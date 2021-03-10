@@ -26,7 +26,7 @@ An application can open one of two types of sockets:
 - **App**: Socket used for normal (default) app commands. e.g. set a reminder on a customer, etc.
 - **Simulator**: Socket used to simulate a customer's interactions with their mobile device. e.g. send an SMS, dial a USSD, etc.
 
-The binary data sent back and forth through the socket is defined by the generated protobuf messages. [LINK HERE]()
+The binary data sent back and forth through the socket is defined by the generated protobuf messages. See SDK repo for more info.
 
 ### Authentication
 
@@ -127,9 +127,9 @@ The SDK should have the following models/classes with methods that correspond to
 
 - `cancelCustomerReminderByTag(tag: Tag, key: String): Future<TagUpdateReply>`
 
-- `sendMessageByTag(tag: Tag, channel: MessagingChannel, message: Message): Future<MessageReply>`
+- `sendMessageByTag(tag: Tag, channel: MessagingChannel, message: Message): Future<TagUpdateReply>`
 
-- `initiatePayment(source: PaymentCounterParty, destination: PaymentCounterParty, value: Cash): Future<InitiatePaymentReply>`
+- `initiatePayment(debitParty: PaymentCounterParty, creditParty: PaymentCounterParty, value: Cash): Future<InitiatePaymentReply>`
 
 ### **Customer**
 
@@ -191,7 +191,7 @@ customer.sendMessage(channel, message)
 
   - `registerNotificationHandler(event: String, handler: NotificationHandler)`
 
-- `receiveMessage(customer: Customer, channel: MessagingChannel, sessionId: String, parts: InboundMessageBody[]): Future<SimulatorReply>`
+- `receiveMessage(phoneNumber: String, channel: MessagingChannel, sessionId: String, parts: SimulatorMessageBody[]): Future<SimulatorReply>`
 
 - `receivePayment(): Future<SimulatorReply>`
 
@@ -260,7 +260,8 @@ customer.sendMessage(channel, message)
 
 ```js
 {
-  // Same as Tag
+  key: String,
+  value: String,
 }
 ```
 
@@ -392,7 +393,7 @@ customer.sendMessage(channel, message)
 }
 ```
 
-- **InboundMessageBody**
+- **SimulatorMessageBody**
 
 ```js
 {
@@ -469,7 +470,21 @@ customer.sendMessage(channel, message)
 }
 ```
 
-- **PaymentChannel**
+- **InitiatePaymentReply**
+
+```js
+{
+  status: PaymentStatus,
+  description: String,
+  transactionId: String,
+  debitCustomerId: String,
+  creditCustomerId: String,
+}
+```
+
+
+
+- **PaymentChannelNumber**
 
 ```js
 {
@@ -541,170 +556,10 @@ customer.sendMessage(channel, message)
 }
 ```
 
-- **Future**: Any construct that sends the command and receives the response asynchronously. e.g. *promises* in JavaScript, *Flux/Mono* in reactor, etc.
-
-- **NotificationHandler**: A function used to handle incoming notifications. It has the following signature:
-
-```
-function handler(notification: Notification, customer: Customer, callback: NotificationCallback): void
-```
-
-- **NotificationCallback**: A function that responds to a notification. It has the following signature:
-
-```
-function callback(message: MessageBody, appData: Map<String, Any>): void
-```
-
-- **Notification**
+- **VoiceCallInput**
 
 ```js
-{ // Notification
-  orgId: String,
-  appId: String,
-  customerId: String,
-  appData: Map<String,Any>,
-  createdAt: Long,
-}
-  
-{ // PaymentStatusNotification extends Notification
-  purseId: String, // Optional
-  transactionId: String,
-  status: { // PaymentStatus
-    QUEUED
-    PENDING_CONFIRMATION
-    PENDING_VALIDATION
-    VALIDATED
-    INVALID_REQUEST
-    NOT_SUPPORTED
-    INSUFFICIENT_FUNDS
-    APPLICATION_ERROR
-    NOT_ALLOWED
-    DUPLICATE_REQUEST
-    INVALID_PURSE
-    INVALID_WALLET
-    DECOMMISSIONED_CUSTOMER_ID
-    SUCCESS
-    PASS_THROUGH
-    FAILED
-    THROTTLED
-    EXPIRED
-    REJECTED
-    REVERSED
-  }
-}
- 
-{ // WalletPaymentNotification extends Notification
-  walletId: String,
-  transactionId: String,
-  status: PaymentStatus
-}
-
-{ // ReminderNotification extends Notification
-  reminder: Reminder,
-  tag: Tag,
-  workId: String
-}
-  
-{ // MessagingSessionInitializedNotification extends Notification
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  sessionId: String,
-  expiresAt: Long,
-}
-  
-{ // MessagingSessionEndedNotification extends Notification
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  sessionId: String,
-  duration: Long,
-  reason: { // MessagingSessionEndReason
-    NORMAL_CLEARING,
-    INACTIVITY,
-    FAILURE
-  }
-}
-  
-{ // MessagingConsentUpdateNotification extends Notification
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  sessionId: String,
-  update: ConsentAction,
-  status: { // MessagingConsentUpdateStatus
-    QUEUED,
-    COMPLETED,
-    INVALID_CHANNEL_NUMBER,
-    DECOMMISSIONED_CUSTOMER_ID,
-    APPLICATION_ERROR
-  }
-}
-  
-{ // MessageStatusNotification extends Notification
-  messageId: String,
-  status: MessageDeliveryStatus
-}
-  
-{ // SentMessageReactionNotification extends Notification
-  messageId: String,
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  reaction: { // MessageReaction
-    CLICKED,
-    UNSUBSCRIBED,
-    COMPLAINED
-  }
-}
-
-
-{ // ReceivedPaymentNotification extends Notification
-  purseId: String,
-  trannsactionId: String,
-  customerNumber: CustomerNumber,
-  channel: PaymentChannel,
-  value: Cash,
-  status: PaymentStatus,
-}
- 
-
-{ // CustomerActivityNotification extends Notification
-  customerNumber: CustomerNumber,
-  channel: ActivityChannel,
-  sessionId: String,
-  activity: Activity,
-}
-
-
-{ // ReceivedSmsNotification extends Notification
-  messageId: String,
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  text: String,
-}
-
-{ // ReceivedMediaNotification extends Notification
-  messageId: String,
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  media: Media,
-  location: Location,
-  email: Email,
-  sessionId: String,
-  inReplyTo: String,
-}
-
-{ // UssdSessionNotification extends Notification
-  messageId: String,
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  ussd: String,
-  sessionId: String,
-}
-
-{ // VoiceCallNotification extends Notification
-  messageId: String,
-  customerNumber: CustomerNumber,
-  channel: MessagingChannel,
-  sessionId: String,
-
+{
   direction: { // VoiceCallDirection
     INBOUND,
     OUTBOUND
@@ -768,11 +623,214 @@ function callback(message: MessageBody, appData: Map<String, Any>): void
 }
 ```
 
+
+
+- **Future**: Any construct that sends the command and receives the response asynchronously. e.g. *promises* in JavaScript, *Flux/Mono* in reactor, etc.
+- **NotificationHandler**: A function used to handle incoming notifications. It has the following signature:
+
+```
+function handler(notification: Notification, customer: Customer, appData: Map<String,Any>, callback: NotificationCallback): void
+```
+
+- **NotificationCallback**: A function that responds to a notification. It has the following signature:
+
+```
+function callback(message: MessageBody, appData: Map<String, Any>): void
+```
+
+- **Notification**
+
+```js
+{ // Notification
+  orgId: String,
+  appId: String,
+  customerId: String,
+  appData: Map<String,Any>,
+  createdAt: Long,
+}
+  
+{ // PaymentStatusNotification extends Notification
+  purseId: String, // Optional
+  transactionId: String,
+  status: { // PaymentStatus
+    QUEUED
+    PENDING_CONFIRMATION
+    PENDING_VALIDATION
+    VALIDATED
+    INVALID_REQUEST
+    NOT_SUPPORTED
+    INSUFFICIENT_FUNDS
+    APPLICATION_ERROR
+    NOT_ALLOWED
+    DUPLICATE_REQUEST
+    INVALID_PURSE
+    INVALID_WALLET
+    DECOMMISSIONED_CUSTOMER_ID
+    SUCCESS
+    PASS_THROUGH
+    FAILED
+    THROTTLED
+    EXPIRED
+    REJECTED
+    REVERSED
+  }
+}
+ 
+{ // WalletPaymentStatusNotification extends Notification
+  walletId: String,
+  transactionId: String,
+  status: PaymentStatus
+}
+
+{ // ReminderNotification extends Notification
+  reminder: Reminder,
+  tag: Tag,
+  workId: String
+}
+  
+{ // MessagingSessionInitializedNotification extends Notification
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  sessionId: String,
+  expiresAt: Long,
+}
+  
+{ // MessagingSessionEndedNotification extends Notification
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  sessionId: String,
+  duration: Long,
+  reason: { // MessagingSessionEndReason
+    NORMAL_CLEARING,
+    INACTIVITY,
+    FAILURE
+  }
+}
+  
+{ // MessagingConsentUpdateNotification extends Notification
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  sessionId: String,
+  update: ConsentAction,
+  status: { // MessagingConsentUpdateStatus
+    QUEUED,
+    COMPLETED,
+    INVALID_CHANNEL_NUMBER,
+    DECOMMISSIONED_CUSTOMER_ID,
+    APPLICATION_ERROR
+  }
+}
+  
+{ // MessageStatusNotification extends Notification
+  messageId: String,
+  status: MessageDeliveryStatus
+}
+  
+{ // SentMessageReactionNotification extends Notification
+  messageId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  reaction: { // MessageReaction
+    CLICKED,
+    UNSUBSCRIBED,
+    COMPLAINED
+  }
+}
+
+
+{ // ReceivedPaymentNotification extends Notification
+  purseId: String,
+  trannsactionId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: PaymentChannel,
+  value: Cash,
+  status: PaymentStatus,
+}
+ 
+
+{ // CustomerActivityNotification extends Notification
+  customerNumber: CustomerNumber,
+  channelNumber: ActivityChannel,
+  sessionId: String,
+  activity: Activity,
+}
+
+
+{ // ReceivedSmsNotification extends Notification
+  messageId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  text: String,
+}
+
+{ // ReceivedMediaNotification extends Notification
+  messageId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  text: String,
+  media: Media,
+  location: Location,
+  email: Email,
+  sessionId: String,
+  inReplyTo: String,
+}
+
+{ // UssdSessionNotification extends Notification
+  messageId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  input: String,
+  sessionId: String,
+}
+
+{ // VoiceCallNotification extends Notification
+  messageId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  sessionId: String,
+  voice: VoiceCallInput
+}
+  
+{ // SendMessageSimulatorNotification extends Notification
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+  message: Message
+}
+  
+{ // MakeVoiceCallSimulatorNotification extends Notification
+  sessionId: String,
+  customerNumber: CustomerNumber,
+  channelNumber: MessagingChannel,
+}
+  
+{ // CustomerPaymentSimulatorNotification extends Notification
+  customerNumber: CustomerNumber,
+  channelNumber: PaymentChannel,
+  transactionId: String,
+  [wallet: Object,]*
+  [purse: Object,]*
+  value: Cash
+}
+  
+{ // SendChannelPaymentSimulatorNotification extends Notification
+  channelNumber: PaymentChannel,
+  transactionId: String,
+  [wallet: Object,]*
+  [purse: Object,]*
+  value: Cash,
+  account: String
+}
+```
+
 ## Events
 
 The SDK should allow developers to listen for and respond asynchronously to the following events (which correspond to the above notifications):
 
 ### Connection
+
+- `error`
+
+- `closed`
 
 - `pending`
 
@@ -780,7 +838,6 @@ The SDK should allow developers to listen for and respond asynchronously to the 
 
 - `connected`
 
-- `error`
 
 ### App
 
@@ -819,6 +876,8 @@ The SDK should allow developers to listen for and respond asynchronously to the 
 - `paymentStatus`
 
 - `walletPaymentStatus`
+
+- `customerActivity`
 
 ### Simulator
 
