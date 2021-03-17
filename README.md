@@ -28,6 +28,19 @@ An application can open one of two types of sockets:
 
 The binary data sent back and forth through the socket is defined by the generated protobuf messages. See SDK repo for more info.
 
+>
+> **TCP/TLS Transport**
+>
+> - Host: **tcp.elarian.dev**
+> - Port: **8082**
+>
+>
+> **WebSocket/TLS Transport**
+>
+> - Host: **web.elarian.dev**
+> - Port: **443**
+
+
 ### Authentication
 
 When establishing the socket connection, the RSocket setup frame must contain a data payload with the following:
@@ -193,9 +206,9 @@ customer.sendMessage(channel, message)
 
 - `receiveMessage(phoneNumber: String, channel: MessagingChannel, sessionId: String, parts: SimulatorMessageBody[]): Future<SimulatorReply>`
 
-- `receivePayment(): Future<SimulatorReply>`
+- `receivePayment(phoneNumber: String, channel: PaymentChannel, transactionId: String, value: Cash, status: PaymentStatus): Future<SimulatorReply>`
 
-- `updatePaymentStatus(): Future<SimulatorReply>`
+- `updatePaymentStatus(transactionId: String, status: PaymentStatus): Future<SimulatorReply>`
 
 
 ### Others Models
@@ -625,7 +638,7 @@ customer.sendMessage(channel, message)
 
 
 
-- **Future**: Any construct that sends the command and receives the response asynchronously. e.g. *promises* in JavaScript, *Flux/Mono* in reactor, etc.
+- **Future**: Any construct that sends the command and receives the response asynchronously. e.g. *promises* in JavaScript, *Flux/Mono* in Java with reactor, etc.
 - **NotificationHandler**: A function used to handle incoming notifications. It has the following signature:
 
 ```
