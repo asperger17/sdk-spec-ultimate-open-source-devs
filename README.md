@@ -833,6 +833,15 @@ function callback(message: MessageBody, appData: Map<String, Any>): void
   value: Cash,
   account: String
 }
+
+{ // CheckoutPaymentSimulatorNotification extends Notification
+  channelNumber: PaymentChannel,
+  customerNumber: CustomerNumber,
+  transactionId: String,
+  [wallet: Object,]*
+  [purse: Object,]*
+  value: Cash,
+}
 ```
 
 ## Events
