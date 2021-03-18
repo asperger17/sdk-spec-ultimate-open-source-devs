@@ -816,7 +816,7 @@ function callback(message: MessageBody, appData: Map<String, Any>): void
   channelNumber: MessagingChannel,
 }
   
-{ // CustomerPaymentSimulatorNotification extends Notification
+{ // SendCustomerPaymentSimulatorNotification extends Notification
   customerNumber: CustomerNumber,
   channelNumber: PaymentChannel,
   transactionId: String,
