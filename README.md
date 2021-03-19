@@ -154,7 +154,7 @@ The SDK should have the following models/classes with methods that correspond to
 
 - `replyToMessage(messageId: String, message: Message): Future<MessageReply> `
 
-- `updateActivity(channel: ActivityChannel, activity: Activity): Future<CustomerStateUpdateReply>`
+- `updateActivity(channel: ActivityChannel, activity: Activity, sessionId: String): Future<CustomerStateUpdateReply>`
 
 - `updateMessagingConsent(channel: MessagingChannel, action: ConsentAction): Future<ConsentUpdateReply>`
 
