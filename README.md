@@ -1,9 +1,9 @@
 # Elarian SDK Spec
 
-> Elarian is a customer engagement runtime that let's you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer's point-of-view. For more info on Elarian, see [https://developers.elarian.com](https://developers.elarian.com)
+> Elarian is a customer engagement runtime that lets you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer's point-of-view. For more info on Elarian, see [https://developers.elarian.com](https://developers.elarian.com)
 
 
-Elarian exposes it's functionalities via [RSocket](http://rsocket.io/) and ~~fully~~ embraces reactive streams concepts. Therefore it depends on drivers that implement the [RSocket Protocol](https://github.com/rsocket/rsocket/blob/master/Protocol.md). The driver should, at minimum, implement the following core RSocket features:
+Elarian exposes its functionalities via [RSocket](http://rsocket.io/) and ~~fully~~ embraces reactive streams concepts. Therefore it depends on drivers that implement the [RSocket Protocol](https://github.com/rsocket/rsocket/blob/master/Protocol.md). The driver should, at minimum, implement the following core RSocket features:
 
 - Interaction models
     - request/response
@@ -128,9 +128,9 @@ With responses being sent back as ***ServerToSimulatorNotificationReply***
 
 A development model structured around asynchronous data streams is expected (i.e. reactive programming) for the SDK. Elarian applications are expected to be built around customer data. As such, developers will be observing and reacting to events([notifications](#Notifications)) being streamed from the Elarian API server in real-time, while at the same time, emitting events([commands](#Commands)) to the API server.
 
-For example, a lending institution, say a bank, could build an app that automates debt collection. The app could set reminders on each of the its customers. When a payment is due, Elarian will notify the app and the company could decide to engage the customer via SMS. Say the SMS to the customer tells them to reply with OK to initiate payment via mobile wallet. If they do, the app sends a command to initiate mobile checkout from the customer's mobile wallet. If they don't, the app could engage the customer with a phone call. The voice prompt could ask them to press 1 to initiate payment, etc.
+For example, a lending institution, say a bank, could build an app that automates debt collection. The app could set reminders on each of the its customers. When a payment is due, Elarian will notify the app and the company could decide to engage the customer via SMS. Say the SMS to the customer tells them to reply with OK to initiate payment via mobile wallet. If they do, the app sends a command to initiate mobile checkout from the customer's mobile wallet. If they don't, the app could engage the customer with a phone call. The voice prompt could ask them to press 1 to initiate the payment, etc.
 
-The SDK needs to provide a programing model to the app developer that allows them to efficiently build such an app and have it work effectively for 10 or 10 million customers. Reactive programming (**in whatever form makes sense for the language**) gives the dev the tools they need to build highly scalable and efficient applications.
+The SDK needs to provide a programming model to the app developer that allows them to efficiently build such an app and have it work effectively for 10 or 10 million customers. Reactive programming (**in whatever form makes sense for the language**) gives the dev the tools they need to build highly scalable and efficient applications.
 
 ## Classes
 
