@@ -1,9 +1,9 @@
 # Elarian SDK Spec
 
-> Elarian is a customer engagement runtime that let's you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer's point-of-view.
+> Elarian is a customer engagement runtime that let's you code against customer data allowing you to track, schedule, execute and analyze engagement actions from a customer's point-of-view. For more info on Elarian, see [https://developers.elarian.com](https://developers.elarian.com)
 
 
-Elarian is built on [RSocket](http://rsocket.io/) and ~~fully~~ embraces reactive streams concepts. Therefore it depends on drivers that implement the [RSocket Protocol](https://github.com/rsocket/rsocket/blob/master/Protocol.md). The driver should, at minimum, implement the following core RSocket features:
+Elarian exposes it's functionalities via [RSocket](http://rsocket.io/) and ~~fully~~ embraces reactive streams concepts. Therefore it depends on drivers that implement the [RSocket Protocol](https://github.com/rsocket/rsocket/blob/master/Protocol.md). The driver should, at minimum, implement the following core RSocket features:
 
 - Interaction models
     - request/response
@@ -12,30 +12,30 @@ Elarian is built on [RSocket](http://rsocket.io/) and ~~fully~~ embraces reactiv
 - Request-N, Keep-Alive and Error frames
 - Resuming Operation
 
-## Core API
+## Core Service
 
 Real-time interactions with the Elarian API server happen in one of two ways:
 
-- An application sends a **command** to the server
-- An application receives **notifications** from the server
+- An application sends a **command** to the server. i.e. request/response from the application
+- An application receives **notifications** from the server i.e. request/response from the Elarian API server
 
-The applications opens a socket connection to the API server and all interactions will happen through this socket. Therefore, this socket needs to be kept open for the entire execution time of the application (i.e. since that could be 1 second or 1 year, the connection needs to be re-established automatically in case of connectivity issues).
+The application opens a socket connection to the API server and all interactions will happen through this socket. Therefore, this socket needs to be kept open for the entire execution time of the application (i.e. since that could be 1 second or 1 year, the connection needs to be re-established automatically in case of connectivity issues).
 
 An application can open one of two types of sockets:
 
 - **App**: Socket used for normal (default) app commands. e.g. set a reminder on a customer, etc.
 - **Simulator**: Socket used to simulate a customer's interactions with their mobile device. e.g. send an SMS, dial a USSD, etc.
 
-The binary data sent back and forth through the socket is defined by the generated protobuf messages. See SDK repo for more info.
+The binary data sent back and forth through the socket is defined by the generated protobuf messages. See the specific SDK repo for the generated classes/structs.
 
 >
-> **TCP/TLS Transport**
+> **TLS Transport**
 >
 > - Host: **tcp.elarian.dev**
 > - Port: **8082**
 >
 >
-> **WebSocket/TLS Transport**
+> **WebSocket Transport**
 >
 > - Host: **web.elarian.dev**
 > - Port: **443**
@@ -45,13 +45,15 @@ The binary data sent back and forth through the socket is defined by the generat
 
 When establishing the socket connection, the RSocket setup frame must contain a data payload with the following:
 
-- An API key (or optionally an auth token)
+- An API key
 - An application id
 - An organization id
 
-After connection is established, application data can now flow through the socket without needed to send these credentials.
+This is sent as a ***AppConnectionMetadata*** payload. After connection is established, application data can now flow through the socket without needed to send these credentials.
 
 ### Commands (App-To-Server)
+
+The following commands can be sent as part of the ***AppToServerCommand*** payload:
 
 - *GenerateAuthToken*
 
@@ -79,14 +81,20 @@ After connection is established, application data can now flow through the socke
 
 - *InitiatePayment*
 
-The following are sent from simulator connections only:
+Response to these commands comes in the form of the ***AppToServerCommandReply*** payload.
+
+The following are sent from simulator connections only(***SimulatorToServerCommand***):
 
 - *ReceiveMessage*
 
 - *ReceivePayment*
 - *UpdatePaymentStatus*
 
+With response coming as ***SimulatorToServerCommandReply***
+
 ### Notifications (Server-To-App)
+
+The following notifications will be received as part of the ***ServerToAppNotification*** payload:
 
 - *Reminder*
 - *MessagingSessionStarted*
@@ -103,7 +111,9 @@ The following are sent from simulator connections only:
 
 - *WalletPaymentStatus*
 
-The following are sent to simulator connections only:
+With responses going back as ***ServerToAppNotificationReply***
+
+The following are sent to simulator connections only(***ServerToSimulatorNotification***):
 
 - *SendMessage*
 - *MakeVoiceCall*
@@ -112,17 +122,19 @@ The following are sent to simulator connections only:
 - *SendChannelPayment*
 - *CheckoutPayment*
 
+With responses being sent back as ***ServerToSimulatorNotificationReply***
+
 ## Programing Paradigm
 
-A development model structured around asynchronous data streams is recommended (i.e. reactive programming) for the SDK. Elarian applications are expected to be built around customer data. As such, developers will be observing and reacting to events([notifications](#Notifications)) being streamed from the Elarian API server in real-time, while at the same time emitting events([commands](#Commands)) to the API server.
+A development model structured around asynchronous data streams is expected (i.e. reactive programming) for the SDK. Elarian applications are expected to be built around customer data. As such, developers will be observing and reacting to events([notifications](#Notifications)) being streamed from the Elarian API server in real-time, while at the same time, emitting events([commands](#Commands)) to the API server.
 
-For example, a lending institution, say a bank, could build an app that automates debt collection. The app could set reminders on each of the institution's customers. When a payment is due, Elarian will notify the app and the company could decide to engage the customer via SMS. Say the SMS to the customer tells them to reply with OK to initiate payment via mobile wallet. If they do, the app sends a command to initiate mobile checkout from the customer's mobile wallet. If they don't, the app could engage the customer with a phone call. The voice prompt could ask them to press 1 to initiate payment, etc.
+For example, a lending institution, say a bank, could build an app that automates debt collection. The app could set reminders on each of the its customers. When a payment is due, Elarian will notify the app and the company could decide to engage the customer via SMS. Say the SMS to the customer tells them to reply with OK to initiate payment via mobile wallet. If they do, the app sends a command to initiate mobile checkout from the customer's mobile wallet. If they don't, the app could engage the customer with a phone call. The voice prompt could ask them to press 1 to initiate payment, etc.
 
-The SDK needs to provide a programing model to the app developer that allows them to efficiently build such an app and have it work effectively for 10 customers as well as 10 million. Reactive programming (in whatever form makes sense for the language) gives the dev the tools they need to build highly scalable and efficient applications.
+The SDK needs to provide a programing model to the app developer that allows them to efficiently build such an app and have it work effectively for 10 or 10 million customers. Reactive programming (**in whatever form makes sense for the language**) gives the dev the tools they need to build highly scalable and efficient applications.
 
 ## Classes
 
-The SDK should have the following models/classes with methods that correspond to the above commands:
+The SDK should have the following classes with methods that correspond to the above commands:
 
 ### **Elarian**
 
@@ -144,6 +156,20 @@ The SDK should have the following models/classes with methods that correspond to
 
 - `initiatePayment(debitParty: PaymentCounterParty, creditParty: PaymentCounterParty, value: Cash): Future<InitiatePaymentReply>`
 
+For example, a node application **could** connect like this:
+
+```js
+const app = new Elarian({
+    appId: 'some-app-id',
+    orgId: 'some-org-id',
+    apiKey: 'some-api-key'
+});
+app
+    .on('error', handleError)
+    .on('connected', hanndleConnected)
+    .connect();
+```
+
 ### **Customer**
 
 - `getState(): Future<CustomerState>`
@@ -164,6 +190,8 @@ The SDK should have the following models/classes with methods that correspond to
 
 - `deleteAppData(): Future<CustomerStateUpdateReply> `
 
+- `getMetadata(): Future<Map<String, Any>>`
+
 - `updateMetadata(data: Map<String, Any>): Future<CustomerStateUpdateReply>`
 
 - `deleteMetadata(keys: String[]): Future<CustomerStateUpdateReply>`
@@ -171,6 +199,8 @@ The SDK should have the following models/classes with methods that correspond to
 - `updateSeconndaryIds(ids: SecondaryId[]): Future<CustomerStateUpdateReply>`
 
 - `deleteSecondaryIds(ids: SecondaryId[]): Future<CustomerStateUpdateReply> `
+
+- `getTags(): Future<Tag[]>`
 
 - `updateTags(tags: Tag[]): Future<CustomerStateUpdateReply>`
 
@@ -184,14 +214,17 @@ For example, a Java application **could** send a message like this:
 
 ```java
 //... asumes use of reactive library reactor
-Elarian client = new Elarian('org-id', 'api-key', 'app-id');
+Elarian client = new Elarian('some-app-id', 'some-org-id', 'some-api-key');
 Customer customer = new Customer(client, '+2547xxx89883');
 
 client.connect();
 
 // Using the customer
 customer.sendMessage(channel, message)
-  	.subscribe(System.out.println);
+  	.subscribe()
+      .onNext()
+      .onError()
+      .onComplete();
 ```
 
 ### **Simulator**
@@ -211,7 +244,7 @@ customer.sendMessage(channel, message)
 - `updatePaymentStatus(transactionId: String, status: PaymentStatus): Future<SimulatorReply>`
 
 
-### Others Models
+### Models
 
 - **AuthToken**
 
@@ -333,6 +366,7 @@ customer.sendMessage(channel, message)
 
 ```js
 {
+  // can be on of
   // Each of these classes extends VoiceAction
   say: Say,
   play: Play,
@@ -648,7 +682,7 @@ function handler(notification: Notification, customer: Customer, appData: Map<St
 - **NotificationCallback**: A function that responds to a notification. It has the following signature:
 
 ```
-function callback(message: MessageBody, appData: Map<String, Any>): void
+function callback(message: Message, appData: Map<String, Any>): void
 ```
 
 - **Notification**
@@ -918,12 +952,20 @@ For example, a JavaScript application **could** listen for SMS ussd like this:
 ```js
 const client = new Elarian('org-id', 'api-key', 'app-id');
 
-client.on('ussdSession', ({ notification, customer }, callback) => {
+client.on('ussdSession', (notification, customer, appData, callback) => {
     //... do something
     const {
         sessionId,
-        appData
+        input,
     } = notification;
+
+    const metadata = await customer.getMetadata();
+    const { name } = metadata;
+
+    const menu = {
+        text: `Hi ${name}!`,
+        isTerminal: true
+    };
 
     callback(menu, appData);
 });
