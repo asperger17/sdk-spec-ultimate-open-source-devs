@@ -144,7 +144,7 @@ The SDK should have the following classes with methods that correspond to the ab
 
 - `on(event: String, handler: NotificationHandler)`
 
-  - `registerNotificationHandler(event: String, handler: NotificationHandler)`
+  - ~~`registerNotificationHandler(event: String, handler: NotificationHandler)`~~
 
 - `generateAuthToken(): Future<AuthToken>`
 
