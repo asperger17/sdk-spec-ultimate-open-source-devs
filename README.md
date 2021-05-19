@@ -235,7 +235,7 @@ customer.sendMessage(channel, message)
 
 - `on(event: String, handler: NotificationHandler)`
 
-  - `registerNotificationHandler(event: String, handler: NotificationHandler)`
+  - ~~`registerNotificationHandler(event: String, handler: NotificationHandler)`~~
 
 - `receiveMessage(phoneNumber: String, channel: MessagingChannel, sessionId: String, parts: SimulatorMessageBody[]): Future<SimulatorReply>`
 
