@@ -366,8 +366,7 @@ customer.sendMessage(channel, message)
 
 ```js
 {
-  // can be on of
-  // Each of these classes extends VoiceAction
+  // Can only be one of these
   say: Say,
   play: Play,
   getDigits: GetDigits,
@@ -378,6 +377,84 @@ customer.sendMessage(channel, message)
   dequeue: Dequeue,
   reject: Reject,
   redirect: Redirect,
+}
+
+
+// Say
+{
+    text: String,
+    playBeep: Boolean,
+    voice: { // TextToSpeechVoice
+        MALE,
+        FEMALE
+    }
+}
+
+// Play
+{
+    url: String
+}
+
+// GetDigits
+{
+    timeout: Number,
+    finishOnKey: String,
+    numDigits: Number,
+    // either
+    say: Say,
+    // or
+    play: Play
+}
+
+// Dial
+{
+    customerNumbers: CustomerNumber[],
+    record: Boolean,
+    sequential: Boolean,
+    ringbackTone: String,
+    callerId: String,
+    maxDuration: Number
+}
+
+// RecordSession
+{
+ // empty for now
+}
+
+// GetRecording
+{
+    playBeep: Boolean,
+    trimSilence: Boolean,
+    timeout: Number,
+    maxLength: Number,
+    finishOnKey: String,
+    // either
+    say: Say,
+    // or
+    play: Play
+}
+
+// Enqueue
+{
+    queueName: String,
+    holdMusic: String
+}
+
+// Dequeue
+{
+    queueName: String,
+    record: Boolean,
+    channelNumber: MessagingChannel
+}
+
+// Reject
+{
+ // empty for now
+}
+
+// Redirect
+{
+    url: String
 }
 ```
 
@@ -491,6 +568,7 @@ customer.sendMessage(channel, message)
     DECOMMISSIONED_CUSTOMERID
     REJECTED
     INVALID_REQUEST
+    INSUFFICIENT_CREDITS
     APPLICATION_ERROR
   },
   description: String,
