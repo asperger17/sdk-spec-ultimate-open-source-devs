@@ -905,6 +905,7 @@ function callback(message: Message, appData: Map<String, Any>): void
   customerNumber: CustomerNumber,
   channelNumber: MessagingChannel,
   input: String,
+  status: String, // one of active, incomplete, completed, app_error
   sessionId: String,
 }
 
