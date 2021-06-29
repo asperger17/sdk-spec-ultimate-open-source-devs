@@ -904,10 +904,21 @@ function callback(message: Message, appData: Map<String, Any>): void
   messageId: String,
   customerNumber: CustomerNumber,
   channelNumber: MessagingChannel,
-  input: String,
+  input: UssdInput,
   status: String, // one of active, incomplete, completed, app_error
   sessionId: String,
 }
+
+{ // UssdInput
+    text: string,
+    status: {
+        ACTIVE,
+        INCOMPLETE,
+        COMPLETED,
+        APP_ERROR
+    }
+}
+
 
 { // VoiceCallNotification extends Notification
   messageId: String,
