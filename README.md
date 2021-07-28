@@ -32,7 +32,7 @@ The binary data sent back and forth through the socket is defined by the generat
 > **TLS Transport**
 >
 > - Host: **tcp.elarian.com** or **tcp.elarian.dev** (staging)
-> - Port: **8082**
+> - Port: **443** or **8082** (staging)
 >
 >
 > **WebSocket Transport**
