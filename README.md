@@ -31,13 +31,13 @@ The binary data sent back and forth through the socket is defined by the generat
 >
 > **TLS Transport**
 >
-> - Host: **tcp.elarian.com** or **tcp.elarian.dev** (staging)
-> - Port: **443** or **8082** (staging)
+> - Host: **tcp.elarian.com**
+> - Port: **443**
 >
 >
 > **WebSocket Transport**
 >
-> - Host: **web.elarian.com** or **web.elarian.dev** (staging)
+> - Host: **web.elarian.com**
 > - Port: **443**
 
 
@@ -57,6 +57,7 @@ The following commands can be sent as part of the ***AppToServerCommand*** paylo
 
 - *GenerateAuthToken*
 
+- *CreateCustomer*
 - *GetCustomerState*
 - *AdoptCustomerState*
 - *AddCustomerReminder*
