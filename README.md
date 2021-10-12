@@ -181,7 +181,7 @@ app
 
 - `replyToMessage(messageId: String, message: Message): Future<MessageReply> `
 
-- `updateActivity(channel: ActivityChannel, activity: Activity): Future<CustomerStateUpdateReply>`
+- `updateActivity(source: String, activity: Activity): Future<CustomerStateUpdateReply>`
 
 - `updateMessagingConsent(channel: MessagingChannel, action: ConsentAction): Future<ConsentUpdateReply>`
 
@@ -621,18 +621,6 @@ customer.sendMessage(channel, message)
 }
 ```
 
-- **ActivityChannel**
-
-```js
-{
-  number: String,
-  channel: { // ActivityChannel.Channel
-    WEB,
-    MOBILE,
-  }
-}
-```
-
 - **Activity**
 
 ```js
@@ -876,7 +864,7 @@ function callback(message: Message, appData: Map<String, Any>): void
 
 { // CustomerActivityNotification extends Notification
   customerNumber: CustomerNumber,
-  channelNumber: ActivityChannel,
+  source: String,
   sessionId: String,
   activity: Activity,
 }
