@@ -31,13 +31,13 @@ The binary data sent back and forth through the socket is defined by the generat
 >
 > **TLS Transport**
 >
-> - Host: **tcp.elarian.com**
+> - Host: **tcp.elarian.dev**
 > - Port: **443**
 >
 >
 > **WebSocket Transport**
 >
-> - Host: **web.elarian.com**
+> - Host: **web.elarian.dev**
 > - Port: **443**
 
 
@@ -50,6 +50,25 @@ When establishing the socket connection, the RSocket setup frame must contain a 
 - An organization id
 
 This is sent as a ***AppConnectionMetadata*** payload. After connection is established, application data can now flow through the socket without needed to send these credentials.
+
+For testing purposes, use the following values:
+
+*Authentication*
+- ORG ID: `el_org_eu_1SJ2jx`
+- APP ID: `el_app_WZFQdt`
+- API KEY: `el_k_test_80922f5e467e9d5e8067795c263ba0e43c6ef6de7ffa1923aaa189d2772042be`
+
+*Engagement Channels*
+- PURSE ID: `el_prs_rL3IPZ`
+- PAYMENT CHANNEL NUMBER: `83044`
+- SMS SHORT CODE: `83044`
+- SMS SENDER ID: `TEST_SENDER_ID`
+- USSD SHORT CODE: `*83044#`
+- VOICE CHANNEL NUMBER: `+254711621711`
+- WHATSAPP CHANNEL NUMBER: `+254711621711`
+- TELEGRAM CHANNEL NUMBER: `+254711621711`
+- FACEBOOK MESSENGER CHANNEL NUMBER: `+254711621711`
+
 
 ### Commands (App-To-Server)
 
@@ -214,7 +233,7 @@ app
 For example, a Java application **could** send a message like this:
 
 ```java
-//... asumes use of reactive library reactor
+//... assumes use of project-reactor
 Elarian client = new Elarian('some-app-id', 'some-org-id', 'some-api-key');
 Customer customer = new Customer(client, '+2547xxx89883');
 
@@ -235,8 +254,6 @@ customer.sendMessage(channel, message)
 - `disconnect()`
 
 - `on(event: String, handler: NotificationHandler)`
-
-  - ~~`registerNotificationHandler(event: String, handler: NotificationHandler)`~~
 
 - `receiveMessage(phoneNumber: String, channel: MessagingChannel, sessionId: String, parts: SimulatorMessageBody[]): Future<SimulatorReply>`
 
@@ -755,13 +772,13 @@ customer.sendMessage(channel, message)
 - **NotificationHandler**: A function used to handle incoming notifications. It has the following signature:
 
 ```
-function handler(notification: Notification, customer: Customer, appData: Map<String,Any>, callback: NotificationCallback): void
+function handler(notification: Notification, customer: Customer, appData: Map<String,Any>?, callback: NotificationCallback): void
 ```
 
 - **NotificationCallback**: A function that responds to a notification. It has the following signature:
 
 ```
-function callback(message: Message, appData: Map<String, Any>): void
+function callback(message: Message?, appData: Map<String, Any>?): void
 ```
 
 - **Notification**
