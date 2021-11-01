@@ -45,9 +45,9 @@ The binary data sent back and forth through the socket is defined by the generat
 
 When establishing the socket connection, the RSocket setup frame must contain a data payload with the following:
 
-- An API key `test_api_key`
-- An application id `test_app`
-- An organization id `test_org`
+- An API key
+- An application id
+- An organization id
 
 This is sent as a ***AppConnectionMetadata*** payload. After connection is established, application data can now flow through the socket without needed to send these credentials.
 
