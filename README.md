@@ -26,7 +26,7 @@ An application can open one of two types of sockets:
 - **App**: Socket used for normal (default) app commands. e.g. set a reminder on a customer, etc.
 - **Simulator**: Socket used to simulate a customer's interactions with their mobile device. e.g. send an SMS, dial a USSD, etc.
 
-The binary data sent back and forth through the socket is defined by the generated protobuf messages. See the specific SDK repo for the generated classes/structs.
+The binary data sent back and forth through the socket is defined by the generated protobuf messages. See [generated/](generated/) for the language-specific classes/structs.
 
 >
 > **TLS Transport**
