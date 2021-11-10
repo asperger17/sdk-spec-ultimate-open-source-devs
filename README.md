@@ -176,6 +176,19 @@ The SDK should have the following classes with methods that correspond to the ab
 
 - `initiatePayment(debitParty: PaymentCounterParty, creditParty: PaymentCounterParty, value: Cash): Future<InitiatePaymentReply>`
 
+- `replayMessagingConsentUpdate(customer: CustomerNumber, channel: MessagingChannel, consent: ConsentAction, updatedAt: Long): Future<CustomerStateUpdateReply>`
+
+- `replayReceivedMessage(customer: CustomerNumber, channel: MessagingChannel, message: ReceivedMessage): Future<CustomerStateUpdateReply>`
+
+- `replaySentMessage(customer: CustomerNumber, channel: MessagingChannel, message: SentMessage): Future<CustomerStateUpdateReply>`
+
+- `replayMessageStatusUpdate(customer: CustomerNumber, channel: MessagingChannel, update: MessageStatusUpdate): Future<CustomerStateUpdateReply>`
+
+- `replayMessageReactionUpdate(customer: CustomerNumber, channel: MessagingChannel,  reaction: MessageReaction, updatedAt: Long): Future<CustomerStateUpdateReply>`
+
+- `replayMessagingSession(customer: CustomerNumber, channel: MessagingChannel, update: MessageSessionUpdate): Future<CustomerStateUpdateReply>`
+
+
 For example, a node application **could** connect like this:
 
 ```js
@@ -255,7 +268,7 @@ customer.sendMessage(channel, message)
 
 - `on(event: String, handler: NotificationHandler)`
 
-- `receiveMessage(phoneNumber: String, channel: MessagingChannel, sessionId: String, parts: SimulatorMessageBody[]): Future<SimulatorReply>`
+- `receiveMessage(phoneNumber: String, channel: MessagingChannel, sessionId: String, parts: InboundMessageBody[]): Future<SimulatorReply>`
 
 - `receivePayment(phoneNumber: String, channel: PaymentChannel, transactionId: String, value: Cash, status: PaymentStatus): Future<SimulatorReply>`
 
@@ -535,7 +548,7 @@ customer.sendMessage(channel, message)
 }
 ```
 
-- **SimulatorMessageBody**
+- **InboundMessageBody**
 
 ```js
 {
@@ -544,17 +557,8 @@ customer.sendMessage(channel, message)
   media: Media,
   location: Location,
   email: Email,
-  voice: {
-    direction: VoiceCallDirection,
-    status: VoiceCallStatus,
-    startedAt: Long,
-    hangupCause: VoiceCallHangupCause,
-    dtmfDigits: String,
-    recordingUrl: String,
-    dialData: VoiceCallDialInput,
-    queueData: VoiceCallQueueInput,
-  },
-  ussd: String
+  voice: VoiceCallInput,
+  ussd: UssdInput
 }
 ```
 
@@ -624,7 +628,6 @@ customer.sendMessage(channel, message)
   creditCustomerId: String,
 }
 ```
-
 
 
 - **PaymentChannelNumber**
@@ -755,6 +758,69 @@ customer.sendMessage(channel, message)
 ```
 
 
+- **ReceivedMessage**
+
+```js
+{
+    messageId: String,
+    sessionId: String,
+    receivedAt: Long,
+    parts: [InboundMessageBody],
+    inReplyTo: String,
+    cost: Cash
+    provider: { // One of
+        AT,
+        TWILIO,
+        MAILGUN,
+        FACEBOOK,
+        TELEGRAM
+    },
+}
+```
+
+- **SentMessage**
+
+```js
+{
+    messageId: String,
+    sessionId: String,
+    sentAt: Long,
+    message: Message,
+    inReplyTo: String,
+    status: MessageDeliveryStatus,
+    cost: Cash,
+    provider: { // One of
+        AT,
+        TWILIO,
+        MAILGUN,
+        FACEBOOK,
+        TELEGRAM
+    }
+}
+```
+
+- **MessageStatusUpdate**
+
+```js
+{
+    messageId: String,
+    updatedAt: Long,
+    status: MessageDeliveryStatus,
+    cost: Cash
+}
+```
+
+- **MessageSessionUpdate**
+
+```js
+{
+    sessionId: String,
+    startedAt: Long,
+    duration: Long,
+    reason: MessagingSessionEndReason,
+    cost: Cash
+}
+```
 
 - **Future**: Any construct that sends the command and receives the response asynchronously. e.g. *promises* in JavaScript, *Flux/Mono* in Java with reactor, etc.
 - **NotificationHandler**: A function used to handle incoming notifications. It has the following signature:
