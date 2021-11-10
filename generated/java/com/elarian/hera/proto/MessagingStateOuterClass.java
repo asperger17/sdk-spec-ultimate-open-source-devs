@@ -169,6 +169,21 @@ public final class MessagingStateOuterClass {
      * <code>.com.elarian.hera.proto.Cash cost = 10;</code>
      */
     com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+     * @return Whether the providerMessageId field is set.
+     */
+    boolean hasProviderMessageId();
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+     * @return The providerMessageId.
+     */
+    com.google.protobuf.StringValue getProviderMessageId();
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReceivedMessage}
@@ -327,6 +342,19 @@ public final class MessagingStateOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(cost_);
                 cost_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (providerMessageId_ != null) {
+                subBuilder = providerMessageId_.toBuilder();
+              }
+              providerMessageId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(providerMessageId_);
+                providerMessageId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -645,6 +673,32 @@ public final class MessagingStateOuterClass {
       return getCost();
     }
 
+    public static final int PROVIDER_MESSAGE_ID_FIELD_NUMBER = 11;
+    private com.google.protobuf.StringValue providerMessageId_;
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+     * @return Whether the providerMessageId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviderMessageId() {
+      return providerMessageId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+     * @return The providerMessageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getProviderMessageId() {
+      return providerMessageId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerMessageId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder() {
+      return getProviderMessageId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -688,6 +742,9 @@ public final class MessagingStateOuterClass {
       }
       if (cost_ != null) {
         output.writeMessage(10, getCost());
+      }
+      if (providerMessageId_ != null) {
+        output.writeMessage(11, getProviderMessageId());
       }
       unknownFields.writeTo(output);
     }
@@ -736,6 +793,10 @@ public final class MessagingStateOuterClass {
       if (cost_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getCost());
+      }
+      if (providerMessageId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getProviderMessageId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -792,6 +853,11 @@ public final class MessagingStateOuterClass {
         if (!getCost()
             .equals(other.getCost())) return false;
       }
+      if (hasProviderMessageId() != other.hasProviderMessageId()) return false;
+      if (hasProviderMessageId()) {
+        if (!getProviderMessageId()
+            .equals(other.getProviderMessageId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -838,6 +904,10 @@ public final class MessagingStateOuterClass {
       if (hasCost()) {
         hash = (37 * hash) + COST_FIELD_NUMBER;
         hash = (53 * hash) + getCost().hashCode();
+      }
+      if (hasProviderMessageId()) {
+        hash = (37 * hash) + PROVIDER_MESSAGE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProviderMessageId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -1025,6 +1095,12 @@ public final class MessagingStateOuterClass {
           cost_ = null;
           costBuilder_ = null;
         }
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageId_ = null;
+        } else {
+          providerMessageId_ = null;
+          providerMessageIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -1097,6 +1173,11 @@ public final class MessagingStateOuterClass {
           result.cost_ = cost_;
         } else {
           result.cost_ = costBuilder_.build();
+        }
+        if (providerMessageIdBuilder_ == null) {
+          result.providerMessageId_ = providerMessageId_;
+        } else {
+          result.providerMessageId_ = providerMessageIdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -1199,6 +1280,9 @@ public final class MessagingStateOuterClass {
         }
         if (other.hasCost()) {
           mergeCost(other.getCost());
+        }
+        if (other.hasProviderMessageId()) {
+          mergeProviderMessageId(other.getProviderMessageId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -2432,6 +2516,125 @@ public final class MessagingStateOuterClass {
         }
         return costBuilder_;
       }
+
+      private com.google.protobuf.StringValue providerMessageId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> providerMessageIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       * @return Whether the providerMessageId field is set.
+       */
+      public boolean hasProviderMessageId() {
+        return providerMessageIdBuilder_ != null || providerMessageId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       * @return The providerMessageId.
+       */
+      public com.google.protobuf.StringValue getProviderMessageId() {
+        if (providerMessageIdBuilder_ == null) {
+          return providerMessageId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerMessageId_;
+        } else {
+          return providerMessageIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      public Builder setProviderMessageId(com.google.protobuf.StringValue value) {
+        if (providerMessageIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providerMessageId_ = value;
+          onChanged();
+        } else {
+          providerMessageIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      public Builder setProviderMessageId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageId_ = builderForValue.build();
+          onChanged();
+        } else {
+          providerMessageIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      public Builder mergeProviderMessageId(com.google.protobuf.StringValue value) {
+        if (providerMessageIdBuilder_ == null) {
+          if (providerMessageId_ != null) {
+            providerMessageId_ =
+              com.google.protobuf.StringValue.newBuilder(providerMessageId_).mergeFrom(value).buildPartial();
+          } else {
+            providerMessageId_ = value;
+          }
+          onChanged();
+        } else {
+          providerMessageIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      public Builder clearProviderMessageId() {
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageId_ = null;
+          onChanged();
+        } else {
+          providerMessageId_ = null;
+          providerMessageIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getProviderMessageIdBuilder() {
+        
+        onChanged();
+        return getProviderMessageIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder() {
+        if (providerMessageIdBuilder_ != null) {
+          return providerMessageIdBuilder_.getMessageOrBuilder();
+        } else {
+          return providerMessageId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : providerMessageId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getProviderMessageIdFieldBuilder() {
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getProviderMessageId(),
+                  getParentForChildren(),
+                  isClean());
+          providerMessageId_ = null;
+        }
+        return providerMessageIdBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -2681,6 +2884,21 @@ public final class MessagingStateOuterClass {
      * <code>.com.elarian.hera.proto.Cash cost = 13;</code>
      */
     com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @return Whether the providerMessageId field is set.
+     */
+    boolean hasProviderMessageId();
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @return The providerMessageId.
+     */
+    com.google.protobuf.StringValue getProviderMessageId();
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SentMessage}
@@ -2872,6 +3090,19 @@ public final class MessagingStateOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(cost_);
                 cost_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 114: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (providerMessageId_ != null) {
+                subBuilder = providerMessageId_.toBuilder();
+              }
+              providerMessageId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(providerMessageId_);
+                providerMessageId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3261,6 +3492,32 @@ public final class MessagingStateOuterClass {
       return getCost();
     }
 
+    public static final int PROVIDER_MESSAGE_ID_FIELD_NUMBER = 14;
+    private com.google.protobuf.StringValue providerMessageId_;
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @return Whether the providerMessageId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviderMessageId() {
+      return providerMessageId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @return The providerMessageId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getProviderMessageId() {
+      return providerMessageId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerMessageId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder() {
+      return getProviderMessageId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3313,6 +3570,9 @@ public final class MessagingStateOuterClass {
       }
       if (cost_ != null) {
         output.writeMessage(13, getCost());
+      }
+      if (providerMessageId_ != null) {
+        output.writeMessage(14, getProviderMessageId());
       }
       unknownFields.writeTo(output);
     }
@@ -3373,6 +3633,10 @@ public final class MessagingStateOuterClass {
       if (cost_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(13, getCost());
+      }
+      if (providerMessageId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(14, getProviderMessageId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3440,6 +3704,11 @@ public final class MessagingStateOuterClass {
         if (!getCost()
             .equals(other.getCost())) return false;
       }
+      if (hasProviderMessageId() != other.hasProviderMessageId()) return false;
+      if (hasProviderMessageId()) {
+        if (!getProviderMessageId()
+            .equals(other.getProviderMessageId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3496,6 +3765,10 @@ public final class MessagingStateOuterClass {
       if (hasCost()) {
         hash = (37 * hash) + COST_FIELD_NUMBER;
         hash = (53 * hash) + getCost().hashCode();
+      }
+      if (hasProviderMessageId()) {
+        hash = (37 * hash) + PROVIDER_MESSAGE_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProviderMessageId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3697,6 +3970,12 @@ public final class MessagingStateOuterClass {
           cost_ = null;
           costBuilder_ = null;
         }
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageId_ = null;
+        } else {
+          providerMessageId_ = null;
+          providerMessageIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -3780,6 +4059,11 @@ public final class MessagingStateOuterClass {
           result.cost_ = cost_;
         } else {
           result.cost_ = costBuilder_.build();
+        }
+        if (providerMessageIdBuilder_ == null) {
+          result.providerMessageId_ = providerMessageId_;
+        } else {
+          result.providerMessageId_ = providerMessageIdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -3891,6 +4175,9 @@ public final class MessagingStateOuterClass {
         }
         if (other.hasCost()) {
           mergeCost(other.getCost());
+        }
+        if (other.hasProviderMessageId()) {
+          mergeProviderMessageId(other.getProviderMessageId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5415,6 +5702,125 @@ public final class MessagingStateOuterClass {
           cost_ = null;
         }
         return costBuilder_;
+      }
+
+      private com.google.protobuf.StringValue providerMessageId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> providerMessageIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       * @return Whether the providerMessageId field is set.
+       */
+      public boolean hasProviderMessageId() {
+        return providerMessageIdBuilder_ != null || providerMessageId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       * @return The providerMessageId.
+       */
+      public com.google.protobuf.StringValue getProviderMessageId() {
+        if (providerMessageIdBuilder_ == null) {
+          return providerMessageId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerMessageId_;
+        } else {
+          return providerMessageIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      public Builder setProviderMessageId(com.google.protobuf.StringValue value) {
+        if (providerMessageIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providerMessageId_ = value;
+          onChanged();
+        } else {
+          providerMessageIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      public Builder setProviderMessageId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageId_ = builderForValue.build();
+          onChanged();
+        } else {
+          providerMessageIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      public Builder mergeProviderMessageId(com.google.protobuf.StringValue value) {
+        if (providerMessageIdBuilder_ == null) {
+          if (providerMessageId_ != null) {
+            providerMessageId_ =
+              com.google.protobuf.StringValue.newBuilder(providerMessageId_).mergeFrom(value).buildPartial();
+          } else {
+            providerMessageId_ = value;
+          }
+          onChanged();
+        } else {
+          providerMessageIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      public Builder clearProviderMessageId() {
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageId_ = null;
+          onChanged();
+        } else {
+          providerMessageId_ = null;
+          providerMessageIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getProviderMessageIdBuilder() {
+        
+        onChanged();
+        return getProviderMessageIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder() {
+        if (providerMessageIdBuilder_ != null) {
+          return providerMessageIdBuilder_.getMessageOrBuilder();
+        } else {
+          return providerMessageId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : providerMessageId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getProviderMessageIdFieldBuilder() {
+        if (providerMessageIdBuilder_ == null) {
+          providerMessageIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getProviderMessageId(),
+                  getParentForChildren(),
+                  isClean());
+          providerMessageId_ = null;
+        }
+        return providerMessageIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -8041,6 +8447,21 @@ public final class MessagingStateOuterClass {
      * <code>.com.elarian.hera.proto.Cash cost = 8;</code>
      */
     com.elarian.hera.proto.CommonModel.CashOrBuilder getCostOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return Whether the providerSessionId field is set.
+     */
+    boolean hasProviderSessionId();
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return The providerSessionId.
+     */
+    com.google.protobuf.StringValue getProviderSessionId();
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getProviderSessionIdOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.CompleteMessagingSession}
@@ -8173,6 +8594,19 @@ public final class MessagingStateOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(cost_);
                 cost_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 74: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (providerSessionId_ != null) {
+                subBuilder = providerSessionId_.toBuilder();
+              }
+              providerSessionId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(providerSessionId_);
+                providerSessionId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8434,6 +8868,32 @@ public final class MessagingStateOuterClass {
       return getCost();
     }
 
+    public static final int PROVIDER_SESSION_ID_FIELD_NUMBER = 9;
+    private com.google.protobuf.StringValue providerSessionId_;
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return Whether the providerSessionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviderSessionId() {
+      return providerSessionId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return The providerSessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getProviderSessionId() {
+      return providerSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerSessionId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getProviderSessionIdOrBuilder() {
+      return getProviderSessionId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8471,6 +8931,9 @@ public final class MessagingStateOuterClass {
       }
       if (cost_ != null) {
         output.writeMessage(8, getCost());
+      }
+      if (providerSessionId_ != null) {
+        output.writeMessage(9, getProviderSessionId());
       }
       unknownFields.writeTo(output);
     }
@@ -8515,6 +8978,10 @@ public final class MessagingStateOuterClass {
       if (cost_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(8, getCost());
+      }
+      if (providerSessionId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getProviderSessionId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8561,6 +9028,11 @@ public final class MessagingStateOuterClass {
         if (!getCost()
             .equals(other.getCost())) return false;
       }
+      if (hasProviderSessionId() != other.hasProviderSessionId()) return false;
+      if (hasProviderSessionId()) {
+        if (!getProviderSessionId()
+            .equals(other.getProviderSessionId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8599,6 +9071,10 @@ public final class MessagingStateOuterClass {
       if (hasCost()) {
         hash = (37 * hash) + COST_FIELD_NUMBER;
         hash = (53 * hash) + getCost().hashCode();
+      }
+      if (hasProviderSessionId()) {
+        hash = (37 * hash) + PROVIDER_SESSION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProviderSessionId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8769,6 +9245,12 @@ public final class MessagingStateOuterClass {
           cost_ = null;
           costBuilder_ = null;
         }
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionId_ = null;
+        } else {
+          providerSessionId_ = null;
+          providerSessionIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -8827,6 +9309,11 @@ public final class MessagingStateOuterClass {
           result.cost_ = cost_;
         } else {
           result.cost_ = costBuilder_.build();
+        }
+        if (providerSessionIdBuilder_ == null) {
+          result.providerSessionId_ = providerSessionId_;
+        } else {
+          result.providerSessionId_ = providerSessionIdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -8907,6 +9394,9 @@ public final class MessagingStateOuterClass {
         }
         if (other.hasCost()) {
           mergeCost(other.getCost());
+        }
+        if (other.hasProviderSessionId()) {
+          mergeProviderSessionId(other.getProviderSessionId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9771,6 +10261,125 @@ public final class MessagingStateOuterClass {
           cost_ = null;
         }
         return costBuilder_;
+      }
+
+      private com.google.protobuf.StringValue providerSessionId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> providerSessionIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       * @return Whether the providerSessionId field is set.
+       */
+      public boolean hasProviderSessionId() {
+        return providerSessionIdBuilder_ != null || providerSessionId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       * @return The providerSessionId.
+       */
+      public com.google.protobuf.StringValue getProviderSessionId() {
+        if (providerSessionIdBuilder_ == null) {
+          return providerSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerSessionId_;
+        } else {
+          return providerSessionIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder setProviderSessionId(com.google.protobuf.StringValue value) {
+        if (providerSessionIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providerSessionId_ = value;
+          onChanged();
+        } else {
+          providerSessionIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder setProviderSessionId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionId_ = builderForValue.build();
+          onChanged();
+        } else {
+          providerSessionIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder mergeProviderSessionId(com.google.protobuf.StringValue value) {
+        if (providerSessionIdBuilder_ == null) {
+          if (providerSessionId_ != null) {
+            providerSessionId_ =
+              com.google.protobuf.StringValue.newBuilder(providerSessionId_).mergeFrom(value).buildPartial();
+          } else {
+            providerSessionId_ = value;
+          }
+          onChanged();
+        } else {
+          providerSessionIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder clearProviderSessionId() {
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionId_ = null;
+          onChanged();
+        } else {
+          providerSessionId_ = null;
+          providerSessionIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getProviderSessionIdBuilder() {
+        
+        onChanged();
+        return getProviderSessionIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getProviderSessionIdOrBuilder() {
+        if (providerSessionIdBuilder_ != null) {
+          return providerSessionIdBuilder_.getMessageOrBuilder();
+        } else {
+          return providerSessionId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : providerSessionId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getProviderSessionIdFieldBuilder() {
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getProviderSessionId(),
+                  getParentForChildren(),
+                  isClean());
+          providerSessionId_ = null;
+        }
+        return providerSessionIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -12415,6 +13024,21 @@ public final class MessagingStateOuterClass {
      */
     com.google.protobuf.ByteString
         getAppIdsBytes(int index);
+
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return Whether the providerSessionId field is set.
+     */
+    boolean hasProviderSessionId();
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return The providerSessionId.
+     */
+    com.google.protobuf.StringValue getProviderSessionId();
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getProviderSessionIdOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.InSessionMessagingChannelState}
@@ -12555,6 +13179,19 @@ public final class MessagingStateOuterClass {
                 mutable_bitField0_ |= 0x00000001;
               }
               appIds_.add(s);
+              break;
+            }
+            case 74: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (providerSessionId_ != null) {
+                subBuilder = providerSessionId_.toBuilder();
+              }
+              providerSessionId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(providerSessionId_);
+                providerSessionId_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -12821,6 +13458,32 @@ public final class MessagingStateOuterClass {
       return appIds_.getByteString(index);
     }
 
+    public static final int PROVIDER_SESSION_ID_FIELD_NUMBER = 9;
+    private com.google.protobuf.StringValue providerSessionId_;
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return Whether the providerSessionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviderSessionId() {
+      return providerSessionId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return The providerSessionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getProviderSessionId() {
+      return providerSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerSessionId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getProviderSessionIdOrBuilder() {
+      return getProviderSessionId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -12858,6 +13521,9 @@ public final class MessagingStateOuterClass {
       }
       for (int i = 0; i < appIds_.size(); i++) {
         com.google.protobuf.GeneratedMessageV3.writeString(output, 8, appIds_.getRaw(i));
+      }
+      if (providerSessionId_ != null) {
+        output.writeMessage(9, getProviderSessionId());
       }
       unknownFields.writeTo(output);
     }
@@ -12902,6 +13568,10 @@ public final class MessagingStateOuterClass {
         }
         size += dataSize;
         size += 1 * getAppIdsList().size();
+      }
+      if (providerSessionId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(9, getProviderSessionId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -12952,6 +13622,11 @@ public final class MessagingStateOuterClass {
       }
       if (!getAppIdsList()
           .equals(other.getAppIdsList())) return false;
+      if (hasProviderSessionId() != other.hasProviderSessionId()) return false;
+      if (hasProviderSessionId()) {
+        if (!getProviderSessionId()
+            .equals(other.getProviderSessionId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -12992,6 +13667,10 @@ public final class MessagingStateOuterClass {
       if (getAppIdsCount() > 0) {
         hash = (37 * hash) + APP_IDS_FIELD_NUMBER;
         hash = (53 * hash) + getAppIdsList().hashCode();
+      }
+      if (hasProviderSessionId()) {
+        hash = (37 * hash) + PROVIDER_SESSION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProviderSessionId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -13166,6 +13845,12 @@ public final class MessagingStateOuterClass {
         }
         appIds_ = com.google.protobuf.LazyStringArrayList.EMPTY;
         bitField0_ = (bitField0_ & ~0x00000001);
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionId_ = null;
+        } else {
+          providerSessionId_ = null;
+          providerSessionIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -13229,6 +13914,11 @@ public final class MessagingStateOuterClass {
           bitField0_ = (bitField0_ & ~0x00000001);
         }
         result.appIds_ = appIds_;
+        if (providerSessionIdBuilder_ == null) {
+          result.providerSessionId_ = providerSessionId_;
+        } else {
+          result.providerSessionId_ = providerSessionIdBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -13308,6 +13998,9 @@ public final class MessagingStateOuterClass {
             appIds_.addAll(other.appIds_);
           }
           onChanged();
+        }
+        if (other.hasProviderSessionId()) {
+          mergeProviderSessionId(other.getProviderSessionId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -14237,6 +14930,125 @@ public final class MessagingStateOuterClass {
         appIds_.add(value);
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue providerSessionId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> providerSessionIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       * @return Whether the providerSessionId field is set.
+       */
+      public boolean hasProviderSessionId() {
+        return providerSessionIdBuilder_ != null || providerSessionId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       * @return The providerSessionId.
+       */
+      public com.google.protobuf.StringValue getProviderSessionId() {
+        if (providerSessionIdBuilder_ == null) {
+          return providerSessionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerSessionId_;
+        } else {
+          return providerSessionIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder setProviderSessionId(com.google.protobuf.StringValue value) {
+        if (providerSessionIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providerSessionId_ = value;
+          onChanged();
+        } else {
+          providerSessionIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder setProviderSessionId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionId_ = builderForValue.build();
+          onChanged();
+        } else {
+          providerSessionIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder mergeProviderSessionId(com.google.protobuf.StringValue value) {
+        if (providerSessionIdBuilder_ == null) {
+          if (providerSessionId_ != null) {
+            providerSessionId_ =
+              com.google.protobuf.StringValue.newBuilder(providerSessionId_).mergeFrom(value).buildPartial();
+          } else {
+            providerSessionId_ = value;
+          }
+          onChanged();
+        } else {
+          providerSessionIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public Builder clearProviderSessionId() {
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionId_ = null;
+          onChanged();
+        } else {
+          providerSessionId_ = null;
+          providerSessionIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getProviderSessionIdBuilder() {
+        
+        onChanged();
+        return getProviderSessionIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getProviderSessionIdOrBuilder() {
+        if (providerSessionIdBuilder_ != null) {
+          return providerSessionIdBuilder_.getMessageOrBuilder();
+        } else {
+          return providerSessionId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : providerSessionId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getProviderSessionIdFieldBuilder() {
+        if (providerSessionIdBuilder_ == null) {
+          providerSessionIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getProviderSessionId(),
+                  getParentForChildren(),
+                  isClean());
+          providerSessionId_ = null;
+        }
+        return providerSessionIdBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17072,7 +17884,7 @@ public final class MessagingStateOuterClass {
       "a.proto\032\036google/protobuf/duration.proto\032" +
       "\037google/protobuf/timestamp.proto\032\036google" +
       "/protobuf/wrappers.proto\032\022common_model.p" +
-      "roto\032\025messaging_model.proto\"\231\004\n\017Received" +
+      "roto\032\025messaging_model.proto\"\324\004\n\017Received" +
       "Message\022?\n\017customer_number\030\001 \001(\0132&.com.e" +
       "larian.hera.proto.CustomerNumber\022F\n\016chan" +
       "nel_number\030\002 \001(\0132..com.elarian.hera.prot" +
@@ -17086,80 +17898,86 @@ public final class MessagingStateOuterClass {
       "gle.protobuf.StringValue\0229\n\005parts\030\t \003(\0132" +
       "*.com.elarian.hera.proto.InboundMessageB" +
       "ody\022*\n\004cost\030\n \001(\0132\034.com.elarian.hera.pro" +
-      "to.Cash\"\304\005\n\013SentMessage\022?\n\017customer_numb" +
+      "to.Cash\0229\n\023provider_message_id\030\013 \001(\0132\034.g" +
+      "oogle.protobuf.StringValue\"\377\005\n\013SentMessa" +
+      "ge\022?\n\017customer_number\030\001 \001(\0132&.com.elaria" +
+      "n.hera.proto.CustomerNumber\022F\n\016channel_n" +
+      "umber\030\002 \001(\0132..com.elarian.hera.proto.Mes" +
+      "sagingChannelNumber\022\022\n\nmessage_id\030\003 \001(\t\022" +
+      ".\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.Ti" +
+      "mestamp\0220\n\nsession_id\030\005 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\0221\n\013in_reply_to\030\006 \001(\0132\034" +
+      ".google.protobuf.StringValue\022?\n\010provider" +
+      "\030\007 \001(\0162-.com.elarian.hera.proto.ChannelN" +
+      "umberProvider\022,\n\006app_id\030\010 \001(\0132\034.google.p" +
+      "rotobuf.StringValue\022.\n\nupdated_at\030\t \001(\0132" +
+      "\032.google.protobuf.Timestamp\022=\n\006status\030\n " +
+      "\001(\0162-.com.elarian.hera.proto.MessageDeli" +
+      "veryStatus\022?\n\treactions\030\013 \003(\0132,.com.elar" +
+      "ian.hera.proto.MessageReactionState\0228\n\007m" +
+      "essage\030\014 \001(\0132\'.com.elarian.hera.proto.Ou" +
+      "tboundMessage\022*\n\004cost\030\r \001(\0132\034.com.elaria" +
+      "n.hera.proto.Cash\0229\n\023provider_message_id" +
+      "\030\016 \001(\0132\034.google.protobuf.StringValue\"\201\001\n" +
+      "\024MessageReactionState\022.\n\ncreated_at\030\001 \001(" +
+      "\0132\032.google.protobuf.Timestamp\0229\n\010reactio" +
+      "n\030\002 \001(\0162\'.com.elarian.hera.proto.Message" +
+      "Reaction\"R\n\021MessageReplyToken\022\r\n\005token\030\001" +
+      " \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.google.protob" +
+      "uf.Timestamp\"\213\001\n\016ChannelMessage\022;\n\010recei" +
+      "ved\030\001 \001(\0132\'.com.elarian.hera.proto.Recei" +
+      "vedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com.elarian" +
+      ".hera.proto.SentMessageH\000B\007\n\005entry\"\323\003\n\030C" +
+      "ompleteMessagingSession\022?\n\017customer_numb" +
       "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom" +
       "erNumber\022F\n\016channel_number\030\002 \001(\0132..com.e" +
       "larian.hera.proto.MessagingChannelNumber" +
-      "\022\022\n\nmessage_id\030\003 \001(\t\022.\n\ncreated_at\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\0220\n\nsession_" +
-      "id\030\005 \001(\0132\034.google.protobuf.StringValue\0221" +
-      "\n\013in_reply_to\030\006 \001(\0132\034.google.protobuf.St" +
-      "ringValue\022?\n\010provider\030\007 \001(\0162-.com.elaria" +
-      "n.hera.proto.ChannelNumberProvider\022,\n\006ap" +
-      "p_id\030\010 \001(\0132\034.google.protobuf.StringValue" +
-      "\022.\n\nupdated_at\030\t \001(\0132\032.google.protobuf.T" +
-      "imestamp\022=\n\006status\030\n \001(\0162-.com.elarian.h" +
-      "era.proto.MessageDeliveryStatus\022?\n\treact" +
-      "ions\030\013 \003(\0132,.com.elarian.hera.proto.Mess" +
-      "ageReactionState\0228\n\007message\030\014 \001(\0132\'.com." +
-      "elarian.hera.proto.OutboundMessage\022*\n\004co" +
-      "st\030\r \001(\0132\034.com.elarian.hera.proto.Cash\"\201" +
-      "\001\n\024MessageReactionState\022.\n\ncreated_at\030\001 " +
-      "\001(\0132\032.google.protobuf.Timestamp\0229\n\010react" +
-      "ion\030\002 \001(\0162\'.com.elarian.hera.proto.Messa" +
-      "geReaction\"R\n\021MessageReplyToken\022\r\n\005token" +
-      "\030\001 \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\"\213\001\n\016ChannelMessage\022;\n\010rec" +
-      "eived\030\001 \001(\0132\'.com.elarian.hera.proto.Rec" +
-      "eivedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com.elari" +
-      "an.hera.proto.SentMessageH\000B\007\n\005entry\"\230\003\n" +
-      "\030CompleteMessagingSession\022?\n\017customer_nu" +
-      "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust" +
-      "omerNumber\022F\n\016channel_number\030\002 \001(\0132..com" +
-      ".elarian.hera.proto.MessagingChannelNumb" +
-      "er\022\022\n\nsession_id\030\003 \001(\t\022.\n\nstarted_at\030\004 \001" +
-      "(\0132\032.google.protobuf.Timestamp\022+\n\010durati" +
-      "on\030\005 \001(\0132\031.google.protobuf.Duration\022\017\n\007a" +
-      "pp_ids\030\006 \003(\t\022E\n\nend_reason\030\007 \001(\01621.com.e" +
-      "larian.hera.proto.MessagingSessionEndRea" +
-      "son\022*\n\004cost\030\010 \001(\0132\034.com.elarian.hera.pro" +
-      "to.Cash\"\227\002\n\034BlockedMessagingChannelState" +
-      "\022?\n\017customer_number\030\001 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumber\022F\n\016channel_num" +
-      "ber\030\002 \001(\0132..com.elarian.hera.proto.Messa" +
-      "gingChannelNumber\022>\n\013reply_token\030\003 \001(\0132)" +
-      ".com.elarian.hera.proto.MessageReplyToke" +
-      "n\022.\n\nblocked_at\030\004 \001(\0132\032.google.protobuf." +
-      "Timestamp\"\226\002\n\033ActiveMessagingChannelStat" +
-      "e\022?\n\017customer_number\030\001 \001(\0132&.com.elarian" +
-      ".hera.proto.CustomerNumber\022F\n\016channel_nu" +
-      "mber\030\002 \001(\0132..com.elarian.hera.proto.Mess" +
-      "agingChannelNumber\022>\n\013reply_token\030\003 \001(\0132" +
-      ").com.elarian.hera.proto.MessageReplyTok" +
-      "en\022.\n\nallowed_at\030\004 \001(\0132\032.google.protobuf" +
-      ".Timestamp\"\236\003\n\036InSessionMessagingChannel" +
-      "State\022?\n\017customer_number\030\001 \001(\0132&.com.ela" +
-      "rian.hera.proto.CustomerNumber\022F\n\016channe" +
-      "l_number\030\002 \001(\0132..com.elarian.hera.proto." +
-      "MessagingChannelNumber\022>\n\013reply_token\030\003 " +
-      "\001(\0132).com.elarian.hera.proto.MessageRepl" +
-      "yToken\022.\n\nallowed_at\030\004 \001(\0132\032.google.prot" +
-      "obuf.Timestamp\022\022\n\nsession_id\030\005 \001(\t\022.\n\nst" +
-      "arted_at\030\006 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022.\n\nexpires_at\030\007 \001(\0132\032.google.protobuf" +
-      ".Timestamp\022\017\n\007app_ids\030\010 \003(\t\"\376\001\n\025Messagin" +
-      "gChannelState\022G\n\007blocked\030\001 \001(\01324.com.ela" +
-      "rian.hera.proto.BlockedMessagingChannelS" +
-      "tateH\000\022E\n\006active\030\002 \001(\01323.com.elarian.her" +
-      "a.proto.ActiveMessagingChannelStateH\000\022L\n" +
-      "\nin_session\030\003 \001(\01326.com.elarian.hera.pro" +
-      "to.InSessionMessagingChannelStateH\000B\007\n\005s" +
-      "tate\"\317\001\n\016MessagingState\022?\n\010channels\030\001 \003(" +
-      "\0132-.com.elarian.hera.proto.MessagingChan" +
-      "nelState\0228\n\010messages\030\002 \003(\0132&.com.elarian" +
-      ".hera.proto.ChannelMessage\022B\n\010sessions\030\003" +
-      " \003(\01320.com.elarian.hera.proto.CompleteMe" +
-      "ssagingSessionb\006proto3"
+      "\022\022\n\nsession_id\030\003 \001(\t\022.\n\nstarted_at\030\004 \001(\013" +
+      "2\032.google.protobuf.Timestamp\022+\n\010duration" +
+      "\030\005 \001(\0132\031.google.protobuf.Duration\022\017\n\007app" +
+      "_ids\030\006 \003(\t\022E\n\nend_reason\030\007 \001(\01621.com.ela" +
+      "rian.hera.proto.MessagingSessionEndReaso" +
+      "n\022*\n\004cost\030\010 \001(\0132\034.com.elarian.hera.proto" +
+      ".Cash\0229\n\023provider_session_id\030\t \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\"\227\002\n\034BlockedMess" +
+      "agingChannelState\022?\n\017customer_number\030\001 \001" +
+      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
+      "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
+      ".hera.proto.MessagingChannelNumber\022>\n\013re" +
+      "ply_token\030\003 \001(\0132).com.elarian.hera.proto" +
+      ".MessageReplyToken\022.\n\nblocked_at\030\004 \001(\0132\032" +
+      ".google.protobuf.Timestamp\"\226\002\n\033ActiveMes" +
+      "sagingChannelState\022?\n\017customer_number\030\001 " +
+      "\001(\0132&.com.elarian.hera.proto.CustomerNum" +
+      "ber\022F\n\016channel_number\030\002 \001(\0132..com.elaria" +
+      "n.hera.proto.MessagingChannelNumber\022>\n\013r" +
+      "eply_token\030\003 \001(\0132).com.elarian.hera.prot" +
+      "o.MessageReplyToken\022.\n\nallowed_at\030\004 \001(\0132" +
+      "\032.google.protobuf.Timestamp\"\331\003\n\036InSessio" +
+      "nMessagingChannelState\022?\n\017customer_numbe" +
+      "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome" +
+      "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el" +
+      "arian.hera.proto.MessagingChannelNumber\022" +
+      ">\n\013reply_token\030\003 \001(\0132).com.elarian.hera." +
+      "proto.MessageReplyToken\022.\n\nallowed_at\030\004 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022\022\n\nsessi" +
+      "on_id\030\005 \001(\t\022.\n\nstarted_at\030\006 \001(\0132\032.google" +
+      ".protobuf.Timestamp\022.\n\nexpires_at\030\007 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022\017\n\007app_ids\030\010" +
+      " \003(\t\0229\n\023provider_session_id\030\t \001(\0132\034.goog" +
+      "le.protobuf.StringValue\"\376\001\n\025MessagingCha" +
+      "nnelState\022G\n\007blocked\030\001 \001(\01324.com.elarian" +
+      ".hera.proto.BlockedMessagingChannelState" +
+      "H\000\022E\n\006active\030\002 \001(\01323.com.elarian.hera.pr" +
+      "oto.ActiveMessagingChannelStateH\000\022L\n\nin_" +
+      "session\030\003 \001(\01326.com.elarian.hera.proto.I" +
+      "nSessionMessagingChannelStateH\000B\007\n\005state" +
+      "\"\317\001\n\016MessagingState\022?\n\010channels\030\001 \003(\0132-." +
+      "com.elarian.hera.proto.MessagingChannelS" +
+      "tate\0228\n\010messages\030\002 \003(\0132&.com.elarian.her" +
+      "a.proto.ChannelMessage\022B\n\010sessions\030\003 \003(\013" +
+      "20.com.elarian.hera.proto.CompleteMessag" +
+      "ingSessionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17175,13 +17993,13 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_ReceivedMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceivedMessage_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "Parts", "Cost", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "Parts", "Cost", "ProviderMessageId", });
     internal_static_com_elarian_hera_proto_SentMessage_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_elarian_hera_proto_SentMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SentMessage_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", "Cost", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", "Cost", "ProviderMessageId", });
     internal_static_com_elarian_hera_proto_MessageReactionState_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_MessageReactionState_fieldAccessorTable = new
@@ -17205,7 +18023,7 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_CompleteMessagingSession_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CompleteMessagingSession_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "SessionId", "StartedAt", "Duration", "AppIds", "EndReason", "Cost", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "SessionId", "StartedAt", "Duration", "AppIds", "EndReason", "Cost", "ProviderSessionId", });
     internal_static_com_elarian_hera_proto_BlockedMessagingChannelState_descriptor =
       getDescriptor().getMessageTypes().get(6);
     internal_static_com_elarian_hera_proto_BlockedMessagingChannelState_fieldAccessorTable = new
@@ -17223,7 +18041,7 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_InSessionMessagingChannelState_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InSessionMessagingChannelState_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "ReplyToken", "AllowedAt", "SessionId", "StartedAt", "ExpiresAt", "AppIds", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "ReplyToken", "AllowedAt", "SessionId", "StartedAt", "ExpiresAt", "AppIds", "ProviderSessionId", });
     internal_static_com_elarian_hera_proto_MessagingChannelState_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_elarian_hera_proto_MessagingChannelState_fieldAccessorTable = new

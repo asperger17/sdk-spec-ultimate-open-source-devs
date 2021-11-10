@@ -144,6 +144,7 @@ typedef GPB_ENUM(CustomerRequestOrigin) {
   CustomerRequestOrigin_CustomerRequestOriginUnspecified = 0,
   CustomerRequestOrigin_CustomerRequestOriginApiRequest = 1,
   CustomerRequestOrigin_CustomerRequestOriginCustomerTag = 2,
+  CustomerRequestOrigin_CustomerRequestOriginReplay = 3,
 };
 
 GPBEnumDescriptor *CustomerRequestOrigin_EnumDescriptor(void);

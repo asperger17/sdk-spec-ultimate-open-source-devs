@@ -245,11 +245,13 @@ GPBEnumDescriptor *CustomerRequestOrigin_EnumDescriptor(void) {
     static const char *valueNames =
         "CustomerRequestOriginUnspecified\000Custome"
         "rRequestOriginApiRequest\000CustomerRequest"
-        "OriginCustomerTag\000";
+        "OriginCustomerTag\000CustomerRequestOriginR"
+        "eplay\000";
     static const int32_t values[] = {
         CustomerRequestOrigin_CustomerRequestOriginUnspecified,
         CustomerRequestOrigin_CustomerRequestOriginApiRequest,
         CustomerRequestOrigin_CustomerRequestOriginCustomerTag,
+        CustomerRequestOrigin_CustomerRequestOriginReplay,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(CustomerRequestOrigin)
@@ -270,6 +272,7 @@ BOOL CustomerRequestOrigin_IsValidValue(int32_t value__) {
     case CustomerRequestOrigin_CustomerRequestOriginUnspecified:
     case CustomerRequestOrigin_CustomerRequestOriginApiRequest:
     case CustomerRequestOrigin_CustomerRequestOriginCustomerTag:
+    case CustomerRequestOrigin_CustomerRequestOriginReplay:
       return YES;
     default:
       return NO;

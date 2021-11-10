@@ -44,6 +44,12 @@ class AppToServerCommand extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\UpdateMessagingConsentCommand $update_messaging_consent
      *     @type \Com\Elarian\Hera\Proto\InitiatePaymentCommand $initiate_payment
      *     @type \Com\Elarian\Hera\Proto\CustomerActivityCommand $customer_activity
+     *     @type \Com\Elarian\Hera\Proto\ReplayMessagingConsentUpdateCommand $replay_messaging_consent_update
+     *     @type \Com\Elarian\Hera\Proto\ReplayReceivedMessageCommand $replay_received_message
+     *     @type \Com\Elarian\Hera\Proto\ReplaySentMessageCommand $replay_sent_message
+     *     @type \Com\Elarian\Hera\Proto\ReplayMessageStatusUpdateCommand $replay_message_status_update
+     *     @type \Com\Elarian\Hera\Proto\ReplayMessageReactionUpdateCommand $replay_message_reaction_update
+     *     @type \Com\Elarian\Hera\Proto\ReplayMessagingSessionCommand $replay_messaging_session
      * }
      */
     public function __construct($data = NULL) {
@@ -668,6 +674,168 @@ class AppToServerCommand extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\CustomerActivityCommand::class);
         $this->writeOneof(23, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand replay_messaging_consent_update = 24;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayMessagingConsentUpdateCommand
+     */
+    public function getReplayMessagingConsentUpdate()
+    {
+        return $this->readOneof(24);
+    }
+
+    public function hasReplayMessagingConsentUpdate()
+    {
+        return $this->hasOneof(24);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand replay_messaging_consent_update = 24;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayMessagingConsentUpdateCommand $var
+     * @return $this
+     */
+    public function setReplayMessagingConsentUpdate($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayMessagingConsentUpdateCommand::class);
+        $this->writeOneof(24, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayReceivedMessageCommand replay_received_message = 25;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayReceivedMessageCommand
+     */
+    public function getReplayReceivedMessage()
+    {
+        return $this->readOneof(25);
+    }
+
+    public function hasReplayReceivedMessage()
+    {
+        return $this->hasOneof(25);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayReceivedMessageCommand replay_received_message = 25;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayReceivedMessageCommand $var
+     * @return $this
+     */
+    public function setReplayReceivedMessage($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayReceivedMessageCommand::class);
+        $this->writeOneof(25, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplaySentMessageCommand replay_sent_message = 26;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplaySentMessageCommand
+     */
+    public function getReplaySentMessage()
+    {
+        return $this->readOneof(26);
+    }
+
+    public function hasReplaySentMessage()
+    {
+        return $this->hasOneof(26);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplaySentMessageCommand replay_sent_message = 26;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplaySentMessageCommand $var
+     * @return $this
+     */
+    public function setReplaySentMessage($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplaySentMessageCommand::class);
+        $this->writeOneof(26, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessageStatusUpdateCommand replay_message_status_update = 27;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayMessageStatusUpdateCommand
+     */
+    public function getReplayMessageStatusUpdate()
+    {
+        return $this->readOneof(27);
+    }
+
+    public function hasReplayMessageStatusUpdate()
+    {
+        return $this->hasOneof(27);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessageStatusUpdateCommand replay_message_status_update = 27;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayMessageStatusUpdateCommand $var
+     * @return $this
+     */
+    public function setReplayMessageStatusUpdate($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayMessageStatusUpdateCommand::class);
+        $this->writeOneof(27, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessageReactionUpdateCommand replay_message_reaction_update = 28;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayMessageReactionUpdateCommand
+     */
+    public function getReplayMessageReactionUpdate()
+    {
+        return $this->readOneof(28);
+    }
+
+    public function hasReplayMessageReactionUpdate()
+    {
+        return $this->hasOneof(28);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessageReactionUpdateCommand replay_message_reaction_update = 28;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayMessageReactionUpdateCommand $var
+     * @return $this
+     */
+    public function setReplayMessageReactionUpdate($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayMessageReactionUpdateCommand::class);
+        $this->writeOneof(28, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessagingSessionCommand replay_messaging_session = 29;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayMessagingSessionCommand
+     */
+    public function getReplayMessagingSession()
+    {
+        return $this->readOneof(29);
+    }
+
+    public function hasReplayMessagingSession()
+    {
+        return $this->hasOneof(29);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayMessagingSessionCommand replay_messaging_session = 29;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayMessagingSessionCommand $var
+     * @return $this
+     */
+    public function setReplayMessagingSession($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayMessagingSessionCommand::class);
+        $this->writeOneof(29, $var);
 
         return $this;
     }

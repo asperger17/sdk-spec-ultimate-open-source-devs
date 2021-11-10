@@ -83,6 +83,7 @@ static GPBFileDescriptor *MessagingStateRoot_FileDescriptor(void) {
 @dynamic hasAppId, appId;
 @dynamic partsArray, partsArray_Count;
 @dynamic hasCost, cost;
+@dynamic hasProviderMessageId, providerMessageId;
 
 typedef struct ReceivedMessage__storage_ {
   uint32_t _has_storage_[1];
@@ -96,6 +97,7 @@ typedef struct ReceivedMessage__storage_ {
   GPBStringValue *appId;
   NSMutableArray *partsArray;
   Cash *cost;
+  GPBStringValue *providerMessageId;
 } ReceivedMessage__storage_;
 
 // This method is threadsafe because it is initially called
@@ -194,6 +196,15 @@ typedef struct ReceivedMessage__storage_ {
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
+      {
+        .name = "providerMessageId",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = ReceivedMessage_FieldNumber_ProviderMessageId,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(ReceivedMessage__storage_, providerMessageId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
     };
     GPBDescriptor *localDescriptor =
         [GPBDescriptor allocDescriptorForClass:[ReceivedMessage class]
@@ -242,6 +253,7 @@ void SetReceivedMessage_Provider_RawValue(ReceivedMessage *message, int32_t valu
 @dynamic reactionsArray, reactionsArray_Count;
 @dynamic hasMessage, message;
 @dynamic hasCost, cost;
+@dynamic hasProviderMessageId, providerMessageId;
 
 typedef struct SentMessage__storage_ {
   uint32_t _has_storage_[1];
@@ -258,6 +270,7 @@ typedef struct SentMessage__storage_ {
   NSMutableArray *reactionsArray;
   OutboundMessage *message;
   Cash *cost;
+  GPBStringValue *providerMessageId;
 } SentMessage__storage_;
 
 // This method is threadsafe because it is initially called
@@ -380,6 +393,15 @@ typedef struct SentMessage__storage_ {
         .number = SentMessage_FieldNumber_Cost,
         .hasIndex = 11,
         .offset = (uint32_t)offsetof(SentMessage__storage_, cost),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "providerMessageId",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = SentMessage_FieldNumber_ProviderMessageId,
+        .hasIndex = 12,
+        .offset = (uint32_t)offsetof(SentMessage__storage_, providerMessageId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -630,6 +652,7 @@ void ChannelMessage_ClearEntryOneOfCase(ChannelMessage *message) {
 @dynamic appIdsArray, appIdsArray_Count;
 @dynamic endReason;
 @dynamic hasCost, cost;
+@dynamic hasProviderSessionId, providerSessionId;
 
 typedef struct CompleteMessagingSession__storage_ {
   uint32_t _has_storage_[1];
@@ -641,6 +664,7 @@ typedef struct CompleteMessagingSession__storage_ {
   GPBDuration *duration;
   NSMutableArray *appIdsArray;
   Cash *cost;
+  GPBStringValue *providerSessionId;
 } CompleteMessagingSession__storage_;
 
 // This method is threadsafe because it is initially called
@@ -718,6 +742,15 @@ typedef struct CompleteMessagingSession__storage_ {
         .number = CompleteMessagingSession_FieldNumber_Cost,
         .hasIndex = 6,
         .offset = (uint32_t)offsetof(CompleteMessagingSession__storage_, cost),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "providerSessionId",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = CompleteMessagingSession_FieldNumber_ProviderSessionId,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(CompleteMessagingSession__storage_, providerSessionId),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -920,6 +953,7 @@ typedef struct ActiveMessagingChannelState__storage_ {
 @dynamic hasStartedAt, startedAt;
 @dynamic hasExpiresAt, expiresAt;
 @dynamic appIdsArray, appIdsArray_Count;
+@dynamic hasProviderSessionId, providerSessionId;
 
 typedef struct InSessionMessagingChannelState__storage_ {
   uint32_t _has_storage_[1];
@@ -931,6 +965,7 @@ typedef struct InSessionMessagingChannelState__storage_ {
   GPBTimestamp *startedAt;
   GPBTimestamp *expiresAt;
   NSMutableArray *appIdsArray;
+  GPBStringValue *providerSessionId;
 } InSessionMessagingChannelState__storage_;
 
 // This method is threadsafe because it is initially called
@@ -1010,6 +1045,15 @@ typedef struct InSessionMessagingChannelState__storage_ {
         .offset = (uint32_t)offsetof(InSessionMessagingChannelState__storage_, appIdsArray),
         .flags = GPBFieldRepeated,
         .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "providerSessionId",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = InSessionMessagingChannelState_FieldNumber_ProviderSessionId,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(InSessionMessagingChannelState__storage_, providerSessionId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =

@@ -65,6 +65,10 @@ class SentMessage extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.com.elarian.hera.proto.Cash cost = 13;</code>
      */
     protected $cost = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     */
+    protected $provider_message_id = null;
 
     /**
      * Constructor.
@@ -85,6 +89,7 @@ class SentMessage extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\MessageReactionState[]|\Google\Protobuf\Internal\RepeatedField $reactions
      *     @type \Com\Elarian\Hera\Proto\OutboundMessage $message
      *     @type \Com\Elarian\Hera\Proto\Cash $cost
+     *     @type \Google\Protobuf\StringValue $provider_message_id
      * }
      */
     public function __construct($data = NULL) {
@@ -536,6 +541,61 @@ class SentMessage extends \Google\Protobuf\Internal\Message
 
         return $this;
     }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @return \Google\Protobuf\StringValue
+     */
+    public function getProviderMessageId()
+    {
+        return isset($this->provider_message_id) ? $this->provider_message_id : null;
+    }
+
+    public function hasProviderMessageId()
+    {
+        return isset($this->provider_message_id);
+    }
+
+    public function clearProviderMessageId()
+    {
+        unset($this->provider_message_id);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getProviderMessageId()</code>
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @return string|null
+     */
+    public function getProviderMessageIdUnwrapped()
+    {
+        return $this->readWrapperValue("provider_message_id");
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @param \Google\Protobuf\StringValue $var
+     * @return $this
+     */
+    public function setProviderMessageId($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        $this->provider_message_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\StringValue object.
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_message_id = 14;</code>
+     * @param string|null $var
+     * @return $this
+     */
+    public function setProviderMessageIdUnwrapped($var)
+    {
+        $this->writeWrapperValue("provider_message_id", $var);
+        return $this;}
 
 }
 

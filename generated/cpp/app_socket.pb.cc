@@ -63,6 +63,12 @@ extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::in
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_ReceivedMessageNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReceivedPaymentNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReminderNotification_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_ReplaySentMessageCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_ReplyToMessageCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_SendMessageCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_SendMessageReply_app_5fsocket_2eproto;
@@ -240,6 +246,30 @@ class CustomerActivityCommandDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CustomerActivityCommand> _instance;
 } _CustomerActivityCommand_default_instance_;
+class ReplayMessagingConsentUpdateCommandDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplayMessagingConsentUpdateCommand> _instance;
+} _ReplayMessagingConsentUpdateCommand_default_instance_;
+class ReplayReceivedMessageCommandDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplayReceivedMessageCommand> _instance;
+} _ReplayReceivedMessageCommand_default_instance_;
+class ReplaySentMessageCommandDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplaySentMessageCommand> _instance;
+} _ReplaySentMessageCommand_default_instance_;
+class ReplayMessageStatusUpdateCommandDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplayMessageStatusUpdateCommand> _instance;
+} _ReplayMessageStatusUpdateCommand_default_instance_;
+class ReplayMessageReactionUpdateCommandDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplayMessageReactionUpdateCommand> _instance;
+} _ReplayMessageReactionUpdateCommand_default_instance_;
+class ReplayMessagingSessionCommandDefaultTypeInternal {
+ public:
+  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<ReplayMessagingSessionCommand> _instance;
+} _ReplayMessagingSessionCommand_default_instance_;
 class CustomerActivityReplyDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CustomerActivityReply> _instance;
@@ -400,8 +430,8 @@ static void InitDefaultsscc_info_AppToServerCommand_app_5fsocket_2eproto() {
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<23> scc_info_AppToServerCommand_app_5fsocket_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 23, 0, InitDefaultsscc_info_AppToServerCommand_app_5fsocket_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<29> scc_info_AppToServerCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 29, 0, InitDefaultsscc_info_AppToServerCommand_app_5fsocket_2eproto}, {
       &scc_info_GenerateAuthTokenCommand_app_5fsocket_2eproto.base,
       &scc_info_CreateCustomerCommand_app_5fsocket_2eproto.base,
       &scc_info_GetCustomerStateCommand_app_5fsocket_2eproto.base,
@@ -424,7 +454,13 @@ static void InitDefaultsscc_info_AppToServerCommand_app_5fsocket_2eproto() {
       &scc_info_ReplyToMessageCommand_app_5fsocket_2eproto.base,
       &scc_info_UpdateMessagingConsentCommand_app_5fsocket_2eproto.base,
       &scc_info_InitiatePaymentCommand_app_5fsocket_2eproto.base,
-      &scc_info_CustomerActivityCommand_app_5fsocket_2eproto.base,}};
+      &scc_info_CustomerActivityCommand_app_5fsocket_2eproto.base,
+      &scc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto.base,
+      &scc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto.base,
+      &scc_info_ReplaySentMessageCommand_app_5fsocket_2eproto.base,
+      &scc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto.base,
+      &scc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto.base,
+      &scc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto.base,}};
 
 static void InitDefaultsscc_info_AppToServerCommandReply_app_5fsocket_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -878,6 +914,111 @@ static void InitDefaultsscc_info_ReminderNotification_app_5fsocket_2eproto() {
       &scc_info_CustomerIndex_common_5fmodel_2eproto.base,
       &scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
 
+static void InitDefaultsscc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::elarian::hera::proto::_ReplayMessageReactionUpdateCommand_default_instance_;
+    new (ptr) ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_CustomerNumber_common_5fmodel_2eproto.base,
+      &scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto.base,}};
+
+static void InitDefaultsscc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::elarian::hera::proto::_ReplayMessageStatusUpdateCommand_default_instance_;
+    new (ptr) ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 4, 0, InitDefaultsscc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto}, {
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_CustomerNumber_common_5fmodel_2eproto.base,
+      &scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto.base,
+      &scc_info_Cash_common_5fmodel_2eproto.base,}};
+
+static void InitDefaultsscc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::elarian::hera::proto::_ReplayMessagingConsentUpdateCommand_default_instance_;
+    new (ptr) ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 3, 0, InitDefaultsscc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto}, {
+      &scc_info_CustomerNumber_common_5fmodel_2eproto.base,
+      &scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto.base,
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,}};
+
+static void InitDefaultsscc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::elarian::hera::proto::_ReplayMessagingSessionCommand_default_instance_;
+    new (ptr) ::com::elarian::hera::proto::ReplayMessagingSessionCommand();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<5> scc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 5, 0, InitDefaultsscc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto}, {
+      &scc_info_CustomerNumber_common_5fmodel_2eproto.base,
+      &scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto.base,
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_Duration_google_2fprotobuf_2fduration_2eproto.base,
+      &scc_info_Cash_common_5fmodel_2eproto.base,}};
+
+static void InitDefaultsscc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::elarian::hera::proto::_ReplayReceivedMessageCommand_default_instance_;
+    new (ptr) ::com::elarian::hera::proto::ReplayReceivedMessageCommand();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 6, 0, InitDefaultsscc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto}, {
+      &scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_CustomerNumber_common_5fmodel_2eproto.base,
+      &scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto.base,
+      &scc_info_InboundMessageBody_messaging_5fmodel_2eproto.base,
+      &scc_info_Cash_common_5fmodel_2eproto.base,}};
+
+static void InitDefaultsscc_info_ReplaySentMessageCommand_app_5fsocket_2eproto() {
+  GOOGLE_PROTOBUF_VERIFY_VERSION;
+
+  {
+    void* ptr = &::com::elarian::hera::proto::_ReplaySentMessageCommand_default_instance_;
+    new (ptr) ::com::elarian::hera::proto::ReplaySentMessageCommand();
+    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
+  }
+}
+
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<6> scc_info_ReplaySentMessageCommand_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 6, 0, InitDefaultsscc_info_ReplaySentMessageCommand_app_5fsocket_2eproto}, {
+      &scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto.base,
+      &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
+      &scc_info_CustomerNumber_common_5fmodel_2eproto.base,
+      &scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto.base,
+      &scc_info_OutboundMessage_messaging_5fmodel_2eproto.base,
+      &scc_info_Cash_common_5fmodel_2eproto.base,}};
+
 static void InitDefaultsscc_info_ReplyToMessageCommand_app_5fsocket_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -1186,7 +1327,7 @@ static void InitDefaultsscc_info_WalletPaymentStatusNotification_app_5fsocket_2e
 ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto =
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto}, {}};
 
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fsocket_2eproto[56];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fsocket_2eproto[62];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_app_5fsocket_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_app_5fsocket_2eproto = nullptr;
 
@@ -1207,6 +1348,12 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   ~0u,  // no _extensions_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::AppToServerCommand, _oneof_case_[0]),
   ~0u,  // no _weak_field_map_
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
+  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
@@ -1554,6 +1701,77 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::CustomerActivityCommand, key_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::CustomerActivityCommand, properties_),
   ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand, customer_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand, channel_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand, updated_at_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand, update_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, provider_message_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, provider_session_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, received_at_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, customer_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, channel_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, parts_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, in_reply_to_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, provider_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayReceivedMessageCommand, cost_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, provider_message_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, provider_session_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, sent_at_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, customer_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, channel_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, provider_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, message_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, in_reply_to_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, status_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplaySentMessageCommand, cost_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, provider_message_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, updated_at_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, customer_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, channel_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, status_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand, cost_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand, provider_message_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand, updated_at_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand, customer_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand, channel_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand, reaction_),
+  ~0u,  // no _has_bits_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, _internal_metadata_),
+  ~0u,  // no _extensions_
+  ~0u,  // no _oneof_case_
+  ~0u,  // no _weak_field_map_
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, provider_session_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, customer_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, channel_number_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, started_at_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, duration_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, end_reason_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayMessagingSessionCommand, cost_),
+  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::CustomerActivityReply, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -1727,60 +1945,66 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::com::elarian::hera::proto::AppConnectionMetadata)},
   { 11, -1, sizeof(::com::elarian::hera::proto::AppToServerCommand)},
-  { 40, -1, sizeof(::com::elarian::hera::proto::AppToServerCommandReply)},
-  { 56, -1, sizeof(::com::elarian::hera::proto::GenerateAuthTokenCommand)},
-  { 61, -1, sizeof(::com::elarian::hera::proto::GenerateAuthTokenReply)},
-  { 68, -1, sizeof(::com::elarian::hera::proto::CreateCustomerCommand)},
-  { 74, -1, sizeof(::com::elarian::hera::proto::GetCustomerStateCommand)},
-  { 83, -1, sizeof(::com::elarian::hera::proto::GetCustomerStateReply)},
-  { 91, -1, sizeof(::com::elarian::hera::proto::CustomerStateReplyData)},
-  { 101, -1, sizeof(::com::elarian::hera::proto::AdoptCustomerStateCommand)},
-  { 111, -1, sizeof(::com::elarian::hera::proto::AddCustomerReminderCommand)},
-  { 121, -1, sizeof(::com::elarian::hera::proto::AddCustomerReminderTagCommand)},
-  { 128, -1, sizeof(::com::elarian::hera::proto::CancelCustomerReminderCommand)},
-  { 138, -1, sizeof(::com::elarian::hera::proto::CancelCustomerReminderTagCommand)},
-  { 145, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerTagCommand)},
-  { 155, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerTagCommand)},
-  { 165, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerSecondaryIdCommand)},
-  { 175, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerSecondaryIdCommand)},
-  { 185, 192, sizeof(::com::elarian::hera::proto::UpdateCustomerMetadataCommand_UpdatesEntry_DoNotUse)},
-  { 194, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerMetadataCommand)},
-  { 204, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerMetadataCommand)},
-  { 214, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerStateReply)},
-  { 222, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerAppDataCommand)},
-  { 232, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerAppDataCommand)},
-  { 241, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerAppDataReply)},
-  { 249, -1, sizeof(::com::elarian::hera::proto::LeaseCustomerAppDataCommand)},
-  { 258, -1, sizeof(::com::elarian::hera::proto::LeaseCustomerAppDataReply)},
-  { 267, -1, sizeof(::com::elarian::hera::proto::SendMessageCommand)},
-  { 275, -1, sizeof(::com::elarian::hera::proto::ReplyToMessageCommand)},
-  { 283, -1, sizeof(::com::elarian::hera::proto::SendMessageTagCommand)},
-  { 291, -1, sizeof(::com::elarian::hera::proto::SendMessageReply)},
-  { 301, -1, sizeof(::com::elarian::hera::proto::UpdateMessagingConsentCommand)},
-  { 309, -1, sizeof(::com::elarian::hera::proto::UpdateMessagingConsentReply)},
-  { 317, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentCommand)},
-  { 325, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentReply)},
-  { 335, -1, sizeof(::com::elarian::hera::proto::TagCommandReply)},
-  { 343, 350, sizeof(::com::elarian::hera::proto::CustomerActivityCommand_PropertiesEntry_DoNotUse)},
-  { 352, -1, sizeof(::com::elarian::hera::proto::CustomerActivityCommand)},
-  { 362, -1, sizeof(::com::elarian::hera::proto::CustomerActivityReply)},
-  { 370, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotification)},
-  { 378, -1, sizeof(::com::elarian::hera::proto::ServerToAppCustomerNotification)},
-  { 401, -1, sizeof(::com::elarian::hera::proto::ServerToAppPurseNotification)},
-  { 412, -1, sizeof(::com::elarian::hera::proto::AppDataUpdate)},
-  { 418, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotificationReply)},
-  { 425, -1, sizeof(::com::elarian::hera::proto::ReminderNotification)},
-  { 433, -1, sizeof(::com::elarian::hera::proto::MessagingSessionStartedNotification)},
-  { 442, -1, sizeof(::com::elarian::hera::proto::MessagingSessionRenewedNotification)},
-  { 451, -1, sizeof(::com::elarian::hera::proto::MessagingSessionEndedNotification)},
-  { 461, -1, sizeof(::com::elarian::hera::proto::MessagingConsentUpdateNotification)},
-  { 470, -1, sizeof(::com::elarian::hera::proto::ReceivedMessageNotification)},
-  { 481, -1, sizeof(::com::elarian::hera::proto::MessageStatusNotification)},
-  { 488, -1, sizeof(::com::elarian::hera::proto::SentMessageReactionNotification)},
-  { 497, -1, sizeof(::com::elarian::hera::proto::ReceivedPaymentNotification)},
-  { 508, -1, sizeof(::com::elarian::hera::proto::PaymentStatusNotification)},
-  { 515, -1, sizeof(::com::elarian::hera::proto::WalletPaymentStatusNotification)},
-  { 523, -1, sizeof(::com::elarian::hera::proto::CustomerActivityNotification)},
+  { 46, -1, sizeof(::com::elarian::hera::proto::AppToServerCommandReply)},
+  { 62, -1, sizeof(::com::elarian::hera::proto::GenerateAuthTokenCommand)},
+  { 67, -1, sizeof(::com::elarian::hera::proto::GenerateAuthTokenReply)},
+  { 74, -1, sizeof(::com::elarian::hera::proto::CreateCustomerCommand)},
+  { 80, -1, sizeof(::com::elarian::hera::proto::GetCustomerStateCommand)},
+  { 89, -1, sizeof(::com::elarian::hera::proto::GetCustomerStateReply)},
+  { 97, -1, sizeof(::com::elarian::hera::proto::CustomerStateReplyData)},
+  { 107, -1, sizeof(::com::elarian::hera::proto::AdoptCustomerStateCommand)},
+  { 117, -1, sizeof(::com::elarian::hera::proto::AddCustomerReminderCommand)},
+  { 127, -1, sizeof(::com::elarian::hera::proto::AddCustomerReminderTagCommand)},
+  { 134, -1, sizeof(::com::elarian::hera::proto::CancelCustomerReminderCommand)},
+  { 144, -1, sizeof(::com::elarian::hera::proto::CancelCustomerReminderTagCommand)},
+  { 151, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerTagCommand)},
+  { 161, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerTagCommand)},
+  { 171, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerSecondaryIdCommand)},
+  { 181, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerSecondaryIdCommand)},
+  { 191, 198, sizeof(::com::elarian::hera::proto::UpdateCustomerMetadataCommand_UpdatesEntry_DoNotUse)},
+  { 200, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerMetadataCommand)},
+  { 210, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerMetadataCommand)},
+  { 220, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerStateReply)},
+  { 228, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerAppDataCommand)},
+  { 238, -1, sizeof(::com::elarian::hera::proto::DeleteCustomerAppDataCommand)},
+  { 247, -1, sizeof(::com::elarian::hera::proto::UpdateCustomerAppDataReply)},
+  { 255, -1, sizeof(::com::elarian::hera::proto::LeaseCustomerAppDataCommand)},
+  { 264, -1, sizeof(::com::elarian::hera::proto::LeaseCustomerAppDataReply)},
+  { 273, -1, sizeof(::com::elarian::hera::proto::SendMessageCommand)},
+  { 281, -1, sizeof(::com::elarian::hera::proto::ReplyToMessageCommand)},
+  { 289, -1, sizeof(::com::elarian::hera::proto::SendMessageTagCommand)},
+  { 297, -1, sizeof(::com::elarian::hera::proto::SendMessageReply)},
+  { 307, -1, sizeof(::com::elarian::hera::proto::UpdateMessagingConsentCommand)},
+  { 315, -1, sizeof(::com::elarian::hera::proto::UpdateMessagingConsentReply)},
+  { 323, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentCommand)},
+  { 331, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentReply)},
+  { 341, -1, sizeof(::com::elarian::hera::proto::TagCommandReply)},
+  { 349, 356, sizeof(::com::elarian::hera::proto::CustomerActivityCommand_PropertiesEntry_DoNotUse)},
+  { 358, -1, sizeof(::com::elarian::hera::proto::CustomerActivityCommand)},
+  { 368, -1, sizeof(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand)},
+  { 377, -1, sizeof(::com::elarian::hera::proto::ReplayReceivedMessageCommand)},
+  { 391, -1, sizeof(::com::elarian::hera::proto::ReplaySentMessageCommand)},
+  { 406, -1, sizeof(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand)},
+  { 417, -1, sizeof(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand)},
+  { 427, -1, sizeof(::com::elarian::hera::proto::ReplayMessagingSessionCommand)},
+  { 439, -1, sizeof(::com::elarian::hera::proto::CustomerActivityReply)},
+  { 447, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotification)},
+  { 455, -1, sizeof(::com::elarian::hera::proto::ServerToAppCustomerNotification)},
+  { 478, -1, sizeof(::com::elarian::hera::proto::ServerToAppPurseNotification)},
+  { 489, -1, sizeof(::com::elarian::hera::proto::AppDataUpdate)},
+  { 495, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotificationReply)},
+  { 502, -1, sizeof(::com::elarian::hera::proto::ReminderNotification)},
+  { 510, -1, sizeof(::com::elarian::hera::proto::MessagingSessionStartedNotification)},
+  { 519, -1, sizeof(::com::elarian::hera::proto::MessagingSessionRenewedNotification)},
+  { 528, -1, sizeof(::com::elarian::hera::proto::MessagingSessionEndedNotification)},
+  { 538, -1, sizeof(::com::elarian::hera::proto::MessagingConsentUpdateNotification)},
+  { 547, -1, sizeof(::com::elarian::hera::proto::ReceivedMessageNotification)},
+  { 558, -1, sizeof(::com::elarian::hera::proto::MessageStatusNotification)},
+  { 565, -1, sizeof(::com::elarian::hera::proto::SentMessageReactionNotification)},
+  { 574, -1, sizeof(::com::elarian::hera::proto::ReceivedPaymentNotification)},
+  { 585, -1, sizeof(::com::elarian::hera::proto::PaymentStatusNotification)},
+  { 592, -1, sizeof(::com::elarian::hera::proto::WalletPaymentStatusNotification)},
+  { 600, -1, sizeof(::com::elarian::hera::proto::CustomerActivityNotification)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -1822,6 +2046,12 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_TagCommandReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_CustomerActivityCommand_PropertiesEntry_DoNotUse_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_CustomerActivityCommand_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReplayMessagingConsentUpdateCommand_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReplayReceivedMessageCommand_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReplaySentMessageCommand_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReplayMessageStatusUpdateCommand_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReplayMessageReactionUpdateCommand_default_instance_),
+  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReplayMessagingSessionCommand_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_CustomerActivityReply_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ServerToAppNotification_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ServerToAppCustomerNotification_default_instance_),
@@ -1856,7 +2086,7 @@ const char descriptor_table_protodef_app_5fsocket_2eproto[] PROTOBUF_SECTION_VAR
   "\003 \001(\0132\034.google.protobuf.StringValue\0220\n\na"
   "uth_token\030\004 \001(\0132\034.google.protobuf.String"
   "Value\022\024\n\014simplex_mode\030\005 \001(\010\022\026\n\016simulator"
-  "_mode\030\006 \001(\010\"\277\017\n\022AppToServerCommand\022O\n\023ge"
+  "_mode\030\006 \001(\010\"\364\023\n\022AppToServerCommand\022O\n\023ge"
   "nerate_auth_token\030\001 \001(\01320.com.elarian.he"
   "ra.proto.GenerateAuthTokenCommandH\000\022H\n\017c"
   "reate_customer\030\002 \001(\0132-.com.elarian.hera."
@@ -1905,307 +2135,383 @@ const char descriptor_table_protodef_app_5fsocket_2eproto[] PROTOBUF_SECTION_VAR
   "itiate_payment\030\026 \001(\0132..com.elarian.hera."
   "proto.InitiatePaymentCommandH\000\022L\n\021custom"
   "er_activity\030\027 \001(\0132/.com.elarian.hera.pro"
-  "to.CustomerActivityCommandH\000B\007\n\005entry\"\260\006"
-  "\n\027AppToServerCommandReply\022M\n\023generate_au"
-  "th_token\030\001 \001(\0132..com.elarian.hera.proto."
-  "GenerateAuthTokenReplyH\000\022K\n\022get_customer"
-  "_state\030\002 \001(\0132-.com.elarian.hera.proto.Ge"
-  "tCustomerStateReplyH\000\022Q\n\025update_customer"
-  "_state\030\003 \001(\01320.com.elarian.hera.proto.Up"
-  "dateCustomerStateReplyH\000\022V\n\030update_custo"
-  "mer_app_data\030\004 \001(\01322.com.elarian.hera.pr"
-  "oto.UpdateCustomerAppDataReplyH\000\022T\n\027leas"
-  "e_customer_app_data\030\005 \001(\01321.com.elarian."
-  "hera.proto.LeaseCustomerAppDataReplyH\000\022@"
-  "\n\014send_message\030\006 \001(\0132(.com.elarian.hera."
-  "proto.SendMessageReplyH\000\022W\n\030update_messa"
-  "ging_consent\030\007 \001(\01323.com.elarian.hera.pr"
-  "oto.UpdateMessagingConsentReplyH\000\022H\n\020ini"
-  "tiate_payment\030\010 \001(\0132,.com.elarian.hera.p"
-  "roto.InitiatePaymentReplyH\000\022>\n\013tag_comma"
-  "nd\030\t \001(\0132\'.com.elarian.hera.proto.TagCom"
-  "mandReplyH\000\022J\n\021customer_activity\030\n \001(\0132-"
-  ".com.elarian.hera.proto.CustomerActivity"
-  "ReplyH\000B\007\n\005entry\"\032\n\030GenerateAuthTokenCom"
-  "mand\"T\n\026GenerateAuthTokenReply\022\r\n\005token\030"
-  "\001 \001(\t\022+\n\010lifetime\030\002 \001(\0132\031.google.protobu"
-  "f.Duration\"X\n\025CreateCustomerCommand\022\?\n\017c"
-  "ustomer_number\030\001 \001(\0132&.com.elarian.hera."
-  "proto.CustomerNumber\"\275\001\n\027GetCustomerStat"
-  "eCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017custo"
-  "mer_number\030\002 \001(\0132&.com.elarian.hera.prot"
-  "o.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\013"
-  "2$.com.elarian.hera.proto.IndexMappingH\000"
-  "B\n\n\010customer\"z\n\025GetCustomerStateReply\022\016\n"
-  "\006status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022<\n\004da"
-  "ta\030\003 \001(\0132..com.elarian.hera.proto.Custom"
-  "erStateReplyData\"\251\002\n\026CustomerStateReplyD"
-  "ata\022\023\n\013customer_id\030\001 \001(\t\022=\n\016identity_sta"
-  "te\030\002 \001(\0132%.com.elarian.hera.proto.Identi"
-  "tyState\022\?\n\017messaging_state\030\003 \001(\0132&.com.e"
-  "larian.hera.proto.MessagingState\022;\n\rpaym"
-  "ent_state\030\004 \001(\0132$.com.elarian.hera.proto"
-  ".PaymentState\022=\n\016activity_state\030\005 \001(\0132%."
-  "com.elarian.hera.proto.ActivityState\"\354\001\n"
-  "\031AdoptCustomerStateCommand\022\023\n\013customer_i"
-  "d\030\001 \001(\t\022\033\n\021other_customer_id\030\002 \001(\tH\000\022G\n\025"
-  "other_customer_number\030\003 \001(\0132&.com.elaria"
-  "n.hera.proto.CustomerNumberH\000\022B\n\022other_s"
-  "econdary_id\030\004 \001(\0132$.com.elarian.hera.pro"
-  "to.IndexMappingH\000B\020\n\016other_customer\"\374\001\n\032"
-  "AddCustomerReminderCommand\022\025\n\013customer_i"
-  "d\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com"
-  ".elarian.hera.proto.CustomerNumberH\000\022<\n\014"
-  "secondary_id\030\003 \001(\0132$.com.elarian.hera.pr"
-  "oto.IndexMappingH\000\022:\n\010reminder\030\004 \001(\0132(.c"
-  "om.elarian.hera.proto.CustomerReminderB\n"
-  "\n\010customer\"\216\001\n\035AddCustomerReminderTagCom"
-  "mand\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera.pro"
-  "to.IndexMapping\022:\n\010reminder\030\002 \001(\0132(.com."
-  "elarian.hera.proto.CustomerReminder\"\320\001\n\035"
-  "CancelCustomerReminderCommand\022\025\n\013custome"
+  "to.CustomerActivityCommandH\000\022f\n\037replay_m"
+  "essaging_consent_update\030\030 \001(\0132;.com.elar"
+  "ian.hera.proto.ReplayMessagingConsentUpd"
+  "ateCommandH\000\022W\n\027replay_received_message\030"
+  "\031 \001(\01324.com.elarian.hera.proto.ReplayRec"
+  "eivedMessageCommandH\000\022O\n\023replay_sent_mes"
+  "sage\030\032 \001(\01320.com.elarian.hera.proto.Repl"
+  "aySentMessageCommandH\000\022`\n\034replay_message"
+  "_status_update\030\033 \001(\01328.com.elarian.hera."
+  "proto.ReplayMessageStatusUpdateCommandH\000"
+  "\022d\n\036replay_message_reaction_update\030\034 \001(\013"
+  "2:.com.elarian.hera.proto.ReplayMessageR"
+  "eactionUpdateCommandH\000\022Y\n\030replay_messagi"
+  "ng_session\030\035 \001(\01325.com.elarian.hera.prot"
+  "o.ReplayMessagingSessionCommandH\000B\007\n\005ent"
+  "ry\"\260\006\n\027AppToServerCommandReply\022M\n\023genera"
+  "te_auth_token\030\001 \001(\0132..com.elarian.hera.p"
+  "roto.GenerateAuthTokenReplyH\000\022K\n\022get_cus"
+  "tomer_state\030\002 \001(\0132-.com.elarian.hera.pro"
+  "to.GetCustomerStateReplyH\000\022Q\n\025update_cus"
+  "tomer_state\030\003 \001(\01320.com.elarian.hera.pro"
+  "to.UpdateCustomerStateReplyH\000\022V\n\030update_"
+  "customer_app_data\030\004 \001(\01322.com.elarian.he"
+  "ra.proto.UpdateCustomerAppDataReplyH\000\022T\n"
+  "\027lease_customer_app_data\030\005 \001(\01321.com.ela"
+  "rian.hera.proto.LeaseCustomerAppDataRepl"
+  "yH\000\022@\n\014send_message\030\006 \001(\0132(.com.elarian."
+  "hera.proto.SendMessageReplyH\000\022W\n\030update_"
+  "messaging_consent\030\007 \001(\01323.com.elarian.he"
+  "ra.proto.UpdateMessagingConsentReplyH\000\022H"
+  "\n\020initiate_payment\030\010 \001(\0132,.com.elarian.h"
+  "era.proto.InitiatePaymentReplyH\000\022>\n\013tag_"
+  "command\030\t \001(\0132\'.com.elarian.hera.proto.T"
+  "agCommandReplyH\000\022J\n\021customer_activity\030\n "
+  "\001(\0132-.com.elarian.hera.proto.CustomerAct"
+  "ivityReplyH\000B\007\n\005entry\"\032\n\030GenerateAuthTok"
+  "enCommand\"T\n\026GenerateAuthTokenReply\022\r\n\005t"
+  "oken\030\001 \001(\t\022+\n\010lifetime\030\002 \001(\0132\031.google.pr"
+  "otobuf.Duration\"X\n\025CreateCustomerCommand"
+  "\022\?\n\017customer_number\030\001 \001(\0132&.com.elarian."
+  "hera.proto.CustomerNumber\"\275\001\n\027GetCustome"
+  "rStateCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017"
+  "customer_number\030\002 \001(\0132&.com.elarian.hera"
+  ".proto.CustomerNumberH\000\022<\n\014secondary_id\030"
+  "\003 \001(\0132$.com.elarian.hera.proto.IndexMapp"
+  "ingH\000B\n\n\010customer\"z\n\025GetCustomerStateRep"
+  "ly\022\016\n\006status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022"
+  "<\n\004data\030\003 \001(\0132..com.elarian.hera.proto.C"
+  "ustomerStateReplyData\"\251\002\n\026CustomerStateR"
+  "eplyData\022\023\n\013customer_id\030\001 \001(\t\022=\n\016identit"
+  "y_state\030\002 \001(\0132%.com.elarian.hera.proto.I"
+  "dentityState\022\?\n\017messaging_state\030\003 \001(\0132&."
+  "com.elarian.hera.proto.MessagingState\022;\n"
+  "\rpayment_state\030\004 \001(\0132$.com.elarian.hera."
+  "proto.PaymentState\022=\n\016activity_state\030\005 \001"
+  "(\0132%.com.elarian.hera.proto.ActivityStat"
+  "e\"\354\001\n\031AdoptCustomerStateCommand\022\023\n\013custo"
+  "mer_id\030\001 \001(\t\022\033\n\021other_customer_id\030\002 \001(\tH"
+  "\000\022G\n\025other_customer_number\030\003 \001(\0132&.com.e"
+  "larian.hera.proto.CustomerNumberH\000\022B\n\022ot"
+  "her_secondary_id\030\004 \001(\0132$.com.elarian.her"
+  "a.proto.IndexMappingH\000B\020\n\016other_customer"
+  "\"\374\001\n\032AddCustomerReminderCommand\022\025\n\013custo"
+  "mer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132"
+  "&.com.elarian.hera.proto.CustomerNumberH"
+  "\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian.he"
+  "ra.proto.IndexMappingH\000\022:\n\010reminder\030\004 \001("
+  "\0132(.com.elarian.hera.proto.CustomerRemin"
+  "derB\n\n\010customer\"\216\001\n\035AddCustomerReminderT"
+  "agCommand\0221\n\003tag\030\001 \001(\0132$.com.elarian.her"
+  "a.proto.IndexMapping\022:\n\010reminder\030\002 \001(\0132("
+  ".com.elarian.hera.proto.CustomerReminder"
+  "\"\320\001\n\035CancelCustomerReminderCommand\022\025\n\013cu"
+  "stomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001"
+  "(\0132&.com.elarian.hera.proto.CustomerNumb"
+  "erH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian"
+  ".hera.proto.IndexMappingH\000\022\013\n\003key\030\004 \001(\tB"
+  "\n\n\010customer\"b\n CancelCustomerReminderTag"
+  "Command\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera."
+  "proto.IndexMapping\022\013\n\003key\030\002 \001(\t\"\366\001\n\030Upda"
+  "teCustomerTagCommand\022\025\n\013customer_id\030\001 \001("
+  "\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elari"
+  "an.hera.proto.CustomerNumberH\000\022<\n\014second"
+  "ary_id\030\003 \001(\0132$.com.elarian.hera.proto.In"
+  "dexMappingH\000\0226\n\007updates\030\004 \003(\0132%.com.elar"
+  "ian.hera.proto.CustomerIndexB\n\n\010customer"
+  "\"\321\001\n\030DeleteCustomerTagCommand\022\025\n\013custome"
   "r_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&."
   "com.elarian.hera.proto.CustomerNumberH\000\022"
   "<\n\014secondary_id\030\003 \001(\0132$.com.elarian.hera"
-  ".proto.IndexMappingH\000\022\013\n\003key\030\004 \001(\tB\n\n\010cu"
-  "stomer\"b\n CancelCustomerReminderTagComma"
-  "nd\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera.proto"
-  ".IndexMapping\022\013\n\003key\030\002 \001(\t\"\366\001\n\030UpdateCus"
-  "tomerTagCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A"
-  "\n\017customer_number\030\002 \001(\0132&.com.elarian.he"
-  "ra.proto.CustomerNumberH\000\022<\n\014secondary_i"
-  "d\030\003 \001(\0132$.com.elarian.hera.proto.IndexMa"
-  "ppingH\000\0226\n\007updates\030\004 \003(\0132%.com.elarian.h"
-  "era.proto.CustomerIndexB\n\n\010customer\"\321\001\n\030"
-  "DeleteCustomerTagCommand\022\025\n\013customer_id\030"
-  "\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.e"
-  "larian.hera.proto.CustomerNumberH\000\022<\n\014se"
-  "condary_id\030\003 \001(\0132$.com.elarian.hera.prot"
-  "o.IndexMappingH\000\022\021\n\tdeletions\030\004 \003(\tB\n\n\010c"
-  "ustomer\"\376\001\n UpdateCustomerSecondaryIdCom"
-  "mand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_"
-  "number\030\002 \001(\0132&.com.elarian.hera.proto.Cu"
-  "stomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.c"
-  "om.elarian.hera.proto.IndexMappingH\000\0226\n\007"
-  "updates\030\004 \003(\0132%.com.elarian.hera.proto.C"
-  "ustomerIndexB\n\n\010customer\"\377\001\n DeleteCusto"
-  "merSecondaryIdCommand\022\025\n\013customer_id\030\001 \001"
-  "(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.elar"
-  "ian.hera.proto.CustomerNumberH\000\022<\n\014secon"
-  "dary_id\030\003 \001(\0132$.com.elarian.hera.proto.I"
-  "ndexMappingH\000\0227\n\tdeletions\030\004 \003(\0132$.com.e"
-  "larian.hera.proto.IndexMappingB\n\n\010custom"
-  "er\"\356\002\n\035UpdateCustomerMetadataCommand\022\025\n\013"
-  "customer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002"
-  " \001(\0132&.com.elarian.hera.proto.CustomerNu"
-  "mberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elari"
-  "an.hera.proto.IndexMappingH\000\022S\n\007updates\030"
-  "\004 \003(\0132B.com.elarian.hera.proto.UpdateCus"
-  "tomerMetadataCommand.UpdatesEntry\032T\n\014Upd"
-  "atesEntry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030\002 \001(\0132$."
-  "com.elarian.hera.proto.DataMapValue:\0028\001B"
-  "\n\n\010customer\"\326\001\n\035DeleteCustomerMetadataCo"
-  "mmand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer"
-  "_number\030\002 \001(\0132&.com.elarian.hera.proto.C"
-  "ustomerNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$."
-  "com.elarian.hera.proto.IndexMappingH\000\022\021\n"
-  "\tdeletions\030\004 \003(\tB\n\n\010customer\"r\n\030UpdateCu"
-  "stomerStateReply\022\016\n\006status\030\001 \001(\010\022\023\n\013desc"
-  "ription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goo"
-  "gle.protobuf.StringValue\"\370\001\n\034UpdateCusto"
-  "merAppDataCommand\022\025\n\013customer_id\030\001 \001(\tH\000"
-  "\022A\n\017customer_number\030\002 \001(\0132&.com.elarian."
-  "hera.proto.CustomerNumberH\000\022<\n\014secondary"
-  "_id\030\003 \001(\0132$.com.elarian.hera.proto.Index"
-  "MappingH\000\0224\n\006update\030\004 \001(\0132$.com.elarian."
-  "hera.proto.DataMapValueB\n\n\010customer\"\302\001\n\034"
-  "DeleteCustomerAppDataCommand\022\025\n\013customer"
-  "_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.c"
-  "om.elarian.hera.proto.CustomerNumberH\000\022<"
-  "\n\014secondary_id\030\003 \001(\0132$.com.elarian.hera."
-  "proto.IndexMappingH\000B\n\n\010customer\"t\n\032Upda"
-  "teCustomerAppDataReply\022\016\n\006status\030\001 \001(\010\022\023"
-  "\n\013description\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\013"
-  "2\034.google.protobuf.StringValue\"\301\001\n\033Lease"
+  ".proto.IndexMappingH\000\022\021\n\tdeletions\030\004 \003(\t"
+  "B\n\n\010customer\"\376\001\n UpdateCustomerSecondary"
+  "IdCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017cust"
+  "omer_number\030\002 \001(\0132&.com.elarian.hera.pro"
+  "to.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001("
+  "\0132$.com.elarian.hera.proto.IndexMappingH"
+  "\000\0226\n\007updates\030\004 \003(\0132%.com.elarian.hera.pr"
+  "oto.CustomerIndexB\n\n\010customer\"\377\001\n Delete"
+  "CustomerSecondaryIdCommand\022\025\n\013customer_i"
+  "d\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com"
+  ".elarian.hera.proto.CustomerNumberH\000\022<\n\014"
+  "secondary_id\030\003 \001(\0132$.com.elarian.hera.pr"
+  "oto.IndexMappingH\000\0227\n\tdeletions\030\004 \003(\0132$."
+  "com.elarian.hera.proto.IndexMappingB\n\n\010c"
+  "ustomer\"\356\002\n\035UpdateCustomerMetadataComman"
+  "d\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017customer_num"
+  "ber\030\002 \001(\0132&.com.elarian.hera.proto.Custo"
+  "merNumberH\000\022<\n\014secondary_id\030\003 \001(\0132$.com."
+  "elarian.hera.proto.IndexMappingH\000\022S\n\007upd"
+  "ates\030\004 \003(\0132B.com.elarian.hera.proto.Upda"
+  "teCustomerMetadataCommand.UpdatesEntry\032T"
+  "\n\014UpdatesEntry\022\013\n\003key\030\001 \001(\t\0223\n\005value\030\002 \001"
+  "(\0132$.com.elarian.hera.proto.DataMapValue"
+  ":\0028\001B\n\n\010customer\"\326\001\n\035DeleteCustomerMetad"
+  "ataCommand\022\025\n\013customer_id\030\001 \001(\tH\000\022A\n\017cus"
+  "tomer_number\030\002 \001(\0132&.com.elarian.hera.pr"
+  "oto.CustomerNumberH\000\022<\n\014secondary_id\030\003 \001"
+  "(\0132$.com.elarian.hera.proto.IndexMapping"
+  "H\000\022\021\n\tdeletions\030\004 \003(\tB\n\n\010customer\"r\n\030Upd"
+  "ateCustomerStateReply\022\016\n\006status\030\001 \001(\010\022\023\n"
+  "\013description\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132"
+  "\034.google.protobuf.StringValue\"\370\001\n\034Update"
   "CustomerAppDataCommand\022\025\n\013customer_id\030\001 "
   "\001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.com.ela"
   "rian.hera.proto.CustomerNumberH\000\022<\n\014seco"
   "ndary_id\030\003 \001(\0132$.com.elarian.hera.proto."
-  "IndexMappingH\000B\n\n\010customer\"\250\001\n\031LeaseCust"
-  "omerAppDataReply\022\016\n\006status\030\001 \001(\010\022\023\n\013desc"
-  "ription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goo"
-  "gle.protobuf.StringValue\0223\n\005value\030\004 \001(\0132"
-  "$.com.elarian.hera.proto.DataMapValue\"\327\001"
-  "\n\022SendMessageCommand\022\?\n\017customer_number\030"
-  "\001 \001(\0132&.com.elarian.hera.proto.CustomerN"
-  "umber\022F\n\016channel_number\030\002 \001(\0132..com.elar"
-  "ian.hera.proto.MessagingChannelNumber\0228\n"
-  "\007message\030\003 \001(\0132\'.com.elarian.hera.proto."
-  "OutboundMessage\"z\n\025ReplyToMessageCommand"
-  "\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nmessage_id\030\002 \001("
-  "\t\0228\n\007message\030\003 \001(\0132\'.com.elarian.hera.pr"
-  "oto.OutboundMessage\"\314\001\n\025SendMessageTagCo"
-  "mmand\0221\n\003tag\030\001 \001(\0132$.com.elarian.hera.pr"
-  "oto.IndexMapping\022F\n\016channel_number\030\002 \001(\013"
-  "2..com.elarian.hera.proto.MessagingChann"
-  "elNumber\0228\n\007message\030\003 \001(\0132\'.com.elarian."
-  "hera.proto.OutboundMessage\"\375\001\n\020SendMessa"
-  "geReply\022=\n\006status\030\001 \001(\0162-.com.elarian.he"
-  "ra.proto.MessageDeliveryStatus\022\023\n\013descri"
-  "ption\030\002 \001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.google"
-  ".protobuf.StringValue\0220\n\nsession_id\030\004 \001("
-  "\0132\034.google.protobuf.StringValue\0221\n\013custo"
-  "mer_id\030\005 \001(\0132\034.google.protobuf.StringVal"
-  "ue\"\350\001\n\035UpdateMessagingConsentCommand\022\?\n\017"
-  "customer_number\030\001 \001(\0132&.com.elarian.hera"
-  ".proto.CustomerNumber\022F\n\016channel_number\030"
+  "IndexMappingH\000\0224\n\006update\030\004 \001(\0132$.com.ela"
+  "rian.hera.proto.DataMapValueB\n\n\010customer"
+  "\"\302\001\n\034DeleteCustomerAppDataCommand\022\025\n\013cus"
+  "tomer_id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001("
+  "\0132&.com.elarian.hera.proto.CustomerNumbe"
+  "rH\000\022<\n\014secondary_id\030\003 \001(\0132$.com.elarian."
+  "hera.proto.IndexMappingH\000B\n\n\010customer\"t\n"
+  "\032UpdateCustomerAppDataReply\022\016\n\006status\030\001 "
+  "\001(\010\022\023\n\013description\030\002 \001(\t\0221\n\013customer_id\030"
+  "\003 \001(\0132\034.google.protobuf.StringValue\"\301\001\n\033"
+  "LeaseCustomerAppDataCommand\022\025\n\013customer_"
+  "id\030\001 \001(\tH\000\022A\n\017customer_number\030\002 \001(\0132&.co"
+  "m.elarian.hera.proto.CustomerNumberH\000\022<\n"
+  "\014secondary_id\030\003 \001(\0132$.com.elarian.hera.p"
+  "roto.IndexMappingH\000B\n\n\010customer\"\250\001\n\031Leas"
+  "eCustomerAppDataReply\022\016\n\006status\030\001 \001(\010\022\023\n"
+  "\013description\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132"
+  "\034.google.protobuf.StringValue\0223\n\005value\030\004"
+  " \001(\0132$.com.elarian.hera.proto.DataMapVal"
+  "ue\"\327\001\n\022SendMessageCommand\022\?\n\017customer_nu"
+  "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022F\n\016channel_number\030\002 \001(\0132..com"
+  ".elarian.hera.proto.MessagingChannelNumb"
+  "er\0228\n\007message\030\003 \001(\0132\'.com.elarian.hera.p"
+  "roto.OutboundMessage\"z\n\025ReplyToMessageCo"
+  "mmand\022\023\n\013customer_id\030\001 \001(\t\022\022\n\nmessage_id"
+  "\030\002 \001(\t\0228\n\007message\030\003 \001(\0132\'.com.elarian.he"
+  "ra.proto.OutboundMessage\"\314\001\n\025SendMessage"
+  "TagCommand\0221\n\003tag\030\001 \001(\0132$.com.elarian.he"
+  "ra.proto.IndexMapping\022F\n\016channel_number\030"
   "\002 \001(\0132..com.elarian.hera.proto.Messaging"
-  "ChannelNumber\022>\n\006update\030\003 \001(\0162..com.elar"
-  "ian.hera.proto.MessagingConsentUpdate\"\253\001"
-  "\n\033UpdateMessagingConsentReply\022D\n\006status\030"
-  "\001 \001(\01624.com.elarian.hera.proto.Messaging"
-  "ConsentUpdateStatus\022\023\n\013description\030\002 \001(\t"
-  "\0221\n\013customer_id\030\003 \001(\0132\034.google.protobuf."
-  "StringValue\"\312\001\n\026InitiatePaymentCommand\022@"
-  "\n\013debit_party\030\001 \001(\0132+.com.elarian.hera.p"
-  "roto.PaymentCounterParty\022A\n\014credit_party"
-  "\030\002 \001(\0132+.com.elarian.hera.proto.PaymentC"
-  "ounterParty\022+\n\005value\030\003 \001(\0132\034.com.elarian"
-  ".hera.proto.Cash\"\213\002\n\024InitiatePaymentRepl"
-  "y\0225\n\006status\030\001 \001(\0162%.com.elarian.hera.pro"
-  "to.PaymentStatus\022\023\n\013description\030\002 \001(\t\0224\n"
-  "\016transaction_id\030\003 \001(\0132\034.google.protobuf."
-  "StringValue\0227\n\021debit_customer_id\030\004 \001(\0132\034"
-  ".google.protobuf.StringValue\0228\n\022credit_c"
-  "ustomer_id\030\005 \001(\0132\034.google.protobuf.Strin"
-  "gValue\"e\n\017TagCommandReply\022\016\n\006status\030\001 \001("
-  "\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_id\030\003 \001(\0132"
-  "\034.google.protobuf.StringValue\"\223\002\n\027Custom"
-  "erActivityCommand\022\?\n\017customer_number\030\001 \001"
+  "ChannelNumber\0228\n\007message\030\003 \001(\0132\'.com.ela"
+  "rian.hera.proto.OutboundMessage\"\375\001\n\020Send"
+  "MessageReply\022=\n\006status\030\001 \001(\0162-.com.elari"
+  "an.hera.proto.MessageDeliveryStatus\022\023\n\013d"
+  "escription\030\002 \001(\t\0220\n\nmessage_id\030\003 \001(\0132\034.g"
+  "oogle.protobuf.StringValue\0220\n\nsession_id"
+  "\030\004 \001(\0132\034.google.protobuf.StringValue\0221\n\013"
+  "customer_id\030\005 \001(\0132\034.google.protobuf.Stri"
+  "ngValue\"\350\001\n\035UpdateMessagingConsentComman"
+  "d\022\?\n\017customer_number\030\001 \001(\0132&.com.elarian"
+  ".hera.proto.CustomerNumber\022F\n\016channel_nu"
+  "mber\030\002 \001(\0132..com.elarian.hera.proto.Mess"
+  "agingChannelNumber\022>\n\006update\030\003 \001(\0162..com"
+  ".elarian.hera.proto.MessagingConsentUpda"
+  "te\"\253\001\n\033UpdateMessagingConsentReply\022D\n\006st"
+  "atus\030\001 \001(\01624.com.elarian.hera.proto.Mess"
+  "agingConsentUpdateStatus\022\023\n\013description\030"
+  "\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.prot"
+  "obuf.StringValue\"\312\001\n\026InitiatePaymentComm"
+  "and\022@\n\013debit_party\030\001 \001(\0132+.com.elarian.h"
+  "era.proto.PaymentCounterParty\022A\n\014credit_"
+  "party\030\002 \001(\0132+.com.elarian.hera.proto.Pay"
+  "mentCounterParty\022+\n\005value\030\003 \001(\0132\034.com.el"
+  "arian.hera.proto.Cash\"\213\002\n\024InitiatePaymen"
+  "tReply\0225\n\006status\030\001 \001(\0162%.com.elarian.her"
+  "a.proto.PaymentStatus\022\023\n\013description\030\002 \001"
+  "(\t\0224\n\016transaction_id\030\003 \001(\0132\034.google.prot"
+  "obuf.StringValue\0227\n\021debit_customer_id\030\004 "
+  "\001(\0132\034.google.protobuf.StringValue\0228\n\022cre"
+  "dit_customer_id\030\005 \001(\0132\034.google.protobuf."
+  "StringValue\"e\n\017TagCommandReply\022\016\n\006status"
+  "\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_id\030\003"
+  " \001(\0132\034.google.protobuf.StringValue\"\223\002\n\027C"
+  "ustomerActivityCommand\022\?\n\017customer_numbe"
+  "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome"
+  "rNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id\030\003 "
+  "\001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003(\0132\?.c"
+  "om.elarian.hera.proto.CustomerActivityCo"
+  "mmand.PropertiesEntry\0321\n\017PropertiesEntry"
+  "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236\002\n#Rep"
+  "layMessagingConsentUpdateCommand\022\?\n\017cust"
+  "omer_number\030\001 \001(\0132&.com.elarian.hera.pro"
+  "to.CustomerNumber\022F\n\016channel_number\030\002 \001("
+  "\0132..com.elarian.hera.proto.MessagingChan"
+  "nelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.google.p"
+  "rotobuf.Timestamp\022>\n\006update\030\004 \001(\0162..com."
+  "elarian.hera.proto.MessagingConsentUpdat"
+  "e\"\213\004\n\034ReplayReceivedMessageCommand\022\033\n\023pr"
+  "ovider_message_id\030\001 \001(\t\0229\n\023provider_sess"
+  "ion_id\030\002 \001(\0132\034.google.protobuf.StringVal"
+  "ue\022/\n\013received_at\030\003 \001(\0132\032.google.protobu"
+  "f.Timestamp\022\?\n\017customer_number\030\004 \001(\0132&.c"
+  "om.elarian.hera.proto.CustomerNumber\022F\n\016"
+  "channel_number\030\005 \001(\0132..com.elarian.hera."
+  "proto.MessagingChannelNumber\0229\n\005parts\030\006 "
+  "\003(\0132*.com.elarian.hera.proto.InboundMess"
+  "ageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.google.pr"
+  "otobuf.StringValue\022\?\n\010provider\030\010 \001(\0162-.c"
+  "om.elarian.hera.proto.ChannelNumberProvi"
+  "der\022*\n\004cost\030\t \001(\0132\034.com.elarian.hera.pro"
+  "to.Cash\"\301\004\n\030ReplaySentMessageCommand\022\033\n\023"
+  "provider_message_id\030\001 \001(\t\0229\n\023provider_se"
+  "ssion_id\030\002 \001(\0132\034.google.protobuf.StringV"
+  "alue\022+\n\007sent_at\030\003 \001(\0132\032.google.protobuf."
+  "Timestamp\022\?\n\017customer_number\030\004 \001(\0132&.com"
+  ".elarian.hera.proto.CustomerNumber\022F\n\016ch"
+  "annel_number\030\005 \001(\0132..com.elarian.hera.pr"
+  "oto.MessagingChannelNumber\022\?\n\010provider\030\006"
+  " \001(\0162-.com.elarian.hera.proto.ChannelNum"
+  "berProvider\0228\n\007message\030\007 \001(\0132\'.com.elari"
+  "an.hera.proto.OutboundMessage\0221\n\013in_repl"
+  "y_to\030\010 \001(\0132\034.google.protobuf.StringValue"
+  "\022=\n\006status\030\t \001(\0162-.com.elarian.hera.prot"
+  "o.MessageDeliveryStatus\022*\n\004cost\030\n \001(\0132\034."
+  "com.elarian.hera.proto.Cash\"\343\002\n ReplayMe"
+  "ssageStatusUpdateCommand\022\033\n\023provider_mes"
+  "sage_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032.goog"
+  "le.protobuf.Timestamp\022\?\n\017customer_number"
+  "\030\003 \001(\0132&.com.elarian.hera.proto.Customer"
+  "Number\022F\n\016channel_number\030\004 \001(\0132..com.ela"
+  "rian.hera.proto.MessagingChannelNumber\022="
+  "\n\006status\030\005 \001(\0162-.com.elarian.hera.proto."
+  "MessageDeliveryStatus\022*\n\004cost\030\006 \001(\0132\034.co"
+  "m.elarian.hera.proto.Cash\"\265\002\n\"ReplayMess"
+  "ageReactionUpdateCommand\022\033\n\023provider_mes"
+  "sage_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032.goog"
+  "le.protobuf.Timestamp\022\?\n\017customer_number"
+  "\030\003 \001(\0132&.com.elarian.hera.proto.Customer"
+  "Number\022F\n\016channel_number\030\004 \001(\0132..com.ela"
+  "rian.hera.proto.MessagingChannelNumber\0229"
+  "\n\010reaction\030\005 \001(\0162\'.com.elarian.hera.prot"
+  "o.MessageReaction\"\225\003\n\035ReplayMessagingSes"
+  "sionCommand\022\033\n\023provider_session_id\030\001 \001(\t"
+  "\022\?\n\017customer_number\030\002 \001(\0132&.com.elarian."
+  "hera.proto.CustomerNumber\022F\n\016channel_num"
+  "ber\030\003 \001(\0132..com.elarian.hera.proto.Messa"
+  "gingChannelNumber\022.\n\nstarted_at\030\004 \001(\0132\032."
+  "google.protobuf.Timestamp\022+\n\010duration\030\005 "
+  "\001(\0132\031.google.protobuf.Duration\022E\n\nend_re"
+  "ason\030\006 \001(\01621.com.elarian.hera.proto.Mess"
+  "agingSessionEndReason\022*\n\004cost\030\007 \001(\0132\034.co"
+  "m.elarian.hera.proto.Cash\"o\n\025CustomerAct"
+  "ivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descriptio"
+  "n\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.pr"
+  "otobuf.StringValue\"\266\001\n\027ServerToAppNotifi"
+  "cation\022K\n\010customer\030\001 \001(\01327.com.elarian.h"
+  "era.proto.ServerToAppCustomerNotificatio"
+  "nH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.hera.pr"
+  "oto.ServerToAppPurseNotificationH\000B\007\n\005en"
+  "try\"\316\t\n\037ServerToAppCustomerNotification\022"
+  "\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013custo"
+  "mer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.com.ela"
+  "rian.hera.proto.DataMapValue\022.\n\ncreated_"
+  "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022@\n\010"
+  "reminder\030\006 \001(\0132,.com.elarian.hera.proto."
+  "ReminderNotificationH\000\022`\n\031messaging_sess"
+  "ion_started\030\007 \001(\0132;.com.elarian.hera.pro"
+  "to.MessagingSessionStartedNotificationH\000"
+  "\022`\n\031messaging_session_renewed\030\010 \001(\0132;.co"
+  "m.elarian.hera.proto.MessagingSessionRen"
+  "ewedNotificationH\000\022\\\n\027messaging_session_"
+  "ended\030\t \001(\01329.com.elarian.hera.proto.Mes"
+  "sagingSessionEndedNotificationH\000\022^\n\030mess"
+  "aging_consent_update\030\n \001(\0132:.com.elarian"
+  ".hera.proto.MessagingConsentUpdateNotifi"
+  "cationH\000\022O\n\020received_message\030\013 \001(\01323.com"
+  ".elarian.hera.proto.ReceivedMessageNotif"
+  "icationH\000\022K\n\016message_status\030\014 \001(\01321.com."
+  "elarian.hera.proto.MessageStatusNotifica"
+  "tionH\000\022X\n\025sent_message_reaction\030\r \001(\01327."
+  "com.elarian.hera.proto.SentMessageReacti"
+  "onNotificationH\000\022O\n\020received_payment\030\016 \001"
+  "(\01323.com.elarian.hera.proto.ReceivedPaym"
+  "entNotificationH\000\022K\n\016payment_status\030\017 \001("
+  "\01321.com.elarian.hera.proto.PaymentStatus"
+  "NotificationH\000\022X\n\025wallet_payment_status\030"
+  "\020 \001(\01327.com.elarian.hera.proto.WalletPay"
+  "mentStatusNotificationH\000\022Q\n\021customer_act"
+  "ivity\030\021 \001(\01324.com.elarian.hera.proto.Cus"
+  "tomerActivityNotificationH\000B\007\n\005entry\"\326\001\n"
+  "\034ServerToAppPurseNotification\022\016\n\006org_id\030"
+  "\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001(\t\022"
+  ".\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.Ti"
+  "mestamp\022K\n\016payment_status\030\005 \001(\01321.com.el"
+  "arian.hera.proto.PaymentStatusNotificati"
+  "onH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004data\030\001"
+  " \001(\0132$.com.elarian.hera.proto.DataMapVal"
+  "ue\"\224\001\n\034ServerToAppNotificationReply\022:\n\013d"
+  "ata_update\030\001 \001(\0132%.com.elarian.hera.prot"
+  "o.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'.com.e"
+  "larian.hera.proto.OutboundMessage\"\265\001\n\024Re"
+  "minderNotification\022:\n\010reminder\030\001 \001(\0132(.c"
+  "om.elarian.hera.proto.CustomerReminder\0222"
+  "\n\003tag\030\002 \001(\0132%.com.elarian.hera.proto.Cus"
+  "tomerIndex\022-\n\007work_id\030\003 \001(\0132\034.google.pro"
+  "tobuf.StringValue\"\362\001\n#MessagingSessionSt"
+  "artedNotification\022\?\n\017customer_number\030\001 \001"
   "(\0132&.com.elarian.hera.proto.CustomerNumb"
-  "er\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id\030\003 \001(\t\022\013"
-  "\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003(\0132\?.com.el"
-  "arian.hera.proto.CustomerActivityCommand"
-  ".PropertiesEntry\0321\n\017PropertiesEntry\022\013\n\003k"
-  "ey\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"o\n\025CustomerA"
-  "ctivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descript"
-  "ion\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google."
-  "protobuf.StringValue\"\266\001\n\027ServerToAppNoti"
-  "fication\022K\n\010customer\030\001 \001(\01327.com.elarian"
-  ".hera.proto.ServerToAppCustomerNotificat"
-  "ionH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.hera."
-  "proto.ServerToAppPurseNotificationH\000B\007\n\005"
-  "entry\"\316\t\n\037ServerToAppCustomerNotificatio"
-  "n\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013cus"
-  "tomer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.com.e"
-  "larian.hera.proto.DataMapValue\022.\n\ncreate"
-  "d_at\030\005 \001(\0132\032.google.protobuf.Timestamp\022@"
-  "\n\010reminder\030\006 \001(\0132,.com.elarian.hera.prot"
-  "o.ReminderNotificationH\000\022`\n\031messaging_se"
-  "ssion_started\030\007 \001(\0132;.com.elarian.hera.p"
-  "roto.MessagingSessionStartedNotification"
-  "H\000\022`\n\031messaging_session_renewed\030\010 \001(\0132;."
-  "com.elarian.hera.proto.MessagingSessionR"
-  "enewedNotificationH\000\022\\\n\027messaging_sessio"
-  "n_ended\030\t \001(\01329.com.elarian.hera.proto.M"
-  "essagingSessionEndedNotificationH\000\022^\n\030me"
-  "ssaging_consent_update\030\n \001(\0132:.com.elari"
-  "an.hera.proto.MessagingConsentUpdateNoti"
-  "ficationH\000\022O\n\020received_message\030\013 \001(\01323.c"
-  "om.elarian.hera.proto.ReceivedMessageNot"
-  "ificationH\000\022K\n\016message_status\030\014 \001(\01321.co"
-  "m.elarian.hera.proto.MessageStatusNotifi"
-  "cationH\000\022X\n\025sent_message_reaction\030\r \001(\0132"
-  "7.com.elarian.hera.proto.SentMessageReac"
-  "tionNotificationH\000\022O\n\020received_payment\030\016"
-  " \001(\01323.com.elarian.hera.proto.ReceivedPa"
-  "ymentNotificationH\000\022K\n\016payment_status\030\017 "
-  "\001(\01321.com.elarian.hera.proto.PaymentStat"
-  "usNotificationH\000\022X\n\025wallet_payment_statu"
-  "s\030\020 \001(\01327.com.elarian.hera.proto.WalletP"
-  "aymentStatusNotificationH\000\022Q\n\021customer_a"
-  "ctivity\030\021 \001(\01324.com.elarian.hera.proto.C"
-  "ustomerActivityNotificationH\000B\007\n\005entry\"\326"
-  "\001\n\034ServerToAppPurseNotification\022\016\n\006org_i"
-  "d\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001("
-  "\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.protobuf."
-  "Timestamp\022K\n\016payment_status\030\005 \001(\01321.com."
-  "elarian.hera.proto.PaymentStatusNotifica"
-  "tionH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004data"
-  "\030\001 \001(\0132$.com.elarian.hera.proto.DataMapV"
-  "alue\"\224\001\n\034ServerToAppNotificationReply\022:\n"
-  "\013data_update\030\001 \001(\0132%.com.elarian.hera.pr"
-  "oto.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'.com"
-  ".elarian.hera.proto.OutboundMessage\"\265\001\n\024"
-  "ReminderNotification\022:\n\010reminder\030\001 \001(\0132("
-  ".com.elarian.hera.proto.CustomerReminder"
-  "\0222\n\003tag\030\002 \001(\0132%.com.elarian.hera.proto.C"
-  "ustomerIndex\022-\n\007work_id\030\003 \001(\0132\034.google.p"
-  "rotobuf.StringValue\"\362\001\n#MessagingSession"
-  "StartedNotification\022\?\n\017customer_number\030\001"
-  " \001(\0132&.com.elarian.hera.proto.CustomerNu"
-  "mber\022F\n\016channel_number\030\002 \001(\0132..com.elari"
-  "an.hera.proto.MessagingChannelNumber\022\022\n\n"
-  "session_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.g"
-  "oogle.protobuf.Timestamp\"\362\001\n#MessagingSe"
-  "ssionRenewedNotification\022\?\n\017customer_num"
-  "ber\030\001 \001(\0132&.com.elarian.hera.proto.Custo"
-  "merNumber\022F\n\016channel_number\030\002 \001(\0132..com."
-  "elarian.hera.proto.MessagingChannelNumbe"
-  "r\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001("
-  "\0132\032.google.protobuf.Timestamp\"\260\002\n!Messag"
-  "ingSessionEndedNotification\022\?\n\017customer_"
-  "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu"
-  "stomerNumber\022F\n\016channel_number\030\002 \001(\0132..c"
-  "om.elarian.hera.proto.MessagingChannelNu"
-  "mber\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration\030\004 \001"
-  "(\0132\031.google.protobuf.Duration\022A\n\006reason\030"
-  "\005 \001(\01621.com.elarian.hera.proto.Messaging"
-  "SessionEndReason\"\263\002\n\"MessagingConsentUpd"
-  "ateNotification\022\?\n\017customer_number\030\001 \001(\013"
-  "2&.com.elarian.hera.proto.CustomerNumber"
-  "\022F\n\016channel_number\030\002 \001(\0132..com.elarian.h"
-  "era.proto.MessagingChannelNumber\022>\n\006upda"
-  "te\030\003 \001(\0162..com.elarian.hera.proto.Messag"
-  "ingConsentUpdate\022D\n\006status\030\004 \001(\01624.com.e"
-  "larian.hera.proto.MessagingConsentUpdate"
-  "Status\"\332\002\n\033ReceivedMessageNotification\022\022"
-  "\n\nmessage_id\030\001 \001(\t\022\?\n\017customer_number\030\002 "
-  "\001(\0132&.com.elarian.hera.proto.CustomerNum"
-  "ber\022F\n\016channel_number\030\003 \001(\0132..com.elaria"
-  "n.hera.proto.MessagingChannelNumber\0229\n\005p"
-  "arts\030\004 \003(\0132*.com.elarian.hera.proto.Inbo"
-  "undMessageBody\0220\n\nsession_id\030\005 \001(\0132\034.goo"
-  "gle.protobuf.StringValue\0221\n\013in_reply_to\030"
-  "\006 \001(\0132\034.google.protobuf.StringValue\"n\n\031M"
-  "essageStatusNotification\022\022\n\nmessage_id\030\001"
-  " \001(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.hera."
-  "proto.MessageDeliveryStatus\"\371\001\n\037SentMess"
-  "ageReactionNotification\022\022\n\nmessage_id\030\001 "
-  "\001(\t\022\?\n\017customer_number\030\002 \001(\0132&.com.elari"
-  "an.hera.proto.CustomerNumber\022F\n\016channel_"
-  "number\030\003 \001(\0132..com.elarian.hera.proto.Me"
-  "ssagingChannelNumber\0229\n\010reaction\030\004 \001(\0162\'"
-  ".com.elarian.hera.proto.MessageReaction\""
-  "\262\002\n\033ReceivedPaymentNotification\022\020\n\010purse"
-  "_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022\?\n\017cus"
-  "tomer_number\030\003 \001(\0132&.com.elarian.hera.pr"
-  "oto.CustomerNumber\022D\n\016channel_number\030\004 \001"
-  "(\0132,.com.elarian.hera.proto.PaymentChann"
-  "elNumber\022+\n\005value\030\005 \001(\0132\034.com.elarian.he"
-  "ra.proto.Cash\0225\n\006status\030\006 \001(\0162%.com.elar"
-  "ian.hera.proto.PaymentStatus\"j\n\031PaymentS"
-  "tatusNotification\022\026\n\016transaction_id\030\001 \001("
-  "\t\0225\n\006status\030\002 \001(\0162%.com.elarian.hera.pro"
-  "to.PaymentStatus\"\203\001\n\037WalletPaymentStatus"
-  "Notification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016trans"
-  "action_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.el"
-  "arian.hera.proto.PaymentStatus\"\277\001\n\034Custo"
-  "merActivityNotification\022\?\n\017customer_numb"
-  "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom"
-  "erNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id\030\003"
-  " \001(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian.her"
-  "a.proto.CustomerActivityb\006proto3"
+  "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian"
+  ".hera.proto.MessagingChannelNumber\022\022\n\nse"
+  "ssion_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.goo"
+  "gle.protobuf.Timestamp\"\362\001\n#MessagingSess"
+  "ionRenewedNotification\022\?\n\017customer_numbe"
+  "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome"
+  "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el"
+  "arian.hera.proto.MessagingChannelNumber\022"
+  "\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132"
+  "\032.google.protobuf.Timestamp\"\260\002\n!Messagin"
+  "gSessionEndedNotification\022\?\n\017customer_nu"
+  "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022F\n\016channel_number\030\002 \001(\0132..com"
+  ".elarian.hera.proto.MessagingChannelNumb"
+  "er\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration\030\004 \001(\013"
+  "2\031.google.protobuf.Duration\022A\n\006reason\030\005 "
+  "\001(\01621.com.elarian.hera.proto.MessagingSe"
+  "ssionEndReason\"\263\002\n\"MessagingConsentUpdat"
+  "eNotification\022\?\n\017customer_number\030\001 \001(\0132&"
+  ".com.elarian.hera.proto.CustomerNumber\022F"
+  "\n\016channel_number\030\002 \001(\0132..com.elarian.her"
+  "a.proto.MessagingChannelNumber\022>\n\006update"
+  "\030\003 \001(\0162..com.elarian.hera.proto.Messagin"
+  "gConsentUpdate\022D\n\006status\030\004 \001(\01624.com.ela"
+  "rian.hera.proto.MessagingConsentUpdateSt"
+  "atus\"\332\002\n\033ReceivedMessageNotification\022\022\n\n"
+  "message_id\030\001 \001(\t\022\?\n\017customer_number\030\002 \001("
+  "\0132&.com.elarian.hera.proto.CustomerNumbe"
+  "r\022F\n\016channel_number\030\003 \001(\0132..com.elarian."
+  "hera.proto.MessagingChannelNumber\0229\n\005par"
+  "ts\030\004 \003(\0132*.com.elarian.hera.proto.Inboun"
+  "dMessageBody\0220\n\nsession_id\030\005 \001(\0132\034.googl"
+  "e.protobuf.StringValue\0221\n\013in_reply_to\030\006 "
+  "\001(\0132\034.google.protobuf.StringValue\"n\n\031Mes"
+  "sageStatusNotification\022\022\n\nmessage_id\030\001 \001"
+  "(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.hera.pr"
+  "oto.MessageDeliveryStatus\"\371\001\n\037SentMessag"
+  "eReactionNotification\022\022\n\nmessage_id\030\001 \001("
+  "\t\022\?\n\017customer_number\030\002 \001(\0132&.com.elarian"
+  ".hera.proto.CustomerNumber\022F\n\016channel_nu"
+  "mber\030\003 \001(\0132..com.elarian.hera.proto.Mess"
+  "agingChannelNumber\0229\n\010reaction\030\004 \001(\0162\'.c"
+  "om.elarian.hera.proto.MessageReaction\"\262\002"
+  "\n\033ReceivedPaymentNotification\022\020\n\010purse_i"
+  "d\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022\?\n\017custo"
+  "mer_number\030\003 \001(\0132&.com.elarian.hera.prot"
+  "o.CustomerNumber\022D\n\016channel_number\030\004 \001(\013"
+  "2,.com.elarian.hera.proto.PaymentChannel"
+  "Number\022+\n\005value\030\005 \001(\0132\034.com.elarian.hera"
+  ".proto.Cash\0225\n\006status\030\006 \001(\0162%.com.elaria"
+  "n.hera.proto.PaymentStatus\"j\n\031PaymentSta"
+  "tusNotification\022\026\n\016transaction_id\030\001 \001(\t\022"
+  "5\n\006status\030\002 \001(\0162%.com.elarian.hera.proto"
+  ".PaymentStatus\"\203\001\n\037WalletPaymentStatusNo"
+  "tification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016transac"
+  "tion_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.elar"
+  "ian.hera.proto.PaymentStatus\"\277\001\n\034Custome"
+  "rActivityNotification\022\?\n\017customer_number"
+  "\030\001 \001(\0132&.com.elarian.hera.proto.Customer"
+  "Number\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id\030\003 \001"
+  "(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian.hera."
+  "proto.CustomerActivityb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_app_5fsocket_2eproto_deps[12] = {
   &::descriptor_table_activity_5fmodel_2eproto,
@@ -2221,7 +2527,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_payment_5fmodel_2eproto,
   &::descriptor_table_payment_5fstate_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app_5fsocket_2eproto_sccs[56] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app_5fsocket_2eproto_sccs[62] = {
   &scc_info_AddCustomerReminderCommand_app_5fsocket_2eproto.base,
   &scc_info_AddCustomerReminderTagCommand_app_5fsocket_2eproto.base,
   &scc_info_AdoptCustomerStateCommand_app_5fsocket_2eproto.base,
@@ -2258,6 +2564,12 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app
   &scc_info_ReceivedMessageNotification_app_5fsocket_2eproto.base,
   &scc_info_ReceivedPaymentNotification_app_5fsocket_2eproto.base,
   &scc_info_ReminderNotification_app_5fsocket_2eproto.base,
+  &scc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto.base,
+  &scc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto.base,
+  &scc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto.base,
+  &scc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto.base,
+  &scc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto.base,
+  &scc_info_ReplaySentMessageCommand_app_5fsocket_2eproto.base,
   &scc_info_ReplyToMessageCommand_app_5fsocket_2eproto.base,
   &scc_info_SendMessageCommand_app_5fsocket_2eproto.base,
   &scc_info_SendMessageReply_app_5fsocket_2eproto.base,
@@ -2281,10 +2593,10 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fsocket_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fsocket_2eproto = {
-  false, false, descriptor_table_protodef_app_5fsocket_2eproto, "app_socket.proto", 14512,
-  &descriptor_table_app_5fsocket_2eproto_once, descriptor_table_app_5fsocket_2eproto_sccs, descriptor_table_app_5fsocket_2eproto_deps, 56, 12,
+  false, false, descriptor_table_protodef_app_5fsocket_2eproto, "app_socket.proto", 17550,
+  &descriptor_table_app_5fsocket_2eproto_once, descriptor_table_app_5fsocket_2eproto_sccs, descriptor_table_app_5fsocket_2eproto_deps, 62, 12,
   schemas, file_default_instances, TableStruct_app_5fsocket_2eproto::offsets,
-  file_level_metadata_app_5fsocket_2eproto, 56, file_level_enum_descriptors_app_5fsocket_2eproto, file_level_service_descriptors_app_5fsocket_2eproto,
+  file_level_metadata_app_5fsocket_2eproto, 62, file_level_enum_descriptors_app_5fsocket_2eproto, file_level_service_descriptors_app_5fsocket_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -2715,6 +3027,12 @@ class AppToServerCommand::_Internal {
   static const ::com::elarian::hera::proto::UpdateMessagingConsentCommand& update_messaging_consent(const AppToServerCommand* msg);
   static const ::com::elarian::hera::proto::InitiatePaymentCommand& initiate_payment(const AppToServerCommand* msg);
   static const ::com::elarian::hera::proto::CustomerActivityCommand& customer_activity(const AppToServerCommand* msg);
+  static const ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand& replay_messaging_consent_update(const AppToServerCommand* msg);
+  static const ::com::elarian::hera::proto::ReplayReceivedMessageCommand& replay_received_message(const AppToServerCommand* msg);
+  static const ::com::elarian::hera::proto::ReplaySentMessageCommand& replay_sent_message(const AppToServerCommand* msg);
+  static const ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand& replay_message_status_update(const AppToServerCommand* msg);
+  static const ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand& replay_message_reaction_update(const AppToServerCommand* msg);
+  static const ::com::elarian::hera::proto::ReplayMessagingSessionCommand& replay_messaging_session(const AppToServerCommand* msg);
 };
 
 const ::com::elarian::hera::proto::GenerateAuthTokenCommand&
@@ -2808,6 +3126,30 @@ AppToServerCommand::_Internal::initiate_payment(const AppToServerCommand* msg) {
 const ::com::elarian::hera::proto::CustomerActivityCommand&
 AppToServerCommand::_Internal::customer_activity(const AppToServerCommand* msg) {
   return *msg->entry_.customer_activity_;
+}
+const ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand&
+AppToServerCommand::_Internal::replay_messaging_consent_update(const AppToServerCommand* msg) {
+  return *msg->entry_.replay_messaging_consent_update_;
+}
+const ::com::elarian::hera::proto::ReplayReceivedMessageCommand&
+AppToServerCommand::_Internal::replay_received_message(const AppToServerCommand* msg) {
+  return *msg->entry_.replay_received_message_;
+}
+const ::com::elarian::hera::proto::ReplaySentMessageCommand&
+AppToServerCommand::_Internal::replay_sent_message(const AppToServerCommand* msg) {
+  return *msg->entry_.replay_sent_message_;
+}
+const ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand&
+AppToServerCommand::_Internal::replay_message_status_update(const AppToServerCommand* msg) {
+  return *msg->entry_.replay_message_status_update_;
+}
+const ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand&
+AppToServerCommand::_Internal::replay_message_reaction_update(const AppToServerCommand* msg) {
+  return *msg->entry_.replay_message_reaction_update_;
+}
+const ::com::elarian::hera::proto::ReplayMessagingSessionCommand&
+AppToServerCommand::_Internal::replay_messaging_session(const AppToServerCommand* msg) {
+  return *msg->entry_.replay_messaging_session_;
 }
 void AppToServerCommand::set_allocated_generate_auth_token(::com::elarian::hera::proto::GenerateAuthTokenCommand* generate_auth_token) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
@@ -3154,6 +3496,96 @@ void AppToServerCommand::set_allocated_customer_activity(::com::elarian::hera::p
   }
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.customer_activity)
 }
+void AppToServerCommand::set_allocated_replay_messaging_consent_update(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand* replay_messaging_consent_update) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_entry();
+  if (replay_messaging_consent_update) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(replay_messaging_consent_update);
+    if (message_arena != submessage_arena) {
+      replay_messaging_consent_update = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, replay_messaging_consent_update, submessage_arena);
+    }
+    set_has_replay_messaging_consent_update();
+    entry_.replay_messaging_consent_update_ = replay_messaging_consent_update;
+  }
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_messaging_consent_update)
+}
+void AppToServerCommand::set_allocated_replay_received_message(::com::elarian::hera::proto::ReplayReceivedMessageCommand* replay_received_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_entry();
+  if (replay_received_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(replay_received_message);
+    if (message_arena != submessage_arena) {
+      replay_received_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, replay_received_message, submessage_arena);
+    }
+    set_has_replay_received_message();
+    entry_.replay_received_message_ = replay_received_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_received_message)
+}
+void AppToServerCommand::set_allocated_replay_sent_message(::com::elarian::hera::proto::ReplaySentMessageCommand* replay_sent_message) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_entry();
+  if (replay_sent_message) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(replay_sent_message);
+    if (message_arena != submessage_arena) {
+      replay_sent_message = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, replay_sent_message, submessage_arena);
+    }
+    set_has_replay_sent_message();
+    entry_.replay_sent_message_ = replay_sent_message;
+  }
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_sent_message)
+}
+void AppToServerCommand::set_allocated_replay_message_status_update(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand* replay_message_status_update) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_entry();
+  if (replay_message_status_update) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(replay_message_status_update);
+    if (message_arena != submessage_arena) {
+      replay_message_status_update = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, replay_message_status_update, submessage_arena);
+    }
+    set_has_replay_message_status_update();
+    entry_.replay_message_status_update_ = replay_message_status_update;
+  }
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_message_status_update)
+}
+void AppToServerCommand::set_allocated_replay_message_reaction_update(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand* replay_message_reaction_update) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_entry();
+  if (replay_message_reaction_update) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(replay_message_reaction_update);
+    if (message_arena != submessage_arena) {
+      replay_message_reaction_update = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, replay_message_reaction_update, submessage_arena);
+    }
+    set_has_replay_message_reaction_update();
+    entry_.replay_message_reaction_update_ = replay_message_reaction_update;
+  }
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_message_reaction_update)
+}
+void AppToServerCommand::set_allocated_replay_messaging_session(::com::elarian::hera::proto::ReplayMessagingSessionCommand* replay_messaging_session) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  clear_entry();
+  if (replay_messaging_session) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(replay_messaging_session);
+    if (message_arena != submessage_arena) {
+      replay_messaging_session = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, replay_messaging_session, submessage_arena);
+    }
+    set_has_replay_messaging_session();
+    entry_.replay_messaging_session_ = replay_messaging_session;
+  }
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_messaging_session)
+}
 AppToServerCommand::AppToServerCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -3255,6 +3687,30 @@ AppToServerCommand::AppToServerCommand(const AppToServerCommand& from)
     }
     case kCustomerActivity: {
       _internal_mutable_customer_activity()->::com::elarian::hera::proto::CustomerActivityCommand::MergeFrom(from._internal_customer_activity());
+      break;
+    }
+    case kReplayMessagingConsentUpdate: {
+      _internal_mutable_replay_messaging_consent_update()->::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand::MergeFrom(from._internal_replay_messaging_consent_update());
+      break;
+    }
+    case kReplayReceivedMessage: {
+      _internal_mutable_replay_received_message()->::com::elarian::hera::proto::ReplayReceivedMessageCommand::MergeFrom(from._internal_replay_received_message());
+      break;
+    }
+    case kReplaySentMessage: {
+      _internal_mutable_replay_sent_message()->::com::elarian::hera::proto::ReplaySentMessageCommand::MergeFrom(from._internal_replay_sent_message());
+      break;
+    }
+    case kReplayMessageStatusUpdate: {
+      _internal_mutable_replay_message_status_update()->::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand::MergeFrom(from._internal_replay_message_status_update());
+      break;
+    }
+    case kReplayMessageReactionUpdate: {
+      _internal_mutable_replay_message_reaction_update()->::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand::MergeFrom(from._internal_replay_message_reaction_update());
+      break;
+    }
+    case kReplayMessagingSession: {
+      _internal_mutable_replay_messaging_session()->::com::elarian::hera::proto::ReplayMessagingSessionCommand::MergeFrom(from._internal_replay_messaging_session());
       break;
     }
     case ENTRY_NOT_SET: {
@@ -3435,6 +3891,42 @@ void AppToServerCommand::clear_entry() {
     case kCustomerActivity: {
       if (GetArena() == nullptr) {
         delete entry_.customer_activity_;
+      }
+      break;
+    }
+    case kReplayMessagingConsentUpdate: {
+      if (GetArena() == nullptr) {
+        delete entry_.replay_messaging_consent_update_;
+      }
+      break;
+    }
+    case kReplayReceivedMessage: {
+      if (GetArena() == nullptr) {
+        delete entry_.replay_received_message_;
+      }
+      break;
+    }
+    case kReplaySentMessage: {
+      if (GetArena() == nullptr) {
+        delete entry_.replay_sent_message_;
+      }
+      break;
+    }
+    case kReplayMessageStatusUpdate: {
+      if (GetArena() == nullptr) {
+        delete entry_.replay_message_status_update_;
+      }
+      break;
+    }
+    case kReplayMessageReactionUpdate: {
+      if (GetArena() == nullptr) {
+        delete entry_.replay_message_reaction_update_;
+      }
+      break;
+    }
+    case kReplayMessagingSession: {
+      if (GetArena() == nullptr) {
+        delete entry_.replay_messaging_session_;
       }
       break;
     }
@@ -3621,6 +4113,48 @@ const char* AppToServerCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       case 23:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 186)) {
           ptr = ctx->ParseMessage(_internal_mutable_customer_activity(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand replay_messaging_consent_update = 24;
+      case 24:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 194)) {
+          ptr = ctx->ParseMessage(_internal_mutable_replay_messaging_consent_update(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ReplayReceivedMessageCommand replay_received_message = 25;
+      case 25:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 202)) {
+          ptr = ctx->ParseMessage(_internal_mutable_replay_received_message(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ReplaySentMessageCommand replay_sent_message = 26;
+      case 26:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 210)) {
+          ptr = ctx->ParseMessage(_internal_mutable_replay_sent_message(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ReplayMessageStatusUpdateCommand replay_message_status_update = 27;
+      case 27:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 218)) {
+          ptr = ctx->ParseMessage(_internal_mutable_replay_message_status_update(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ReplayMessageReactionUpdateCommand replay_message_reaction_update = 28;
+      case 28:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 226)) {
+          ptr = ctx->ParseMessage(_internal_mutable_replay_message_reaction_update(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ReplayMessagingSessionCommand replay_messaging_session = 29;
+      case 29:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 234)) {
+          ptr = ctx->ParseMessage(_internal_mutable_replay_messaging_session(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3836,6 +4370,54 @@ failure:
         23, _Internal::customer_activity(this), target, stream);
   }
 
+  // .com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand replay_messaging_consent_update = 24;
+  if (_internal_has_replay_messaging_consent_update()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        24, _Internal::replay_messaging_consent_update(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ReplayReceivedMessageCommand replay_received_message = 25;
+  if (_internal_has_replay_received_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        25, _Internal::replay_received_message(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ReplaySentMessageCommand replay_sent_message = 26;
+  if (_internal_has_replay_sent_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        26, _Internal::replay_sent_message(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ReplayMessageStatusUpdateCommand replay_message_status_update = 27;
+  if (_internal_has_replay_message_status_update()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        27, _Internal::replay_message_status_update(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ReplayMessageReactionUpdateCommand replay_message_reaction_update = 28;
+  if (_internal_has_replay_message_reaction_update()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        28, _Internal::replay_message_reaction_update(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ReplayMessagingSessionCommand replay_messaging_session = 29;
+  if (_internal_has_replay_messaging_session()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        29, _Internal::replay_messaging_session(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -4014,6 +4596,48 @@ size_t AppToServerCommand::ByteSizeLong() const {
           *entry_.customer_activity_);
       break;
     }
+    // .com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand replay_messaging_consent_update = 24;
+    case kReplayMessagingConsentUpdate: {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *entry_.replay_messaging_consent_update_);
+      break;
+    }
+    // .com.elarian.hera.proto.ReplayReceivedMessageCommand replay_received_message = 25;
+    case kReplayReceivedMessage: {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *entry_.replay_received_message_);
+      break;
+    }
+    // .com.elarian.hera.proto.ReplaySentMessageCommand replay_sent_message = 26;
+    case kReplaySentMessage: {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *entry_.replay_sent_message_);
+      break;
+    }
+    // .com.elarian.hera.proto.ReplayMessageStatusUpdateCommand replay_message_status_update = 27;
+    case kReplayMessageStatusUpdate: {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *entry_.replay_message_status_update_);
+      break;
+    }
+    // .com.elarian.hera.proto.ReplayMessageReactionUpdateCommand replay_message_reaction_update = 28;
+    case kReplayMessageReactionUpdate: {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *entry_.replay_message_reaction_update_);
+      break;
+    }
+    // .com.elarian.hera.proto.ReplayMessagingSessionCommand replay_messaging_session = 29;
+    case kReplayMessagingSession: {
+      total_size += 2 +
+        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+          *entry_.replay_messaging_session_);
+      break;
+    }
     case ENTRY_NOT_SET: {
       break;
     }
@@ -4140,6 +4764,30 @@ void AppToServerCommand::MergeFrom(const AppToServerCommand& from) {
     }
     case kCustomerActivity: {
       _internal_mutable_customer_activity()->::com::elarian::hera::proto::CustomerActivityCommand::MergeFrom(from._internal_customer_activity());
+      break;
+    }
+    case kReplayMessagingConsentUpdate: {
+      _internal_mutable_replay_messaging_consent_update()->::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand::MergeFrom(from._internal_replay_messaging_consent_update());
+      break;
+    }
+    case kReplayReceivedMessage: {
+      _internal_mutable_replay_received_message()->::com::elarian::hera::proto::ReplayReceivedMessageCommand::MergeFrom(from._internal_replay_received_message());
+      break;
+    }
+    case kReplaySentMessage: {
+      _internal_mutable_replay_sent_message()->::com::elarian::hera::proto::ReplaySentMessageCommand::MergeFrom(from._internal_replay_sent_message());
+      break;
+    }
+    case kReplayMessageStatusUpdate: {
+      _internal_mutable_replay_message_status_update()->::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand::MergeFrom(from._internal_replay_message_status_update());
+      break;
+    }
+    case kReplayMessageReactionUpdate: {
+      _internal_mutable_replay_message_reaction_update()->::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand::MergeFrom(from._internal_replay_message_reaction_update());
+      break;
+    }
+    case kReplayMessagingSession: {
+      _internal_mutable_replay_messaging_session()->::com::elarian::hera::proto::ReplayMessagingSessionCommand::MergeFrom(from._internal_replay_messaging_session());
       break;
     }
     case ENTRY_NOT_SET: {
@@ -16187,6 +16835,2771 @@ void CustomerActivityCommand::InternalSwap(CustomerActivityCommand* other) {
 
 // ===================================================================
 
+class ReplayMessagingConsentUpdateCommand::_Internal {
+ public:
+  static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const ReplayMessagingConsentUpdateCommand* msg);
+  static const ::com::elarian::hera::proto::MessagingChannelNumber& channel_number(const ReplayMessagingConsentUpdateCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& updated_at(const ReplayMessagingConsentUpdateCommand* msg);
+};
+
+const ::com::elarian::hera::proto::CustomerNumber&
+ReplayMessagingConsentUpdateCommand::_Internal::customer_number(const ReplayMessagingConsentUpdateCommand* msg) {
+  return *msg->customer_number_;
+}
+const ::com::elarian::hera::proto::MessagingChannelNumber&
+ReplayMessagingConsentUpdateCommand::_Internal::channel_number(const ReplayMessagingConsentUpdateCommand* msg) {
+  return *msg->channel_number_;
+}
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+ReplayMessagingConsentUpdateCommand::_Internal::updated_at(const ReplayMessagingConsentUpdateCommand* msg) {
+  return *msg->updated_at_;
+}
+void ReplayMessagingConsentUpdateCommand::clear_customer_number() {
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+}
+void ReplayMessagingConsentUpdateCommand::clear_channel_number() {
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+}
+void ReplayMessagingConsentUpdateCommand::clear_updated_at() {
+  if (GetArena() == nullptr && updated_at_ != nullptr) {
+    delete updated_at_;
+  }
+  updated_at_ = nullptr;
+}
+ReplayMessagingConsentUpdateCommand::ReplayMessagingConsentUpdateCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+}
+ReplayMessagingConsentUpdateCommand::ReplayMessagingConsentUpdateCommand(const ReplayMessagingConsentUpdateCommand& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  if (from._internal_has_customer_number()) {
+    customer_number_ = new ::com::elarian::hera::proto::CustomerNumber(*from.customer_number_);
+  } else {
+    customer_number_ = nullptr;
+  }
+  if (from._internal_has_channel_number()) {
+    channel_number_ = new ::com::elarian::hera::proto::MessagingChannelNumber(*from.channel_number_);
+  } else {
+    channel_number_ = nullptr;
+  }
+  if (from._internal_has_updated_at()) {
+    updated_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.updated_at_);
+  } else {
+    updated_at_ = nullptr;
+  }
+  update_ = from.update_;
+  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+}
+
+void ReplayMessagingConsentUpdateCommand::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto.base);
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&customer_number_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&update_) -
+      reinterpret_cast<char*>(&customer_number_)) + sizeof(update_));
+}
+
+ReplayMessagingConsentUpdateCommand::~ReplayMessagingConsentUpdateCommand() {
+  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ReplayMessagingConsentUpdateCommand::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  if (this != internal_default_instance()) delete customer_number_;
+  if (this != internal_default_instance()) delete channel_number_;
+  if (this != internal_default_instance()) delete updated_at_;
+}
+
+void ReplayMessagingConsentUpdateCommand::ArenaDtor(void* object) {
+  ReplayMessagingConsentUpdateCommand* _this = reinterpret_cast< ReplayMessagingConsentUpdateCommand* >(object);
+  (void)_this;
+}
+void ReplayMessagingConsentUpdateCommand::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ReplayMessagingConsentUpdateCommand::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplayMessagingConsentUpdateCommand& ReplayMessagingConsentUpdateCommand::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplayMessagingConsentUpdateCommand_app_5fsocket_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplayMessagingConsentUpdateCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+  if (GetArena() == nullptr && updated_at_ != nullptr) {
+    delete updated_at_;
+  }
+  updated_at_ = nullptr;
+  update_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ReplayMessagingConsentUpdateCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // .com.elarian.hera.proto.CustomerNumber customer_number = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          ptr = ctx->ParseMessage(_internal_mutable_customer_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_channel_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Timestamp updated_at = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_updated_at(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingConsentUpdate update = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 32)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_update(static_cast<::com::elarian::hera::proto::MessagingConsentUpdate>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplayMessagingConsentUpdateCommand::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 1;
+  if (this->has_customer_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        1, _Internal::customer_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;
+  if (this->has_channel_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::channel_number(this), target, stream);
+  }
+
+  // .google.protobuf.Timestamp updated_at = 3;
+  if (this->has_updated_at()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::updated_at(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingConsentUpdate update = 4;
+  if (this->update() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      4, this->_internal_update(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  return target;
+}
+
+size_t ReplayMessagingConsentUpdateCommand::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 1;
+  if (this->has_customer_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *customer_number_);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 2;
+  if (this->has_channel_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *channel_number_);
+  }
+
+  // .google.protobuf.Timestamp updated_at = 3;
+  if (this->has_updated_at()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *updated_at_);
+  }
+
+  // .com.elarian.hera.proto.MessagingConsentUpdate update = 4;
+  if (this->update() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_update());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplayMessagingConsentUpdateCommand::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplayMessagingConsentUpdateCommand* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplayMessagingConsentUpdateCommand>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+    MergeFrom(*source);
+  }
+}
+
+void ReplayMessagingConsentUpdateCommand::MergeFrom(const ReplayMessagingConsentUpdateCommand& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.has_customer_number()) {
+    _internal_mutable_customer_number()->::com::elarian::hera::proto::CustomerNumber::MergeFrom(from._internal_customer_number());
+  }
+  if (from.has_channel_number()) {
+    _internal_mutable_channel_number()->::com::elarian::hera::proto::MessagingChannelNumber::MergeFrom(from._internal_channel_number());
+  }
+  if (from.has_updated_at()) {
+    _internal_mutable_updated_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_updated_at());
+  }
+  if (from.update() != 0) {
+    _internal_set_update(from._internal_update());
+  }
+}
+
+void ReplayMessagingConsentUpdateCommand::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplayMessagingConsentUpdateCommand::CopyFrom(const ReplayMessagingConsentUpdateCommand& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplayMessagingConsentUpdateCommand::IsInitialized() const {
+  return true;
+}
+
+void ReplayMessagingConsentUpdateCommand::InternalSwap(ReplayMessagingConsentUpdateCommand* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReplayMessagingConsentUpdateCommand, update_)
+      + sizeof(ReplayMessagingConsentUpdateCommand::update_)
+      - PROTOBUF_FIELD_OFFSET(ReplayMessagingConsentUpdateCommand, customer_number_)>(
+          reinterpret_cast<char*>(&customer_number_),
+          reinterpret_cast<char*>(&other->customer_number_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplayMessagingConsentUpdateCommand::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class ReplayReceivedMessageCommand::_Internal {
+ public:
+  static const PROTOBUF_NAMESPACE_ID::StringValue& provider_session_id(const ReplayReceivedMessageCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& received_at(const ReplayReceivedMessageCommand* msg);
+  static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const ReplayReceivedMessageCommand* msg);
+  static const ::com::elarian::hera::proto::MessagingChannelNumber& channel_number(const ReplayReceivedMessageCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::StringValue& in_reply_to(const ReplayReceivedMessageCommand* msg);
+  static const ::com::elarian::hera::proto::Cash& cost(const ReplayReceivedMessageCommand* msg);
+};
+
+const PROTOBUF_NAMESPACE_ID::StringValue&
+ReplayReceivedMessageCommand::_Internal::provider_session_id(const ReplayReceivedMessageCommand* msg) {
+  return *msg->provider_session_id_;
+}
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+ReplayReceivedMessageCommand::_Internal::received_at(const ReplayReceivedMessageCommand* msg) {
+  return *msg->received_at_;
+}
+const ::com::elarian::hera::proto::CustomerNumber&
+ReplayReceivedMessageCommand::_Internal::customer_number(const ReplayReceivedMessageCommand* msg) {
+  return *msg->customer_number_;
+}
+const ::com::elarian::hera::proto::MessagingChannelNumber&
+ReplayReceivedMessageCommand::_Internal::channel_number(const ReplayReceivedMessageCommand* msg) {
+  return *msg->channel_number_;
+}
+const PROTOBUF_NAMESPACE_ID::StringValue&
+ReplayReceivedMessageCommand::_Internal::in_reply_to(const ReplayReceivedMessageCommand* msg) {
+  return *msg->in_reply_to_;
+}
+const ::com::elarian::hera::proto::Cash&
+ReplayReceivedMessageCommand::_Internal::cost(const ReplayReceivedMessageCommand* msg) {
+  return *msg->cost_;
+}
+void ReplayReceivedMessageCommand::clear_provider_session_id() {
+  if (GetArena() == nullptr && provider_session_id_ != nullptr) {
+    delete provider_session_id_;
+  }
+  provider_session_id_ = nullptr;
+}
+void ReplayReceivedMessageCommand::clear_received_at() {
+  if (GetArena() == nullptr && received_at_ != nullptr) {
+    delete received_at_;
+  }
+  received_at_ = nullptr;
+}
+void ReplayReceivedMessageCommand::clear_customer_number() {
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+}
+void ReplayReceivedMessageCommand::clear_channel_number() {
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+}
+void ReplayReceivedMessageCommand::clear_parts() {
+  parts_.Clear();
+}
+void ReplayReceivedMessageCommand::clear_in_reply_to() {
+  if (GetArena() == nullptr && in_reply_to_ != nullptr) {
+    delete in_reply_to_;
+  }
+  in_reply_to_ = nullptr;
+}
+void ReplayReceivedMessageCommand::clear_cost() {
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+}
+ReplayReceivedMessageCommand::ReplayReceivedMessageCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena),
+  parts_(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+}
+ReplayReceivedMessageCommand::ReplayReceivedMessageCommand(const ReplayReceivedMessageCommand& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message(),
+      parts_(from.parts_) {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_provider_message_id().empty()) {
+    provider_message_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_provider_message_id(), 
+      GetArena());
+  }
+  if (from._internal_has_provider_session_id()) {
+    provider_session_id_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.provider_session_id_);
+  } else {
+    provider_session_id_ = nullptr;
+  }
+  if (from._internal_has_received_at()) {
+    received_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.received_at_);
+  } else {
+    received_at_ = nullptr;
+  }
+  if (from._internal_has_customer_number()) {
+    customer_number_ = new ::com::elarian::hera::proto::CustomerNumber(*from.customer_number_);
+  } else {
+    customer_number_ = nullptr;
+  }
+  if (from._internal_has_channel_number()) {
+    channel_number_ = new ::com::elarian::hera::proto::MessagingChannelNumber(*from.channel_number_);
+  } else {
+    channel_number_ = nullptr;
+  }
+  if (from._internal_has_in_reply_to()) {
+    in_reply_to_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.in_reply_to_);
+  } else {
+    in_reply_to_ = nullptr;
+  }
+  if (from._internal_has_cost()) {
+    cost_ = new ::com::elarian::hera::proto::Cash(*from.cost_);
+  } else {
+    cost_ = nullptr;
+  }
+  provider_ = from.provider_;
+  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+}
+
+void ReplayReceivedMessageCommand::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto.base);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&provider_session_id_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&provider_) -
+      reinterpret_cast<char*>(&provider_session_id_)) + sizeof(provider_));
+}
+
+ReplayReceivedMessageCommand::~ReplayReceivedMessageCommand() {
+  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ReplayReceivedMessageCommand::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  provider_message_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete provider_session_id_;
+  if (this != internal_default_instance()) delete received_at_;
+  if (this != internal_default_instance()) delete customer_number_;
+  if (this != internal_default_instance()) delete channel_number_;
+  if (this != internal_default_instance()) delete in_reply_to_;
+  if (this != internal_default_instance()) delete cost_;
+}
+
+void ReplayReceivedMessageCommand::ArenaDtor(void* object) {
+  ReplayReceivedMessageCommand* _this = reinterpret_cast< ReplayReceivedMessageCommand* >(object);
+  (void)_this;
+}
+void ReplayReceivedMessageCommand::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ReplayReceivedMessageCommand::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplayReceivedMessageCommand& ReplayReceivedMessageCommand::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplayReceivedMessageCommand_app_5fsocket_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplayReceivedMessageCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  parts_.Clear();
+  provider_message_id_.ClearToEmpty();
+  if (GetArena() == nullptr && provider_session_id_ != nullptr) {
+    delete provider_session_id_;
+  }
+  provider_session_id_ = nullptr;
+  if (GetArena() == nullptr && received_at_ != nullptr) {
+    delete received_at_;
+  }
+  received_at_ = nullptr;
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+  if (GetArena() == nullptr && in_reply_to_ != nullptr) {
+    delete in_reply_to_;
+  }
+  in_reply_to_ = nullptr;
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+  provider_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ReplayReceivedMessageCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string provider_message_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_provider_message_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.ReplayReceivedMessageCommand.provider_message_id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue provider_session_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_provider_session_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Timestamp received_at = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_received_at(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.CustomerNumber customer_number = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_customer_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_channel_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // repeated .com.elarian.hera.proto.InboundMessageBody parts = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr -= 1;
+          do {
+            ptr += 1;
+            ptr = ctx->ParseMessage(_internal_add_parts(), ptr);
+            CHK_(ptr);
+            if (!ctx->DataAvailable(ptr)) break;
+          } while (::PROTOBUF_NAMESPACE_ID::internal::ExpectTag<50>(ptr));
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue in_reply_to = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_in_reply_to(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ChannelNumberProvider provider = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 64)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_provider(static_cast<::com::elarian::hera::proto::ChannelNumberProvider>(val));
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.Cash cost = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 74)) {
+          ptr = ctx->ParseMessage(_internal_mutable_cost(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplayReceivedMessageCommand::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_provider_message_id().data(), static_cast<int>(this->_internal_provider_message_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.ReplayReceivedMessageCommand.provider_message_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_provider_message_id(), target);
+  }
+
+  // .google.protobuf.StringValue provider_session_id = 2;
+  if (this->has_provider_session_id()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::provider_session_id(this), target, stream);
+  }
+
+  // .google.protobuf.Timestamp received_at = 3;
+  if (this->has_received_at()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::received_at(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 4;
+  if (this->has_customer_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::customer_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;
+  if (this->has_channel_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::channel_number(this), target, stream);
+  }
+
+  // repeated .com.elarian.hera.proto.InboundMessageBody parts = 6;
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->_internal_parts_size()); i < n; i++) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(6, this->_internal_parts(i), target, stream);
+  }
+
+  // .google.protobuf.StringValue in_reply_to = 7;
+  if (this->has_in_reply_to()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::in_reply_to(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ChannelNumberProvider provider = 8;
+  if (this->provider() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      8, this->_internal_provider(), target);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 9;
+  if (this->has_cost()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        9, _Internal::cost(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  return target;
+}
+
+size_t ReplayReceivedMessageCommand::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // repeated .com.elarian.hera.proto.InboundMessageBody parts = 6;
+  total_size += 1UL * this->_internal_parts_size();
+  for (const auto& msg : this->parts_) {
+    total_size +=
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(msg);
+  }
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_provider_message_id());
+  }
+
+  // .google.protobuf.StringValue provider_session_id = 2;
+  if (this->has_provider_session_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *provider_session_id_);
+  }
+
+  // .google.protobuf.Timestamp received_at = 3;
+  if (this->has_received_at()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *received_at_);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 4;
+  if (this->has_customer_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *customer_number_);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;
+  if (this->has_channel_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *channel_number_);
+  }
+
+  // .google.protobuf.StringValue in_reply_to = 7;
+  if (this->has_in_reply_to()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *in_reply_to_);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 9;
+  if (this->has_cost()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *cost_);
+  }
+
+  // .com.elarian.hera.proto.ChannelNumberProvider provider = 8;
+  if (this->provider() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_provider());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplayReceivedMessageCommand::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplayReceivedMessageCommand* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplayReceivedMessageCommand>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+    MergeFrom(*source);
+  }
+}
+
+void ReplayReceivedMessageCommand::MergeFrom(const ReplayReceivedMessageCommand& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  parts_.MergeFrom(from.parts_);
+  if (from.provider_message_id().size() > 0) {
+    _internal_set_provider_message_id(from._internal_provider_message_id());
+  }
+  if (from.has_provider_session_id()) {
+    _internal_mutable_provider_session_id()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_provider_session_id());
+  }
+  if (from.has_received_at()) {
+    _internal_mutable_received_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_received_at());
+  }
+  if (from.has_customer_number()) {
+    _internal_mutable_customer_number()->::com::elarian::hera::proto::CustomerNumber::MergeFrom(from._internal_customer_number());
+  }
+  if (from.has_channel_number()) {
+    _internal_mutable_channel_number()->::com::elarian::hera::proto::MessagingChannelNumber::MergeFrom(from._internal_channel_number());
+  }
+  if (from.has_in_reply_to()) {
+    _internal_mutable_in_reply_to()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_in_reply_to());
+  }
+  if (from.has_cost()) {
+    _internal_mutable_cost()->::com::elarian::hera::proto::Cash::MergeFrom(from._internal_cost());
+  }
+  if (from.provider() != 0) {
+    _internal_set_provider(from._internal_provider());
+  }
+}
+
+void ReplayReceivedMessageCommand::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplayReceivedMessageCommand::CopyFrom(const ReplayReceivedMessageCommand& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.ReplayReceivedMessageCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplayReceivedMessageCommand::IsInitialized() const {
+  return true;
+}
+
+void ReplayReceivedMessageCommand::InternalSwap(ReplayReceivedMessageCommand* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  parts_.InternalSwap(&other->parts_);
+  provider_message_id_.Swap(&other->provider_message_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReplayReceivedMessageCommand, provider_)
+      + sizeof(ReplayReceivedMessageCommand::provider_)
+      - PROTOBUF_FIELD_OFFSET(ReplayReceivedMessageCommand, provider_session_id_)>(
+          reinterpret_cast<char*>(&provider_session_id_),
+          reinterpret_cast<char*>(&other->provider_session_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplayReceivedMessageCommand::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class ReplaySentMessageCommand::_Internal {
+ public:
+  static const PROTOBUF_NAMESPACE_ID::StringValue& provider_session_id(const ReplaySentMessageCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& sent_at(const ReplaySentMessageCommand* msg);
+  static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const ReplaySentMessageCommand* msg);
+  static const ::com::elarian::hera::proto::MessagingChannelNumber& channel_number(const ReplaySentMessageCommand* msg);
+  static const ::com::elarian::hera::proto::OutboundMessage& message(const ReplaySentMessageCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::StringValue& in_reply_to(const ReplaySentMessageCommand* msg);
+  static const ::com::elarian::hera::proto::Cash& cost(const ReplaySentMessageCommand* msg);
+};
+
+const PROTOBUF_NAMESPACE_ID::StringValue&
+ReplaySentMessageCommand::_Internal::provider_session_id(const ReplaySentMessageCommand* msg) {
+  return *msg->provider_session_id_;
+}
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+ReplaySentMessageCommand::_Internal::sent_at(const ReplaySentMessageCommand* msg) {
+  return *msg->sent_at_;
+}
+const ::com::elarian::hera::proto::CustomerNumber&
+ReplaySentMessageCommand::_Internal::customer_number(const ReplaySentMessageCommand* msg) {
+  return *msg->customer_number_;
+}
+const ::com::elarian::hera::proto::MessagingChannelNumber&
+ReplaySentMessageCommand::_Internal::channel_number(const ReplaySentMessageCommand* msg) {
+  return *msg->channel_number_;
+}
+const ::com::elarian::hera::proto::OutboundMessage&
+ReplaySentMessageCommand::_Internal::message(const ReplaySentMessageCommand* msg) {
+  return *msg->message_;
+}
+const PROTOBUF_NAMESPACE_ID::StringValue&
+ReplaySentMessageCommand::_Internal::in_reply_to(const ReplaySentMessageCommand* msg) {
+  return *msg->in_reply_to_;
+}
+const ::com::elarian::hera::proto::Cash&
+ReplaySentMessageCommand::_Internal::cost(const ReplaySentMessageCommand* msg) {
+  return *msg->cost_;
+}
+void ReplaySentMessageCommand::clear_provider_session_id() {
+  if (GetArena() == nullptr && provider_session_id_ != nullptr) {
+    delete provider_session_id_;
+  }
+  provider_session_id_ = nullptr;
+}
+void ReplaySentMessageCommand::clear_sent_at() {
+  if (GetArena() == nullptr && sent_at_ != nullptr) {
+    delete sent_at_;
+  }
+  sent_at_ = nullptr;
+}
+void ReplaySentMessageCommand::clear_customer_number() {
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+}
+void ReplaySentMessageCommand::clear_channel_number() {
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+}
+void ReplaySentMessageCommand::clear_message() {
+  if (GetArena() == nullptr && message_ != nullptr) {
+    delete message_;
+  }
+  message_ = nullptr;
+}
+void ReplaySentMessageCommand::clear_in_reply_to() {
+  if (GetArena() == nullptr && in_reply_to_ != nullptr) {
+    delete in_reply_to_;
+  }
+  in_reply_to_ = nullptr;
+}
+void ReplaySentMessageCommand::clear_cost() {
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+}
+ReplaySentMessageCommand::ReplaySentMessageCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.ReplaySentMessageCommand)
+}
+ReplaySentMessageCommand::ReplaySentMessageCommand(const ReplaySentMessageCommand& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_provider_message_id().empty()) {
+    provider_message_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_provider_message_id(), 
+      GetArena());
+  }
+  if (from._internal_has_provider_session_id()) {
+    provider_session_id_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.provider_session_id_);
+  } else {
+    provider_session_id_ = nullptr;
+  }
+  if (from._internal_has_sent_at()) {
+    sent_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.sent_at_);
+  } else {
+    sent_at_ = nullptr;
+  }
+  if (from._internal_has_customer_number()) {
+    customer_number_ = new ::com::elarian::hera::proto::CustomerNumber(*from.customer_number_);
+  } else {
+    customer_number_ = nullptr;
+  }
+  if (from._internal_has_channel_number()) {
+    channel_number_ = new ::com::elarian::hera::proto::MessagingChannelNumber(*from.channel_number_);
+  } else {
+    channel_number_ = nullptr;
+  }
+  if (from._internal_has_message()) {
+    message_ = new ::com::elarian::hera::proto::OutboundMessage(*from.message_);
+  } else {
+    message_ = nullptr;
+  }
+  if (from._internal_has_in_reply_to()) {
+    in_reply_to_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.in_reply_to_);
+  } else {
+    in_reply_to_ = nullptr;
+  }
+  if (from._internal_has_cost()) {
+    cost_ = new ::com::elarian::hera::proto::Cash(*from.cost_);
+  } else {
+    cost_ = nullptr;
+  }
+  ::memcpy(&provider_, &from.provider_,
+    static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+    reinterpret_cast<char*>(&provider_)) + sizeof(status_));
+  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.ReplaySentMessageCommand)
+}
+
+void ReplaySentMessageCommand::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplaySentMessageCommand_app_5fsocket_2eproto.base);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&provider_session_id_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+      reinterpret_cast<char*>(&provider_session_id_)) + sizeof(status_));
+}
+
+ReplaySentMessageCommand::~ReplaySentMessageCommand() {
+  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.ReplaySentMessageCommand)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ReplaySentMessageCommand::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  provider_message_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete provider_session_id_;
+  if (this != internal_default_instance()) delete sent_at_;
+  if (this != internal_default_instance()) delete customer_number_;
+  if (this != internal_default_instance()) delete channel_number_;
+  if (this != internal_default_instance()) delete message_;
+  if (this != internal_default_instance()) delete in_reply_to_;
+  if (this != internal_default_instance()) delete cost_;
+}
+
+void ReplaySentMessageCommand::ArenaDtor(void* object) {
+  ReplaySentMessageCommand* _this = reinterpret_cast< ReplaySentMessageCommand* >(object);
+  (void)_this;
+}
+void ReplaySentMessageCommand::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ReplaySentMessageCommand::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplaySentMessageCommand& ReplaySentMessageCommand::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplaySentMessageCommand_app_5fsocket_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplaySentMessageCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  provider_message_id_.ClearToEmpty();
+  if (GetArena() == nullptr && provider_session_id_ != nullptr) {
+    delete provider_session_id_;
+  }
+  provider_session_id_ = nullptr;
+  if (GetArena() == nullptr && sent_at_ != nullptr) {
+    delete sent_at_;
+  }
+  sent_at_ = nullptr;
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+  if (GetArena() == nullptr && message_ != nullptr) {
+    delete message_;
+  }
+  message_ = nullptr;
+  if (GetArena() == nullptr && in_reply_to_ != nullptr) {
+    delete in_reply_to_;
+  }
+  in_reply_to_ = nullptr;
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+  ::memset(&provider_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&status_) -
+      reinterpret_cast<char*>(&provider_)) + sizeof(status_));
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ReplaySentMessageCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string provider_message_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_provider_message_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.ReplaySentMessageCommand.provider_message_id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue provider_session_id = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_provider_session_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Timestamp sent_at = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_sent_at(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.CustomerNumber customer_number = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_customer_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_channel_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.ChannelNumberProvider provider = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_provider(static_cast<::com::elarian::hera::proto::ChannelNumberProvider>(val));
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.OutboundMessage message = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_message(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue in_reply_to = 8;
+      case 8:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 66)) {
+          ptr = ctx->ParseMessage(_internal_mutable_in_reply_to(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessageDeliveryStatus status = 9;
+      case 9:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 72)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_status(static_cast<::com::elarian::hera::proto::MessageDeliveryStatus>(val));
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.Cash cost = 10;
+      case 10:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 82)) {
+          ptr = ctx->ParseMessage(_internal_mutable_cost(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplaySentMessageCommand::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_provider_message_id().data(), static_cast<int>(this->_internal_provider_message_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.ReplaySentMessageCommand.provider_message_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_provider_message_id(), target);
+  }
+
+  // .google.protobuf.StringValue provider_session_id = 2;
+  if (this->has_provider_session_id()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::provider_session_id(this), target, stream);
+  }
+
+  // .google.protobuf.Timestamp sent_at = 3;
+  if (this->has_sent_at()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::sent_at(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 4;
+  if (this->has_customer_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::customer_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;
+  if (this->has_channel_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::channel_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.ChannelNumberProvider provider = 6;
+  if (this->provider() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      6, this->_internal_provider(), target);
+  }
+
+  // .com.elarian.hera.proto.OutboundMessage message = 7;
+  if (this->has_message()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::message(this), target, stream);
+  }
+
+  // .google.protobuf.StringValue in_reply_to = 8;
+  if (this->has_in_reply_to()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        8, _Internal::in_reply_to(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessageDeliveryStatus status = 9;
+  if (this->status() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      9, this->_internal_status(), target);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 10;
+  if (this->has_cost()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        10, _Internal::cost(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.ReplaySentMessageCommand)
+  return target;
+}
+
+size_t ReplaySentMessageCommand::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_provider_message_id());
+  }
+
+  // .google.protobuf.StringValue provider_session_id = 2;
+  if (this->has_provider_session_id()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *provider_session_id_);
+  }
+
+  // .google.protobuf.Timestamp sent_at = 3;
+  if (this->has_sent_at()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *sent_at_);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 4;
+  if (this->has_customer_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *customer_number_);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 5;
+  if (this->has_channel_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *channel_number_);
+  }
+
+  // .com.elarian.hera.proto.OutboundMessage message = 7;
+  if (this->has_message()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *message_);
+  }
+
+  // .google.protobuf.StringValue in_reply_to = 8;
+  if (this->has_in_reply_to()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *in_reply_to_);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 10;
+  if (this->has_cost()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *cost_);
+  }
+
+  // .com.elarian.hera.proto.ChannelNumberProvider provider = 6;
+  if (this->provider() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_provider());
+  }
+
+  // .com.elarian.hera.proto.MessageDeliveryStatus status = 9;
+  if (this->status() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_status());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplaySentMessageCommand::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplaySentMessageCommand* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplaySentMessageCommand>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.ReplaySentMessageCommand)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.ReplaySentMessageCommand)
+    MergeFrom(*source);
+  }
+}
+
+void ReplaySentMessageCommand::MergeFrom(const ReplaySentMessageCommand& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.provider_message_id().size() > 0) {
+    _internal_set_provider_message_id(from._internal_provider_message_id());
+  }
+  if (from.has_provider_session_id()) {
+    _internal_mutable_provider_session_id()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_provider_session_id());
+  }
+  if (from.has_sent_at()) {
+    _internal_mutable_sent_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_sent_at());
+  }
+  if (from.has_customer_number()) {
+    _internal_mutable_customer_number()->::com::elarian::hera::proto::CustomerNumber::MergeFrom(from._internal_customer_number());
+  }
+  if (from.has_channel_number()) {
+    _internal_mutable_channel_number()->::com::elarian::hera::proto::MessagingChannelNumber::MergeFrom(from._internal_channel_number());
+  }
+  if (from.has_message()) {
+    _internal_mutable_message()->::com::elarian::hera::proto::OutboundMessage::MergeFrom(from._internal_message());
+  }
+  if (from.has_in_reply_to()) {
+    _internal_mutable_in_reply_to()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_in_reply_to());
+  }
+  if (from.has_cost()) {
+    _internal_mutable_cost()->::com::elarian::hera::proto::Cash::MergeFrom(from._internal_cost());
+  }
+  if (from.provider() != 0) {
+    _internal_set_provider(from._internal_provider());
+  }
+  if (from.status() != 0) {
+    _internal_set_status(from._internal_status());
+  }
+}
+
+void ReplaySentMessageCommand::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplaySentMessageCommand::CopyFrom(const ReplaySentMessageCommand& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.ReplaySentMessageCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplaySentMessageCommand::IsInitialized() const {
+  return true;
+}
+
+void ReplaySentMessageCommand::InternalSwap(ReplaySentMessageCommand* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  provider_message_id_.Swap(&other->provider_message_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReplaySentMessageCommand, status_)
+      + sizeof(ReplaySentMessageCommand::status_)
+      - PROTOBUF_FIELD_OFFSET(ReplaySentMessageCommand, provider_session_id_)>(
+          reinterpret_cast<char*>(&provider_session_id_),
+          reinterpret_cast<char*>(&other->provider_session_id_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplaySentMessageCommand::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class ReplayMessageStatusUpdateCommand::_Internal {
+ public:
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& updated_at(const ReplayMessageStatusUpdateCommand* msg);
+  static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const ReplayMessageStatusUpdateCommand* msg);
+  static const ::com::elarian::hera::proto::MessagingChannelNumber& channel_number(const ReplayMessageStatusUpdateCommand* msg);
+  static const ::com::elarian::hera::proto::Cash& cost(const ReplayMessageStatusUpdateCommand* msg);
+};
+
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+ReplayMessageStatusUpdateCommand::_Internal::updated_at(const ReplayMessageStatusUpdateCommand* msg) {
+  return *msg->updated_at_;
+}
+const ::com::elarian::hera::proto::CustomerNumber&
+ReplayMessageStatusUpdateCommand::_Internal::customer_number(const ReplayMessageStatusUpdateCommand* msg) {
+  return *msg->customer_number_;
+}
+const ::com::elarian::hera::proto::MessagingChannelNumber&
+ReplayMessageStatusUpdateCommand::_Internal::channel_number(const ReplayMessageStatusUpdateCommand* msg) {
+  return *msg->channel_number_;
+}
+const ::com::elarian::hera::proto::Cash&
+ReplayMessageStatusUpdateCommand::_Internal::cost(const ReplayMessageStatusUpdateCommand* msg) {
+  return *msg->cost_;
+}
+void ReplayMessageStatusUpdateCommand::clear_updated_at() {
+  if (GetArena() == nullptr && updated_at_ != nullptr) {
+    delete updated_at_;
+  }
+  updated_at_ = nullptr;
+}
+void ReplayMessageStatusUpdateCommand::clear_customer_number() {
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+}
+void ReplayMessageStatusUpdateCommand::clear_channel_number() {
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+}
+void ReplayMessageStatusUpdateCommand::clear_cost() {
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+}
+ReplayMessageStatusUpdateCommand::ReplayMessageStatusUpdateCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+}
+ReplayMessageStatusUpdateCommand::ReplayMessageStatusUpdateCommand(const ReplayMessageStatusUpdateCommand& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_provider_message_id().empty()) {
+    provider_message_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_provider_message_id(), 
+      GetArena());
+  }
+  if (from._internal_has_updated_at()) {
+    updated_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.updated_at_);
+  } else {
+    updated_at_ = nullptr;
+  }
+  if (from._internal_has_customer_number()) {
+    customer_number_ = new ::com::elarian::hera::proto::CustomerNumber(*from.customer_number_);
+  } else {
+    customer_number_ = nullptr;
+  }
+  if (from._internal_has_channel_number()) {
+    channel_number_ = new ::com::elarian::hera::proto::MessagingChannelNumber(*from.channel_number_);
+  } else {
+    channel_number_ = nullptr;
+  }
+  if (from._internal_has_cost()) {
+    cost_ = new ::com::elarian::hera::proto::Cash(*from.cost_);
+  } else {
+    cost_ = nullptr;
+  }
+  status_ = from.status_;
+  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+}
+
+void ReplayMessageStatusUpdateCommand::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto.base);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&updated_at_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+      reinterpret_cast<char*>(&updated_at_)) + sizeof(status_));
+}
+
+ReplayMessageStatusUpdateCommand::~ReplayMessageStatusUpdateCommand() {
+  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ReplayMessageStatusUpdateCommand::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  provider_message_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete updated_at_;
+  if (this != internal_default_instance()) delete customer_number_;
+  if (this != internal_default_instance()) delete channel_number_;
+  if (this != internal_default_instance()) delete cost_;
+}
+
+void ReplayMessageStatusUpdateCommand::ArenaDtor(void* object) {
+  ReplayMessageStatusUpdateCommand* _this = reinterpret_cast< ReplayMessageStatusUpdateCommand* >(object);
+  (void)_this;
+}
+void ReplayMessageStatusUpdateCommand::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ReplayMessageStatusUpdateCommand::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplayMessageStatusUpdateCommand& ReplayMessageStatusUpdateCommand::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplayMessageStatusUpdateCommand_app_5fsocket_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplayMessageStatusUpdateCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  provider_message_id_.ClearToEmpty();
+  if (GetArena() == nullptr && updated_at_ != nullptr) {
+    delete updated_at_;
+  }
+  updated_at_ = nullptr;
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+  status_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ReplayMessageStatusUpdateCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string provider_message_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_provider_message_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.ReplayMessageStatusUpdateCommand.provider_message_id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Timestamp updated_at = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_updated_at(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.CustomerNumber customer_number = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_customer_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_channel_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessageDeliveryStatus status = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_status(static_cast<::com::elarian::hera::proto::MessageDeliveryStatus>(val));
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.Cash cost = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
+          ptr = ctx->ParseMessage(_internal_mutable_cost(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplayMessageStatusUpdateCommand::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_provider_message_id().data(), static_cast<int>(this->_internal_provider_message_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.ReplayMessageStatusUpdateCommand.provider_message_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_provider_message_id(), target);
+  }
+
+  // .google.protobuf.Timestamp updated_at = 2;
+  if (this->has_updated_at()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::updated_at(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 3;
+  if (this->has_customer_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::customer_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;
+  if (this->has_channel_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::channel_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessageDeliveryStatus status = 5;
+  if (this->status() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      5, this->_internal_status(), target);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 6;
+  if (this->has_cost()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        6, _Internal::cost(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  return target;
+}
+
+size_t ReplayMessageStatusUpdateCommand::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_provider_message_id());
+  }
+
+  // .google.protobuf.Timestamp updated_at = 2;
+  if (this->has_updated_at()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *updated_at_);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 3;
+  if (this->has_customer_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *customer_number_);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;
+  if (this->has_channel_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *channel_number_);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 6;
+  if (this->has_cost()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *cost_);
+  }
+
+  // .com.elarian.hera.proto.MessageDeliveryStatus status = 5;
+  if (this->status() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_status());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplayMessageStatusUpdateCommand::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplayMessageStatusUpdateCommand* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplayMessageStatusUpdateCommand>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+    MergeFrom(*source);
+  }
+}
+
+void ReplayMessageStatusUpdateCommand::MergeFrom(const ReplayMessageStatusUpdateCommand& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.provider_message_id().size() > 0) {
+    _internal_set_provider_message_id(from._internal_provider_message_id());
+  }
+  if (from.has_updated_at()) {
+    _internal_mutable_updated_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_updated_at());
+  }
+  if (from.has_customer_number()) {
+    _internal_mutable_customer_number()->::com::elarian::hera::proto::CustomerNumber::MergeFrom(from._internal_customer_number());
+  }
+  if (from.has_channel_number()) {
+    _internal_mutable_channel_number()->::com::elarian::hera::proto::MessagingChannelNumber::MergeFrom(from._internal_channel_number());
+  }
+  if (from.has_cost()) {
+    _internal_mutable_cost()->::com::elarian::hera::proto::Cash::MergeFrom(from._internal_cost());
+  }
+  if (from.status() != 0) {
+    _internal_set_status(from._internal_status());
+  }
+}
+
+void ReplayMessageStatusUpdateCommand::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplayMessageStatusUpdateCommand::CopyFrom(const ReplayMessageStatusUpdateCommand& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.ReplayMessageStatusUpdateCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplayMessageStatusUpdateCommand::IsInitialized() const {
+  return true;
+}
+
+void ReplayMessageStatusUpdateCommand::InternalSwap(ReplayMessageStatusUpdateCommand* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  provider_message_id_.Swap(&other->provider_message_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReplayMessageStatusUpdateCommand, status_)
+      + sizeof(ReplayMessageStatusUpdateCommand::status_)
+      - PROTOBUF_FIELD_OFFSET(ReplayMessageStatusUpdateCommand, updated_at_)>(
+          reinterpret_cast<char*>(&updated_at_),
+          reinterpret_cast<char*>(&other->updated_at_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplayMessageStatusUpdateCommand::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class ReplayMessageReactionUpdateCommand::_Internal {
+ public:
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& updated_at(const ReplayMessageReactionUpdateCommand* msg);
+  static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const ReplayMessageReactionUpdateCommand* msg);
+  static const ::com::elarian::hera::proto::MessagingChannelNumber& channel_number(const ReplayMessageReactionUpdateCommand* msg);
+};
+
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+ReplayMessageReactionUpdateCommand::_Internal::updated_at(const ReplayMessageReactionUpdateCommand* msg) {
+  return *msg->updated_at_;
+}
+const ::com::elarian::hera::proto::CustomerNumber&
+ReplayMessageReactionUpdateCommand::_Internal::customer_number(const ReplayMessageReactionUpdateCommand* msg) {
+  return *msg->customer_number_;
+}
+const ::com::elarian::hera::proto::MessagingChannelNumber&
+ReplayMessageReactionUpdateCommand::_Internal::channel_number(const ReplayMessageReactionUpdateCommand* msg) {
+  return *msg->channel_number_;
+}
+void ReplayMessageReactionUpdateCommand::clear_updated_at() {
+  if (GetArena() == nullptr && updated_at_ != nullptr) {
+    delete updated_at_;
+  }
+  updated_at_ = nullptr;
+}
+void ReplayMessageReactionUpdateCommand::clear_customer_number() {
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+}
+void ReplayMessageReactionUpdateCommand::clear_channel_number() {
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+}
+ReplayMessageReactionUpdateCommand::ReplayMessageReactionUpdateCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+}
+ReplayMessageReactionUpdateCommand::ReplayMessageReactionUpdateCommand(const ReplayMessageReactionUpdateCommand& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_provider_message_id().empty()) {
+    provider_message_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_provider_message_id(), 
+      GetArena());
+  }
+  if (from._internal_has_updated_at()) {
+    updated_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.updated_at_);
+  } else {
+    updated_at_ = nullptr;
+  }
+  if (from._internal_has_customer_number()) {
+    customer_number_ = new ::com::elarian::hera::proto::CustomerNumber(*from.customer_number_);
+  } else {
+    customer_number_ = nullptr;
+  }
+  if (from._internal_has_channel_number()) {
+    channel_number_ = new ::com::elarian::hera::proto::MessagingChannelNumber(*from.channel_number_);
+  } else {
+    channel_number_ = nullptr;
+  }
+  reaction_ = from.reaction_;
+  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+}
+
+void ReplayMessageReactionUpdateCommand::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto.base);
+  provider_message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&updated_at_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&reaction_) -
+      reinterpret_cast<char*>(&updated_at_)) + sizeof(reaction_));
+}
+
+ReplayMessageReactionUpdateCommand::~ReplayMessageReactionUpdateCommand() {
+  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ReplayMessageReactionUpdateCommand::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  provider_message_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete updated_at_;
+  if (this != internal_default_instance()) delete customer_number_;
+  if (this != internal_default_instance()) delete channel_number_;
+}
+
+void ReplayMessageReactionUpdateCommand::ArenaDtor(void* object) {
+  ReplayMessageReactionUpdateCommand* _this = reinterpret_cast< ReplayMessageReactionUpdateCommand* >(object);
+  (void)_this;
+}
+void ReplayMessageReactionUpdateCommand::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ReplayMessageReactionUpdateCommand::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplayMessageReactionUpdateCommand& ReplayMessageReactionUpdateCommand::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplayMessageReactionUpdateCommand_app_5fsocket_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplayMessageReactionUpdateCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  provider_message_id_.ClearToEmpty();
+  if (GetArena() == nullptr && updated_at_ != nullptr) {
+    delete updated_at_;
+  }
+  updated_at_ = nullptr;
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+  reaction_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ReplayMessageReactionUpdateCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string provider_message_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_provider_message_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.ReplayMessageReactionUpdateCommand.provider_message_id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Timestamp updated_at = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_updated_at(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.CustomerNumber customer_number = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_customer_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_channel_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessageReaction reaction = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 40)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_reaction(static_cast<::com::elarian::hera::proto::MessageReaction>(val));
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplayMessageReactionUpdateCommand::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_provider_message_id().data(), static_cast<int>(this->_internal_provider_message_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.ReplayMessageReactionUpdateCommand.provider_message_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_provider_message_id(), target);
+  }
+
+  // .google.protobuf.Timestamp updated_at = 2;
+  if (this->has_updated_at()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::updated_at(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 3;
+  if (this->has_customer_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::customer_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;
+  if (this->has_channel_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::channel_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessageReaction reaction = 5;
+  if (this->reaction() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      5, this->_internal_reaction(), target);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  return target;
+}
+
+size_t ReplayMessageReactionUpdateCommand::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string provider_message_id = 1;
+  if (this->provider_message_id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_provider_message_id());
+  }
+
+  // .google.protobuf.Timestamp updated_at = 2;
+  if (this->has_updated_at()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *updated_at_);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 3;
+  if (this->has_customer_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *customer_number_);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 4;
+  if (this->has_channel_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *channel_number_);
+  }
+
+  // .com.elarian.hera.proto.MessageReaction reaction = 5;
+  if (this->reaction() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_reaction());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplayMessageReactionUpdateCommand::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplayMessageReactionUpdateCommand* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplayMessageReactionUpdateCommand>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+    MergeFrom(*source);
+  }
+}
+
+void ReplayMessageReactionUpdateCommand::MergeFrom(const ReplayMessageReactionUpdateCommand& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.provider_message_id().size() > 0) {
+    _internal_set_provider_message_id(from._internal_provider_message_id());
+  }
+  if (from.has_updated_at()) {
+    _internal_mutable_updated_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_updated_at());
+  }
+  if (from.has_customer_number()) {
+    _internal_mutable_customer_number()->::com::elarian::hera::proto::CustomerNumber::MergeFrom(from._internal_customer_number());
+  }
+  if (from.has_channel_number()) {
+    _internal_mutable_channel_number()->::com::elarian::hera::proto::MessagingChannelNumber::MergeFrom(from._internal_channel_number());
+  }
+  if (from.reaction() != 0) {
+    _internal_set_reaction(from._internal_reaction());
+  }
+}
+
+void ReplayMessageReactionUpdateCommand::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplayMessageReactionUpdateCommand::CopyFrom(const ReplayMessageReactionUpdateCommand& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.ReplayMessageReactionUpdateCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplayMessageReactionUpdateCommand::IsInitialized() const {
+  return true;
+}
+
+void ReplayMessageReactionUpdateCommand::InternalSwap(ReplayMessageReactionUpdateCommand* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  provider_message_id_.Swap(&other->provider_message_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReplayMessageReactionUpdateCommand, reaction_)
+      + sizeof(ReplayMessageReactionUpdateCommand::reaction_)
+      - PROTOBUF_FIELD_OFFSET(ReplayMessageReactionUpdateCommand, updated_at_)>(
+          reinterpret_cast<char*>(&updated_at_),
+          reinterpret_cast<char*>(&other->updated_at_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplayMessageReactionUpdateCommand::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
+class ReplayMessagingSessionCommand::_Internal {
+ public:
+  static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const ReplayMessagingSessionCommand* msg);
+  static const ::com::elarian::hera::proto::MessagingChannelNumber& channel_number(const ReplayMessagingSessionCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::Timestamp& started_at(const ReplayMessagingSessionCommand* msg);
+  static const PROTOBUF_NAMESPACE_ID::Duration& duration(const ReplayMessagingSessionCommand* msg);
+  static const ::com::elarian::hera::proto::Cash& cost(const ReplayMessagingSessionCommand* msg);
+};
+
+const ::com::elarian::hera::proto::CustomerNumber&
+ReplayMessagingSessionCommand::_Internal::customer_number(const ReplayMessagingSessionCommand* msg) {
+  return *msg->customer_number_;
+}
+const ::com::elarian::hera::proto::MessagingChannelNumber&
+ReplayMessagingSessionCommand::_Internal::channel_number(const ReplayMessagingSessionCommand* msg) {
+  return *msg->channel_number_;
+}
+const PROTOBUF_NAMESPACE_ID::Timestamp&
+ReplayMessagingSessionCommand::_Internal::started_at(const ReplayMessagingSessionCommand* msg) {
+  return *msg->started_at_;
+}
+const PROTOBUF_NAMESPACE_ID::Duration&
+ReplayMessagingSessionCommand::_Internal::duration(const ReplayMessagingSessionCommand* msg) {
+  return *msg->duration_;
+}
+const ::com::elarian::hera::proto::Cash&
+ReplayMessagingSessionCommand::_Internal::cost(const ReplayMessagingSessionCommand* msg) {
+  return *msg->cost_;
+}
+void ReplayMessagingSessionCommand::clear_customer_number() {
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+}
+void ReplayMessagingSessionCommand::clear_channel_number() {
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+}
+void ReplayMessagingSessionCommand::clear_started_at() {
+  if (GetArena() == nullptr && started_at_ != nullptr) {
+    delete started_at_;
+  }
+  started_at_ = nullptr;
+}
+void ReplayMessagingSessionCommand::clear_duration() {
+  if (GetArena() == nullptr && duration_ != nullptr) {
+    delete duration_;
+  }
+  duration_ = nullptr;
+}
+void ReplayMessagingSessionCommand::clear_cost() {
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+}
+ReplayMessagingSessionCommand::ReplayMessagingSessionCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena)
+  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+}
+ReplayMessagingSessionCommand::ReplayMessagingSessionCommand(const ReplayMessagingSessionCommand& from)
+  : ::PROTOBUF_NAMESPACE_ID::Message() {
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  provider_session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_provider_session_id().empty()) {
+    provider_session_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_provider_session_id(), 
+      GetArena());
+  }
+  if (from._internal_has_customer_number()) {
+    customer_number_ = new ::com::elarian::hera::proto::CustomerNumber(*from.customer_number_);
+  } else {
+    customer_number_ = nullptr;
+  }
+  if (from._internal_has_channel_number()) {
+    channel_number_ = new ::com::elarian::hera::proto::MessagingChannelNumber(*from.channel_number_);
+  } else {
+    channel_number_ = nullptr;
+  }
+  if (from._internal_has_started_at()) {
+    started_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.started_at_);
+  } else {
+    started_at_ = nullptr;
+  }
+  if (from._internal_has_duration()) {
+    duration_ = new PROTOBUF_NAMESPACE_ID::Duration(*from.duration_);
+  } else {
+    duration_ = nullptr;
+  }
+  if (from._internal_has_cost()) {
+    cost_ = new ::com::elarian::hera::proto::Cash(*from.cost_);
+  } else {
+    cost_ = nullptr;
+  }
+  end_reason_ = from.end_reason_;
+  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+}
+
+void ReplayMessagingSessionCommand::SharedCtor() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto.base);
+  provider_session_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&customer_number_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&end_reason_) -
+      reinterpret_cast<char*>(&customer_number_)) + sizeof(end_reason_));
+}
+
+ReplayMessagingSessionCommand::~ReplayMessagingSessionCommand() {
+  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  SharedDtor();
+  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+void ReplayMessagingSessionCommand::SharedDtor() {
+  GOOGLE_DCHECK(GetArena() == nullptr);
+  provider_session_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete customer_number_;
+  if (this != internal_default_instance()) delete channel_number_;
+  if (this != internal_default_instance()) delete started_at_;
+  if (this != internal_default_instance()) delete duration_;
+  if (this != internal_default_instance()) delete cost_;
+}
+
+void ReplayMessagingSessionCommand::ArenaDtor(void* object) {
+  ReplayMessagingSessionCommand* _this = reinterpret_cast< ReplayMessagingSessionCommand* >(object);
+  (void)_this;
+}
+void ReplayMessagingSessionCommand::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
+}
+void ReplayMessagingSessionCommand::SetCachedSize(int size) const {
+  _cached_size_.Set(size);
+}
+const ReplayMessagingSessionCommand& ReplayMessagingSessionCommand::default_instance() {
+  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_ReplayMessagingSessionCommand_app_5fsocket_2eproto.base);
+  return *internal_default_instance();
+}
+
+
+void ReplayMessagingSessionCommand::Clear() {
+// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  provider_session_id_.ClearToEmpty();
+  if (GetArena() == nullptr && customer_number_ != nullptr) {
+    delete customer_number_;
+  }
+  customer_number_ = nullptr;
+  if (GetArena() == nullptr && channel_number_ != nullptr) {
+    delete channel_number_;
+  }
+  channel_number_ = nullptr;
+  if (GetArena() == nullptr && started_at_ != nullptr) {
+    delete started_at_;
+  }
+  started_at_ = nullptr;
+  if (GetArena() == nullptr && duration_ != nullptr) {
+    delete duration_;
+  }
+  duration_ = nullptr;
+  if (GetArena() == nullptr && cost_ != nullptr) {
+    delete cost_;
+  }
+  cost_ = nullptr;
+  end_reason_ = 0;
+  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
+}
+
+const char* ReplayMessagingSessionCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
+#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
+  while (!ctx->Done(&ptr)) {
+    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
+    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
+    CHK_(ptr);
+    switch (tag >> 3) {
+      // string provider_session_id = 1;
+      case 1:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
+          auto str = _internal_mutable_provider_session_id();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.ReplayMessagingSessionCommand.provider_session_id"));
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.CustomerNumber customer_number = 2;
+      case 2:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
+          ptr = ctx->ParseMessage(_internal_mutable_customer_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_channel_number(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Timestamp started_at = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          ptr = ctx->ParseMessage(_internal_mutable_started_at(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.Duration duration = 5;
+      case 5:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 42)) {
+          ptr = ctx->ParseMessage(_internal_mutable_duration(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.MessagingSessionEndReason end_reason = 6;
+      case 6:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 48)) {
+          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
+          CHK_(ptr);
+          _internal_set_end_reason(static_cast<::com::elarian::hera::proto::MessagingSessionEndReason>(val));
+        } else goto handle_unusual;
+        continue;
+      // .com.elarian.hera.proto.Cash cost = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          ptr = ctx->ParseMessage(_internal_mutable_cost(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      default: {
+      handle_unusual:
+        if ((tag & 7) == 4 || tag == 0) {
+          ctx->SetLastTag(tag);
+          goto success;
+        }
+        ptr = UnknownFieldParse(tag,
+            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
+            ptr, ctx);
+        CHK_(ptr != nullptr);
+        continue;
+      }
+    }  // switch
+  }  // while
+success:
+  return ptr;
+failure:
+  ptr = nullptr;
+  goto success;
+#undef CHK_
+}
+
+::PROTOBUF_NAMESPACE_ID::uint8* ReplayMessagingSessionCommand::_InternalSerialize(
+    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
+  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  // string provider_session_id = 1;
+  if (this->provider_session_id().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_provider_session_id().data(), static_cast<int>(this->_internal_provider_session_id().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.ReplayMessagingSessionCommand.provider_session_id");
+    target = stream->WriteStringMaybeAliased(
+        1, this->_internal_provider_session_id(), target);
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 2;
+  if (this->has_customer_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        2, _Internal::customer_number(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;
+  if (this->has_channel_number()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::channel_number(this), target, stream);
+  }
+
+  // .google.protobuf.Timestamp started_at = 4;
+  if (this->has_started_at()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        4, _Internal::started_at(this), target, stream);
+  }
+
+  // .google.protobuf.Duration duration = 5;
+  if (this->has_duration()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        5, _Internal::duration(this), target, stream);
+  }
+
+  // .com.elarian.hera.proto.MessagingSessionEndReason end_reason = 6;
+  if (this->end_reason() != 0) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
+      6, this->_internal_end_reason(), target);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 7;
+  if (this->has_cost()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        7, _Internal::cost(this), target, stream);
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
+        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
+  }
+  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  return target;
+}
+
+size_t ReplayMessagingSessionCommand::ByteSizeLong() const {
+// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  size_t total_size = 0;
+
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  // string provider_session_id = 1;
+  if (this->provider_session_id().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_provider_session_id());
+  }
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 2;
+  if (this->has_customer_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *customer_number_);
+  }
+
+  // .com.elarian.hera.proto.MessagingChannelNumber channel_number = 3;
+  if (this->has_channel_number()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *channel_number_);
+  }
+
+  // .google.protobuf.Timestamp started_at = 4;
+  if (this->has_started_at()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *started_at_);
+  }
+
+  // .google.protobuf.Duration duration = 5;
+  if (this->has_duration()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *duration_);
+  }
+
+  // .com.elarian.hera.proto.Cash cost = 7;
+  if (this->has_cost()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *cost_);
+  }
+
+  // .com.elarian.hera.proto.MessagingSessionEndReason end_reason = 6;
+  if (this->end_reason() != 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_end_reason());
+  }
+
+  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
+    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
+        _internal_metadata_, total_size, &_cached_size_);
+  }
+  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
+  SetCachedSize(cached_size);
+  return total_size;
+}
+
+void ReplayMessagingSessionCommand::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  const ReplayMessagingSessionCommand* source =
+      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<ReplayMessagingSessionCommand>(
+          &from);
+  if (source == nullptr) {
+  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
+  } else {
+  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+    MergeFrom(*source);
+  }
+}
+
+void ReplayMessagingSessionCommand::MergeFrom(const ReplayMessagingSessionCommand& from) {
+// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  GOOGLE_DCHECK_NE(&from, this);
+  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
+  (void) cached_has_bits;
+
+  if (from.provider_session_id().size() > 0) {
+    _internal_set_provider_session_id(from._internal_provider_session_id());
+  }
+  if (from.has_customer_number()) {
+    _internal_mutable_customer_number()->::com::elarian::hera::proto::CustomerNumber::MergeFrom(from._internal_customer_number());
+  }
+  if (from.has_channel_number()) {
+    _internal_mutable_channel_number()->::com::elarian::hera::proto::MessagingChannelNumber::MergeFrom(from._internal_channel_number());
+  }
+  if (from.has_started_at()) {
+    _internal_mutable_started_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_started_at());
+  }
+  if (from.has_duration()) {
+    _internal_mutable_duration()->PROTOBUF_NAMESPACE_ID::Duration::MergeFrom(from._internal_duration());
+  }
+  if (from.has_cost()) {
+    _internal_mutable_cost()->::com::elarian::hera::proto::Cash::MergeFrom(from._internal_cost());
+  }
+  if (from.end_reason() != 0) {
+    _internal_set_end_reason(from._internal_end_reason());
+  }
+}
+
+void ReplayMessagingSessionCommand::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
+// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+void ReplayMessagingSessionCommand::CopyFrom(const ReplayMessagingSessionCommand& from) {
+// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.ReplayMessagingSessionCommand)
+  if (&from == this) return;
+  Clear();
+  MergeFrom(from);
+}
+
+bool ReplayMessagingSessionCommand::IsInitialized() const {
+  return true;
+}
+
+void ReplayMessagingSessionCommand::InternalSwap(ReplayMessagingSessionCommand* other) {
+  using std::swap;
+  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  provider_session_id_.Swap(&other->provider_session_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(ReplayMessagingSessionCommand, end_reason_)
+      + sizeof(ReplayMessagingSessionCommand::end_reason_)
+      - PROTOBUF_FIELD_OFFSET(ReplayMessagingSessionCommand, customer_number_)>(
+          reinterpret_cast<char*>(&customer_number_),
+          reinterpret_cast<char*>(&other->customer_number_));
+}
+
+::PROTOBUF_NAMESPACE_ID::Metadata ReplayMessagingSessionCommand::GetMetadata() const {
+  return GetMetadataStatic();
+}
+
+
+// ===================================================================
+
 class CustomerActivityReply::_Internal {
  public:
   static const PROTOBUF_NAMESPACE_ID::StringValue& customer_id(const CustomerActivityReply* msg);
@@ -22894,6 +26307,24 @@ template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::CustomerActivityComman
 }
 template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::CustomerActivityCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::CustomerActivityCommand >(Arena* arena) {
   return Arena::CreateMessageInternal< ::com::elarian::hera::proto::CustomerActivityCommand >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReplayReceivedMessageCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::ReplayReceivedMessageCommand >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::ReplayReceivedMessageCommand >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReplaySentMessageCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::ReplaySentMessageCommand >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::ReplaySentMessageCommand >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand >(arena);
+}
+template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReplayMessagingSessionCommand* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::ReplayMessagingSessionCommand >(Arena* arena) {
+  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::ReplayMessagingSessionCommand >(arena);
 }
 template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::CustomerActivityReply* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::CustomerActivityReply >(Arena* arena) {
   return Arena::CreateMessageInternal< ::com::elarian::hera::proto::CustomerActivityReply >(arena);

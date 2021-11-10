@@ -240,6 +240,7 @@ class ReceivedMessage PROTOBUF_FINAL :
     kInReplyToFieldNumber = 6,
     kAppIdFieldNumber = 8,
     kCostFieldNumber = 10,
+    kProviderMessageIdFieldNumber = 11,
     kProviderFieldNumber = 7,
   };
   // repeated .com.elarian.hera.proto.InboundMessageBody parts = 9;
@@ -402,6 +403,24 @@ class ReceivedMessage PROTOBUF_FINAL :
       ::com::elarian::hera::proto::Cash* cost);
   ::com::elarian::hera::proto::Cash* unsafe_arena_release_cost();
 
+  // .google.protobuf.StringValue provider_message_id = 11;
+  bool has_provider_message_id() const;
+  private:
+  bool _internal_has_provider_message_id() const;
+  public:
+  void clear_provider_message_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& provider_message_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_provider_message_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_provider_message_id();
+  void set_allocated_provider_message_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_provider_message_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_provider_message_id();
+  public:
+  void unsafe_arena_set_allocated_provider_message_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_provider_message_id();
+
   // .com.elarian.hera.proto.ChannelNumberProvider provider = 7;
   void clear_provider();
   ::com::elarian::hera::proto::ChannelNumberProvider provider() const;
@@ -427,6 +446,7 @@ class ReceivedMessage PROTOBUF_FINAL :
   PROTOBUF_NAMESPACE_ID::StringValue* in_reply_to_;
   PROTOBUF_NAMESPACE_ID::StringValue* app_id_;
   ::com::elarian::hera::proto::Cash* cost_;
+  PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id_;
   int provider_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_messaging_5fstate_2eproto;
@@ -556,6 +576,7 @@ class SentMessage PROTOBUF_FINAL :
     kUpdatedAtFieldNumber = 9,
     kMessageFieldNumber = 12,
     kCostFieldNumber = 13,
+    kProviderMessageIdFieldNumber = 14,
     kProviderFieldNumber = 7,
     kStatusFieldNumber = 10,
   };
@@ -755,6 +776,24 @@ class SentMessage PROTOBUF_FINAL :
       ::com::elarian::hera::proto::Cash* cost);
   ::com::elarian::hera::proto::Cash* unsafe_arena_release_cost();
 
+  // .google.protobuf.StringValue provider_message_id = 14;
+  bool has_provider_message_id() const;
+  private:
+  bool _internal_has_provider_message_id() const;
+  public:
+  void clear_provider_message_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& provider_message_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_provider_message_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_provider_message_id();
+  void set_allocated_provider_message_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_provider_message_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_provider_message_id();
+  public:
+  void unsafe_arena_set_allocated_provider_message_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_provider_message_id();
+
   // .com.elarian.hera.proto.ChannelNumberProvider provider = 7;
   void clear_provider();
   ::com::elarian::hera::proto::ChannelNumberProvider provider() const;
@@ -791,6 +830,7 @@ class SentMessage PROTOBUF_FINAL :
   PROTOBUF_NAMESPACE_ID::Timestamp* updated_at_;
   ::com::elarian::hera::proto::OutboundMessage* message_;
   ::com::elarian::hera::proto::Cash* cost_;
+  PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id_;
   int provider_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -1419,6 +1459,7 @@ class CompleteMessagingSession PROTOBUF_FINAL :
     kStartedAtFieldNumber = 4,
     kDurationFieldNumber = 5,
     kCostFieldNumber = 8,
+    kProviderSessionIdFieldNumber = 9,
     kEndReasonFieldNumber = 7,
   };
   // repeated string app_ids = 6;
@@ -1551,6 +1592,24 @@ class CompleteMessagingSession PROTOBUF_FINAL :
       ::com::elarian::hera::proto::Cash* cost);
   ::com::elarian::hera::proto::Cash* unsafe_arena_release_cost();
 
+  // .google.protobuf.StringValue provider_session_id = 9;
+  bool has_provider_session_id() const;
+  private:
+  bool _internal_has_provider_session_id() const;
+  public:
+  void clear_provider_session_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& provider_session_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_provider_session_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_provider_session_id();
+  void set_allocated_provider_session_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_provider_session_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_provider_session_id();
+  public:
+  void unsafe_arena_set_allocated_provider_session_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_provider_session_id();
+
   // .com.elarian.hera.proto.MessagingSessionEndReason end_reason = 7;
   void clear_end_reason();
   ::com::elarian::hera::proto::MessagingSessionEndReason end_reason() const;
@@ -1574,6 +1633,7 @@ class CompleteMessagingSession PROTOBUF_FINAL :
   PROTOBUF_NAMESPACE_ID::Timestamp* started_at_;
   PROTOBUF_NAMESPACE_ID::Duration* duration_;
   ::com::elarian::hera::proto::Cash* cost_;
+  PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id_;
   int end_reason_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_messaging_5fstate_2eproto;
@@ -2110,6 +2170,7 @@ class InSessionMessagingChannelState PROTOBUF_FINAL :
     kAllowedAtFieldNumber = 4,
     kStartedAtFieldNumber = 6,
     kExpiresAtFieldNumber = 7,
+    kProviderSessionIdFieldNumber = 9,
   };
   // repeated string app_ids = 8;
   int app_ids_size() const;
@@ -2259,6 +2320,24 @@ class InSessionMessagingChannelState PROTOBUF_FINAL :
       PROTOBUF_NAMESPACE_ID::Timestamp* expires_at);
   PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_expires_at();
 
+  // .google.protobuf.StringValue provider_session_id = 9;
+  bool has_provider_session_id() const;
+  private:
+  bool _internal_has_provider_session_id() const;
+  public:
+  void clear_provider_session_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& provider_session_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_provider_session_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_provider_session_id();
+  void set_allocated_provider_session_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_provider_session_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_provider_session_id();
+  public:
+  void unsafe_arena_set_allocated_provider_session_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_provider_session_id();
+
   // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.InSessionMessagingChannelState)
  private:
   class _Internal;
@@ -2274,6 +2353,7 @@ class InSessionMessagingChannelState PROTOBUF_FINAL :
   PROTOBUF_NAMESPACE_ID::Timestamp* allowed_at_;
   PROTOBUF_NAMESPACE_ID::Timestamp* started_at_;
   PROTOBUF_NAMESPACE_ID::Timestamp* expires_at_;
+  PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_messaging_5fstate_2eproto;
 };
@@ -3334,6 +3414,83 @@ inline void ReceivedMessage::set_allocated_cost(::com::elarian::hera::proto::Cas
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReceivedMessage.cost)
 }
 
+// .google.protobuf.StringValue provider_message_id = 11;
+inline bool ReceivedMessage::_internal_has_provider_message_id() const {
+  return this != internal_default_instance() && provider_message_id_ != nullptr;
+}
+inline bool ReceivedMessage::has_provider_message_id() const {
+  return _internal_has_provider_message_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReceivedMessage::_internal_provider_message_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = provider_message_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReceivedMessage::provider_message_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReceivedMessage.provider_message_id)
+  return _internal_provider_message_id();
+}
+inline void ReceivedMessage::unsafe_arena_set_allocated_provider_message_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_message_id_);
+  }
+  provider_message_id_ = provider_message_id;
+  if (provider_message_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReceivedMessage.provider_message_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReceivedMessage::release_provider_message_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_message_id_;
+  provider_message_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReceivedMessage::unsafe_arena_release_provider_message_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReceivedMessage.provider_message_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_message_id_;
+  provider_message_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReceivedMessage::_internal_mutable_provider_message_id() {
+  
+  if (provider_message_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    provider_message_id_ = p;
+  }
+  return provider_message_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReceivedMessage::mutable_provider_message_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReceivedMessage.provider_message_id)
+  return _internal_mutable_provider_message_id();
+}
+inline void ReceivedMessage::set_allocated_provider_message_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_message_id_);
+  }
+  if (provider_message_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_message_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      provider_message_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, provider_message_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  provider_message_id_ = provider_message_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReceivedMessage.provider_message_id)
+}
+
 // -------------------------------------------------------------------
 
 // SentMessage
@@ -4169,6 +4326,83 @@ inline void SentMessage::set_allocated_cost(::com::elarian::hera::proto::Cash* c
   }
   cost_ = cost;
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.SentMessage.cost)
+}
+
+// .google.protobuf.StringValue provider_message_id = 14;
+inline bool SentMessage::_internal_has_provider_message_id() const {
+  return this != internal_default_instance() && provider_message_id_ != nullptr;
+}
+inline bool SentMessage::has_provider_message_id() const {
+  return _internal_has_provider_message_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& SentMessage::_internal_provider_message_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = provider_message_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& SentMessage::provider_message_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.SentMessage.provider_message_id)
+  return _internal_provider_message_id();
+}
+inline void SentMessage::unsafe_arena_set_allocated_provider_message_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_message_id_);
+  }
+  provider_message_id_ = provider_message_id;
+  if (provider_message_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.SentMessage.provider_message_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* SentMessage::release_provider_message_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_message_id_;
+  provider_message_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* SentMessage::unsafe_arena_release_provider_message_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.SentMessage.provider_message_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_message_id_;
+  provider_message_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* SentMessage::_internal_mutable_provider_message_id() {
+  
+  if (provider_message_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    provider_message_id_ = p;
+  }
+  return provider_message_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* SentMessage::mutable_provider_message_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.SentMessage.provider_message_id)
+  return _internal_mutable_provider_message_id();
+}
+inline void SentMessage::set_allocated_provider_message_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_message_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_message_id_);
+  }
+  if (provider_message_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_message_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      provider_message_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, provider_message_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  provider_message_id_ = provider_message_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.SentMessage.provider_message_id)
 }
 
 // -------------------------------------------------------------------
@@ -5115,6 +5349,83 @@ inline void CompleteMessagingSession::set_allocated_cost(::com::elarian::hera::p
   }
   cost_ = cost;
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.CompleteMessagingSession.cost)
+}
+
+// .google.protobuf.StringValue provider_session_id = 9;
+inline bool CompleteMessagingSession::_internal_has_provider_session_id() const {
+  return this != internal_default_instance() && provider_session_id_ != nullptr;
+}
+inline bool CompleteMessagingSession::has_provider_session_id() const {
+  return _internal_has_provider_session_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& CompleteMessagingSession::_internal_provider_session_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = provider_session_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& CompleteMessagingSession::provider_session_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.CompleteMessagingSession.provider_session_id)
+  return _internal_provider_session_id();
+}
+inline void CompleteMessagingSession::unsafe_arena_set_allocated_provider_session_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_session_id_);
+  }
+  provider_session_id_ = provider_session_id;
+  if (provider_session_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.CompleteMessagingSession.provider_session_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* CompleteMessagingSession::release_provider_session_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_session_id_;
+  provider_session_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* CompleteMessagingSession::unsafe_arena_release_provider_session_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.CompleteMessagingSession.provider_session_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_session_id_;
+  provider_session_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* CompleteMessagingSession::_internal_mutable_provider_session_id() {
+  
+  if (provider_session_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    provider_session_id_ = p;
+  }
+  return provider_session_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* CompleteMessagingSession::mutable_provider_session_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.CompleteMessagingSession.provider_session_id)
+  return _internal_mutable_provider_session_id();
+}
+inline void CompleteMessagingSession::set_allocated_provider_session_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_session_id_);
+  }
+  if (provider_session_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_session_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      provider_session_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, provider_session_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  provider_session_id_ = provider_session_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.CompleteMessagingSession.provider_session_id)
 }
 
 // -------------------------------------------------------------------
@@ -6358,6 +6669,83 @@ inline ::PROTOBUF_NAMESPACE_ID::RepeatedPtrField<std::string>*
 InSessionMessagingChannelState::mutable_app_ids() {
   // @@protoc_insertion_point(field_mutable_list:com.elarian.hera.proto.InSessionMessagingChannelState.app_ids)
   return &app_ids_;
+}
+
+// .google.protobuf.StringValue provider_session_id = 9;
+inline bool InSessionMessagingChannelState::_internal_has_provider_session_id() const {
+  return this != internal_default_instance() && provider_session_id_ != nullptr;
+}
+inline bool InSessionMessagingChannelState::has_provider_session_id() const {
+  return _internal_has_provider_session_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& InSessionMessagingChannelState::_internal_provider_session_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = provider_session_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& InSessionMessagingChannelState::provider_session_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id)
+  return _internal_provider_session_id();
+}
+inline void InSessionMessagingChannelState::unsafe_arena_set_allocated_provider_session_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_session_id_);
+  }
+  provider_session_id_ = provider_session_id;
+  if (provider_session_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* InSessionMessagingChannelState::release_provider_session_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_session_id_;
+  provider_session_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* InSessionMessagingChannelState::unsafe_arena_release_provider_session_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = provider_session_id_;
+  provider_session_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* InSessionMessagingChannelState::_internal_mutable_provider_session_id() {
+  
+  if (provider_session_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    provider_session_id_ = p;
+  }
+  return provider_session_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* InSessionMessagingChannelState::mutable_provider_session_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id)
+  return _internal_mutable_provider_session_id();
+}
+inline void InSessionMessagingChannelState::set_allocated_provider_session_id(PROTOBUF_NAMESPACE_ID::StringValue* provider_session_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_session_id_);
+  }
+  if (provider_session_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(provider_session_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      provider_session_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, provider_session_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  provider_session_id_ = provider_session_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id)
 }
 
 // -------------------------------------------------------------------

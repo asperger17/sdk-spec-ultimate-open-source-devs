@@ -85,6 +85,12 @@ GPBObjCClassDeclaration(PaymentStatusNotification);
 GPBObjCClassDeclaration(ReceivedMessageNotification);
 GPBObjCClassDeclaration(ReceivedPaymentNotification);
 GPBObjCClassDeclaration(ReminderNotification);
+GPBObjCClassDeclaration(ReplayMessageReactionUpdateCommand);
+GPBObjCClassDeclaration(ReplayMessageStatusUpdateCommand);
+GPBObjCClassDeclaration(ReplayMessagingConsentUpdateCommand);
+GPBObjCClassDeclaration(ReplayMessagingSessionCommand);
+GPBObjCClassDeclaration(ReplayReceivedMessageCommand);
+GPBObjCClassDeclaration(ReplaySentMessageCommand);
 GPBObjCClassDeclaration(ReplyToMessageCommand);
 GPBObjCClassDeclaration(SendMessageCommand);
 GPBObjCClassDeclaration(SendMessageReply);
@@ -252,6 +258,12 @@ typedef struct AppConnectionMetadata__storage_ {
 @dynamic updateMessagingConsent;
 @dynamic initiatePayment;
 @dynamic customerActivity;
+@dynamic replayMessagingConsentUpdate;
+@dynamic replayReceivedMessage;
+@dynamic replaySentMessage;
+@dynamic replayMessageStatusUpdate;
+@dynamic replayMessageReactionUpdate;
+@dynamic replayMessagingSession;
 
 typedef struct AppToServerCommand__storage_ {
   uint32_t _has_storage_[2];
@@ -278,6 +290,12 @@ typedef struct AppToServerCommand__storage_ {
   UpdateMessagingConsentCommand *updateMessagingConsent;
   InitiatePaymentCommand *initiatePayment;
   CustomerActivityCommand *customerActivity;
+  ReplayMessagingConsentUpdateCommand *replayMessagingConsentUpdate;
+  ReplayReceivedMessageCommand *replayReceivedMessage;
+  ReplaySentMessageCommand *replaySentMessage;
+  ReplayMessageStatusUpdateCommand *replayMessageStatusUpdate;
+  ReplayMessageReactionUpdateCommand *replayMessageReactionUpdate;
+  ReplayMessagingSessionCommand *replayMessagingSession;
 } AppToServerCommand__storage_;
 
 // This method is threadsafe because it is initially called
@@ -490,6 +508,60 @@ typedef struct AppToServerCommand__storage_ {
         .number = AppToServerCommand_FieldNumber_CustomerActivity,
         .hasIndex = -1,
         .offset = (uint32_t)offsetof(AppToServerCommand__storage_, customerActivity),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "replayMessagingConsentUpdate",
+        .dataTypeSpecific.clazz = GPBObjCClass(ReplayMessagingConsentUpdateCommand),
+        .number = AppToServerCommand_FieldNumber_ReplayMessagingConsentUpdate,
+        .hasIndex = -1,
+        .offset = (uint32_t)offsetof(AppToServerCommand__storage_, replayMessagingConsentUpdate),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "replayReceivedMessage",
+        .dataTypeSpecific.clazz = GPBObjCClass(ReplayReceivedMessageCommand),
+        .number = AppToServerCommand_FieldNumber_ReplayReceivedMessage,
+        .hasIndex = -1,
+        .offset = (uint32_t)offsetof(AppToServerCommand__storage_, replayReceivedMessage),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "replaySentMessage",
+        .dataTypeSpecific.clazz = GPBObjCClass(ReplaySentMessageCommand),
+        .number = AppToServerCommand_FieldNumber_ReplaySentMessage,
+        .hasIndex = -1,
+        .offset = (uint32_t)offsetof(AppToServerCommand__storage_, replaySentMessage),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "replayMessageStatusUpdate",
+        .dataTypeSpecific.clazz = GPBObjCClass(ReplayMessageStatusUpdateCommand),
+        .number = AppToServerCommand_FieldNumber_ReplayMessageStatusUpdate,
+        .hasIndex = -1,
+        .offset = (uint32_t)offsetof(AppToServerCommand__storage_, replayMessageStatusUpdate),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "replayMessageReactionUpdate",
+        .dataTypeSpecific.clazz = GPBObjCClass(ReplayMessageReactionUpdateCommand),
+        .number = AppToServerCommand_FieldNumber_ReplayMessageReactionUpdate,
+        .hasIndex = -1,
+        .offset = (uint32_t)offsetof(AppToServerCommand__storage_, replayMessageReactionUpdate),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "replayMessagingSession",
+        .dataTypeSpecific.clazz = GPBObjCClass(ReplayMessagingSessionCommand),
+        .number = AppToServerCommand_FieldNumber_ReplayMessagingSession,
+        .hasIndex = -1,
+        .offset = (uint32_t)offsetof(AppToServerCommand__storage_, replayMessagingSession),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -3207,6 +3279,745 @@ typedef struct CustomerActivityCommand__storage_ {
 }
 
 @end
+
+#pragma mark - ReplayMessagingConsentUpdateCommand
+
+@implementation ReplayMessagingConsentUpdateCommand
+
+@dynamic hasCustomerNumber, customerNumber;
+@dynamic hasChannelNumber, channelNumber;
+@dynamic hasUpdatedAt, updatedAt;
+@dynamic update;
+
+typedef struct ReplayMessagingConsentUpdateCommand__storage_ {
+  uint32_t _has_storage_[1];
+  MessagingConsentUpdate update;
+  CustomerNumber *customerNumber;
+  MessagingChannelNumber *channelNumber;
+  GPBTimestamp *updatedAt;
+} ReplayMessagingConsentUpdateCommand__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "customerNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomerNumber),
+        .number = ReplayMessagingConsentUpdateCommand_FieldNumber_CustomerNumber,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ReplayMessagingConsentUpdateCommand__storage_, customerNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "channelNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(MessagingChannelNumber),
+        .number = ReplayMessagingConsentUpdateCommand_FieldNumber_ChannelNumber,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ReplayMessagingConsentUpdateCommand__storage_, channelNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "updatedAt",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBTimestamp),
+        .number = ReplayMessagingConsentUpdateCommand_FieldNumber_UpdatedAt,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ReplayMessagingConsentUpdateCommand__storage_, updatedAt),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "update",
+        .dataTypeSpecific.enumDescFunc = MessagingConsentUpdate_EnumDescriptor,
+        .number = ReplayMessagingConsentUpdateCommand_FieldNumber_Update,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ReplayMessagingConsentUpdateCommand__storage_, update),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ReplayMessagingConsentUpdateCommand class]
+                                     rootClass:[AppSocketRoot class]
+                                          file:AppSocketRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ReplayMessagingConsentUpdateCommand__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t ReplayMessagingConsentUpdateCommand_Update_RawValue(ReplayMessagingConsentUpdateCommand *message) {
+  GPBDescriptor *descriptor = [ReplayMessagingConsentUpdateCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessagingConsentUpdateCommand_FieldNumber_Update];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplayMessagingConsentUpdateCommand_Update_RawValue(ReplayMessagingConsentUpdateCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplayMessagingConsentUpdateCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessagingConsentUpdateCommand_FieldNumber_Update];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+#pragma mark - ReplayReceivedMessageCommand
+
+@implementation ReplayReceivedMessageCommand
+
+@dynamic providerMessageId;
+@dynamic hasProviderSessionId, providerSessionId;
+@dynamic hasReceivedAt, receivedAt;
+@dynamic hasCustomerNumber, customerNumber;
+@dynamic hasChannelNumber, channelNumber;
+@dynamic partsArray, partsArray_Count;
+@dynamic hasInReplyTo, inReplyTo;
+@dynamic provider;
+@dynamic hasCost, cost;
+
+typedef struct ReplayReceivedMessageCommand__storage_ {
+  uint32_t _has_storage_[1];
+  ChannelNumberProvider provider;
+  NSString *providerMessageId;
+  GPBStringValue *providerSessionId;
+  GPBTimestamp *receivedAt;
+  CustomerNumber *customerNumber;
+  MessagingChannelNumber *channelNumber;
+  NSMutableArray *partsArray;
+  GPBStringValue *inReplyTo;
+  Cash *cost;
+} ReplayReceivedMessageCommand__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "providerMessageId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ReplayReceivedMessageCommand_FieldNumber_ProviderMessageId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, providerMessageId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "providerSessionId",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = ReplayReceivedMessageCommand_FieldNumber_ProviderSessionId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, providerSessionId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "receivedAt",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBTimestamp),
+        .number = ReplayReceivedMessageCommand_FieldNumber_ReceivedAt,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, receivedAt),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "customerNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomerNumber),
+        .number = ReplayReceivedMessageCommand_FieldNumber_CustomerNumber,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, customerNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "channelNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(MessagingChannelNumber),
+        .number = ReplayReceivedMessageCommand_FieldNumber_ChannelNumber,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, channelNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "partsArray",
+        .dataTypeSpecific.clazz = GPBObjCClass(InboundMessageBody),
+        .number = ReplayReceivedMessageCommand_FieldNumber_PartsArray,
+        .hasIndex = GPBNoHasBit,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, partsArray),
+        .flags = GPBFieldRepeated,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "inReplyTo",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = ReplayReceivedMessageCommand_FieldNumber_InReplyTo,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, inReplyTo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "provider",
+        .dataTypeSpecific.enumDescFunc = ChannelNumberProvider_EnumDescriptor,
+        .number = ReplayReceivedMessageCommand_FieldNumber_Provider,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, provider),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "cost",
+        .dataTypeSpecific.clazz = GPBObjCClass(Cash),
+        .number = ReplayReceivedMessageCommand_FieldNumber_Cost,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(ReplayReceivedMessageCommand__storage_, cost),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ReplayReceivedMessageCommand class]
+                                     rootClass:[AppSocketRoot class]
+                                          file:AppSocketRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ReplayReceivedMessageCommand__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t ReplayReceivedMessageCommand_Provider_RawValue(ReplayReceivedMessageCommand *message) {
+  GPBDescriptor *descriptor = [ReplayReceivedMessageCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayReceivedMessageCommand_FieldNumber_Provider];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplayReceivedMessageCommand_Provider_RawValue(ReplayReceivedMessageCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplayReceivedMessageCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayReceivedMessageCommand_FieldNumber_Provider];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+#pragma mark - ReplaySentMessageCommand
+
+@implementation ReplaySentMessageCommand
+
+@dynamic providerMessageId;
+@dynamic hasProviderSessionId, providerSessionId;
+@dynamic hasSentAt, sentAt;
+@dynamic hasCustomerNumber, customerNumber;
+@dynamic hasChannelNumber, channelNumber;
+@dynamic provider;
+@dynamic hasMessage, message;
+@dynamic hasInReplyTo, inReplyTo;
+@dynamic status;
+@dynamic hasCost, cost;
+
+typedef struct ReplaySentMessageCommand__storage_ {
+  uint32_t _has_storage_[1];
+  ChannelNumberProvider provider;
+  MessageDeliveryStatus status;
+  NSString *providerMessageId;
+  GPBStringValue *providerSessionId;
+  GPBTimestamp *sentAt;
+  CustomerNumber *customerNumber;
+  MessagingChannelNumber *channelNumber;
+  OutboundMessage *message;
+  GPBStringValue *inReplyTo;
+  Cash *cost;
+} ReplaySentMessageCommand__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "providerMessageId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ReplaySentMessageCommand_FieldNumber_ProviderMessageId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, providerMessageId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "providerSessionId",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = ReplaySentMessageCommand_FieldNumber_ProviderSessionId,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, providerSessionId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "sentAt",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBTimestamp),
+        .number = ReplaySentMessageCommand_FieldNumber_SentAt,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, sentAt),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "customerNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomerNumber),
+        .number = ReplaySentMessageCommand_FieldNumber_CustomerNumber,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, customerNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "channelNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(MessagingChannelNumber),
+        .number = ReplaySentMessageCommand_FieldNumber_ChannelNumber,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, channelNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "provider",
+        .dataTypeSpecific.enumDescFunc = ChannelNumberProvider_EnumDescriptor,
+        .number = ReplaySentMessageCommand_FieldNumber_Provider,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, provider),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "message",
+        .dataTypeSpecific.clazz = GPBObjCClass(OutboundMessage),
+        .number = ReplaySentMessageCommand_FieldNumber_Message,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, message),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "inReplyTo",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = ReplaySentMessageCommand_FieldNumber_InReplyTo,
+        .hasIndex = 7,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, inReplyTo),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "status",
+        .dataTypeSpecific.enumDescFunc = MessageDeliveryStatus_EnumDescriptor,
+        .number = ReplaySentMessageCommand_FieldNumber_Status,
+        .hasIndex = 8,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, status),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "cost",
+        .dataTypeSpecific.clazz = GPBObjCClass(Cash),
+        .number = ReplaySentMessageCommand_FieldNumber_Cost,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(ReplaySentMessageCommand__storage_, cost),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ReplaySentMessageCommand class]
+                                     rootClass:[AppSocketRoot class]
+                                          file:AppSocketRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ReplaySentMessageCommand__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t ReplaySentMessageCommand_Provider_RawValue(ReplaySentMessageCommand *message) {
+  GPBDescriptor *descriptor = [ReplaySentMessageCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplaySentMessageCommand_FieldNumber_Provider];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplaySentMessageCommand_Provider_RawValue(ReplaySentMessageCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplaySentMessageCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplaySentMessageCommand_FieldNumber_Provider];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+int32_t ReplaySentMessageCommand_Status_RawValue(ReplaySentMessageCommand *message) {
+  GPBDescriptor *descriptor = [ReplaySentMessageCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplaySentMessageCommand_FieldNumber_Status];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplaySentMessageCommand_Status_RawValue(ReplaySentMessageCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplaySentMessageCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplaySentMessageCommand_FieldNumber_Status];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+#pragma mark - ReplayMessageStatusUpdateCommand
+
+@implementation ReplayMessageStatusUpdateCommand
+
+@dynamic providerMessageId;
+@dynamic hasUpdatedAt, updatedAt;
+@dynamic hasCustomerNumber, customerNumber;
+@dynamic hasChannelNumber, channelNumber;
+@dynamic status;
+@dynamic hasCost, cost;
+
+typedef struct ReplayMessageStatusUpdateCommand__storage_ {
+  uint32_t _has_storage_[1];
+  MessageDeliveryStatus status;
+  NSString *providerMessageId;
+  GPBTimestamp *updatedAt;
+  CustomerNumber *customerNumber;
+  MessagingChannelNumber *channelNumber;
+  Cash *cost;
+} ReplayMessageStatusUpdateCommand__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "providerMessageId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ReplayMessageStatusUpdateCommand_FieldNumber_ProviderMessageId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ReplayMessageStatusUpdateCommand__storage_, providerMessageId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "updatedAt",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBTimestamp),
+        .number = ReplayMessageStatusUpdateCommand_FieldNumber_UpdatedAt,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ReplayMessageStatusUpdateCommand__storage_, updatedAt),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "customerNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomerNumber),
+        .number = ReplayMessageStatusUpdateCommand_FieldNumber_CustomerNumber,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ReplayMessageStatusUpdateCommand__storage_, customerNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "channelNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(MessagingChannelNumber),
+        .number = ReplayMessageStatusUpdateCommand_FieldNumber_ChannelNumber,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ReplayMessageStatusUpdateCommand__storage_, channelNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "status",
+        .dataTypeSpecific.enumDescFunc = MessageDeliveryStatus_EnumDescriptor,
+        .number = ReplayMessageStatusUpdateCommand_FieldNumber_Status,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ReplayMessageStatusUpdateCommand__storage_, status),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "cost",
+        .dataTypeSpecific.clazz = GPBObjCClass(Cash),
+        .number = ReplayMessageStatusUpdateCommand_FieldNumber_Cost,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ReplayMessageStatusUpdateCommand__storage_, cost),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ReplayMessageStatusUpdateCommand class]
+                                     rootClass:[AppSocketRoot class]
+                                          file:AppSocketRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ReplayMessageStatusUpdateCommand__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t ReplayMessageStatusUpdateCommand_Status_RawValue(ReplayMessageStatusUpdateCommand *message) {
+  GPBDescriptor *descriptor = [ReplayMessageStatusUpdateCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessageStatusUpdateCommand_FieldNumber_Status];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplayMessageStatusUpdateCommand_Status_RawValue(ReplayMessageStatusUpdateCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplayMessageStatusUpdateCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessageStatusUpdateCommand_FieldNumber_Status];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+#pragma mark - ReplayMessageReactionUpdateCommand
+
+@implementation ReplayMessageReactionUpdateCommand
+
+@dynamic providerMessageId;
+@dynamic hasUpdatedAt, updatedAt;
+@dynamic hasCustomerNumber, customerNumber;
+@dynamic hasChannelNumber, channelNumber;
+@dynamic reaction;
+
+typedef struct ReplayMessageReactionUpdateCommand__storage_ {
+  uint32_t _has_storage_[1];
+  MessageReaction reaction;
+  NSString *providerMessageId;
+  GPBTimestamp *updatedAt;
+  CustomerNumber *customerNumber;
+  MessagingChannelNumber *channelNumber;
+} ReplayMessageReactionUpdateCommand__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "providerMessageId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ReplayMessageReactionUpdateCommand_FieldNumber_ProviderMessageId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ReplayMessageReactionUpdateCommand__storage_, providerMessageId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "updatedAt",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBTimestamp),
+        .number = ReplayMessageReactionUpdateCommand_FieldNumber_UpdatedAt,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ReplayMessageReactionUpdateCommand__storage_, updatedAt),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "customerNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomerNumber),
+        .number = ReplayMessageReactionUpdateCommand_FieldNumber_CustomerNumber,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ReplayMessageReactionUpdateCommand__storage_, customerNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "channelNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(MessagingChannelNumber),
+        .number = ReplayMessageReactionUpdateCommand_FieldNumber_ChannelNumber,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ReplayMessageReactionUpdateCommand__storage_, channelNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "reaction",
+        .dataTypeSpecific.enumDescFunc = MessageReaction_EnumDescriptor,
+        .number = ReplayMessageReactionUpdateCommand_FieldNumber_Reaction,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ReplayMessageReactionUpdateCommand__storage_, reaction),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ReplayMessageReactionUpdateCommand class]
+                                     rootClass:[AppSocketRoot class]
+                                          file:AppSocketRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ReplayMessageReactionUpdateCommand__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t ReplayMessageReactionUpdateCommand_Reaction_RawValue(ReplayMessageReactionUpdateCommand *message) {
+  GPBDescriptor *descriptor = [ReplayMessageReactionUpdateCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessageReactionUpdateCommand_FieldNumber_Reaction];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplayMessageReactionUpdateCommand_Reaction_RawValue(ReplayMessageReactionUpdateCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplayMessageReactionUpdateCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessageReactionUpdateCommand_FieldNumber_Reaction];
+  GPBSetMessageRawEnumField(message, field, value);
+}
+
+#pragma mark - ReplayMessagingSessionCommand
+
+@implementation ReplayMessagingSessionCommand
+
+@dynamic providerSessionId;
+@dynamic hasCustomerNumber, customerNumber;
+@dynamic hasChannelNumber, channelNumber;
+@dynamic hasStartedAt, startedAt;
+@dynamic hasDuration, duration;
+@dynamic endReason;
+@dynamic hasCost, cost;
+
+typedef struct ReplayMessagingSessionCommand__storage_ {
+  uint32_t _has_storage_[1];
+  MessagingSessionEndReason endReason;
+  NSString *providerSessionId;
+  CustomerNumber *customerNumber;
+  MessagingChannelNumber *channelNumber;
+  GPBTimestamp *startedAt;
+  GPBDuration *duration;
+  Cash *cost;
+} ReplayMessagingSessionCommand__storage_;
+
+// This method is threadsafe because it is initially called
+// in +initialize for each subclass.
++ (GPBDescriptor *)descriptor {
+  static GPBDescriptor *descriptor = nil;
+  if (!descriptor) {
+    static GPBMessageFieldDescription fields[] = {
+      {
+        .name = "providerSessionId",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ReplayMessagingSessionCommand_FieldNumber_ProviderSessionId,
+        .hasIndex = 0,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, providerSessionId),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
+      },
+      {
+        .name = "customerNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(CustomerNumber),
+        .number = ReplayMessagingSessionCommand_FieldNumber_CustomerNumber,
+        .hasIndex = 1,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, customerNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "channelNumber",
+        .dataTypeSpecific.clazz = GPBObjCClass(MessagingChannelNumber),
+        .number = ReplayMessagingSessionCommand_FieldNumber_ChannelNumber,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, channelNumber),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "startedAt",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBTimestamp),
+        .number = ReplayMessagingSessionCommand_FieldNumber_StartedAt,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, startedAt),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "duration",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBDuration),
+        .number = ReplayMessagingSessionCommand_FieldNumber_Duration,
+        .hasIndex = 4,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, duration),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "endReason",
+        .dataTypeSpecific.enumDescFunc = MessagingSessionEndReason_EnumDescriptor,
+        .number = ReplayMessagingSessionCommand_FieldNumber_EndReason,
+        .hasIndex = 5,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, endReason),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "cost",
+        .dataTypeSpecific.clazz = GPBObjCClass(Cash),
+        .number = ReplayMessagingSessionCommand_FieldNumber_Cost,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ReplayMessagingSessionCommand__storage_, cost),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+    };
+    GPBDescriptor *localDescriptor =
+        [GPBDescriptor allocDescriptorForClass:[ReplayMessagingSessionCommand class]
+                                     rootClass:[AppSocketRoot class]
+                                          file:AppSocketRoot_FileDescriptor()
+                                        fields:fields
+                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
+                                   storageSize:sizeof(ReplayMessagingSessionCommand__storage_)
+                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
+    #if defined(DEBUG) && DEBUG
+      NSAssert(descriptor == nil, @"Startup recursed!");
+    #endif  // DEBUG
+    descriptor = localDescriptor;
+  }
+  return descriptor;
+}
+
+@end
+
+int32_t ReplayMessagingSessionCommand_EndReason_RawValue(ReplayMessagingSessionCommand *message) {
+  GPBDescriptor *descriptor = [ReplayMessagingSessionCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessagingSessionCommand_FieldNumber_EndReason];
+  return GPBGetMessageRawEnumField(message, field);
+}
+
+void SetReplayMessagingSessionCommand_EndReason_RawValue(ReplayMessagingSessionCommand *message, int32_t value) {
+  GPBDescriptor *descriptor = [ReplayMessagingSessionCommand descriptor];
+  GPBFieldDescriptor *field = [descriptor fieldWithNumber:ReplayMessagingSessionCommand_FieldNumber_EndReason];
+  GPBSetMessageRawEnumField(message, field, value);
+}
 
 #pragma mark - CustomerActivityReply
 

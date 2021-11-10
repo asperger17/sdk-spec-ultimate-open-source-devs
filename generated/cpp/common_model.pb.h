@@ -214,12 +214,13 @@ enum CustomerRequestOrigin : int {
   CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED = 0,
   CUSTOMER_REQUEST_ORIGIN_API_REQUEST = 1,
   CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG = 2,
+  CUSTOMER_REQUEST_ORIGIN_REPLAY = 3,
   CustomerRequestOrigin_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   CustomerRequestOrigin_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool CustomerRequestOrigin_IsValid(int value);
 constexpr CustomerRequestOrigin CustomerRequestOrigin_MIN = CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED;
-constexpr CustomerRequestOrigin CustomerRequestOrigin_MAX = CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG;
+constexpr CustomerRequestOrigin CustomerRequestOrigin_MAX = CUSTOMER_REQUEST_ORIGIN_REPLAY;
 constexpr int CustomerRequestOrigin_ARRAYSIZE = CustomerRequestOrigin_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* CustomerRequestOrigin_descriptor();

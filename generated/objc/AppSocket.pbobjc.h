@@ -78,6 +78,12 @@ CF_EXTERN_C_BEGIN
 @class ReceivedMessageNotification;
 @class ReceivedPaymentNotification;
 @class ReminderNotification;
+@class ReplayMessageReactionUpdateCommand;
+@class ReplayMessageStatusUpdateCommand;
+@class ReplayMessagingConsentUpdateCommand;
+@class ReplayMessagingSessionCommand;
+@class ReplayReceivedMessageCommand;
+@class ReplaySentMessageCommand;
 @class ReplyToMessageCommand;
 @class SendMessageCommand;
 @class SendMessageReply;
@@ -95,6 +101,7 @@ CF_EXTERN_C_BEGIN
 @class UpdateMessagingConsentCommand;
 @class UpdateMessagingConsentReply;
 @class WalletPaymentStatusNotification;
+GPB_ENUM_FWD_DECLARE(ChannelNumberProvider);
 GPB_ENUM_FWD_DECLARE(MessageDeliveryStatus);
 GPB_ENUM_FWD_DECLARE(MessageReaction);
 GPB_ENUM_FWD_DECLARE(MessagingConsentUpdate);
@@ -176,6 +183,12 @@ typedef GPB_ENUM(AppToServerCommand_FieldNumber) {
   AppToServerCommand_FieldNumber_UpdateMessagingConsent = 21,
   AppToServerCommand_FieldNumber_InitiatePayment = 22,
   AppToServerCommand_FieldNumber_CustomerActivity = 23,
+  AppToServerCommand_FieldNumber_ReplayMessagingConsentUpdate = 24,
+  AppToServerCommand_FieldNumber_ReplayReceivedMessage = 25,
+  AppToServerCommand_FieldNumber_ReplaySentMessage = 26,
+  AppToServerCommand_FieldNumber_ReplayMessageStatusUpdate = 27,
+  AppToServerCommand_FieldNumber_ReplayMessageReactionUpdate = 28,
+  AppToServerCommand_FieldNumber_ReplayMessagingSession = 29,
 };
 
 typedef GPB_ENUM(AppToServerCommand_Entry_OneOfCase) {
@@ -203,6 +216,12 @@ typedef GPB_ENUM(AppToServerCommand_Entry_OneOfCase) {
   AppToServerCommand_Entry_OneOfCase_UpdateMessagingConsent = 21,
   AppToServerCommand_Entry_OneOfCase_InitiatePayment = 22,
   AppToServerCommand_Entry_OneOfCase_CustomerActivity = 23,
+  AppToServerCommand_Entry_OneOfCase_ReplayMessagingConsentUpdate = 24,
+  AppToServerCommand_Entry_OneOfCase_ReplayReceivedMessage = 25,
+  AppToServerCommand_Entry_OneOfCase_ReplaySentMessage = 26,
+  AppToServerCommand_Entry_OneOfCase_ReplayMessageStatusUpdate = 27,
+  AppToServerCommand_Entry_OneOfCase_ReplayMessageReactionUpdate = 28,
+  AppToServerCommand_Entry_OneOfCase_ReplayMessagingSession = 29,
 };
 
 GPB_FINAL @interface AppToServerCommand : GPBMessage
@@ -254,6 +273,18 @@ GPB_FINAL @interface AppToServerCommand : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) InitiatePaymentCommand *initiatePayment;
 
 @property(nonatomic, readwrite, strong, null_resettable) CustomerActivityCommand *customerActivity;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayMessagingConsentUpdateCommand *replayMessagingConsentUpdate;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayReceivedMessageCommand *replayReceivedMessage;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplaySentMessageCommand *replaySentMessage;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayMessageStatusUpdateCommand *replayMessageStatusUpdate;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayMessageReactionUpdateCommand *replayMessageReactionUpdate;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayMessagingSessionCommand *replayMessagingSession;
 
 @end
 
@@ -1263,6 +1294,325 @@ GPB_FINAL @interface CustomerActivityCommand : GPBMessage
 @property(nonatomic, readonly) NSUInteger properties_Count;
 
 @end
+
+#pragma mark - ReplayMessagingConsentUpdateCommand
+
+typedef GPB_ENUM(ReplayMessagingConsentUpdateCommand_FieldNumber) {
+  ReplayMessagingConsentUpdateCommand_FieldNumber_CustomerNumber = 1,
+  ReplayMessagingConsentUpdateCommand_FieldNumber_ChannelNumber = 2,
+  ReplayMessagingConsentUpdateCommand_FieldNumber_UpdatedAt = 3,
+  ReplayMessagingConsentUpdateCommand_FieldNumber_Update = 4,
+};
+
+GPB_FINAL @interface ReplayMessagingConsentUpdateCommand : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) MessagingChannelNumber *channelNumber;
+/** Test to see if @c channelNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasChannelNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *updatedAt;
+/** Test to see if @c updatedAt has been set. */
+@property(nonatomic, readwrite) BOOL hasUpdatedAt;
+
+@property(nonatomic, readwrite) enum MessagingConsentUpdate update;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayMessagingConsentUpdateCommand's @c update property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayMessagingConsentUpdateCommand_Update_RawValue(ReplayMessagingConsentUpdateCommand *message);
+/**
+ * Sets the raw value of an @c ReplayMessagingConsentUpdateCommand's @c update property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayMessagingConsentUpdateCommand_Update_RawValue(ReplayMessagingConsentUpdateCommand *message, int32_t value);
+
+#pragma mark - ReplayReceivedMessageCommand
+
+typedef GPB_ENUM(ReplayReceivedMessageCommand_FieldNumber) {
+  ReplayReceivedMessageCommand_FieldNumber_ProviderMessageId = 1,
+  ReplayReceivedMessageCommand_FieldNumber_ProviderSessionId = 2,
+  ReplayReceivedMessageCommand_FieldNumber_ReceivedAt = 3,
+  ReplayReceivedMessageCommand_FieldNumber_CustomerNumber = 4,
+  ReplayReceivedMessageCommand_FieldNumber_ChannelNumber = 5,
+  ReplayReceivedMessageCommand_FieldNumber_PartsArray = 6,
+  ReplayReceivedMessageCommand_FieldNumber_InReplyTo = 7,
+  ReplayReceivedMessageCommand_FieldNumber_Provider = 8,
+  ReplayReceivedMessageCommand_FieldNumber_Cost = 9,
+};
+
+GPB_FINAL @interface ReplayReceivedMessageCommand : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerMessageId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerSessionId;
+/** Test to see if @c providerSessionId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderSessionId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *receivedAt;
+/** Test to see if @c receivedAt has been set. */
+@property(nonatomic, readwrite) BOOL hasReceivedAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) MessagingChannelNumber *channelNumber;
+/** Test to see if @c channelNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasChannelNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<InboundMessageBody*> *partsArray;
+/** The number of items in @c partsArray without causing the array to be created. */
+@property(nonatomic, readonly) NSUInteger partsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *inReplyTo;
+/** Test to see if @c inReplyTo has been set. */
+@property(nonatomic, readwrite) BOOL hasInReplyTo;
+
+@property(nonatomic, readwrite) enum ChannelNumberProvider provider;
+
+@property(nonatomic, readwrite, strong, null_resettable) Cash *cost;
+/** Test to see if @c cost has been set. */
+@property(nonatomic, readwrite) BOOL hasCost;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayReceivedMessageCommand's @c provider property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayReceivedMessageCommand_Provider_RawValue(ReplayReceivedMessageCommand *message);
+/**
+ * Sets the raw value of an @c ReplayReceivedMessageCommand's @c provider property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayReceivedMessageCommand_Provider_RawValue(ReplayReceivedMessageCommand *message, int32_t value);
+
+#pragma mark - ReplaySentMessageCommand
+
+typedef GPB_ENUM(ReplaySentMessageCommand_FieldNumber) {
+  ReplaySentMessageCommand_FieldNumber_ProviderMessageId = 1,
+  ReplaySentMessageCommand_FieldNumber_ProviderSessionId = 2,
+  ReplaySentMessageCommand_FieldNumber_SentAt = 3,
+  ReplaySentMessageCommand_FieldNumber_CustomerNumber = 4,
+  ReplaySentMessageCommand_FieldNumber_ChannelNumber = 5,
+  ReplaySentMessageCommand_FieldNumber_Provider = 6,
+  ReplaySentMessageCommand_FieldNumber_Message = 7,
+  ReplaySentMessageCommand_FieldNumber_InReplyTo = 8,
+  ReplaySentMessageCommand_FieldNumber_Status = 9,
+  ReplaySentMessageCommand_FieldNumber_Cost = 10,
+};
+
+GPB_FINAL @interface ReplaySentMessageCommand : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerMessageId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerSessionId;
+/** Test to see if @c providerSessionId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderSessionId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *sentAt;
+/** Test to see if @c sentAt has been set. */
+@property(nonatomic, readwrite) BOOL hasSentAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) MessagingChannelNumber *channelNumber;
+/** Test to see if @c channelNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasChannelNumber;
+
+@property(nonatomic, readwrite) enum ChannelNumberProvider provider;
+
+@property(nonatomic, readwrite, strong, null_resettable) OutboundMessage *message;
+/** Test to see if @c message has been set. */
+@property(nonatomic, readwrite) BOOL hasMessage;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *inReplyTo;
+/** Test to see if @c inReplyTo has been set. */
+@property(nonatomic, readwrite) BOOL hasInReplyTo;
+
+@property(nonatomic, readwrite) enum MessageDeliveryStatus status;
+
+@property(nonatomic, readwrite, strong, null_resettable) Cash *cost;
+/** Test to see if @c cost has been set. */
+@property(nonatomic, readwrite) BOOL hasCost;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplaySentMessageCommand's @c provider property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplaySentMessageCommand_Provider_RawValue(ReplaySentMessageCommand *message);
+/**
+ * Sets the raw value of an @c ReplaySentMessageCommand's @c provider property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplaySentMessageCommand_Provider_RawValue(ReplaySentMessageCommand *message, int32_t value);
+
+/**
+ * Fetches the raw value of a @c ReplaySentMessageCommand's @c status property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplaySentMessageCommand_Status_RawValue(ReplaySentMessageCommand *message);
+/**
+ * Sets the raw value of an @c ReplaySentMessageCommand's @c status property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplaySentMessageCommand_Status_RawValue(ReplaySentMessageCommand *message, int32_t value);
+
+#pragma mark - ReplayMessageStatusUpdateCommand
+
+typedef GPB_ENUM(ReplayMessageStatusUpdateCommand_FieldNumber) {
+  ReplayMessageStatusUpdateCommand_FieldNumber_ProviderMessageId = 1,
+  ReplayMessageStatusUpdateCommand_FieldNumber_UpdatedAt = 2,
+  ReplayMessageStatusUpdateCommand_FieldNumber_CustomerNumber = 3,
+  ReplayMessageStatusUpdateCommand_FieldNumber_ChannelNumber = 4,
+  ReplayMessageStatusUpdateCommand_FieldNumber_Status = 5,
+  ReplayMessageStatusUpdateCommand_FieldNumber_Cost = 6,
+};
+
+GPB_FINAL @interface ReplayMessageStatusUpdateCommand : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerMessageId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *updatedAt;
+/** Test to see if @c updatedAt has been set. */
+@property(nonatomic, readwrite) BOOL hasUpdatedAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) MessagingChannelNumber *channelNumber;
+/** Test to see if @c channelNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasChannelNumber;
+
+@property(nonatomic, readwrite) enum MessageDeliveryStatus status;
+
+@property(nonatomic, readwrite, strong, null_resettable) Cash *cost;
+/** Test to see if @c cost has been set. */
+@property(nonatomic, readwrite) BOOL hasCost;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayMessageStatusUpdateCommand's @c status property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayMessageStatusUpdateCommand_Status_RawValue(ReplayMessageStatusUpdateCommand *message);
+/**
+ * Sets the raw value of an @c ReplayMessageStatusUpdateCommand's @c status property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayMessageStatusUpdateCommand_Status_RawValue(ReplayMessageStatusUpdateCommand *message, int32_t value);
+
+#pragma mark - ReplayMessageReactionUpdateCommand
+
+typedef GPB_ENUM(ReplayMessageReactionUpdateCommand_FieldNumber) {
+  ReplayMessageReactionUpdateCommand_FieldNumber_ProviderMessageId = 1,
+  ReplayMessageReactionUpdateCommand_FieldNumber_UpdatedAt = 2,
+  ReplayMessageReactionUpdateCommand_FieldNumber_CustomerNumber = 3,
+  ReplayMessageReactionUpdateCommand_FieldNumber_ChannelNumber = 4,
+  ReplayMessageReactionUpdateCommand_FieldNumber_Reaction = 5,
+};
+
+GPB_FINAL @interface ReplayMessageReactionUpdateCommand : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerMessageId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *updatedAt;
+/** Test to see if @c updatedAt has been set. */
+@property(nonatomic, readwrite) BOOL hasUpdatedAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) MessagingChannelNumber *channelNumber;
+/** Test to see if @c channelNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasChannelNumber;
+
+@property(nonatomic, readwrite) enum MessageReaction reaction;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayMessageReactionUpdateCommand's @c reaction property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayMessageReactionUpdateCommand_Reaction_RawValue(ReplayMessageReactionUpdateCommand *message);
+/**
+ * Sets the raw value of an @c ReplayMessageReactionUpdateCommand's @c reaction property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayMessageReactionUpdateCommand_Reaction_RawValue(ReplayMessageReactionUpdateCommand *message, int32_t value);
+
+#pragma mark - ReplayMessagingSessionCommand
+
+typedef GPB_ENUM(ReplayMessagingSessionCommand_FieldNumber) {
+  ReplayMessagingSessionCommand_FieldNumber_ProviderSessionId = 1,
+  ReplayMessagingSessionCommand_FieldNumber_CustomerNumber = 2,
+  ReplayMessagingSessionCommand_FieldNumber_ChannelNumber = 3,
+  ReplayMessagingSessionCommand_FieldNumber_StartedAt = 4,
+  ReplayMessagingSessionCommand_FieldNumber_Duration = 5,
+  ReplayMessagingSessionCommand_FieldNumber_EndReason = 6,
+  ReplayMessagingSessionCommand_FieldNumber_Cost = 7,
+};
+
+GPB_FINAL @interface ReplayMessagingSessionCommand : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerSessionId;
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) MessagingChannelNumber *channelNumber;
+/** Test to see if @c channelNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasChannelNumber;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *startedAt;
+/** Test to see if @c startedAt has been set. */
+@property(nonatomic, readwrite) BOOL hasStartedAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBDuration *duration;
+/** Test to see if @c duration has been set. */
+@property(nonatomic, readwrite) BOOL hasDuration;
+
+@property(nonatomic, readwrite) enum MessagingSessionEndReason endReason;
+
+@property(nonatomic, readwrite, strong, null_resettable) Cash *cost;
+/** Test to see if @c cost has been set. */
+@property(nonatomic, readwrite) BOOL hasCost;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayMessagingSessionCommand's @c endReason property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayMessagingSessionCommand_EndReason_RawValue(ReplayMessagingSessionCommand *message);
+/**
+ * Sets the raw value of an @c ReplayMessagingSessionCommand's @c endReason property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayMessagingSessionCommand_EndReason_RawValue(ReplayMessagingSessionCommand *message, int32_t value);
 
 #pragma mark - CustomerActivityReply
 

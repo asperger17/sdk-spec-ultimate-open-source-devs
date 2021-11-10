@@ -598,6 +598,10 @@ public final class CommonModel {
      * <code>CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG = 2;</code>
      */
     CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG(2),
+    /**
+     * <code>CUSTOMER_REQUEST_ORIGIN_REPLAY = 3;</code>
+     */
+    CUSTOMER_REQUEST_ORIGIN_REPLAY(3),
     UNRECOGNIZED(-1),
     ;
 
@@ -613,6 +617,10 @@ public final class CommonModel {
      * <code>CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG = 2;</code>
      */
     public static final int CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG_VALUE = 2;
+    /**
+     * <code>CUSTOMER_REQUEST_ORIGIN_REPLAY = 3;</code>
+     */
+    public static final int CUSTOMER_REQUEST_ORIGIN_REPLAY_VALUE = 3;
 
 
     public final int getNumber() {
@@ -642,6 +650,7 @@ public final class CommonModel {
         case 0: return CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED;
         case 1: return CUSTOMER_REQUEST_ORIGIN_API_REQUEST;
         case 2: return CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG;
+        case 3: return CUSTOMER_REQUEST_ORIGIN_REPLAY;
         default: return null;
       }
     }
@@ -5687,11 +5696,12 @@ public final class CommonModel {
       "TACT\020\007*\217\001\n\026CustomerEventDirection\022(\n$CUS" +
       "TOMER_EVENT_DIRECTION_UNSPECIFIED\020\000\022$\n C" +
       "USTOMER_EVENT_DIRECTION_INBOUND\020\001\022%\n!CUS" +
-      "TOMER_EVENT_DIRECTION_OUTBOUND\020\002*\223\001\n\025Cus" +
+      "TOMER_EVENT_DIRECTION_OUTBOUND\020\002*\267\001\n\025Cus" +
       "tomerRequestOrigin\022\'\n#CUSTOMER_REQUEST_O" +
       "RIGIN_UNSPECIFIED\020\000\022\'\n#CUSTOMER_REQUEST_" +
       "ORIGIN_API_REQUEST\020\001\022(\n$CUSTOMER_REQUEST" +
-      "_ORIGIN_CUSTOMER_TAG\020\002b\006proto3"
+      "_ORIGIN_CUSTOMER_TAG\020\002\022\"\n\036CUSTOMER_REQUE" +
+      "ST_ORIGIN_REPLAY\020\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,

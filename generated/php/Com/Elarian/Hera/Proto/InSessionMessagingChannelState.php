@@ -45,6 +45,10 @@ class InSessionMessagingChannelState extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>repeated string app_ids = 8;</code>
      */
     private $app_ids;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     */
+    protected $provider_session_id = null;
 
     /**
      * Constructor.
@@ -60,6 +64,7 @@ class InSessionMessagingChannelState extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $started_at
      *     @type \Google\Protobuf\Timestamp $expires_at
      *     @type string[]|\Google\Protobuf\Internal\RepeatedField $app_ids
+     *     @type \Google\Protobuf\StringValue $provider_session_id
      * }
      */
     public function __construct($data = NULL) {
@@ -302,6 +307,61 @@ class InSessionMessagingChannelState extends \Google\Protobuf\Internal\Message
 
         return $this;
     }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return \Google\Protobuf\StringValue
+     */
+    public function getProviderSessionId()
+    {
+        return isset($this->provider_session_id) ? $this->provider_session_id : null;
+    }
+
+    public function hasProviderSessionId()
+    {
+        return isset($this->provider_session_id);
+    }
+
+    public function clearProviderSessionId()
+    {
+        unset($this->provider_session_id);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getProviderSessionId()</code>
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @return string|null
+     */
+    public function getProviderSessionIdUnwrapped()
+    {
+        return $this->readWrapperValue("provider_session_id");
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @param \Google\Protobuf\StringValue $var
+     * @return $this
+     */
+    public function setProviderSessionId($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        $this->provider_session_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\StringValue object.
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_session_id = 9;</code>
+     * @param string|null $var
+     * @return $this
+     */
+    public function setProviderSessionIdUnwrapped($var)
+    {
+        $this->writeWrapperValue("provider_session_id", $var);
+        return $this;}
 
 }
 

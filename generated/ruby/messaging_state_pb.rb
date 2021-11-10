@@ -21,6 +21,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :app_id, :message, 8, "google.protobuf.StringValue"
       repeated :parts, :message, 9, "com.elarian.hera.proto.InboundMessageBody"
       optional :cost, :message, 10, "com.elarian.hera.proto.Cash"
+      optional :provider_message_id, :message, 11, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.SentMessage" do
       optional :customer_number, :message, 1, "com.elarian.hera.proto.CustomerNumber"
@@ -36,6 +37,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :reactions, :message, 11, "com.elarian.hera.proto.MessageReactionState"
       optional :message, :message, 12, "com.elarian.hera.proto.OutboundMessage"
       optional :cost, :message, 13, "com.elarian.hera.proto.Cash"
+      optional :provider_message_id, :message, 14, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.MessageReactionState" do
       optional :created_at, :message, 1, "google.protobuf.Timestamp"
@@ -60,6 +62,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :app_ids, :string, 6
       optional :end_reason, :enum, 7, "com.elarian.hera.proto.MessagingSessionEndReason"
       optional :cost, :message, 8, "com.elarian.hera.proto.Cash"
+      optional :provider_session_id, :message, 9, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.BlockedMessagingChannelState" do
       optional :customer_number, :message, 1, "com.elarian.hera.proto.CustomerNumber"
@@ -82,6 +85,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :started_at, :message, 6, "google.protobuf.Timestamp"
       optional :expires_at, :message, 7, "google.protobuf.Timestamp"
       repeated :app_ids, :string, 8
+      optional :provider_session_id, :message, 9, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.MessagingChannelState" do
       oneof :state do

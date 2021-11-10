@@ -59,10 +59,11 @@ namespace Com.Elarian.Hera.Proto {
             "VEFDVBAHKo8BChZDdXN0b21lckV2ZW50RGlyZWN0aW9uEigKJENVU1RPTUVS",
             "X0VWRU5UX0RJUkVDVElPTl9VTlNQRUNJRklFRBAAEiQKIENVU1RPTUVSX0VW",
             "RU5UX0RJUkVDVElPTl9JTkJPVU5EEAESJQohQ1VTVE9NRVJfRVZFTlRfRElS",
-            "RUNUSU9OX09VVEJPVU5EEAIqkwEKFUN1c3RvbWVyUmVxdWVzdE9yaWdpbhIn",
+            "RUNUSU9OX09VVEJPVU5EEAIqtwEKFUN1c3RvbWVyUmVxdWVzdE9yaWdpbhIn",
             "CiNDVVNUT01FUl9SRVFVRVNUX09SSUdJTl9VTlNQRUNJRklFRBAAEicKI0NV",
             "U1RPTUVSX1JFUVVFU1RfT1JJR0lOX0FQSV9SRVFVRVNUEAESKAokQ1VTVE9N",
-            "RVJfUkVRVUVTVF9PUklHSU5fQ1VTVE9NRVJfVEFHEAJiBnByb3RvMw=="));
+            "RVJfUkVRVUVTVF9PUklHSU5fQ1VTVE9NRVJfVEFHEAISIgoeQ1VTVE9NRVJf",
+            "UkVRVUVTVF9PUklHSU5fUkVQTEFZEANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Com.Elarian.Hera.Proto.CustomerNumberProvider), typeof(global::Com.Elarian.Hera.Proto.ChannelNumberProvider), typeof(global::Com.Elarian.Hera.Proto.MediaType), typeof(global::Com.Elarian.Hera.Proto.CustomerEventDirection), typeof(global::Com.Elarian.Hera.Proto.CustomerRequestOrigin), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -117,6 +118,7 @@ namespace Com.Elarian.Hera.Proto {
     [pbr::OriginalName("CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED")] Unspecified = 0,
     [pbr::OriginalName("CUSTOMER_REQUEST_ORIGIN_API_REQUEST")] ApiRequest = 1,
     [pbr::OriginalName("CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG")] CustomerTag = 2,
+    [pbr::OriginalName("CUSTOMER_REQUEST_ORIGIN_REPLAY")] Replay = 3,
   }
 
   #endregion

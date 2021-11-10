@@ -80,6 +80,7 @@ typedef GPB_ENUM(ReceivedMessage_FieldNumber) {
   ReceivedMessage_FieldNumber_AppId = 8,
   ReceivedMessage_FieldNumber_PartsArray = 9,
   ReceivedMessage_FieldNumber_Cost = 10,
+  ReceivedMessage_FieldNumber_ProviderMessageId = 11,
 };
 
 GPB_FINAL @interface ReceivedMessage : GPBMessage
@@ -120,6 +121,10 @@ GPB_FINAL @interface ReceivedMessage : GPBMessage
 /** Test to see if @c cost has been set. */
 @property(nonatomic, readwrite) BOOL hasCost;
 
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerMessageId;
+/** Test to see if @c providerMessageId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderMessageId;
+
 @end
 
 /**
@@ -150,6 +155,7 @@ typedef GPB_ENUM(SentMessage_FieldNumber) {
   SentMessage_FieldNumber_ReactionsArray = 11,
   SentMessage_FieldNumber_Message = 12,
   SentMessage_FieldNumber_Cost = 13,
+  SentMessage_FieldNumber_ProviderMessageId = 14,
 };
 
 GPB_FINAL @interface SentMessage : GPBMessage
@@ -199,6 +205,10 @@ GPB_FINAL @interface SentMessage : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) Cash *cost;
 /** Test to see if @c cost has been set. */
 @property(nonatomic, readwrite) BOOL hasCost;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerMessageId;
+/** Test to see if @c providerMessageId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderMessageId;
 
 @end
 
@@ -311,6 +321,7 @@ typedef GPB_ENUM(CompleteMessagingSession_FieldNumber) {
   CompleteMessagingSession_FieldNumber_AppIdsArray = 6,
   CompleteMessagingSession_FieldNumber_EndReason = 7,
   CompleteMessagingSession_FieldNumber_Cost = 8,
+  CompleteMessagingSession_FieldNumber_ProviderSessionId = 9,
 };
 
 GPB_FINAL @interface CompleteMessagingSession : GPBMessage
@@ -342,6 +353,10 @@ GPB_FINAL @interface CompleteMessagingSession : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) Cash *cost;
 /** Test to see if @c cost has been set. */
 @property(nonatomic, readwrite) BOOL hasCost;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerSessionId;
+/** Test to see if @c providerSessionId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderSessionId;
 
 @end
 
@@ -426,6 +441,7 @@ typedef GPB_ENUM(InSessionMessagingChannelState_FieldNumber) {
   InSessionMessagingChannelState_FieldNumber_StartedAt = 6,
   InSessionMessagingChannelState_FieldNumber_ExpiresAt = 7,
   InSessionMessagingChannelState_FieldNumber_AppIdsArray = 8,
+  InSessionMessagingChannelState_FieldNumber_ProviderSessionId = 9,
 };
 
 GPB_FINAL @interface InSessionMessagingChannelState : GPBMessage
@@ -459,6 +475,10 @@ GPB_FINAL @interface InSessionMessagingChannelState : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) NSMutableArray<NSString*> *appIdsArray;
 /** The number of items in @c appIdsArray without causing the array to be created. */
 @property(nonatomic, readonly) NSUInteger appIdsArray_Count;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerSessionId;
+/** Test to see if @c providerSessionId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderSessionId;
 
 @end
 

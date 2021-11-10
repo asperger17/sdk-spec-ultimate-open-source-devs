@@ -71,6 +71,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED, 0
       value :CUSTOMER_REQUEST_ORIGIN_API_REQUEST, 1
       value :CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG, 2
+      value :CUSTOMER_REQUEST_ORIGIN_REPLAY, 3
     end
   end
 end

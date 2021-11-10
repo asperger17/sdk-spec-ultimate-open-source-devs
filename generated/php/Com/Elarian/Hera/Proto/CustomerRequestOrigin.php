@@ -23,11 +23,16 @@ class CustomerRequestOrigin
      * Generated from protobuf enum <code>CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG = 2;</code>
      */
     const CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG = 2;
+    /**
+     * Generated from protobuf enum <code>CUSTOMER_REQUEST_ORIGIN_REPLAY = 3;</code>
+     */
+    const CUSTOMER_REQUEST_ORIGIN_REPLAY = 3;
 
     private static $valueToName = [
         self::CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED => 'CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED',
         self::CUSTOMER_REQUEST_ORIGIN_API_REQUEST => 'CUSTOMER_REQUEST_ORIGIN_API_REQUEST',
         self::CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG => 'CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG',
+        self::CUSTOMER_REQUEST_ORIGIN_REPLAY => 'CUSTOMER_REQUEST_ORIGIN_REPLAY',
     ];
 
     public static function name($value)
