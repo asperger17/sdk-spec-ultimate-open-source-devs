@@ -184,7 +184,7 @@ The SDK should have the following classes with methods that correspond to the ab
 
 - `replayMessageStatusUpdate(customer: CustomerNumber, channel: MessagingChannel, update: MessageStatusUpdate): Future<CustomerStateUpdateReply>`
 
-- `replayMessageReactionUpdate(customer: CustomerNumber, channel: MessagingChannel,  reaction: MessageReaction, updatedAt: Long): Future<CustomerStateUpdateReply>`
+- `replayMessageReactionUpdate(customer: CustomerNumber, channel: MessagingChannel,  messageId: string, reaction: MessageReaction, updatedAt: Long): Future<CustomerStateUpdateReply>`
 
 - `replayMessagingSession(customer: CustomerNumber, channel: MessagingChannel, update: MessageSessionUpdate): Future<CustomerStateUpdateReply>`
 
