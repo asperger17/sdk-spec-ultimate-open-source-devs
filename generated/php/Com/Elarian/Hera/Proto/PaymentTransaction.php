@@ -45,6 +45,10 @@ class PaymentTransaction extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     protected $updated_at = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     */
+    protected $provider_transaction_id = null;
 
     /**
      * Constructor.
@@ -60,6 +64,7 @@ class PaymentTransaction extends \Google\Protobuf\Internal\Message
      *     @type int $status
      *     @type \Google\Protobuf\Timestamp $created_at
      *     @type \Google\Protobuf\Timestamp $updated_at
+     *     @type \Google\Protobuf\StringValue $provider_transaction_id
      * }
      */
     public function __construct($data = NULL) {
@@ -325,6 +330,61 @@ class PaymentTransaction extends \Google\Protobuf\Internal\Message
 
         return $this;
     }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @return \Google\Protobuf\StringValue
+     */
+    public function getProviderTransactionId()
+    {
+        return isset($this->provider_transaction_id) ? $this->provider_transaction_id : null;
+    }
+
+    public function hasProviderTransactionId()
+    {
+        return isset($this->provider_transaction_id);
+    }
+
+    public function clearProviderTransactionId()
+    {
+        unset($this->provider_transaction_id);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getProviderTransactionId()</code>
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @return string|null
+     */
+    public function getProviderTransactionIdUnwrapped()
+    {
+        return $this->readWrapperValue("provider_transaction_id");
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @param \Google\Protobuf\StringValue $var
+     * @return $this
+     */
+    public function setProviderTransactionId($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        $this->provider_transaction_id = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\StringValue object.
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @param string|null $var
+     * @return $this
+     */
+    public function setProviderTransactionIdUnwrapped($var)
+    {
+        $this->writeWrapperValue("provider_transaction_id", $var);
+        return $this;}
 
 }
 

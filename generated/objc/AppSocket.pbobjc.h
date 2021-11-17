@@ -82,6 +82,9 @@ CF_EXTERN_C_BEGIN
 @class ReplayMessageStatusUpdateCommand;
 @class ReplayMessagingConsentUpdateCommand;
 @class ReplayMessagingSessionCommand;
+@class ReplayPaymentCommand;
+@class ReplayPaymentReply;
+@class ReplayPaymentStatusUpdateCommand;
 @class ReplayReceivedMessageCommand;
 @class ReplaySentMessageCommand;
 @class ReplyToMessageCommand;
@@ -189,6 +192,8 @@ typedef GPB_ENUM(AppToServerCommand_FieldNumber) {
   AppToServerCommand_FieldNumber_ReplayMessageStatusUpdate = 27,
   AppToServerCommand_FieldNumber_ReplayMessageReactionUpdate = 28,
   AppToServerCommand_FieldNumber_ReplayMessagingSession = 29,
+  AppToServerCommand_FieldNumber_ReplayPayment = 30,
+  AppToServerCommand_FieldNumber_ReplayPaymentStatusUpdate = 31,
 };
 
 typedef GPB_ENUM(AppToServerCommand_Entry_OneOfCase) {
@@ -222,6 +227,8 @@ typedef GPB_ENUM(AppToServerCommand_Entry_OneOfCase) {
   AppToServerCommand_Entry_OneOfCase_ReplayMessageStatusUpdate = 27,
   AppToServerCommand_Entry_OneOfCase_ReplayMessageReactionUpdate = 28,
   AppToServerCommand_Entry_OneOfCase_ReplayMessagingSession = 29,
+  AppToServerCommand_Entry_OneOfCase_ReplayPayment = 30,
+  AppToServerCommand_Entry_OneOfCase_ReplayPaymentStatusUpdate = 31,
 };
 
 GPB_FINAL @interface AppToServerCommand : GPBMessage
@@ -286,6 +293,10 @@ GPB_FINAL @interface AppToServerCommand : GPBMessage
 
 @property(nonatomic, readwrite, strong, null_resettable) ReplayMessagingSessionCommand *replayMessagingSession;
 
+@property(nonatomic, readwrite, strong, null_resettable) ReplayPaymentCommand *replayPayment;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayPaymentStatusUpdateCommand *replayPaymentStatusUpdate;
+
 @end
 
 /**
@@ -306,6 +317,7 @@ typedef GPB_ENUM(AppToServerCommandReply_FieldNumber) {
   AppToServerCommandReply_FieldNumber_InitiatePayment = 8,
   AppToServerCommandReply_FieldNumber_TagCommand = 9,
   AppToServerCommandReply_FieldNumber_CustomerActivity = 10,
+  AppToServerCommandReply_FieldNumber_ReplayPayment = 11,
 };
 
 typedef GPB_ENUM(AppToServerCommandReply_Entry_OneOfCase) {
@@ -320,6 +332,7 @@ typedef GPB_ENUM(AppToServerCommandReply_Entry_OneOfCase) {
   AppToServerCommandReply_Entry_OneOfCase_InitiatePayment = 8,
   AppToServerCommandReply_Entry_OneOfCase_TagCommand = 9,
   AppToServerCommandReply_Entry_OneOfCase_CustomerActivity = 10,
+  AppToServerCommandReply_Entry_OneOfCase_ReplayPayment = 11,
 };
 
 GPB_FINAL @interface AppToServerCommandReply : GPBMessage
@@ -345,6 +358,8 @@ GPB_FINAL @interface AppToServerCommandReply : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) TagCommandReply *tagCommand;
 
 @property(nonatomic, readwrite, strong, null_resettable) CustomerActivityReply *customerActivity;
+
+@property(nonatomic, readwrite, strong, null_resettable) ReplayPaymentReply *replayPayment;
 
 @end
 
@@ -1246,6 +1261,120 @@ int32_t InitiatePaymentReply_Status_RawValue(InitiatePaymentReply *message);
  * was generated.
  **/
 void SetInitiatePaymentReply_Status_RawValue(InitiatePaymentReply *message, int32_t value);
+
+#pragma mark - ReplayPaymentCommand
+
+typedef GPB_ENUM(ReplayPaymentCommand_FieldNumber) {
+  ReplayPaymentCommand_FieldNumber_ProviderTransactionId = 1,
+  ReplayPaymentCommand_FieldNumber_CreatedAt = 2,
+  ReplayPaymentCommand_FieldNumber_DebitParty = 3,
+  ReplayPaymentCommand_FieldNumber_CreditParty = 4,
+  ReplayPaymentCommand_FieldNumber_Status = 5,
+  ReplayPaymentCommand_FieldNumber_Value = 6,
+};
+
+GPB_FINAL @interface ReplayPaymentCommand : GPBMessage
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerTransactionId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *createdAt;
+/** Test to see if @c createdAt has been set. */
+@property(nonatomic, readwrite) BOOL hasCreatedAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) PaymentCounterParty *debitParty;
+/** Test to see if @c debitParty has been set. */
+@property(nonatomic, readwrite) BOOL hasDebitParty;
+
+@property(nonatomic, readwrite, strong, null_resettable) PaymentCounterParty *creditParty;
+/** Test to see if @c creditParty has been set. */
+@property(nonatomic, readwrite) BOOL hasCreditParty;
+
+@property(nonatomic, readwrite) enum PaymentStatus status;
+
+@property(nonatomic, readwrite, strong, null_resettable) Cash *value;
+/** Test to see if @c value has been set. */
+@property(nonatomic, readwrite) BOOL hasValue;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayPaymentCommand's @c status property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayPaymentCommand_Status_RawValue(ReplayPaymentCommand *message);
+/**
+ * Sets the raw value of an @c ReplayPaymentCommand's @c status property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayPaymentCommand_Status_RawValue(ReplayPaymentCommand *message, int32_t value);
+
+#pragma mark - ReplayPaymentStatusUpdateCommand
+
+typedef GPB_ENUM(ReplayPaymentStatusUpdateCommand_FieldNumber) {
+  ReplayPaymentStatusUpdateCommand_FieldNumber_CustomerNumber = 1,
+  ReplayPaymentStatusUpdateCommand_FieldNumber_ProviderTransactionId = 2,
+  ReplayPaymentStatusUpdateCommand_FieldNumber_UpdatedAt = 3,
+  ReplayPaymentStatusUpdateCommand_FieldNumber_Status = 4,
+};
+
+GPB_FINAL @interface ReplayPaymentStatusUpdateCommand : GPBMessage
+
+@property(nonatomic, readwrite, strong, null_resettable) CustomerNumber *customerNumber;
+/** Test to see if @c customerNumber has been set. */
+@property(nonatomic, readwrite) BOOL hasCustomerNumber;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *providerTransactionId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *updatedAt;
+/** Test to see if @c updatedAt has been set. */
+@property(nonatomic, readwrite) BOOL hasUpdatedAt;
+
+@property(nonatomic, readwrite) enum PaymentStatus status;
+
+@end
+
+/**
+ * Fetches the raw value of a @c ReplayPaymentStatusUpdateCommand's @c status property, even
+ * if the value was not defined by the enum at the time the code was generated.
+ **/
+int32_t ReplayPaymentStatusUpdateCommand_Status_RawValue(ReplayPaymentStatusUpdateCommand *message);
+/**
+ * Sets the raw value of an @c ReplayPaymentStatusUpdateCommand's @c status property, allowing
+ * it to be set to a value that was not defined by the enum at the time the code
+ * was generated.
+ **/
+void SetReplayPaymentStatusUpdateCommand_Status_RawValue(ReplayPaymentStatusUpdateCommand *message, int32_t value);
+
+#pragma mark - ReplayPaymentReply
+
+typedef GPB_ENUM(ReplayPaymentReply_FieldNumber) {
+  ReplayPaymentReply_FieldNumber_Status = 1,
+  ReplayPaymentReply_FieldNumber_Description_p = 2,
+  ReplayPaymentReply_FieldNumber_TransactionId = 3,
+  ReplayPaymentReply_FieldNumber_DebitCustomerId = 4,
+  ReplayPaymentReply_FieldNumber_CreditCustomerId = 5,
+};
+
+GPB_FINAL @interface ReplayPaymentReply : GPBMessage
+
+@property(nonatomic, readwrite) BOOL status;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *description_p;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *transactionId;
+/** Test to see if @c transactionId has been set. */
+@property(nonatomic, readwrite) BOOL hasTransactionId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *debitCustomerId;
+/** Test to see if @c debitCustomerId has been set. */
+@property(nonatomic, readwrite) BOOL hasDebitCustomerId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *creditCustomerId;
+/** Test to see if @c creditCustomerId has been set. */
+@property(nonatomic, readwrite) BOOL hasCreditCustomerId;
+
+@end
 
 #pragma mark - TagCommandReply
 

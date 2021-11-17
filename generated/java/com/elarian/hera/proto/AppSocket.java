@@ -1719,6 +1719,36 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.AppSocket.ReplayMessagingSessionCommandOrBuilder getReplayMessagingSessionOrBuilder();
 
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     * @return Whether the replayPayment field is set.
+     */
+    boolean hasReplayPayment();
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     * @return The replayPayment.
+     */
+    com.elarian.hera.proto.AppSocket.ReplayPaymentCommand getReplayPayment();
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     */
+    com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder getReplayPaymentOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     * @return Whether the replayPaymentStatusUpdate field is set.
+     */
+    boolean hasReplayPaymentStatusUpdate();
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     * @return The replayPaymentStatusUpdate.
+     */
+    com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand getReplayPaymentStatusUpdate();
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     */
+    com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder getReplayPaymentStatusUpdateOrBuilder();
+
     public com.elarian.hera.proto.AppSocket.AppToServerCommand.EntryCase getEntryCase();
   }
   /**
@@ -2172,6 +2202,34 @@ public final class AppSocket {
               entryCase_ = 29;
               break;
             }
+            case 242: {
+              com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder subBuilder = null;
+              if (entryCase_ == 30) {
+                subBuilder = ((com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_).toBuilder();
+              }
+              entry_ =
+                  input.readMessage(com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_);
+                entry_ = subBuilder.buildPartial();
+              }
+              entryCase_ = 30;
+              break;
+            }
+            case 250: {
+              com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder subBuilder = null;
+              if (entryCase_ == 31) {
+                subBuilder = ((com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_).toBuilder();
+              }
+              entry_ =
+                  input.readMessage(com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_);
+                entry_ = subBuilder.buildPartial();
+              }
+              entryCase_ = 31;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -2238,6 +2296,8 @@ public final class AppSocket {
       REPLAY_MESSAGE_STATUS_UPDATE(27),
       REPLAY_MESSAGE_REACTION_UPDATE(28),
       REPLAY_MESSAGING_SESSION(29),
+      REPLAY_PAYMENT(30),
+      REPLAY_PAYMENT_STATUS_UPDATE(31),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -2284,6 +2344,8 @@ public final class AppSocket {
           case 27: return REPLAY_MESSAGE_STATUS_UPDATE;
           case 28: return REPLAY_MESSAGE_REACTION_UPDATE;
           case 29: return REPLAY_MESSAGING_SESSION;
+          case 30: return REPLAY_PAYMENT;
+          case 31: return REPLAY_PAYMENT_STATUS_UPDATE;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -3198,6 +3260,68 @@ public final class AppSocket {
       return com.elarian.hera.proto.AppSocket.ReplayMessagingSessionCommand.getDefaultInstance();
     }
 
+    public static final int REPLAY_PAYMENT_FIELD_NUMBER = 30;
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     * @return Whether the replayPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplayPayment() {
+      return entryCase_ == 30;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     * @return The replayPayment.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand getReplayPayment() {
+      if (entryCase_ == 30) {
+         return (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder getReplayPaymentOrBuilder() {
+      if (entryCase_ == 30) {
+         return (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+    }
+
+    public static final int REPLAY_PAYMENT_STATUS_UPDATE_FIELD_NUMBER = 31;
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     * @return Whether the replayPaymentStatusUpdate field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplayPaymentStatusUpdate() {
+      return entryCase_ == 31;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     * @return The replayPaymentStatusUpdate.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand getReplayPaymentStatusUpdate() {
+      if (entryCase_ == 31) {
+         return (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder getReplayPaymentStatusUpdateOrBuilder() {
+      if (entryCase_ == 31) {
+         return (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3298,6 +3422,12 @@ public final class AppSocket {
       }
       if (entryCase_ == 29) {
         output.writeMessage(29, (com.elarian.hera.proto.AppSocket.ReplayMessagingSessionCommand) entry_);
+      }
+      if (entryCase_ == 30) {
+        output.writeMessage(30, (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_);
+      }
+      if (entryCase_ == 31) {
+        output.writeMessage(31, (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_);
       }
       unknownFields.writeTo(output);
     }
@@ -3423,6 +3553,14 @@ public final class AppSocket {
       if (entryCase_ == 29) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(29, (com.elarian.hera.proto.AppSocket.ReplayMessagingSessionCommand) entry_);
+      }
+      if (entryCase_ == 30) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(30, (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_);
+      }
+      if (entryCase_ == 31) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(31, (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3557,6 +3695,14 @@ public final class AppSocket {
           if (!getReplayMessagingSession()
               .equals(other.getReplayMessagingSession())) return false;
           break;
+        case 30:
+          if (!getReplayPayment()
+              .equals(other.getReplayPayment())) return false;
+          break;
+        case 31:
+          if (!getReplayPaymentStatusUpdate()
+              .equals(other.getReplayPaymentStatusUpdate())) return false;
+          break;
         case 0:
         default:
       }
@@ -3687,6 +3833,14 @@ public final class AppSocket {
         case 29:
           hash = (37 * hash) + REPLAY_MESSAGING_SESSION_FIELD_NUMBER;
           hash = (53 * hash) + getReplayMessagingSession().hashCode();
+          break;
+        case 30:
+          hash = (37 * hash) + REPLAY_PAYMENT_FIELD_NUMBER;
+          hash = (53 * hash) + getReplayPayment().hashCode();
+          break;
+        case 31:
+          hash = (37 * hash) + REPLAY_PAYMENT_STATUS_UPDATE_FIELD_NUMBER;
+          hash = (53 * hash) + getReplayPaymentStatusUpdate().hashCode();
           break;
         case 0:
         default:
@@ -4055,6 +4209,20 @@ public final class AppSocket {
             result.entry_ = replayMessagingSessionBuilder_.build();
           }
         }
+        if (entryCase_ == 30) {
+          if (replayPaymentBuilder_ == null) {
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = replayPaymentBuilder_.build();
+          }
+        }
+        if (entryCase_ == 31) {
+          if (replayPaymentStatusUpdateBuilder_ == null) {
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = replayPaymentStatusUpdateBuilder_.build();
+          }
+        }
         result.entryCase_ = entryCase_;
         onBuilt();
         return result;
@@ -4219,6 +4387,14 @@ public final class AppSocket {
           }
           case REPLAY_MESSAGING_SESSION: {
             mergeReplayMessagingSession(other.getReplayMessagingSession());
+            break;
+          }
+          case REPLAY_PAYMENT: {
+            mergeReplayPayment(other.getReplayPayment());
+            break;
+          }
+          case REPLAY_PAYMENT_STATUS_UPDATE: {
+            mergeReplayPaymentStatusUpdate(other.getReplayPaymentStatusUpdate());
             break;
           }
           case ENTRY_NOT_SET: {
@@ -8357,6 +8533,288 @@ public final class AppSocket {
         onChanged();;
         return replayMessagingSessionBuilder_;
       }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.AppSocket.ReplayPaymentCommand, com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder> replayPaymentBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       * @return Whether the replayPayment field is set.
+       */
+      @java.lang.Override
+      public boolean hasReplayPayment() {
+        return entryCase_ == 30;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       * @return The replayPayment.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand getReplayPayment() {
+        if (replayPaymentBuilder_ == null) {
+          if (entryCase_ == 30) {
+            return (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_;
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+        } else {
+          if (entryCase_ == 30) {
+            return replayPaymentBuilder_.getMessage();
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      public Builder setReplayPayment(com.elarian.hera.proto.AppSocket.ReplayPaymentCommand value) {
+        if (replayPaymentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+          onChanged();
+        } else {
+          replayPaymentBuilder_.setMessage(value);
+        }
+        entryCase_ = 30;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      public Builder setReplayPayment(
+          com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder builderForValue) {
+        if (replayPaymentBuilder_ == null) {
+          entry_ = builderForValue.build();
+          onChanged();
+        } else {
+          replayPaymentBuilder_.setMessage(builderForValue.build());
+        }
+        entryCase_ = 30;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      public Builder mergeReplayPayment(com.elarian.hera.proto.AppSocket.ReplayPaymentCommand value) {
+        if (replayPaymentBuilder_ == null) {
+          if (entryCase_ == 30 &&
+              entry_ != com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.newBuilder((com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            entry_ = value;
+          }
+          onChanged();
+        } else {
+          if (entryCase_ == 30) {
+            replayPaymentBuilder_.mergeFrom(value);
+          }
+          replayPaymentBuilder_.setMessage(value);
+        }
+        entryCase_ = 30;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      public Builder clearReplayPayment() {
+        if (replayPaymentBuilder_ == null) {
+          if (entryCase_ == 30) {
+            entryCase_ = 0;
+            entry_ = null;
+            onChanged();
+          }
+        } else {
+          if (entryCase_ == 30) {
+            entryCase_ = 0;
+            entry_ = null;
+          }
+          replayPaymentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder getReplayPaymentBuilder() {
+        return getReplayPaymentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder getReplayPaymentOrBuilder() {
+        if ((entryCase_ == 30) && (replayPaymentBuilder_ != null)) {
+          return replayPaymentBuilder_.getMessageOrBuilder();
+        } else {
+          if (entryCase_ == 30) {
+            return (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_;
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.AppSocket.ReplayPaymentCommand, com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder> 
+          getReplayPaymentFieldBuilder() {
+        if (replayPaymentBuilder_ == null) {
+          if (!(entryCase_ == 30)) {
+            entry_ = com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+          }
+          replayPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.AppSocket.ReplayPaymentCommand, com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder>(
+                  (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) entry_,
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        entryCase_ = 30;
+        onChanged();;
+        return replayPaymentBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder> replayPaymentStatusUpdateBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       * @return Whether the replayPaymentStatusUpdate field is set.
+       */
+      @java.lang.Override
+      public boolean hasReplayPaymentStatusUpdate() {
+        return entryCase_ == 31;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       * @return The replayPaymentStatusUpdate.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand getReplayPaymentStatusUpdate() {
+        if (replayPaymentStatusUpdateBuilder_ == null) {
+          if (entryCase_ == 31) {
+            return (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_;
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+        } else {
+          if (entryCase_ == 31) {
+            return replayPaymentStatusUpdateBuilder_.getMessage();
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      public Builder setReplayPaymentStatusUpdate(com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand value) {
+        if (replayPaymentStatusUpdateBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+          onChanged();
+        } else {
+          replayPaymentStatusUpdateBuilder_.setMessage(value);
+        }
+        entryCase_ = 31;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      public Builder setReplayPaymentStatusUpdate(
+          com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder builderForValue) {
+        if (replayPaymentStatusUpdateBuilder_ == null) {
+          entry_ = builderForValue.build();
+          onChanged();
+        } else {
+          replayPaymentStatusUpdateBuilder_.setMessage(builderForValue.build());
+        }
+        entryCase_ = 31;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      public Builder mergeReplayPaymentStatusUpdate(com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand value) {
+        if (replayPaymentStatusUpdateBuilder_ == null) {
+          if (entryCase_ == 31 &&
+              entry_ != com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.newBuilder((com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            entry_ = value;
+          }
+          onChanged();
+        } else {
+          if (entryCase_ == 31) {
+            replayPaymentStatusUpdateBuilder_.mergeFrom(value);
+          }
+          replayPaymentStatusUpdateBuilder_.setMessage(value);
+        }
+        entryCase_ = 31;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      public Builder clearReplayPaymentStatusUpdate() {
+        if (replayPaymentStatusUpdateBuilder_ == null) {
+          if (entryCase_ == 31) {
+            entryCase_ = 0;
+            entry_ = null;
+            onChanged();
+          }
+        } else {
+          if (entryCase_ == 31) {
+            entryCase_ = 0;
+            entry_ = null;
+          }
+          replayPaymentStatusUpdateBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder getReplayPaymentStatusUpdateBuilder() {
+        return getReplayPaymentStatusUpdateFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder getReplayPaymentStatusUpdateOrBuilder() {
+        if ((entryCase_ == 31) && (replayPaymentStatusUpdateBuilder_ != null)) {
+          return replayPaymentStatusUpdateBuilder_.getMessageOrBuilder();
+        } else {
+          if (entryCase_ == 31) {
+            return (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_;
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder> 
+          getReplayPaymentStatusUpdateFieldBuilder() {
+        if (replayPaymentStatusUpdateBuilder_ == null) {
+          if (!(entryCase_ == 31)) {
+            entry_ = com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+          }
+          replayPaymentStatusUpdateBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder>(
+                  (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) entry_,
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        entryCase_ = 31;
+        onChanged();;
+        return replayPaymentStatusUpdateBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -8564,6 +9022,21 @@ public final class AppSocket {
      */
     com.elarian.hera.proto.AppSocket.CustomerActivityReplyOrBuilder getCustomerActivityOrBuilder();
 
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     * @return Whether the replayPayment field is set.
+     */
+    boolean hasReplayPayment();
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     * @return The replayPayment.
+     */
+    com.elarian.hera.proto.AppSocket.ReplayPaymentReply getReplayPayment();
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     */
+    com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder getReplayPaymentOrBuilder();
+
     public com.elarian.hera.proto.AppSocket.AppToServerCommandReply.EntryCase getEntryCase();
   }
   /**
@@ -8751,6 +9224,20 @@ public final class AppSocket {
               entryCase_ = 10;
               break;
             }
+            case 90: {
+              com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder subBuilder = null;
+              if (entryCase_ == 11) {
+                subBuilder = ((com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_).toBuilder();
+              }
+              entry_ =
+                  input.readMessage(com.elarian.hera.proto.AppSocket.ReplayPaymentReply.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom((com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_);
+                entry_ = subBuilder.buildPartial();
+              }
+              entryCase_ = 11;
+              break;
+            }
             default: {
               if (!parseUnknownField(
                   input, unknownFields, extensionRegistry, tag)) {
@@ -8798,6 +9285,7 @@ public final class AppSocket {
       INITIATE_PAYMENT(8),
       TAG_COMMAND(9),
       CUSTOMER_ACTIVITY(10),
+      REPLAY_PAYMENT(11),
       ENTRY_NOT_SET(0);
       private final int value;
       private EntryCase(int value) {
@@ -8825,6 +9313,7 @@ public final class AppSocket {
           case 8: return INITIATE_PAYMENT;
           case 9: return TAG_COMMAND;
           case 10: return CUSTOMER_ACTIVITY;
+          case 11: return REPLAY_PAYMENT;
           case 0: return ENTRY_NOT_SET;
           default: return null;
         }
@@ -9150,6 +9639,37 @@ public final class AppSocket {
       return com.elarian.hera.proto.AppSocket.CustomerActivityReply.getDefaultInstance();
     }
 
+    public static final int REPLAY_PAYMENT_FIELD_NUMBER = 11;
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     * @return Whether the replayPayment field is set.
+     */
+    @java.lang.Override
+    public boolean hasReplayPayment() {
+      return entryCase_ == 11;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     * @return The replayPayment.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentReply getReplayPayment() {
+      if (entryCase_ == 11) {
+         return (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+    }
+    /**
+     * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder getReplayPaymentOrBuilder() {
+      if (entryCase_ == 11) {
+         return (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_;
+      }
+      return com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -9193,6 +9713,9 @@ public final class AppSocket {
       }
       if (entryCase_ == 10) {
         output.writeMessage(10, (com.elarian.hera.proto.AppSocket.CustomerActivityReply) entry_);
+      }
+      if (entryCase_ == 11) {
+        output.writeMessage(11, (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_);
       }
       unknownFields.writeTo(output);
     }
@@ -9242,6 +9765,10 @@ public final class AppSocket {
       if (entryCase_ == 10) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, (com.elarian.hera.proto.AppSocket.CustomerActivityReply) entry_);
+      }
+      if (entryCase_ == 11) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -9300,6 +9827,10 @@ public final class AppSocket {
           if (!getCustomerActivity()
               .equals(other.getCustomerActivity())) return false;
           break;
+        case 11:
+          if (!getReplayPayment()
+              .equals(other.getReplayPayment())) return false;
+          break;
         case 0:
         default:
       }
@@ -9354,6 +9885,10 @@ public final class AppSocket {
         case 10:
           hash = (37 * hash) + CUSTOMER_ACTIVITY_FIELD_NUMBER;
           hash = (53 * hash) + getCustomerActivity().hashCode();
+          break;
+        case 11:
+          hash = (37 * hash) + REPLAY_PAYMENT_FIELD_NUMBER;
+          hash = (53 * hash) + getReplayPayment().hashCode();
           break;
         case 0:
         default:
@@ -9589,6 +10124,13 @@ public final class AppSocket {
             result.entry_ = customerActivityBuilder_.build();
           }
         }
+        if (entryCase_ == 11) {
+          if (replayPaymentBuilder_ == null) {
+            result.entry_ = entry_;
+          } else {
+            result.entry_ = replayPaymentBuilder_.build();
+          }
+        }
         result.entryCase_ = entryCase_;
         onBuilt();
         return result;
@@ -9677,6 +10219,10 @@ public final class AppSocket {
           }
           case CUSTOMER_ACTIVITY: {
             mergeCustomerActivity(other.getCustomerActivity());
+            break;
+          }
+          case REPLAY_PAYMENT: {
+            mergeReplayPayment(other.getReplayPayment());
             break;
           }
           case ENTRY_NOT_SET: {
@@ -11135,6 +11681,147 @@ public final class AppSocket {
         entryCase_ = 10;
         onChanged();;
         return customerActivityBuilder_;
+      }
+
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.AppSocket.ReplayPaymentReply, com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder> replayPaymentBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       * @return Whether the replayPayment field is set.
+       */
+      @java.lang.Override
+      public boolean hasReplayPayment() {
+        return entryCase_ == 11;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       * @return The replayPayment.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentReply getReplayPayment() {
+        if (replayPaymentBuilder_ == null) {
+          if (entryCase_ == 11) {
+            return (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_;
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+        } else {
+          if (entryCase_ == 11) {
+            return replayPaymentBuilder_.getMessage();
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      public Builder setReplayPayment(com.elarian.hera.proto.AppSocket.ReplayPaymentReply value) {
+        if (replayPaymentBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          entry_ = value;
+          onChanged();
+        } else {
+          replayPaymentBuilder_.setMessage(value);
+        }
+        entryCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      public Builder setReplayPayment(
+          com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder builderForValue) {
+        if (replayPaymentBuilder_ == null) {
+          entry_ = builderForValue.build();
+          onChanged();
+        } else {
+          replayPaymentBuilder_.setMessage(builderForValue.build());
+        }
+        entryCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      public Builder mergeReplayPayment(com.elarian.hera.proto.AppSocket.ReplayPaymentReply value) {
+        if (replayPaymentBuilder_ == null) {
+          if (entryCase_ == 11 &&
+              entry_ != com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance()) {
+            entry_ = com.elarian.hera.proto.AppSocket.ReplayPaymentReply.newBuilder((com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_)
+                .mergeFrom(value).buildPartial();
+          } else {
+            entry_ = value;
+          }
+          onChanged();
+        } else {
+          if (entryCase_ == 11) {
+            replayPaymentBuilder_.mergeFrom(value);
+          }
+          replayPaymentBuilder_.setMessage(value);
+        }
+        entryCase_ = 11;
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      public Builder clearReplayPayment() {
+        if (replayPaymentBuilder_ == null) {
+          if (entryCase_ == 11) {
+            entryCase_ = 0;
+            entry_ = null;
+            onChanged();
+          }
+        } else {
+          if (entryCase_ == 11) {
+            entryCase_ = 0;
+            entry_ = null;
+          }
+          replayPaymentBuilder_.clear();
+        }
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder getReplayPaymentBuilder() {
+        return getReplayPaymentFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder getReplayPaymentOrBuilder() {
+        if ((entryCase_ == 11) && (replayPaymentBuilder_ != null)) {
+          return replayPaymentBuilder_.getMessageOrBuilder();
+        } else {
+          if (entryCase_ == 11) {
+            return (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_;
+          }
+          return com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.AppSocket.ReplayPaymentReply, com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder> 
+          getReplayPaymentFieldBuilder() {
+        if (replayPaymentBuilder_ == null) {
+          if (!(entryCase_ == 11)) {
+            entry_ = com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+          }
+          replayPaymentBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.AppSocket.ReplayPaymentReply, com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder, com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder>(
+                  (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) entry_,
+                  getParentForChildren(),
+                  isClean());
+          entry_ = null;
+        }
+        entryCase_ = 11;
+        onChanged();;
+        return replayPaymentBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -45122,6 +45809,3822 @@ public final class AppSocket {
 
     @java.lang.Override
     public com.elarian.hera.proto.AppSocket.InitiatePaymentReply getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReplayPaymentCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReplayPaymentCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>string provider_transaction_id = 1;</code>
+     * @return The providerTransactionId.
+     */
+    java.lang.String getProviderTransactionId();
+    /**
+     * <code>string provider_transaction_id = 1;</code>
+     * @return The bytes for providerTransactionId.
+     */
+    com.google.protobuf.ByteString
+        getProviderTransactionIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * @return Whether the createdAt field is set.
+     */
+    boolean hasCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * @return The createdAt.
+     */
+    com.google.protobuf.Timestamp getCreatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+     * @return Whether the debitParty field is set.
+     */
+    boolean hasDebitParty();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+     * @return The debitParty.
+     */
+    com.elarian.hera.proto.PaymentModel.PaymentCounterParty getDebitParty();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+     */
+    com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder getDebitPartyOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+     * @return Whether the creditParty field is set.
+     */
+    boolean hasCreditParty();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+     * @return The creditParty.
+     */
+    com.elarian.hera.proto.PaymentModel.PaymentCounterParty getCreditParty();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+     */
+    com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder getCreditPartyOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
+
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return Whether the value field is set.
+     */
+    boolean hasValue();
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return The value.
+     */
+    com.elarian.hera.proto.CommonModel.Cash getValue();
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     */
+    com.elarian.hera.proto.CommonModel.CashOrBuilder getValueOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentCommand}
+   */
+  public static final class ReplayPaymentCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReplayPaymentCommand)
+      ReplayPaymentCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReplayPaymentCommand.newBuilder() to construct.
+    private ReplayPaymentCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReplayPaymentCommand() {
+      providerTransactionId_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReplayPaymentCommand();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReplayPaymentCommand(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerTransactionId_ = s;
+              break;
+            }
+            case 18: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (createdAt_ != null) {
+                subBuilder = createdAt_.toBuilder();
+              }
+              createdAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(createdAt_);
+                createdAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 26: {
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder subBuilder = null;
+              if (debitParty_ != null) {
+                subBuilder = debitParty_.toBuilder();
+              }
+              debitParty_ = input.readMessage(com.elarian.hera.proto.PaymentModel.PaymentCounterParty.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(debitParty_);
+                debitParty_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder subBuilder = null;
+              if (creditParty_ != null) {
+                subBuilder = creditParty_.toBuilder();
+              }
+              creditParty_ = input.readMessage(com.elarian.hera.proto.PaymentModel.PaymentCounterParty.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creditParty_);
+                creditParty_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 40: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            case 50: {
+              com.elarian.hera.proto.CommonModel.Cash.Builder subBuilder = null;
+              if (value_ != null) {
+                subBuilder = value_.toBuilder();
+              }
+              value_ = input.readMessage(com.elarian.hera.proto.CommonModel.Cash.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(value_);
+                value_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.class, com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder.class);
+    }
+
+    public static final int PROVIDER_TRANSACTION_ID_FIELD_NUMBER = 1;
+    private volatile java.lang.Object providerTransactionId_;
+    /**
+     * <code>string provider_transaction_id = 1;</code>
+     * @return The providerTransactionId.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderTransactionId() {
+      java.lang.Object ref = providerTransactionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerTransactionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider_transaction_id = 1;</code>
+     * @return The bytes for providerTransactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderTransactionIdBytes() {
+      java.lang.Object ref = providerTransactionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerTransactionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int CREATED_AT_FIELD_NUMBER = 2;
+    private com.google.protobuf.Timestamp createdAt_;
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * @return Whether the createdAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreatedAt() {
+      return createdAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     * @return The createdAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getCreatedAt() {
+      return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp created_at = 2;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+      return getCreatedAt();
+    }
+
+    public static final int DEBIT_PARTY_FIELD_NUMBER = 3;
+    private com.elarian.hera.proto.PaymentModel.PaymentCounterParty debitParty_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+     * @return Whether the debitParty field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebitParty() {
+      return debitParty_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+     * @return The debitParty.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getDebitParty() {
+      return debitParty_ == null ? com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : debitParty_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder getDebitPartyOrBuilder() {
+      return getDebitParty();
+    }
+
+    public static final int CREDIT_PARTY_FIELD_NUMBER = 4;
+    private com.elarian.hera.proto.PaymentModel.PaymentCounterParty creditParty_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+     * @return Whether the creditParty field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreditParty() {
+      return creditParty_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+     * @return The creditParty.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getCreditParty() {
+      return creditParty_ == null ? com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : creditParty_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder getCreditPartyOrBuilder() {
+      return getCreditParty();
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 5;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.valueOf(status_);
+      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
+    }
+
+    public static final int VALUE_FIELD_NUMBER = 6;
+    private com.elarian.hera.proto.CommonModel.Cash value_;
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return Whether the value field is set.
+     */
+    @java.lang.Override
+    public boolean hasValue() {
+      return value_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     * @return The value.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.Cash getValue() {
+      return value_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : value_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CashOrBuilder getValueOrBuilder() {
+      return getValue();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (!getProviderTransactionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, providerTransactionId_);
+      }
+      if (createdAt_ != null) {
+        output.writeMessage(2, getCreatedAt());
+      }
+      if (debitParty_ != null) {
+        output.writeMessage(3, getDebitParty());
+      }
+      if (creditParty_ != null) {
+        output.writeMessage(4, getCreditParty());
+      }
+      if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(5, status_);
+      }
+      if (value_ != null) {
+        output.writeMessage(6, getValue());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (!getProviderTransactionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, providerTransactionId_);
+      }
+      if (createdAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(2, getCreatedAt());
+      }
+      if (debitParty_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDebitParty());
+      }
+      if (creditParty_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getCreditParty());
+      }
+      if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(5, status_);
+      }
+      if (value_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(6, getValue());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.AppSocket.ReplayPaymentCommand)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.AppSocket.ReplayPaymentCommand other = (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) obj;
+
+      if (!getProviderTransactionId()
+          .equals(other.getProviderTransactionId())) return false;
+      if (hasCreatedAt() != other.hasCreatedAt()) return false;
+      if (hasCreatedAt()) {
+        if (!getCreatedAt()
+            .equals(other.getCreatedAt())) return false;
+      }
+      if (hasDebitParty() != other.hasDebitParty()) return false;
+      if (hasDebitParty()) {
+        if (!getDebitParty()
+            .equals(other.getDebitParty())) return false;
+      }
+      if (hasCreditParty() != other.hasCreditParty()) return false;
+      if (hasCreditParty()) {
+        if (!getCreditParty()
+            .equals(other.getCreditParty())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (hasValue() != other.hasValue()) return false;
+      if (hasValue()) {
+        if (!getValue()
+            .equals(other.getValue())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + PROVIDER_TRANSACTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderTransactionId().hashCode();
+      if (hasCreatedAt()) {
+        hash = (37 * hash) + CREATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getCreatedAt().hashCode();
+      }
+      if (hasDebitParty()) {
+        hash = (37 * hash) + DEBIT_PARTY_FIELD_NUMBER;
+        hash = (53 * hash) + getDebitParty().hashCode();
+      }
+      if (hasCreditParty()) {
+        hash = (37 * hash) + CREDIT_PARTY_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditParty().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      if (hasValue()) {
+        hash = (37 * hash) + VALUE_FIELD_NUMBER;
+        hash = (53 * hash) + getValue().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.ReplayPaymentCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.ReplayPaymentCommand)
+        com.elarian.hera.proto.AppSocket.ReplayPaymentCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.class, com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        providerTransactionId_ = "";
+
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+        if (debitPartyBuilder_ == null) {
+          debitParty_ = null;
+        } else {
+          debitParty_ = null;
+          debitPartyBuilder_ = null;
+        }
+        if (creditPartyBuilder_ == null) {
+          creditParty_ = null;
+        } else {
+          creditParty_ = null;
+          creditPartyBuilder_ = null;
+        }
+        status_ = 0;
+
+        if (valueBuilder_ == null) {
+          value_ = null;
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand getDefaultInstanceForType() {
+        return com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand build() {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand buildPartial() {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentCommand result = new com.elarian.hera.proto.AppSocket.ReplayPaymentCommand(this);
+        result.providerTransactionId_ = providerTransactionId_;
+        if (createdAtBuilder_ == null) {
+          result.createdAt_ = createdAt_;
+        } else {
+          result.createdAt_ = createdAtBuilder_.build();
+        }
+        if (debitPartyBuilder_ == null) {
+          result.debitParty_ = debitParty_;
+        } else {
+          result.debitParty_ = debitPartyBuilder_.build();
+        }
+        if (creditPartyBuilder_ == null) {
+          result.creditParty_ = creditParty_;
+        } else {
+          result.creditParty_ = creditPartyBuilder_.build();
+        }
+        result.status_ = status_;
+        if (valueBuilder_ == null) {
+          result.value_ = value_;
+        } else {
+          result.value_ = valueBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) {
+          return mergeFrom((com.elarian.hera.proto.AppSocket.ReplayPaymentCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.AppSocket.ReplayPaymentCommand other) {
+        if (other == com.elarian.hera.proto.AppSocket.ReplayPaymentCommand.getDefaultInstance()) return this;
+        if (!other.getProviderTransactionId().isEmpty()) {
+          providerTransactionId_ = other.providerTransactionId_;
+          onChanged();
+        }
+        if (other.hasCreatedAt()) {
+          mergeCreatedAt(other.getCreatedAt());
+        }
+        if (other.hasDebitParty()) {
+          mergeDebitParty(other.getDebitParty());
+        }
+        if (other.hasCreditParty()) {
+          mergeCreditParty(other.getCreditParty());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        if (other.hasValue()) {
+          mergeValue(other.getValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentCommand parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.AppSocket.ReplayPaymentCommand) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private java.lang.Object providerTransactionId_ = "";
+      /**
+       * <code>string provider_transaction_id = 1;</code>
+       * @return The providerTransactionId.
+       */
+      public java.lang.String getProviderTransactionId() {
+        java.lang.Object ref = providerTransactionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerTransactionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider_transaction_id = 1;</code>
+       * @return The bytes for providerTransactionId.
+       */
+      public com.google.protobuf.ByteString
+          getProviderTransactionIdBytes() {
+        java.lang.Object ref = providerTransactionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerTransactionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider_transaction_id = 1;</code>
+       * @param value The providerTransactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTransactionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerTransactionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_transaction_id = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderTransactionId() {
+        
+        providerTransactionId_ = getDefaultInstance().getProviderTransactionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_transaction_id = 1;</code>
+       * @param value The bytes for providerTransactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTransactionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerTransactionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp createdAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> createdAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * @return Whether the createdAt field is set.
+       */
+      public boolean hasCreatedAt() {
+        return createdAtBuilder_ != null || createdAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       * @return The createdAt.
+       */
+      public com.google.protobuf.Timestamp getCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          return createdAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        } else {
+          return createdAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder setCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          createdAt_ = value;
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder setCreatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          createdAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder mergeCreatedAt(com.google.protobuf.Timestamp value) {
+        if (createdAtBuilder_ == null) {
+          if (createdAt_ != null) {
+            createdAt_ =
+              com.google.protobuf.Timestamp.newBuilder(createdAt_).mergeFrom(value).buildPartial();
+          } else {
+            createdAt_ = value;
+          }
+          onChanged();
+        } else {
+          createdAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public Builder clearCreatedAt() {
+        if (createdAtBuilder_ == null) {
+          createdAt_ = null;
+          onChanged();
+        } else {
+          createdAt_ = null;
+          createdAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getCreatedAtBuilder() {
+        
+        onChanged();
+        return getCreatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getCreatedAtOrBuilder() {
+        if (createdAtBuilder_ != null) {
+          return createdAtBuilder_.getMessageOrBuilder();
+        } else {
+          return createdAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : createdAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp created_at = 2;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getCreatedAtFieldBuilder() {
+        if (createdAtBuilder_ == null) {
+          createdAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getCreatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          createdAt_ = null;
+        }
+        return createdAtBuilder_;
+      }
+
+      private com.elarian.hera.proto.PaymentModel.PaymentCounterParty debitParty_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty, com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder, com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder> debitPartyBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       * @return Whether the debitParty field is set.
+       */
+      public boolean hasDebitParty() {
+        return debitPartyBuilder_ != null || debitParty_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       * @return The debitParty.
+       */
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getDebitParty() {
+        if (debitPartyBuilder_ == null) {
+          return debitParty_ == null ? com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : debitParty_;
+        } else {
+          return debitPartyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      public Builder setDebitParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
+        if (debitPartyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          debitParty_ = value;
+          onChanged();
+        } else {
+          debitPartyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      public Builder setDebitParty(
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder builderForValue) {
+        if (debitPartyBuilder_ == null) {
+          debitParty_ = builderForValue.build();
+          onChanged();
+        } else {
+          debitPartyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      public Builder mergeDebitParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
+        if (debitPartyBuilder_ == null) {
+          if (debitParty_ != null) {
+            debitParty_ =
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty.newBuilder(debitParty_).mergeFrom(value).buildPartial();
+          } else {
+            debitParty_ = value;
+          }
+          onChanged();
+        } else {
+          debitPartyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      public Builder clearDebitParty() {
+        if (debitPartyBuilder_ == null) {
+          debitParty_ = null;
+          onChanged();
+        } else {
+          debitParty_ = null;
+          debitPartyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder getDebitPartyBuilder() {
+        
+        onChanged();
+        return getDebitPartyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder getDebitPartyOrBuilder() {
+        if (debitPartyBuilder_ != null) {
+          return debitPartyBuilder_.getMessageOrBuilder();
+        } else {
+          return debitParty_ == null ?
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : debitParty_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty debit_party = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty, com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder, com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder> 
+          getDebitPartyFieldBuilder() {
+        if (debitPartyBuilder_ == null) {
+          debitPartyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty, com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder, com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder>(
+                  getDebitParty(),
+                  getParentForChildren(),
+                  isClean());
+          debitParty_ = null;
+        }
+        return debitPartyBuilder_;
+      }
+
+      private com.elarian.hera.proto.PaymentModel.PaymentCounterParty creditParty_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty, com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder, com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder> creditPartyBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       * @return Whether the creditParty field is set.
+       */
+      public boolean hasCreditParty() {
+        return creditPartyBuilder_ != null || creditParty_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       * @return The creditParty.
+       */
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterParty getCreditParty() {
+        if (creditPartyBuilder_ == null) {
+          return creditParty_ == null ? com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : creditParty_;
+        } else {
+          return creditPartyBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      public Builder setCreditParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
+        if (creditPartyBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          creditParty_ = value;
+          onChanged();
+        } else {
+          creditPartyBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      public Builder setCreditParty(
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder builderForValue) {
+        if (creditPartyBuilder_ == null) {
+          creditParty_ = builderForValue.build();
+          onChanged();
+        } else {
+          creditPartyBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      public Builder mergeCreditParty(com.elarian.hera.proto.PaymentModel.PaymentCounterParty value) {
+        if (creditPartyBuilder_ == null) {
+          if (creditParty_ != null) {
+            creditParty_ =
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty.newBuilder(creditParty_).mergeFrom(value).buildPartial();
+          } else {
+            creditParty_ = value;
+          }
+          onChanged();
+        } else {
+          creditPartyBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      public Builder clearCreditParty() {
+        if (creditPartyBuilder_ == null) {
+          creditParty_ = null;
+          onChanged();
+        } else {
+          creditParty_ = null;
+          creditPartyBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder getCreditPartyBuilder() {
+        
+        onChanged();
+        return getCreditPartyFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      public com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder getCreditPartyOrBuilder() {
+        if (creditPartyBuilder_ != null) {
+          return creditPartyBuilder_.getMessageOrBuilder();
+        } else {
+          return creditParty_ == null ?
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty.getDefaultInstance() : creditParty_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentCounterParty credit_party = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.PaymentModel.PaymentCounterParty, com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder, com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder> 
+          getCreditPartyFieldBuilder() {
+        if (creditPartyBuilder_ == null) {
+          creditPartyBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.PaymentModel.PaymentCounterParty, com.elarian.hera.proto.PaymentModel.PaymentCounterParty.Builder, com.elarian.hera.proto.PaymentModel.PaymentCounterPartyOrBuilder>(
+                  getCreditParty(),
+                  getParentForChildren(),
+                  isClean());
+          creditParty_ = null;
+        }
+        return creditPartyBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.valueOf(status_);
+        return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 5;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+
+      private com.elarian.hera.proto.CommonModel.Cash value_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> valueBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * @return Whether the value field is set.
+       */
+      public boolean hasValue() {
+        return valueBuilder_ != null || value_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       * @return The value.
+       */
+      public com.elarian.hera.proto.CommonModel.Cash getValue() {
+        if (valueBuilder_ == null) {
+          return value_ == null ? com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : value_;
+        } else {
+          return valueBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      public Builder setValue(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (valueBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          value_ = value;
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      public Builder setValue(
+          com.elarian.hera.proto.CommonModel.Cash.Builder builderForValue) {
+        if (valueBuilder_ == null) {
+          value_ = builderForValue.build();
+          onChanged();
+        } else {
+          valueBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      public Builder mergeValue(com.elarian.hera.proto.CommonModel.Cash value) {
+        if (valueBuilder_ == null) {
+          if (value_ != null) {
+            value_ =
+              com.elarian.hera.proto.CommonModel.Cash.newBuilder(value_).mergeFrom(value).buildPartial();
+          } else {
+            value_ = value;
+          }
+          onChanged();
+        } else {
+          valueBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      public Builder clearValue() {
+        if (valueBuilder_ == null) {
+          value_ = null;
+          onChanged();
+        } else {
+          value_ = null;
+          valueBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.Cash.Builder getValueBuilder() {
+        
+        onChanged();
+        return getValueFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CashOrBuilder getValueOrBuilder() {
+        if (valueBuilder_ != null) {
+          return valueBuilder_.getMessageOrBuilder();
+        } else {
+          return value_ == null ?
+              com.elarian.hera.proto.CommonModel.Cash.getDefaultInstance() : value_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.Cash value = 6;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder> 
+          getValueFieldBuilder() {
+        if (valueBuilder_ == null) {
+          valueBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.CommonModel.Cash, com.elarian.hera.proto.CommonModel.Cash.Builder, com.elarian.hera.proto.CommonModel.CashOrBuilder>(
+                  getValue(),
+                  getParentForChildren(),
+                  isClean());
+          value_ = null;
+        }
+        return valueBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReplayPaymentCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplayPaymentCommand)
+    private static final com.elarian.hera.proto.AppSocket.ReplayPaymentCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.AppSocket.ReplayPaymentCommand();
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReplayPaymentCommand>
+        PARSER = new com.google.protobuf.AbstractParser<ReplayPaymentCommand>() {
+      @java.lang.Override
+      public ReplayPaymentCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReplayPaymentCommand(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReplayPaymentCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReplayPaymentCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReplayPaymentStatusUpdateCommandOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    boolean hasCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber();
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    com.elarian.hera.proto.CommonModel.CustomerNumberOrBuilder getCustomerNumberOrBuilder();
+
+    /**
+     * <code>string provider_transaction_id = 2;</code>
+     * @return The providerTransactionId.
+     */
+    java.lang.String getProviderTransactionId();
+    /**
+     * <code>string provider_transaction_id = 2;</code>
+     * @return The bytes for providerTransactionId.
+     */
+    com.google.protobuf.ByteString
+        getProviderTransactionIdBytes();
+
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    boolean hasUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+     * @return The updatedAt.
+     */
+    com.google.protobuf.Timestamp getUpdatedAt();
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+     */
+    com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    int getStatusValue();
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The status.
+     */
+    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand}
+   */
+  public static final class ReplayPaymentStatusUpdateCommand extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand)
+      ReplayPaymentStatusUpdateCommandOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReplayPaymentStatusUpdateCommand.newBuilder() to construct.
+    private ReplayPaymentStatusUpdateCommand(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReplayPaymentStatusUpdateCommand() {
+      providerTransactionId_ = "";
+      status_ = 0;
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReplayPaymentStatusUpdateCommand();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReplayPaymentStatusUpdateCommand(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 10: {
+              com.elarian.hera.proto.CommonModel.CustomerNumber.Builder subBuilder = null;
+              if (customerNumber_ != null) {
+                subBuilder = customerNumber_.toBuilder();
+              }
+              customerNumber_ = input.readMessage(com.elarian.hera.proto.CommonModel.CustomerNumber.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(customerNumber_);
+                customerNumber_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              providerTransactionId_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.Timestamp.Builder subBuilder = null;
+              if (updatedAt_ != null) {
+                subBuilder = updatedAt_.toBuilder();
+              }
+              updatedAt_ = input.readMessage(com.google.protobuf.Timestamp.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(updatedAt_);
+                updatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 32: {
+              int rawValue = input.readEnum();
+
+              status_ = rawValue;
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.class, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder.class);
+    }
+
+    public static final int CUSTOMER_NUMBER_FIELD_NUMBER = 1;
+    private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return Whether the customerNumber field is set.
+     */
+    @java.lang.Override
+    public boolean hasCustomerNumber() {
+      return customerNumber_ != null;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     * @return The customerNumber.
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+      return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+     */
+    @java.lang.Override
+    public com.elarian.hera.proto.CommonModel.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
+      return getCustomerNumber();
+    }
+
+    public static final int PROVIDER_TRANSACTION_ID_FIELD_NUMBER = 2;
+    private volatile java.lang.Object providerTransactionId_;
+    /**
+     * <code>string provider_transaction_id = 2;</code>
+     * @return The providerTransactionId.
+     */
+    @java.lang.Override
+    public java.lang.String getProviderTransactionId() {
+      java.lang.Object ref = providerTransactionId_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        providerTransactionId_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string provider_transaction_id = 2;</code>
+     * @return The bytes for providerTransactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getProviderTransactionIdBytes() {
+      java.lang.Object ref = providerTransactionId_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        providerTransactionId_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int UPDATED_AT_FIELD_NUMBER = 3;
+    private com.google.protobuf.Timestamp updatedAt_;
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+     * @return Whether the updatedAt field is set.
+     */
+    @java.lang.Override
+    public boolean hasUpdatedAt() {
+      return updatedAt_ != null;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+     * @return The updatedAt.
+     */
+    @java.lang.Override
+    public com.google.protobuf.Timestamp getUpdatedAt() {
+      return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+    }
+    /**
+     * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+      return getUpdatedAt();
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 4;
+    private int status_;
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The enum numeric value on the wire for status.
+     */
+    @java.lang.Override public int getStatusValue() {
+      return status_;
+    }
+    /**
+     * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+     * @return The status.
+     */
+    @java.lang.Override public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+      @SuppressWarnings("deprecation")
+      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.valueOf(status_);
+      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (customerNumber_ != null) {
+        output.writeMessage(1, getCustomerNumber());
+      }
+      if (!getProviderTransactionIdBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, providerTransactionId_);
+      }
+      if (updatedAt_ != null) {
+        output.writeMessage(3, getUpdatedAt());
+      }
+      if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
+        output.writeEnum(4, status_);
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (customerNumber_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(1, getCustomerNumber());
+      }
+      if (!getProviderTransactionIdBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, providerTransactionId_);
+      }
+      if (updatedAt_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getUpdatedAt());
+      }
+      if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeEnumSize(4, status_);
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand other = (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) obj;
+
+      if (hasCustomerNumber() != other.hasCustomerNumber()) return false;
+      if (hasCustomerNumber()) {
+        if (!getCustomerNumber()
+            .equals(other.getCustomerNumber())) return false;
+      }
+      if (!getProviderTransactionId()
+          .equals(other.getProviderTransactionId())) return false;
+      if (hasUpdatedAt() != other.hasUpdatedAt()) return false;
+      if (hasUpdatedAt()) {
+        if (!getUpdatedAt()
+            .equals(other.getUpdatedAt())) return false;
+      }
+      if (status_ != other.status_) return false;
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      if (hasCustomerNumber()) {
+        hash = (37 * hash) + CUSTOMER_NUMBER_FIELD_NUMBER;
+        hash = (53 * hash) + getCustomerNumber().hashCode();
+      }
+      hash = (37 * hash) + PROVIDER_TRANSACTION_ID_FIELD_NUMBER;
+      hash = (53 * hash) + getProviderTransactionId().hashCode();
+      if (hasUpdatedAt()) {
+        hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
+        hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + status_;
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand)
+        com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommandOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.class, com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = null;
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_ = null;
+        }
+        providerTransactionId_ = "";
+
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+        status_ = 0;
+
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand getDefaultInstanceForType() {
+        return com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand build() {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand buildPartial() {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand result = new com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand(this);
+        if (customerNumberBuilder_ == null) {
+          result.customerNumber_ = customerNumber_;
+        } else {
+          result.customerNumber_ = customerNumberBuilder_.build();
+        }
+        result.providerTransactionId_ = providerTransactionId_;
+        if (updatedAtBuilder_ == null) {
+          result.updatedAt_ = updatedAt_;
+        } else {
+          result.updatedAt_ = updatedAtBuilder_.build();
+        }
+        result.status_ = status_;
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) {
+          return mergeFrom((com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand other) {
+        if (other == com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand.getDefaultInstance()) return this;
+        if (other.hasCustomerNumber()) {
+          mergeCustomerNumber(other.getCustomerNumber());
+        }
+        if (!other.getProviderTransactionId().isEmpty()) {
+          providerTransactionId_ = other.providerTransactionId_;
+          onChanged();
+        }
+        if (other.hasUpdatedAt()) {
+          mergeUpdatedAt(other.getUpdatedAt());
+        }
+        if (other.status_ != 0) {
+          setStatusValue(other.getStatusValue());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private com.elarian.hera.proto.CommonModel.CustomerNumber customerNumber_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.CustomerNumber, com.elarian.hera.proto.CommonModel.CustomerNumber.Builder, com.elarian.hera.proto.CommonModel.CustomerNumberOrBuilder> customerNumberBuilder_;
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       * @return Whether the customerNumber field is set.
+       */
+      public boolean hasCustomerNumber() {
+        return customerNumberBuilder_ != null || customerNumber_ != null;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       * @return The customerNumber.
+       */
+      public com.elarian.hera.proto.CommonModel.CustomerNumber getCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          return customerNumber_ == null ? com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+        } else {
+          return customerNumberBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        if (customerNumberBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          customerNumber_ = value;
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder setCustomerNumber(
+          com.elarian.hera.proto.CommonModel.CustomerNumber.Builder builderForValue) {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = builderForValue.build();
+          onChanged();
+        } else {
+          customerNumberBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder mergeCustomerNumber(com.elarian.hera.proto.CommonModel.CustomerNumber value) {
+        if (customerNumberBuilder_ == null) {
+          if (customerNumber_ != null) {
+            customerNumber_ =
+              com.elarian.hera.proto.CommonModel.CustomerNumber.newBuilder(customerNumber_).mergeFrom(value).buildPartial();
+          } else {
+            customerNumber_ = value;
+          }
+          onChanged();
+        } else {
+          customerNumberBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public Builder clearCustomerNumber() {
+        if (customerNumberBuilder_ == null) {
+          customerNumber_ = null;
+          onChanged();
+        } else {
+          customerNumber_ = null;
+          customerNumberBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CustomerNumber.Builder getCustomerNumberBuilder() {
+        
+        onChanged();
+        return getCustomerNumberFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      public com.elarian.hera.proto.CommonModel.CustomerNumberOrBuilder getCustomerNumberOrBuilder() {
+        if (customerNumberBuilder_ != null) {
+          return customerNumberBuilder_.getMessageOrBuilder();
+        } else {
+          return customerNumber_ == null ?
+              com.elarian.hera.proto.CommonModel.CustomerNumber.getDefaultInstance() : customerNumber_;
+        }
+      }
+      /**
+       * <code>.com.elarian.hera.proto.CustomerNumber customer_number = 1;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.elarian.hera.proto.CommonModel.CustomerNumber, com.elarian.hera.proto.CommonModel.CustomerNumber.Builder, com.elarian.hera.proto.CommonModel.CustomerNumberOrBuilder> 
+          getCustomerNumberFieldBuilder() {
+        if (customerNumberBuilder_ == null) {
+          customerNumberBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.elarian.hera.proto.CommonModel.CustomerNumber, com.elarian.hera.proto.CommonModel.CustomerNumber.Builder, com.elarian.hera.proto.CommonModel.CustomerNumberOrBuilder>(
+                  getCustomerNumber(),
+                  getParentForChildren(),
+                  isClean());
+          customerNumber_ = null;
+        }
+        return customerNumberBuilder_;
+      }
+
+      private java.lang.Object providerTransactionId_ = "";
+      /**
+       * <code>string provider_transaction_id = 2;</code>
+       * @return The providerTransactionId.
+       */
+      public java.lang.String getProviderTransactionId() {
+        java.lang.Object ref = providerTransactionId_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          providerTransactionId_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string provider_transaction_id = 2;</code>
+       * @return The bytes for providerTransactionId.
+       */
+      public com.google.protobuf.ByteString
+          getProviderTransactionIdBytes() {
+        java.lang.Object ref = providerTransactionId_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          providerTransactionId_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string provider_transaction_id = 2;</code>
+       * @param value The providerTransactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTransactionId(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        providerTransactionId_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_transaction_id = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearProviderTransactionId() {
+        
+        providerTransactionId_ = getDefaultInstance().getProviderTransactionId();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string provider_transaction_id = 2;</code>
+       * @param value The bytes for providerTransactionId to set.
+       * @return This builder for chaining.
+       */
+      public Builder setProviderTransactionIdBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        providerTransactionId_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.Timestamp updatedAt_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> updatedAtBuilder_;
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       * @return Whether the updatedAt field is set.
+       */
+      public boolean hasUpdatedAt() {
+        return updatedAtBuilder_ != null || updatedAt_ != null;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       * @return The updatedAt.
+       */
+      public com.google.protobuf.Timestamp getUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          return updatedAt_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        } else {
+          return updatedAtBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      public Builder setUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          updatedAt_ = value;
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      public Builder setUpdatedAt(
+          com.google.protobuf.Timestamp.Builder builderForValue) {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = builderForValue.build();
+          onChanged();
+        } else {
+          updatedAtBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      public Builder mergeUpdatedAt(com.google.protobuf.Timestamp value) {
+        if (updatedAtBuilder_ == null) {
+          if (updatedAt_ != null) {
+            updatedAt_ =
+              com.google.protobuf.Timestamp.newBuilder(updatedAt_).mergeFrom(value).buildPartial();
+          } else {
+            updatedAt_ = value;
+          }
+          onChanged();
+        } else {
+          updatedAtBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      public Builder clearUpdatedAt() {
+        if (updatedAtBuilder_ == null) {
+          updatedAt_ = null;
+          onChanged();
+        } else {
+          updatedAt_ = null;
+          updatedAtBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      public com.google.protobuf.Timestamp.Builder getUpdatedAtBuilder() {
+        
+        onChanged();
+        return getUpdatedAtFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      public com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder() {
+        if (updatedAtBuilder_ != null) {
+          return updatedAtBuilder_.getMessageOrBuilder();
+        } else {
+          return updatedAt_ == null ?
+              com.google.protobuf.Timestamp.getDefaultInstance() : updatedAt_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.Timestamp updated_at = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder> 
+          getUpdatedAtFieldBuilder() {
+        if (updatedAtBuilder_ == null) {
+          updatedAtBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.Timestamp, com.google.protobuf.Timestamp.Builder, com.google.protobuf.TimestampOrBuilder>(
+                  getUpdatedAt(),
+                  getParentForChildren(),
+                  isClean());
+          updatedAt_ = null;
+        }
+        return updatedAtBuilder_;
+      }
+
+      private int status_ = 0;
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @return The enum numeric value on the wire for status.
+       */
+      @java.lang.Override public int getStatusValue() {
+        return status_;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @param value The enum numeric value on the wire for status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatusValue(int value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
+        @SuppressWarnings("deprecation")
+        com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.valueOf(status_);
+        return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
+        if (value == null) {
+          throw new NullPointerException();
+        }
+        
+        status_ = value.getNumber();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>.com.elarian.hera.proto.PaymentStatus status = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = 0;
+        onChanged();
+        return this;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand)
+    private static final com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand();
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReplayPaymentStatusUpdateCommand>
+        PARSER = new com.google.protobuf.AbstractParser<ReplayPaymentStatusUpdateCommand>() {
+      @java.lang.Override
+      public ReplayPaymentStatusUpdateCommand parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReplayPaymentStatusUpdateCommand(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReplayPaymentStatusUpdateCommand> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReplayPaymentStatusUpdateCommand> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentStatusUpdateCommand getDefaultInstanceForType() {
+      return DEFAULT_INSTANCE;
+    }
+
+  }
+
+  public interface ReplayPaymentReplyOrBuilder extends
+      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.ReplayPaymentReply)
+      com.google.protobuf.MessageOrBuilder {
+
+    /**
+     * <code>bool status = 1;</code>
+     * @return The status.
+     */
+    boolean getStatus();
+
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    java.lang.String getDescription();
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    com.google.protobuf.ByteString
+        getDescriptionBytes();
+
+    /**
+     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+     * @return Whether the transactionId field is set.
+     */
+    boolean hasTransactionId();
+    /**
+     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+     * @return The transactionId.
+     */
+    com.google.protobuf.StringValue getTransactionId();
+    /**
+     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getTransactionIdOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+     * @return Whether the debitCustomerId field is set.
+     */
+    boolean hasDebitCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+     * @return The debitCustomerId.
+     */
+    com.google.protobuf.StringValue getDebitCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDebitCustomerIdOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+     * @return Whether the creditCustomerId field is set.
+     */
+    boolean hasCreditCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+     * @return The creditCustomerId.
+     */
+    com.google.protobuf.StringValue getCreditCustomerId();
+    /**
+     * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getCreditCustomerIdOrBuilder();
+  }
+  /**
+   * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentReply}
+   */
+  public static final class ReplayPaymentReply extends
+      com.google.protobuf.GeneratedMessageV3 implements
+      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.ReplayPaymentReply)
+      ReplayPaymentReplyOrBuilder {
+  private static final long serialVersionUID = 0L;
+    // Use ReplayPaymentReply.newBuilder() to construct.
+    private ReplayPaymentReply(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
+      super(builder);
+    }
+    private ReplayPaymentReply() {
+      description_ = "";
+    }
+
+    @java.lang.Override
+    @SuppressWarnings({"unused"})
+    protected java.lang.Object newInstance(
+        UnusedPrivateParameter unused) {
+      return new ReplayPaymentReply();
+    }
+
+    @java.lang.Override
+    public final com.google.protobuf.UnknownFieldSet
+    getUnknownFields() {
+      return this.unknownFields;
+    }
+    private ReplayPaymentReply(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      this();
+      if (extensionRegistry == null) {
+        throw new java.lang.NullPointerException();
+      }
+      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
+          com.google.protobuf.UnknownFieldSet.newBuilder();
+      try {
+        boolean done = false;
+        while (!done) {
+          int tag = input.readTag();
+          switch (tag) {
+            case 0:
+              done = true;
+              break;
+            case 8: {
+
+              status_ = input.readBool();
+              break;
+            }
+            case 18: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              description_ = s;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (transactionId_ != null) {
+                subBuilder = transactionId_.toBuilder();
+              }
+              transactionId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(transactionId_);
+                transactionId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 34: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (debitCustomerId_ != null) {
+                subBuilder = debitCustomerId_.toBuilder();
+              }
+              debitCustomerId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(debitCustomerId_);
+                debitCustomerId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 42: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (creditCustomerId_ != null) {
+                subBuilder = creditCustomerId_.toBuilder();
+              }
+              creditCustomerId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(creditCustomerId_);
+                creditCustomerId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            default: {
+              if (!parseUnknownField(
+                  input, unknownFields, extensionRegistry, tag)) {
+                done = true;
+              }
+              break;
+            }
+          }
+        }
+      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+        throw e.setUnfinishedMessage(this);
+      } catch (java.io.IOException e) {
+        throw new com.google.protobuf.InvalidProtocolBufferException(
+            e).setUnfinishedMessage(this);
+      } finally {
+        this.unknownFields = unknownFields.build();
+        makeExtensionsImmutable();
+      }
+    }
+    public static final com.google.protobuf.Descriptors.Descriptor
+        getDescriptor() {
+      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentReply_descriptor;
+    }
+
+    @java.lang.Override
+    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+        internalGetFieldAccessorTable() {
+      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentReply_fieldAccessorTable
+          .ensureFieldAccessorsInitialized(
+              com.elarian.hera.proto.AppSocket.ReplayPaymentReply.class, com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder.class);
+    }
+
+    public static final int STATUS_FIELD_NUMBER = 1;
+    private boolean status_;
+    /**
+     * <code>bool status = 1;</code>
+     * @return The status.
+     */
+    @java.lang.Override
+    public boolean getStatus() {
+      return status_;
+    }
+
+    public static final int DESCRIPTION_FIELD_NUMBER = 2;
+    private volatile java.lang.Object description_;
+    /**
+     * <code>string description = 2;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public java.lang.String getDescription() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        description_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string description = 2;</code>
+     * @return The bytes for description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getDescriptionBytes() {
+      java.lang.Object ref = description_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        description_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
+    public static final int TRANSACTION_ID_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue transactionId_;
+    /**
+     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+     * @return Whether the transactionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasTransactionId() {
+      return transactionId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+     * @return The transactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getTransactionId() {
+      return transactionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : transactionId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getTransactionIdOrBuilder() {
+      return getTransactionId();
+    }
+
+    public static final int DEBIT_CUSTOMER_ID_FIELD_NUMBER = 4;
+    private com.google.protobuf.StringValue debitCustomerId_;
+    /**
+     * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+     * @return Whether the debitCustomerId field is set.
+     */
+    @java.lang.Override
+    public boolean hasDebitCustomerId() {
+      return debitCustomerId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+     * @return The debitCustomerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDebitCustomerId() {
+      return debitCustomerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : debitCustomerId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDebitCustomerIdOrBuilder() {
+      return getDebitCustomerId();
+    }
+
+    public static final int CREDIT_CUSTOMER_ID_FIELD_NUMBER = 5;
+    private com.google.protobuf.StringValue creditCustomerId_;
+    /**
+     * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+     * @return Whether the creditCustomerId field is set.
+     */
+    @java.lang.Override
+    public boolean hasCreditCustomerId() {
+      return creditCustomerId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+     * @return The creditCustomerId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getCreditCustomerId() {
+      return creditCustomerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCustomerId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getCreditCustomerIdOrBuilder() {
+      return getCreditCustomerId();
+    }
+
+    private byte memoizedIsInitialized = -1;
+    @java.lang.Override
+    public final boolean isInitialized() {
+      byte isInitialized = memoizedIsInitialized;
+      if (isInitialized == 1) return true;
+      if (isInitialized == 0) return false;
+
+      memoizedIsInitialized = 1;
+      return true;
+    }
+
+    @java.lang.Override
+    public void writeTo(com.google.protobuf.CodedOutputStream output)
+                        throws java.io.IOException {
+      if (status_ != false) {
+        output.writeBool(1, status_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, description_);
+      }
+      if (transactionId_ != null) {
+        output.writeMessage(3, getTransactionId());
+      }
+      if (debitCustomerId_ != null) {
+        output.writeMessage(4, getDebitCustomerId());
+      }
+      if (creditCustomerId_ != null) {
+        output.writeMessage(5, getCreditCustomerId());
+      }
+      unknownFields.writeTo(output);
+    }
+
+    @java.lang.Override
+    public int getSerializedSize() {
+      int size = memoizedSize;
+      if (size != -1) return size;
+
+      size = 0;
+      if (status_ != false) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeBoolSize(1, status_);
+      }
+      if (!getDescriptionBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, description_);
+      }
+      if (transactionId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getTransactionId());
+      }
+      if (debitCustomerId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(4, getDebitCustomerId());
+      }
+      if (creditCustomerId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(5, getCreditCustomerId());
+      }
+      size += unknownFields.getSerializedSize();
+      memoizedSize = size;
+      return size;
+    }
+
+    @java.lang.Override
+    public boolean equals(final java.lang.Object obj) {
+      if (obj == this) {
+       return true;
+      }
+      if (!(obj instanceof com.elarian.hera.proto.AppSocket.ReplayPaymentReply)) {
+        return super.equals(obj);
+      }
+      com.elarian.hera.proto.AppSocket.ReplayPaymentReply other = (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) obj;
+
+      if (getStatus()
+          != other.getStatus()) return false;
+      if (!getDescription()
+          .equals(other.getDescription())) return false;
+      if (hasTransactionId() != other.hasTransactionId()) return false;
+      if (hasTransactionId()) {
+        if (!getTransactionId()
+            .equals(other.getTransactionId())) return false;
+      }
+      if (hasDebitCustomerId() != other.hasDebitCustomerId()) return false;
+      if (hasDebitCustomerId()) {
+        if (!getDebitCustomerId()
+            .equals(other.getDebitCustomerId())) return false;
+      }
+      if (hasCreditCustomerId() != other.hasCreditCustomerId()) return false;
+      if (hasCreditCustomerId()) {
+        if (!getCreditCustomerId()
+            .equals(other.getCreditCustomerId())) return false;
+      }
+      if (!unknownFields.equals(other.unknownFields)) return false;
+      return true;
+    }
+
+    @java.lang.Override
+    public int hashCode() {
+      if (memoizedHashCode != 0) {
+        return memoizedHashCode;
+      }
+      int hash = 41;
+      hash = (19 * hash) + getDescriptor().hashCode();
+      hash = (37 * hash) + STATUS_FIELD_NUMBER;
+      hash = (53 * hash) + com.google.protobuf.Internal.hashBoolean(
+          getStatus());
+      hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+      hash = (53 * hash) + getDescription().hashCode();
+      if (hasTransactionId()) {
+        hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getTransactionId().hashCode();
+      }
+      if (hasDebitCustomerId()) {
+        hash = (37 * hash) + DEBIT_CUSTOMER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getDebitCustomerId().hashCode();
+      }
+      if (hasCreditCustomerId()) {
+        hash = (37 * hash) + CREDIT_CUSTOMER_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getCreditCustomerId().hashCode();
+      }
+      hash = (29 * hash) + unknownFields.hashCode();
+      memoizedHashCode = hash;
+      return hash;
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        java.nio.ByteBuffer data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        java.nio.ByteBuffer data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        com.google.protobuf.ByteString data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        com.google.protobuf.ByteString data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(byte[] data)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        byte[] data,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws com.google.protobuf.InvalidProtocolBufferException {
+      return PARSER.parseFrom(data, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseDelimitedFrom(java.io.InputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseDelimitedFrom(
+        java.io.InputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        com.google.protobuf.CodedInputStream input)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input);
+    }
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply parseFrom(
+        com.google.protobuf.CodedInputStream input,
+        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+        throws java.io.IOException {
+      return com.google.protobuf.GeneratedMessageV3
+          .parseWithIOException(PARSER, input, extensionRegistry);
+    }
+
+    @java.lang.Override
+    public Builder newBuilderForType() { return newBuilder(); }
+    public static Builder newBuilder() {
+      return DEFAULT_INSTANCE.toBuilder();
+    }
+    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.ReplayPaymentReply prototype) {
+      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
+    }
+    @java.lang.Override
+    public Builder toBuilder() {
+      return this == DEFAULT_INSTANCE
+          ? new Builder() : new Builder().mergeFrom(this);
+    }
+
+    @java.lang.Override
+    protected Builder newBuilderForType(
+        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+      Builder builder = new Builder(parent);
+      return builder;
+    }
+    /**
+     * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentReply}
+     */
+    public static final class Builder extends
+        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
+        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.ReplayPaymentReply)
+        com.elarian.hera.proto.AppSocket.ReplayPaymentReplyOrBuilder {
+      public static final com.google.protobuf.Descriptors.Descriptor
+          getDescriptor() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentReply_descriptor;
+      }
+
+      @java.lang.Override
+      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+          internalGetFieldAccessorTable() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentReply_fieldAccessorTable
+            .ensureFieldAccessorsInitialized(
+                com.elarian.hera.proto.AppSocket.ReplayPaymentReply.class, com.elarian.hera.proto.AppSocket.ReplayPaymentReply.Builder.class);
+      }
+
+      // Construct using com.elarian.hera.proto.AppSocket.ReplayPaymentReply.newBuilder()
+      private Builder() {
+        maybeForceBuilderInitialization();
+      }
+
+      private Builder(
+          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
+        super(parent);
+        maybeForceBuilderInitialization();
+      }
+      private void maybeForceBuilderInitialization() {
+        if (com.google.protobuf.GeneratedMessageV3
+                .alwaysUseFieldBuilders) {
+        }
+      }
+      @java.lang.Override
+      public Builder clear() {
+        super.clear();
+        status_ = false;
+
+        description_ = "";
+
+        if (transactionIdBuilder_ == null) {
+          transactionId_ = null;
+        } else {
+          transactionId_ = null;
+          transactionIdBuilder_ = null;
+        }
+        if (debitCustomerIdBuilder_ == null) {
+          debitCustomerId_ = null;
+        } else {
+          debitCustomerId_ = null;
+          debitCustomerIdBuilder_ = null;
+        }
+        if (creditCustomerIdBuilder_ == null) {
+          creditCustomerId_ = null;
+        } else {
+          creditCustomerId_ = null;
+          creditCustomerIdBuilder_ = null;
+        }
+        return this;
+      }
+
+      @java.lang.Override
+      public com.google.protobuf.Descriptors.Descriptor
+          getDescriptorForType() {
+        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_ReplayPaymentReply_descriptor;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentReply getDefaultInstanceForType() {
+        return com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance();
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentReply build() {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentReply result = buildPartial();
+        if (!result.isInitialized()) {
+          throw newUninitializedMessageException(result);
+        }
+        return result;
+      }
+
+      @java.lang.Override
+      public com.elarian.hera.proto.AppSocket.ReplayPaymentReply buildPartial() {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentReply result = new com.elarian.hera.proto.AppSocket.ReplayPaymentReply(this);
+        result.status_ = status_;
+        result.description_ = description_;
+        if (transactionIdBuilder_ == null) {
+          result.transactionId_ = transactionId_;
+        } else {
+          result.transactionId_ = transactionIdBuilder_.build();
+        }
+        if (debitCustomerIdBuilder_ == null) {
+          result.debitCustomerId_ = debitCustomerId_;
+        } else {
+          result.debitCustomerId_ = debitCustomerIdBuilder_.build();
+        }
+        if (creditCustomerIdBuilder_ == null) {
+          result.creditCustomerId_ = creditCustomerId_;
+        } else {
+          result.creditCustomerId_ = creditCustomerIdBuilder_.build();
+        }
+        onBuilt();
+        return result;
+      }
+
+      @java.lang.Override
+      public Builder clone() {
+        return super.clone();
+      }
+      @java.lang.Override
+      public Builder setField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.setField(field, value);
+      }
+      @java.lang.Override
+      public Builder clearField(
+          com.google.protobuf.Descriptors.FieldDescriptor field) {
+        return super.clearField(field);
+      }
+      @java.lang.Override
+      public Builder clearOneof(
+          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
+        return super.clearOneof(oneof);
+      }
+      @java.lang.Override
+      public Builder setRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          int index, java.lang.Object value) {
+        return super.setRepeatedField(field, index, value);
+      }
+      @java.lang.Override
+      public Builder addRepeatedField(
+          com.google.protobuf.Descriptors.FieldDescriptor field,
+          java.lang.Object value) {
+        return super.addRepeatedField(field, value);
+      }
+      @java.lang.Override
+      public Builder mergeFrom(com.google.protobuf.Message other) {
+        if (other instanceof com.elarian.hera.proto.AppSocket.ReplayPaymentReply) {
+          return mergeFrom((com.elarian.hera.proto.AppSocket.ReplayPaymentReply)other);
+        } else {
+          super.mergeFrom(other);
+          return this;
+        }
+      }
+
+      public Builder mergeFrom(com.elarian.hera.proto.AppSocket.ReplayPaymentReply other) {
+        if (other == com.elarian.hera.proto.AppSocket.ReplayPaymentReply.getDefaultInstance()) return this;
+        if (other.getStatus() != false) {
+          setStatus(other.getStatus());
+        }
+        if (!other.getDescription().isEmpty()) {
+          description_ = other.description_;
+          onChanged();
+        }
+        if (other.hasTransactionId()) {
+          mergeTransactionId(other.getTransactionId());
+        }
+        if (other.hasDebitCustomerId()) {
+          mergeDebitCustomerId(other.getDebitCustomerId());
+        }
+        if (other.hasCreditCustomerId()) {
+          mergeCreditCustomerId(other.getCreditCustomerId());
+        }
+        this.mergeUnknownFields(other.unknownFields);
+        onChanged();
+        return this;
+      }
+
+      @java.lang.Override
+      public final boolean isInitialized() {
+        return true;
+      }
+
+      @java.lang.Override
+      public Builder mergeFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws java.io.IOException {
+        com.elarian.hera.proto.AppSocket.ReplayPaymentReply parsedMessage = null;
+        try {
+          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
+        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
+          parsedMessage = (com.elarian.hera.proto.AppSocket.ReplayPaymentReply) e.getUnfinishedMessage();
+          throw e.unwrapIOException();
+        } finally {
+          if (parsedMessage != null) {
+            mergeFrom(parsedMessage);
+          }
+        }
+        return this;
+      }
+
+      private boolean status_ ;
+      /**
+       * <code>bool status = 1;</code>
+       * @return The status.
+       */
+      @java.lang.Override
+      public boolean getStatus() {
+        return status_;
+      }
+      /**
+       * <code>bool status = 1;</code>
+       * @param value The status to set.
+       * @return This builder for chaining.
+       */
+      public Builder setStatus(boolean value) {
+        
+        status_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>bool status = 1;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearStatus() {
+        
+        status_ = false;
+        onChanged();
+        return this;
+      }
+
+      private java.lang.Object description_ = "";
+      /**
+       * <code>string description = 2;</code>
+       * @return The description.
+       */
+      public java.lang.String getDescription() {
+        java.lang.Object ref = description_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          description_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return The bytes for description.
+       */
+      public com.google.protobuf.ByteString
+          getDescriptionBytes() {
+        java.lang.Object ref = description_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          description_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescription(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        description_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearDescription() {
+        
+        description_ = getDefaultInstance().getDescription();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string description = 2;</code>
+       * @param value The bytes for description to set.
+       * @return This builder for chaining.
+       */
+      public Builder setDescriptionBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        description_ = value;
+        onChanged();
+        return this;
+      }
+
+      private com.google.protobuf.StringValue transactionId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> transactionIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       * @return Whether the transactionId field is set.
+       */
+      public boolean hasTransactionId() {
+        return transactionIdBuilder_ != null || transactionId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       * @return The transactionId.
+       */
+      public com.google.protobuf.StringValue getTransactionId() {
+        if (transactionIdBuilder_ == null) {
+          return transactionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : transactionId_;
+        } else {
+          return transactionIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      public Builder setTransactionId(com.google.protobuf.StringValue value) {
+        if (transactionIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          transactionId_ = value;
+          onChanged();
+        } else {
+          transactionIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      public Builder setTransactionId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (transactionIdBuilder_ == null) {
+          transactionId_ = builderForValue.build();
+          onChanged();
+        } else {
+          transactionIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      public Builder mergeTransactionId(com.google.protobuf.StringValue value) {
+        if (transactionIdBuilder_ == null) {
+          if (transactionId_ != null) {
+            transactionId_ =
+              com.google.protobuf.StringValue.newBuilder(transactionId_).mergeFrom(value).buildPartial();
+          } else {
+            transactionId_ = value;
+          }
+          onChanged();
+        } else {
+          transactionIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      public Builder clearTransactionId() {
+        if (transactionIdBuilder_ == null) {
+          transactionId_ = null;
+          onChanged();
+        } else {
+          transactionId_ = null;
+          transactionIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getTransactionIdBuilder() {
+        
+        onChanged();
+        return getTransactionIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getTransactionIdOrBuilder() {
+        if (transactionIdBuilder_ != null) {
+          return transactionIdBuilder_.getMessageOrBuilder();
+        } else {
+          return transactionId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : transactionId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue transaction_id = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getTransactionIdFieldBuilder() {
+        if (transactionIdBuilder_ == null) {
+          transactionIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getTransactionId(),
+                  getParentForChildren(),
+                  isClean());
+          transactionId_ = null;
+        }
+        return transactionIdBuilder_;
+      }
+
+      private com.google.protobuf.StringValue debitCustomerId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> debitCustomerIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       * @return Whether the debitCustomerId field is set.
+       */
+      public boolean hasDebitCustomerId() {
+        return debitCustomerIdBuilder_ != null || debitCustomerId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       * @return The debitCustomerId.
+       */
+      public com.google.protobuf.StringValue getDebitCustomerId() {
+        if (debitCustomerIdBuilder_ == null) {
+          return debitCustomerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : debitCustomerId_;
+        } else {
+          return debitCustomerIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      public Builder setDebitCustomerId(com.google.protobuf.StringValue value) {
+        if (debitCustomerIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          debitCustomerId_ = value;
+          onChanged();
+        } else {
+          debitCustomerIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      public Builder setDebitCustomerId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (debitCustomerIdBuilder_ == null) {
+          debitCustomerId_ = builderForValue.build();
+          onChanged();
+        } else {
+          debitCustomerIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      public Builder mergeDebitCustomerId(com.google.protobuf.StringValue value) {
+        if (debitCustomerIdBuilder_ == null) {
+          if (debitCustomerId_ != null) {
+            debitCustomerId_ =
+              com.google.protobuf.StringValue.newBuilder(debitCustomerId_).mergeFrom(value).buildPartial();
+          } else {
+            debitCustomerId_ = value;
+          }
+          onChanged();
+        } else {
+          debitCustomerIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      public Builder clearDebitCustomerId() {
+        if (debitCustomerIdBuilder_ == null) {
+          debitCustomerId_ = null;
+          onChanged();
+        } else {
+          debitCustomerId_ = null;
+          debitCustomerIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDebitCustomerIdBuilder() {
+        
+        onChanged();
+        return getDebitCustomerIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDebitCustomerIdOrBuilder() {
+        if (debitCustomerIdBuilder_ != null) {
+          return debitCustomerIdBuilder_.getMessageOrBuilder();
+        } else {
+          return debitCustomerId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : debitCustomerId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue debit_customer_id = 4;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDebitCustomerIdFieldBuilder() {
+        if (debitCustomerIdBuilder_ == null) {
+          debitCustomerIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDebitCustomerId(),
+                  getParentForChildren(),
+                  isClean());
+          debitCustomerId_ = null;
+        }
+        return debitCustomerIdBuilder_;
+      }
+
+      private com.google.protobuf.StringValue creditCustomerId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> creditCustomerIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       * @return Whether the creditCustomerId field is set.
+       */
+      public boolean hasCreditCustomerId() {
+        return creditCustomerIdBuilder_ != null || creditCustomerId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       * @return The creditCustomerId.
+       */
+      public com.google.protobuf.StringValue getCreditCustomerId() {
+        if (creditCustomerIdBuilder_ == null) {
+          return creditCustomerId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : creditCustomerId_;
+        } else {
+          return creditCustomerIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      public Builder setCreditCustomerId(com.google.protobuf.StringValue value) {
+        if (creditCustomerIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          creditCustomerId_ = value;
+          onChanged();
+        } else {
+          creditCustomerIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      public Builder setCreditCustomerId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (creditCustomerIdBuilder_ == null) {
+          creditCustomerId_ = builderForValue.build();
+          onChanged();
+        } else {
+          creditCustomerIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      public Builder mergeCreditCustomerId(com.google.protobuf.StringValue value) {
+        if (creditCustomerIdBuilder_ == null) {
+          if (creditCustomerId_ != null) {
+            creditCustomerId_ =
+              com.google.protobuf.StringValue.newBuilder(creditCustomerId_).mergeFrom(value).buildPartial();
+          } else {
+            creditCustomerId_ = value;
+          }
+          onChanged();
+        } else {
+          creditCustomerIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      public Builder clearCreditCustomerId() {
+        if (creditCustomerIdBuilder_ == null) {
+          creditCustomerId_ = null;
+          onChanged();
+        } else {
+          creditCustomerId_ = null;
+          creditCustomerIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getCreditCustomerIdBuilder() {
+        
+        onChanged();
+        return getCreditCustomerIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getCreditCustomerIdOrBuilder() {
+        if (creditCustomerIdBuilder_ != null) {
+          return creditCustomerIdBuilder_.getMessageOrBuilder();
+        } else {
+          return creditCustomerId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : creditCustomerId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue credit_customer_id = 5;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getCreditCustomerIdFieldBuilder() {
+        if (creditCustomerIdBuilder_ == null) {
+          creditCustomerIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getCreditCustomerId(),
+                  getParentForChildren(),
+                  isClean());
+          creditCustomerId_ = null;
+        }
+        return creditCustomerIdBuilder_;
+      }
+      @java.lang.Override
+      public final Builder setUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.setUnknownFields(unknownFields);
+      }
+
+      @java.lang.Override
+      public final Builder mergeUnknownFields(
+          final com.google.protobuf.UnknownFieldSet unknownFields) {
+        return super.mergeUnknownFields(unknownFields);
+      }
+
+
+      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.ReplayPaymentReply)
+    }
+
+    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplayPaymentReply)
+    private static final com.elarian.hera.proto.AppSocket.ReplayPaymentReply DEFAULT_INSTANCE;
+    static {
+      DEFAULT_INSTANCE = new com.elarian.hera.proto.AppSocket.ReplayPaymentReply();
+    }
+
+    public static com.elarian.hera.proto.AppSocket.ReplayPaymentReply getDefaultInstance() {
+      return DEFAULT_INSTANCE;
+    }
+
+    private static final com.google.protobuf.Parser<ReplayPaymentReply>
+        PARSER = new com.google.protobuf.AbstractParser<ReplayPaymentReply>() {
+      @java.lang.Override
+      public ReplayPaymentReply parsePartialFrom(
+          com.google.protobuf.CodedInputStream input,
+          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
+          throws com.google.protobuf.InvalidProtocolBufferException {
+        return new ReplayPaymentReply(input, extensionRegistry);
+      }
+    };
+
+    public static com.google.protobuf.Parser<ReplayPaymentReply> parser() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.google.protobuf.Parser<ReplayPaymentReply> getParserForType() {
+      return PARSER;
+    }
+
+    @java.lang.Override
+    public com.elarian.hera.proto.AppSocket.ReplayPaymentReply getDefaultInstanceForType() {
       return DEFAULT_INSTANCE;
     }
 
@@ -79572,6 +84075,21 @@ public final class AppSocket {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_InitiatePaymentReply_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_ReplayPaymentCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
+    internal_static_com_elarian_hera_proto_ReplayPaymentReply_descriptor;
+  private static final 
+    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
+      internal_static_com_elarian_hera_proto_ReplayPaymentReply_fieldAccessorTable;
+  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_TagCommandReply_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -79728,7 +84246,7 @@ public final class AppSocket {
       "\003 \001(\0132\034.google.protobuf.StringValue\0220\n\na" +
       "uth_token\030\004 \001(\0132\034.google.protobuf.String" +
       "Value\022\024\n\014simplex_mode\030\005 \001(\010\022\026\n\016simulator" +
-      "_mode\030\006 \001(\010\"\364\023\n\022AppToServerCommand\022O\n\023ge" +
+      "_mode\030\006 \001(\010\"\236\025\n\022AppToServerCommand\022O\n\023ge" +
       "nerate_auth_token\030\001 \001(\01320.com.elarian.he" +
       "ra.proto.GenerateAuthTokenCommandH\000\022H\n\017c" +
       "reate_customer\030\002 \001(\0132-.com.elarian.hera." +
@@ -79791,28 +84309,34 @@ public final class AppSocket {
       "2:.com.elarian.hera.proto.ReplayMessageR" +
       "eactionUpdateCommandH\000\022Y\n\030replay_messagi" +
       "ng_session\030\035 \001(\01325.com.elarian.hera.prot" +
-      "o.ReplayMessagingSessionCommandH\000B\007\n\005ent" +
-      "ry\"\260\006\n\027AppToServerCommandReply\022M\n\023genera" +
-      "te_auth_token\030\001 \001(\0132..com.elarian.hera.p" +
-      "roto.GenerateAuthTokenReplyH\000\022K\n\022get_cus" +
-      "tomer_state\030\002 \001(\0132-.com.elarian.hera.pro" +
-      "to.GetCustomerStateReplyH\000\022Q\n\025update_cus" +
-      "tomer_state\030\003 \001(\01320.com.elarian.hera.pro" +
-      "to.UpdateCustomerStateReplyH\000\022V\n\030update_" +
-      "customer_app_data\030\004 \001(\01322.com.elarian.he" +
-      "ra.proto.UpdateCustomerAppDataReplyH\000\022T\n" +
-      "\027lease_customer_app_data\030\005 \001(\01321.com.ela" +
-      "rian.hera.proto.LeaseCustomerAppDataRepl" +
-      "yH\000\022@\n\014send_message\030\006 \001(\0132(.com.elarian." +
-      "hera.proto.SendMessageReplyH\000\022W\n\030update_" +
-      "messaging_consent\030\007 \001(\01323.com.elarian.he" +
-      "ra.proto.UpdateMessagingConsentReplyH\000\022H" +
-      "\n\020initiate_payment\030\010 \001(\0132,.com.elarian.h" +
-      "era.proto.InitiatePaymentReplyH\000\022>\n\013tag_" +
-      "command\030\t \001(\0132\'.com.elarian.hera.proto.T" +
-      "agCommandReplyH\000\022J\n\021customer_activity\030\n " +
-      "\001(\0132-.com.elarian.hera.proto.CustomerAct" +
-      "ivityReplyH\000B\007\n\005entry\"\032\n\030GenerateAuthTok" +
+      "o.ReplayMessagingSessionCommandH\000\022F\n\016rep" +
+      "lay_payment\030\036 \001(\0132,.com.elarian.hera.pro" +
+      "to.ReplayPaymentCommandH\000\022`\n\034replay_paym" +
+      "ent_status_update\030\037 \001(\01328.com.elarian.he" +
+      "ra.proto.ReplayPaymentStatusUpdateComman" +
+      "dH\000B\007\n\005entry\"\366\006\n\027AppToServerCommandReply" +
+      "\022M\n\023generate_auth_token\030\001 \001(\0132..com.elar" +
+      "ian.hera.proto.GenerateAuthTokenReplyH\000\022" +
+      "K\n\022get_customer_state\030\002 \001(\0132-.com.elaria" +
+      "n.hera.proto.GetCustomerStateReplyH\000\022Q\n\025" +
+      "update_customer_state\030\003 \001(\01320.com.elaria" +
+      "n.hera.proto.UpdateCustomerStateReplyH\000\022" +
+      "V\n\030update_customer_app_data\030\004 \001(\01322.com." +
+      "elarian.hera.proto.UpdateCustomerAppData" +
+      "ReplyH\000\022T\n\027lease_customer_app_data\030\005 \001(\013" +
+      "21.com.elarian.hera.proto.LeaseCustomerA" +
+      "ppDataReplyH\000\022@\n\014send_message\030\006 \001(\0132(.co" +
+      "m.elarian.hera.proto.SendMessageReplyH\000\022" +
+      "W\n\030update_messaging_consent\030\007 \001(\01323.com." +
+      "elarian.hera.proto.UpdateMessagingConsen" +
+      "tReplyH\000\022H\n\020initiate_payment\030\010 \001(\0132,.com" +
+      ".elarian.hera.proto.InitiatePaymentReply" +
+      "H\000\022>\n\013tag_command\030\t \001(\0132\'.com.elarian.he" +
+      "ra.proto.TagCommandReplyH\000\022J\n\021customer_a" +
+      "ctivity\030\n \001(\0132-.com.elarian.hera.proto.C" +
+      "ustomerActivityReplyH\000\022D\n\016replay_payment" +
+      "\030\013 \001(\0132*.com.elarian.hera.proto.ReplayPa" +
+      "ymentReplyH\000B\007\n\005entry\"\032\n\030GenerateAuthTok" +
       "enCommand\"T\n\026GenerateAuthTokenReply\022\r\n\005t" +
       "oken\030\001 \001(\t\022+\n\010lifetime\030\002 \001(\0132\031.google.pr" +
       "otobuf.Duration\"X\n\025CreateCustomerCommand" +
@@ -79964,196 +84488,216 @@ public final class AppSocket {
       "obuf.StringValue\0227\n\021debit_customer_id\030\004 " +
       "\001(\0132\034.google.protobuf.StringValue\0228\n\022cre" +
       "dit_customer_id\030\005 \001(\0132\034.google.protobuf." +
-      "StringValue\"e\n\017TagCommandReply\022\016\n\006status" +
-      "\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_id\030\003" +
-      " \001(\0132\034.google.protobuf.StringValue\"\223\002\n\027C" +
-      "ustomerActivityCommand\022?\n\017customer_numbe" +
-      "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome" +
-      "rNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id\030\003 " +
-      "\001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003(\0132?.c" +
-      "om.elarian.hera.proto.CustomerActivityCo" +
-      "mmand.PropertiesEntry\0321\n\017PropertiesEntry" +
-      "\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236\002\n#Rep" +
-      "layMessagingConsentUpdateCommand\022?\n\017cust" +
-      "omer_number\030\001 \001(\0132&.com.elarian.hera.pro" +
-      "to.CustomerNumber\022F\n\016channel_number\030\002 \001(" +
-      "\0132..com.elarian.hera.proto.MessagingChan" +
-      "nelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022>\n\006update\030\004 \001(\0162..com." +
-      "elarian.hera.proto.MessagingConsentUpdat" +
-      "e\"\213\004\n\034ReplayReceivedMessageCommand\022\033\n\023pr" +
-      "ovider_message_id\030\001 \001(\t\0229\n\023provider_sess" +
-      "ion_id\030\002 \001(\0132\034.google.protobuf.StringVal" +
-      "ue\022/\n\013received_at\030\003 \001(\0132\032.google.protobu" +
-      "f.Timestamp\022?\n\017customer_number\030\004 \001(\0132&.c" +
-      "om.elarian.hera.proto.CustomerNumber\022F\n\016" +
-      "channel_number\030\005 \001(\0132..com.elarian.hera." +
-      "proto.MessagingChannelNumber\0229\n\005parts\030\006 " +
-      "\003(\0132*.com.elarian.hera.proto.InboundMess" +
-      "ageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\022?\n\010provider\030\010 \001(\0162-.c" +
-      "om.elarian.hera.proto.ChannelNumberProvi" +
-      "der\022*\n\004cost\030\t \001(\0132\034.com.elarian.hera.pro" +
-      "to.Cash\"\301\004\n\030ReplaySentMessageCommand\022\033\n\023" +
-      "provider_message_id\030\001 \001(\t\0229\n\023provider_se" +
-      "ssion_id\030\002 \001(\0132\034.google.protobuf.StringV" +
-      "alue\022+\n\007sent_at\030\003 \001(\0132\032.google.protobuf." +
-      "Timestamp\022?\n\017customer_number\030\004 \001(\0132&.com" +
-      ".elarian.hera.proto.CustomerNumber\022F\n\016ch" +
-      "annel_number\030\005 \001(\0132..com.elarian.hera.pr" +
-      "oto.MessagingChannelNumber\022?\n\010provider\030\006" +
-      " \001(\0162-.com.elarian.hera.proto.ChannelNum" +
-      "berProvider\0228\n\007message\030\007 \001(\0132\'.com.elari" +
-      "an.hera.proto.OutboundMessage\0221\n\013in_repl" +
-      "y_to\030\010 \001(\0132\034.google.protobuf.StringValue" +
-      "\022=\n\006status\030\t \001(\0162-.com.elarian.hera.prot" +
-      "o.MessageDeliveryStatus\022*\n\004cost\030\n \001(\0132\034." +
-      "com.elarian.hera.proto.Cash\"\343\002\n ReplayMe" +
-      "ssageStatusUpdateCommand\022\033\n\023provider_mes" +
-      "sage_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022?\n\017customer_number" +
-      "\030\003 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "Number\022F\n\016channel_number\030\004 \001(\0132..com.ela" +
-      "rian.hera.proto.MessagingChannelNumber\022=" +
-      "\n\006status\030\005 \001(\0162-.com.elarian.hera.proto." +
-      "MessageDeliveryStatus\022*\n\004cost\030\006 \001(\0132\034.co" +
-      "m.elarian.hera.proto.Cash\"\265\002\n\"ReplayMess" +
-      "ageReactionUpdateCommand\022\033\n\023provider_mes" +
-      "sage_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032.goog" +
-      "le.protobuf.Timestamp\022?\n\017customer_number" +
-      "\030\003 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "Number\022F\n\016channel_number\030\004 \001(\0132..com.ela" +
-      "rian.hera.proto.MessagingChannelNumber\0229" +
-      "\n\010reaction\030\005 \001(\0162\'.com.elarian.hera.prot" +
-      "o.MessageReaction\"\225\003\n\035ReplayMessagingSes" +
-      "sionCommand\022\033\n\023provider_session_id\030\001 \001(\t" +
-      "\022?\n\017customer_number\030\002 \001(\0132&.com.elarian." +
-      "hera.proto.CustomerNumber\022F\n\016channel_num" +
-      "ber\030\003 \001(\0132..com.elarian.hera.proto.Messa" +
-      "gingChannelNumber\022.\n\nstarted_at\030\004 \001(\0132\032." +
-      "google.protobuf.Timestamp\022+\n\010duration\030\005 " +
-      "\001(\0132\031.google.protobuf.Duration\022E\n\nend_re" +
-      "ason\030\006 \001(\01621.com.elarian.hera.proto.Mess" +
-      "agingSessionEndReason\022*\n\004cost\030\007 \001(\0132\034.co" +
-      "m.elarian.hera.proto.Cash\"o\n\025CustomerAct" +
-      "ivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descriptio" +
-      "n\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.pr" +
-      "otobuf.StringValue\"\266\001\n\027ServerToAppNotifi" +
-      "cation\022K\n\010customer\030\001 \001(\01327.com.elarian.h" +
-      "era.proto.ServerToAppCustomerNotificatio" +
-      "nH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.hera.pr" +
-      "oto.ServerToAppPurseNotificationH\000B\007\n\005en" +
-      "try\"\316\t\n\037ServerToAppCustomerNotification\022" +
-      "\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013custo" +
-      "mer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.com.ela" +
-      "rian.hera.proto.DataMapValue\022.\n\ncreated_" +
-      "at\030\005 \001(\0132\032.google.protobuf.Timestamp\022@\n\010" +
-      "reminder\030\006 \001(\0132,.com.elarian.hera.proto." +
-      "ReminderNotificationH\000\022`\n\031messaging_sess" +
-      "ion_started\030\007 \001(\0132;.com.elarian.hera.pro" +
-      "to.MessagingSessionStartedNotificationH\000" +
-      "\022`\n\031messaging_session_renewed\030\010 \001(\0132;.co" +
-      "m.elarian.hera.proto.MessagingSessionRen" +
-      "ewedNotificationH\000\022\\\n\027messaging_session_" +
-      "ended\030\t \001(\01329.com.elarian.hera.proto.Mes" +
-      "sagingSessionEndedNotificationH\000\022^\n\030mess" +
-      "aging_consent_update\030\n \001(\0132:.com.elarian" +
-      ".hera.proto.MessagingConsentUpdateNotifi" +
-      "cationH\000\022O\n\020received_message\030\013 \001(\01323.com" +
-      ".elarian.hera.proto.ReceivedMessageNotif" +
-      "icationH\000\022K\n\016message_status\030\014 \001(\01321.com." +
-      "elarian.hera.proto.MessageStatusNotifica" +
-      "tionH\000\022X\n\025sent_message_reaction\030\r \001(\01327." +
-      "com.elarian.hera.proto.SentMessageReacti" +
-      "onNotificationH\000\022O\n\020received_payment\030\016 \001" +
-      "(\01323.com.elarian.hera.proto.ReceivedPaym" +
-      "entNotificationH\000\022K\n\016payment_status\030\017 \001(" +
-      "\01321.com.elarian.hera.proto.PaymentStatus" +
-      "NotificationH\000\022X\n\025wallet_payment_status\030" +
-      "\020 \001(\01327.com.elarian.hera.proto.WalletPay" +
-      "mentStatusNotificationH\000\022Q\n\021customer_act" +
-      "ivity\030\021 \001(\01324.com.elarian.hera.proto.Cus" +
-      "tomerActivityNotificationH\000B\007\n\005entry\"\326\001\n" +
-      "\034ServerToAppPurseNotification\022\016\n\006org_id\030" +
-      "\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001(\t\022" +
-      ".\n\ncreated_at\030\004 \001(\0132\032.google.protobuf.Ti" +
-      "mestamp\022K\n\016payment_status\030\005 \001(\01321.com.el" +
-      "arian.hera.proto.PaymentStatusNotificati" +
-      "onH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004data\030\001" +
-      " \001(\0132$.com.elarian.hera.proto.DataMapVal" +
-      "ue\"\224\001\n\034ServerToAppNotificationReply\022:\n\013d" +
-      "ata_update\030\001 \001(\0132%.com.elarian.hera.prot" +
-      "o.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'.com.e" +
-      "larian.hera.proto.OutboundMessage\"\265\001\n\024Re" +
-      "minderNotification\022:\n\010reminder\030\001 \001(\0132(.c" +
-      "om.elarian.hera.proto.CustomerReminder\0222" +
-      "\n\003tag\030\002 \001(\0132%.com.elarian.hera.proto.Cus" +
-      "tomerIndex\022-\n\007work_id\030\003 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\"\362\001\n#MessagingSessionSt" +
-      "artedNotification\022?\n\017customer_number\030\001 \001" +
+      "StringValue\"\320\002\n\024ReplayPaymentCommand\022\037\n\027" +
+      "provider_transaction_id\030\001 \001(\t\022.\n\ncreated" +
+      "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022@\n" +
+      "\013debit_party\030\003 \001(\0132+.com.elarian.hera.pr" +
+      "oto.PaymentCounterParty\022A\n\014credit_party\030" +
+      "\004 \001(\0132+.com.elarian.hera.proto.PaymentCo" +
+      "unterParty\0225\n\006status\030\005 \001(\0162%.com.elarian" +
+      ".hera.proto.PaymentStatus\022+\n\005value\030\006 \001(\013" +
+      "2\034.com.elarian.hera.proto.Cash\"\353\001\n Repla" +
+      "yPaymentStatusUpdateCommand\022?\n\017customer_" +
+      "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu" +
+      "stomerNumber\022\037\n\027provider_transaction_id\030" +
+      "\002 \001(\t\022.\n\nupdated_at\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp\0225\n\006status\030\004 \001(\0162%.com.elar" +
+      "ian.hera.proto.PaymentStatus\"\342\001\n\022ReplayP" +
+      "aymentReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descripti" +
+      "on\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\0227\n\021debit_customer" +
+      "_id\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
+      "8\n\022credit_customer_id\030\005 \001(\0132\034.google.pro" +
+      "tobuf.StringValue\"e\n\017TagCommandReply\022\016\n\006" +
+      "status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007wor" +
+      "k_id\030\003 \001(\0132\034.google.protobuf.StringValue" +
+      "\"\223\002\n\027CustomerActivityCommand\022?\n\017customer" +
+      "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
+      "ustomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession" +
+      "_id\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003" +
+      "(\0132?.com.elarian.hera.proto.CustomerActi" +
+      "vityCommand.PropertiesEntry\0321\n\017Propertie" +
+      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236" +
+      "\002\n#ReplayMessagingConsentUpdateCommand\022?" +
+      "\n\017customer_number\030\001 \001(\0132&.com.elarian.he" +
+      "ra.proto.CustomerNumber\022F\n\016channel_numbe" +
+      "r\030\002 \001(\0132..com.elarian.hera.proto.Messagi" +
+      "ngChannelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\022>\n\006update\030\004 \001(\0162" +
+      "..com.elarian.hera.proto.MessagingConsen" +
+      "tUpdate\"\213\004\n\034ReplayReceivedMessageCommand" +
+      "\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provide" +
+      "r_session_id\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022/\n\013received_at\030\003 \001(\0132\032.google.p" +
+      "rotobuf.Timestamp\022?\n\017customer_number\030\004 \001" +
       "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\022\022\n\nse" +
-      "ssion_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.goo" +
-      "gle.protobuf.Timestamp\"\362\001\n#MessagingSess" +
-      "ionRenewedNotification\022?\n\017customer_numbe" +
-      "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome" +
-      "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el" +
+      "er\022F\n\016channel_number\030\005 \001(\0132..com.elarian" +
+      ".hera.proto.MessagingChannelNumber\0229\n\005pa" +
+      "rts\030\006 \003(\0132*.com.elarian.hera.proto.Inbou" +
+      "ndMessageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\022?\n\010provider\030\010 \001" +
+      "(\0162-.com.elarian.hera.proto.ChannelNumbe" +
+      "rProvider\022*\n\004cost\030\t \001(\0132\034.com.elarian.he" +
+      "ra.proto.Cash\"\301\004\n\030ReplaySentMessageComma" +
+      "nd\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provi" +
+      "der_session_id\030\002 \001(\0132\034.google.protobuf.S" +
+      "tringValue\022+\n\007sent_at\030\003 \001(\0132\032.google.pro" +
+      "tobuf.Timestamp\022?\n\017customer_number\030\004 \001(\013" +
+      "2&.com.elarian.hera.proto.CustomerNumber" +
+      "\022F\n\016channel_number\030\005 \001(\0132..com.elarian.h" +
+      "era.proto.MessagingChannelNumber\022?\n\010prov" +
+      "ider\030\006 \001(\0162-.com.elarian.hera.proto.Chan" +
+      "nelNumberProvider\0228\n\007message\030\007 \001(\0132\'.com" +
+      ".elarian.hera.proto.OutboundMessage\0221\n\013i" +
+      "n_reply_to\030\010 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022=\n\006status\030\t \001(\0162-.com.elarian.her" +
+      "a.proto.MessageDeliveryStatus\022*\n\004cost\030\n " +
+      "\001(\0132\034.com.elarian.hera.proto.Cash\"\343\002\n Re" +
+      "playMessageStatusUpdateCommand\022\033\n\023provid" +
+      "er_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022?\n\017customer_" +
+      "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu" +
+      "stomerNumber\022F\n\016channel_number\030\004 \001(\0132..c" +
+      "om.elarian.hera.proto.MessagingChannelNu" +
+      "mber\022=\n\006status\030\005 \001(\0162-.com.elarian.hera." +
+      "proto.MessageDeliveryStatus\022*\n\004cost\030\006 \001(" +
+      "\0132\034.com.elarian.hera.proto.Cash\"\265\002\n\"Repl" +
+      "ayMessageReactionUpdateCommand\022\033\n\023provid" +
+      "er_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132" +
+      "\032.google.protobuf.Timestamp\022?\n\017customer_" +
+      "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu" +
+      "stomerNumber\022F\n\016channel_number\030\004 \001(\0132..c" +
+      "om.elarian.hera.proto.MessagingChannelNu" +
+      "mber\0229\n\010reaction\030\005 \001(\0162\'.com.elarian.her" +
+      "a.proto.MessageReaction\"\225\003\n\035ReplayMessag" +
+      "ingSessionCommand\022\033\n\023provider_session_id" +
+      "\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.el" +
+      "arian.hera.proto.CustomerNumber\022F\n\016chann" +
+      "el_number\030\003 \001(\0132..com.elarian.hera.proto" +
+      ".MessagingChannelNumber\022.\n\nstarted_at\030\004 " +
+      "\001(\0132\032.google.protobuf.Timestamp\022+\n\010durat" +
+      "ion\030\005 \001(\0132\031.google.protobuf.Duration\022E\n\n" +
+      "end_reason\030\006 \001(\01621.com.elarian.hera.prot" +
+      "o.MessagingSessionEndReason\022*\n\004cost\030\007 \001(" +
+      "\0132\034.com.elarian.hera.proto.Cash\"o\n\025Custo" +
+      "merActivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013desc" +
+      "ription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goo" +
+      "gle.protobuf.StringValue\"\266\001\n\027ServerToApp" +
+      "Notification\022K\n\010customer\030\001 \001(\01327.com.ela" +
+      "rian.hera.proto.ServerToAppCustomerNotif" +
+      "icationH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.h" +
+      "era.proto.ServerToAppPurseNotificationH\000" +
+      "B\007\n\005entry\"\316\t\n\037ServerToAppCustomerNotific" +
+      "ation\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n" +
+      "\013customer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.c" +
+      "om.elarian.hera.proto.DataMapValue\022.\n\ncr" +
+      "eated_at\030\005 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022@\n\010reminder\030\006 \001(\0132,.com.elarian.hera." +
+      "proto.ReminderNotificationH\000\022`\n\031messagin" +
+      "g_session_started\030\007 \001(\0132;.com.elarian.he" +
+      "ra.proto.MessagingSessionStartedNotifica" +
+      "tionH\000\022`\n\031messaging_session_renewed\030\010 \001(" +
+      "\0132;.com.elarian.hera.proto.MessagingSess" +
+      "ionRenewedNotificationH\000\022\\\n\027messaging_se" +
+      "ssion_ended\030\t \001(\01329.com.elarian.hera.pro" +
+      "to.MessagingSessionEndedNotificationH\000\022^" +
+      "\n\030messaging_consent_update\030\n \001(\0132:.com.e" +
+      "larian.hera.proto.MessagingConsentUpdate" +
+      "NotificationH\000\022O\n\020received_message\030\013 \001(\013" +
+      "23.com.elarian.hera.proto.ReceivedMessag" +
+      "eNotificationH\000\022K\n\016message_status\030\014 \001(\0132" +
+      "1.com.elarian.hera.proto.MessageStatusNo" +
+      "tificationH\000\022X\n\025sent_message_reaction\030\r " +
+      "\001(\01327.com.elarian.hera.proto.SentMessage" +
+      "ReactionNotificationH\000\022O\n\020received_payme" +
+      "nt\030\016 \001(\01323.com.elarian.hera.proto.Receiv" +
+      "edPaymentNotificationH\000\022K\n\016payment_statu" +
+      "s\030\017 \001(\01321.com.elarian.hera.proto.Payment" +
+      "StatusNotificationH\000\022X\n\025wallet_payment_s" +
+      "tatus\030\020 \001(\01327.com.elarian.hera.proto.Wal" +
+      "letPaymentStatusNotificationH\000\022Q\n\021custom" +
+      "er_activity\030\021 \001(\01324.com.elarian.hera.pro" +
+      "to.CustomerActivityNotificationH\000B\007\n\005ent" +
+      "ry\"\326\001\n\034ServerToAppPurseNotification\022\016\n\006o" +
+      "rg_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030" +
+      "\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022K\n\016payment_status\030\005 \001(\01321." +
+      "com.elarian.hera.proto.PaymentStatusNoti" +
+      "ficationH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004" +
+      "data\030\001 \001(\0132$.com.elarian.hera.proto.Data" +
+      "MapValue\"\224\001\n\034ServerToAppNotificationRepl" +
+      "y\022:\n\013data_update\030\001 \001(\0132%.com.elarian.her" +
+      "a.proto.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'" +
+      ".com.elarian.hera.proto.OutboundMessage\"" +
+      "\265\001\n\024ReminderNotification\022:\n\010reminder\030\001 \001" +
+      "(\0132(.com.elarian.hera.proto.CustomerRemi" +
+      "nder\0222\n\003tag\030\002 \001(\0132%.com.elarian.hera.pro" +
+      "to.CustomerIndex\022-\n\007work_id\030\003 \001(\0132\034.goog",
+      "le.protobuf.StringValue\"\362\001\n#MessagingSes" +
+      "sionStartedNotification\022?\n\017customer_numb" +
+      "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom" +
+      "erNumber\022F\n\016channel_number\030\002 \001(\0132..com.e" +
+      "larian.hera.proto.MessagingChannelNumber" +
+      "\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\013" +
+      "2\032.google.protobuf.Timestamp\"\362\001\n#Messagi" +
+      "ngSessionRenewedNotification\022?\n\017customer" +
+      "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
+      "ustomerNumber\022F\n\016channel_number\030\002 \001(\0132.." +
+      "com.elarian.hera.proto.MessagingChannelN" +
+      "umber\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030" +
+      "\004 \001(\0132\032.google.protobuf.Timestamp\"\260\002\n!Me" +
+      "ssagingSessionEndedNotification\022?\n\017custo" +
+      "mer_number\030\001 \001(\0132&.com.elarian.hera.prot" +
+      "o.CustomerNumber\022F\n\016channel_number\030\002 \001(\013" +
+      "2..com.elarian.hera.proto.MessagingChann" +
+      "elNumber\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration" +
+      "\030\004 \001(\0132\031.google.protobuf.Duration\022A\n\006rea" +
+      "son\030\005 \001(\01621.com.elarian.hera.proto.Messa" +
+      "gingSessionEndReason\"\263\002\n\"MessagingConsen" +
+      "tUpdateNotification\022?\n\017customer_number\030\001" +
+      " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
+      "mber\022F\n\016channel_number\030\002 \001(\0132..com.elari" +
+      "an.hera.proto.MessagingChannelNumber\022>\n\006" +
+      "update\030\003 \001(\0162..com.elarian.hera.proto.Me" +
+      "ssagingConsentUpdate\022D\n\006status\030\004 \001(\01624.c" +
+      "om.elarian.hera.proto.MessagingConsentUp" +
+      "dateStatus\"\332\002\n\033ReceivedMessageNotificati" +
+      "on\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017customer_numbe" +
+      "r\030\002 \001(\0132&.com.elarian.hera.proto.Custome" +
+      "rNumber\022F\n\016channel_number\030\003 \001(\0132..com.el" +
       "arian.hera.proto.MessagingChannelNumber\022" +
-      "\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132" +
-      "\032.google.protobuf.Timestamp\"\260\002\n!Messagin" +
-      "gSessionEndedNotification\022?\n\017customer_nu" +
-      "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust" +
-      "omerNumber\022F\n\016channel_number\030\002 \001(\0132..com" +
-      ".elarian.hera.proto.MessagingChannelNumb" +
-      "er\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration\030\004 \001(\013" +
-      "2\031.google.protobuf.Duration\022A\n\006reason\030\005 " +
-      "\001(\01621.com.elarian.hera.proto.MessagingSe" +
-      "ssionEndReason\"\263\002\n\"MessagingConsentUpdat" +
-      "eNotification\022?\n\017customer_number\030\001 \001(\0132&" +
-      ".com.elarian.hera.proto.CustomerNumber\022F" +
-      "\n\016channel_number\030\002 \001(\0132..com.elarian.her" +
-      "a.proto.MessagingChannelNumber\022>\n\006update" +
-      "\030\003 \001(\0162..com.elarian.hera.proto.Messagin",
-      "gConsentUpdate\022D\n\006status\030\004 \001(\01624.com.ela" +
-      "rian.hera.proto.MessagingConsentUpdateSt" +
-      "atus\"\332\002\n\033ReceivedMessageNotification\022\022\n\n" +
-      "message_id\030\001 \001(\t\022?\n\017customer_number\030\002 \001(" +
-      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
-      "r\022F\n\016channel_number\030\003 \001(\0132..com.elarian." +
-      "hera.proto.MessagingChannelNumber\0229\n\005par" +
-      "ts\030\004 \003(\0132*.com.elarian.hera.proto.Inboun" +
-      "dMessageBody\0220\n\nsession_id\030\005 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\0221\n\013in_reply_to\030\006 " +
-      "\001(\0132\034.google.protobuf.StringValue\"n\n\031Mes" +
-      "sageStatusNotification\022\022\n\nmessage_id\030\001 \001" +
-      "(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.hera.pr" +
-      "oto.MessageDeliveryStatus\"\371\001\n\037SentMessag" +
-      "eReactionNotification\022\022\n\nmessage_id\030\001 \001(" +
-      "\t\022?\n\017customer_number\030\002 \001(\0132&.com.elarian" +
-      ".hera.proto.CustomerNumber\022F\n\016channel_nu" +
-      "mber\030\003 \001(\0132..com.elarian.hera.proto.Mess" +
-      "agingChannelNumber\0229\n\010reaction\030\004 \001(\0162\'.c" +
-      "om.elarian.hera.proto.MessageReaction\"\262\002" +
-      "\n\033ReceivedPaymentNotification\022\020\n\010purse_i" +
-      "d\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n\017custo" +
-      "mer_number\030\003 \001(\0132&.com.elarian.hera.prot" +
-      "o.CustomerNumber\022D\n\016channel_number\030\004 \001(\013" +
-      "2,.com.elarian.hera.proto.PaymentChannel" +
-      "Number\022+\n\005value\030\005 \001(\0132\034.com.elarian.hera" +
-      ".proto.Cash\0225\n\006status\030\006 \001(\0162%.com.elaria" +
-      "n.hera.proto.PaymentStatus\"j\n\031PaymentSta" +
-      "tusNotification\022\026\n\016transaction_id\030\001 \001(\t\022" +
-      "5\n\006status\030\002 \001(\0162%.com.elarian.hera.proto" +
-      ".PaymentStatus\"\203\001\n\037WalletPaymentStatusNo" +
-      "tification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016transac" +
-      "tion_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.com.elar" +
-      "ian.hera.proto.PaymentStatus\"\277\001\n\034Custome" +
-      "rActivityNotification\022?\n\017customer_number" +
-      "\030\001 \001(\0132&.com.elarian.hera.proto.Customer" +
-      "Number\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id\030\003 \001" +
-      "(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian.hera." +
-      "proto.CustomerActivityb\006proto3"
+      "9\n\005parts\030\004 \003(\0132*.com.elarian.hera.proto." +
+      "InboundMessageBody\0220\n\nsession_id\030\005 \001(\0132\034" +
+      ".google.protobuf.StringValue\0221\n\013in_reply" +
+      "_to\030\006 \001(\0132\034.google.protobuf.StringValue\"" +
+      "n\n\031MessageStatusNotification\022\022\n\nmessage_" +
+      "id\030\001 \001(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.h" +
+      "era.proto.MessageDeliveryStatus\"\371\001\n\037Sent" +
+      "MessageReactionNotification\022\022\n\nmessage_i" +
+      "d\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumber\022F\n\016chan" +
+      "nel_number\030\003 \001(\0132..com.elarian.hera.prot" +
+      "o.MessagingChannelNumber\0229\n\010reaction\030\004 \001" +
+      "(\0162\'.com.elarian.hera.proto.MessageReact" +
+      "ion\"\262\002\n\033ReceivedPaymentNotification\022\020\n\010p" +
+      "urse_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n" +
+      "\017customer_number\030\003 \001(\0132&.com.elarian.her" +
+      "a.proto.CustomerNumber\022D\n\016channel_number" +
+      "\030\004 \001(\0132,.com.elarian.hera.proto.PaymentC" +
+      "hannelNumber\022+\n\005value\030\005 \001(\0132\034.com.elaria" +
+      "n.hera.proto.Cash\0225\n\006status\030\006 \001(\0162%.com." +
+      "elarian.hera.proto.PaymentStatus\"j\n\031Paym" +
+      "entStatusNotification\022\026\n\016transaction_id\030" +
+      "\001 \001(\t\0225\n\006status\030\002 \001(\0162%.com.elarian.hera" +
+      ".proto.PaymentStatus\"\203\001\n\037WalletPaymentSt" +
+      "atusNotification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016t" +
+      "ransaction_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.co" +
+      "m.elarian.hera.proto.PaymentStatus\"\277\001\n\034C" +
+      "ustomerActivityNotification\022?\n\017customer_" +
+      "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu" +
+      "stomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_" +
+      "id\030\003 \001(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian" +
+      ".hera.proto.CustomerActivityb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -80182,13 +84726,13 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_AppToServerCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppToServerCommand_descriptor,
-        new java.lang.String[] { "GenerateAuthToken", "CreateCustomer", "GetCustomerState", "AdoptCustomerState", "AddCustomerReminder", "AddCustomerReminderTag", "CancelCustomerReminder", "CancelCustomerReminderTag", "UpdateCustomerTag", "DeleteCustomerTag", "UpdateCustomerSecondaryId", "DeleteCustomerSecondaryId", "UpdateCustomerMetadata", "DeleteCustomerMetadata", "LeaseCustomerAppData", "UpdateCustomerAppData", "DeleteCustomerAppData", "SendMessage", "SendMessageTag", "ReplyToMessage", "UpdateMessagingConsent", "InitiatePayment", "CustomerActivity", "ReplayMessagingConsentUpdate", "ReplayReceivedMessage", "ReplaySentMessage", "ReplayMessageStatusUpdate", "ReplayMessageReactionUpdate", "ReplayMessagingSession", "Entry", });
+        new java.lang.String[] { "GenerateAuthToken", "CreateCustomer", "GetCustomerState", "AdoptCustomerState", "AddCustomerReminder", "AddCustomerReminderTag", "CancelCustomerReminder", "CancelCustomerReminderTag", "UpdateCustomerTag", "DeleteCustomerTag", "UpdateCustomerSecondaryId", "DeleteCustomerSecondaryId", "UpdateCustomerMetadata", "DeleteCustomerMetadata", "LeaseCustomerAppData", "UpdateCustomerAppData", "DeleteCustomerAppData", "SendMessage", "SendMessageTag", "ReplyToMessage", "UpdateMessagingConsent", "InitiatePayment", "CustomerActivity", "ReplayMessagingConsentUpdate", "ReplayReceivedMessage", "ReplaySentMessage", "ReplayMessageStatusUpdate", "ReplayMessageReactionUpdate", "ReplayMessagingSession", "ReplayPayment", "ReplayPaymentStatusUpdate", "Entry", });
     internal_static_com_elarian_hera_proto_AppToServerCommandReply_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_AppToServerCommandReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppToServerCommandReply_descriptor,
-        new java.lang.String[] { "GenerateAuthToken", "GetCustomerState", "UpdateCustomerState", "UpdateCustomerAppData", "LeaseCustomerAppData", "SendMessage", "UpdateMessagingConsent", "InitiatePayment", "TagCommand", "CustomerActivity", "Entry", });
+        new java.lang.String[] { "GenerateAuthToken", "GetCustomerState", "UpdateCustomerState", "UpdateCustomerAppData", "LeaseCustomerAppData", "SendMessage", "UpdateMessagingConsent", "InitiatePayment", "TagCommand", "CustomerActivity", "ReplayPayment", "Entry", });
     internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_elarian_hera_proto_GenerateAuthTokenCommand_fieldAccessorTable = new
@@ -80381,14 +84925,32 @@ public final class AppSocket {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InitiatePaymentReply_descriptor,
         new java.lang.String[] { "Status", "Description", "TransactionId", "DebitCustomerId", "CreditCustomerId", });
-    internal_static_com_elarian_hera_proto_TagCommandReply_descriptor =
+    internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor =
       getDescriptor().getMessageTypes().get(34);
+    internal_static_com_elarian_hera_proto_ReplayPaymentCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor,
+        new java.lang.String[] { "ProviderTransactionId", "CreatedAt", "DebitParty", "CreditParty", "Status", "Value", });
+    internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor =
+      getDescriptor().getMessageTypes().get(35);
+    internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor,
+        new java.lang.String[] { "CustomerNumber", "ProviderTransactionId", "UpdatedAt", "Status", });
+    internal_static_com_elarian_hera_proto_ReplayPaymentReply_descriptor =
+      getDescriptor().getMessageTypes().get(36);
+    internal_static_com_elarian_hera_proto_ReplayPaymentReply_fieldAccessorTable = new
+      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
+        internal_static_com_elarian_hera_proto_ReplayPaymentReply_descriptor,
+        new java.lang.String[] { "Status", "Description", "TransactionId", "DebitCustomerId", "CreditCustomerId", });
+    internal_static_com_elarian_hera_proto_TagCommandReply_descriptor =
+      getDescriptor().getMessageTypes().get(37);
     internal_static_com_elarian_hera_proto_TagCommandReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_TagCommandReply_descriptor,
         new java.lang.String[] { "Status", "Description", "WorkId", });
     internal_static_com_elarian_hera_proto_CustomerActivityCommand_descriptor =
-      getDescriptor().getMessageTypes().get(35);
+      getDescriptor().getMessageTypes().get(38);
     internal_static_com_elarian_hera_proto_CustomerActivityCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerActivityCommand_descriptor,
@@ -80400,145 +84962,145 @@ public final class AppSocket {
         internal_static_com_elarian_hera_proto_CustomerActivityCommand_PropertiesEntry_descriptor,
         new java.lang.String[] { "Key", "Value", });
     internal_static_com_elarian_hera_proto_ReplayMessagingConsentUpdateCommand_descriptor =
-      getDescriptor().getMessageTypes().get(36);
+      getDescriptor().getMessageTypes().get(39);
     internal_static_com_elarian_hera_proto_ReplayMessagingConsentUpdateCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplayMessagingConsentUpdateCommand_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "UpdatedAt", "Update", });
     internal_static_com_elarian_hera_proto_ReplayReceivedMessageCommand_descriptor =
-      getDescriptor().getMessageTypes().get(37);
+      getDescriptor().getMessageTypes().get(40);
     internal_static_com_elarian_hera_proto_ReplayReceivedMessageCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplayReceivedMessageCommand_descriptor,
         new java.lang.String[] { "ProviderMessageId", "ProviderSessionId", "ReceivedAt", "CustomerNumber", "ChannelNumber", "Parts", "InReplyTo", "Provider", "Cost", });
     internal_static_com_elarian_hera_proto_ReplaySentMessageCommand_descriptor =
-      getDescriptor().getMessageTypes().get(38);
+      getDescriptor().getMessageTypes().get(41);
     internal_static_com_elarian_hera_proto_ReplaySentMessageCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplaySentMessageCommand_descriptor,
         new java.lang.String[] { "ProviderMessageId", "ProviderSessionId", "SentAt", "CustomerNumber", "ChannelNumber", "Provider", "Message", "InReplyTo", "Status", "Cost", });
     internal_static_com_elarian_hera_proto_ReplayMessageStatusUpdateCommand_descriptor =
-      getDescriptor().getMessageTypes().get(39);
+      getDescriptor().getMessageTypes().get(42);
     internal_static_com_elarian_hera_proto_ReplayMessageStatusUpdateCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplayMessageStatusUpdateCommand_descriptor,
         new java.lang.String[] { "ProviderMessageId", "UpdatedAt", "CustomerNumber", "ChannelNumber", "Status", "Cost", });
     internal_static_com_elarian_hera_proto_ReplayMessageReactionUpdateCommand_descriptor =
-      getDescriptor().getMessageTypes().get(40);
+      getDescriptor().getMessageTypes().get(43);
     internal_static_com_elarian_hera_proto_ReplayMessageReactionUpdateCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplayMessageReactionUpdateCommand_descriptor,
         new java.lang.String[] { "ProviderMessageId", "UpdatedAt", "CustomerNumber", "ChannelNumber", "Reaction", });
     internal_static_com_elarian_hera_proto_ReplayMessagingSessionCommand_descriptor =
-      getDescriptor().getMessageTypes().get(41);
+      getDescriptor().getMessageTypes().get(44);
     internal_static_com_elarian_hera_proto_ReplayMessagingSessionCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplayMessagingSessionCommand_descriptor,
         new java.lang.String[] { "ProviderSessionId", "CustomerNumber", "ChannelNumber", "StartedAt", "Duration", "EndReason", "Cost", });
     internal_static_com_elarian_hera_proto_CustomerActivityReply_descriptor =
-      getDescriptor().getMessageTypes().get(42);
+      getDescriptor().getMessageTypes().get(45);
     internal_static_com_elarian_hera_proto_CustomerActivityReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerActivityReply_descriptor,
         new java.lang.String[] { "Status", "Description", "CustomerId", });
     internal_static_com_elarian_hera_proto_ServerToAppNotification_descriptor =
-      getDescriptor().getMessageTypes().get(43);
+      getDescriptor().getMessageTypes().get(46);
     internal_static_com_elarian_hera_proto_ServerToAppNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppNotification_descriptor,
         new java.lang.String[] { "Customer", "Purse", "Entry", });
     internal_static_com_elarian_hera_proto_ServerToAppCustomerNotification_descriptor =
-      getDescriptor().getMessageTypes().get(44);
+      getDescriptor().getMessageTypes().get(47);
     internal_static_com_elarian_hera_proto_ServerToAppCustomerNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppCustomerNotification_descriptor,
         new java.lang.String[] { "OrgId", "AppId", "CustomerId", "AppData", "CreatedAt", "Reminder", "MessagingSessionStarted", "MessagingSessionRenewed", "MessagingSessionEnded", "MessagingConsentUpdate", "ReceivedMessage", "MessageStatus", "SentMessageReaction", "ReceivedPayment", "PaymentStatus", "WalletPaymentStatus", "CustomerActivity", "Entry", });
     internal_static_com_elarian_hera_proto_ServerToAppPurseNotification_descriptor =
-      getDescriptor().getMessageTypes().get(45);
+      getDescriptor().getMessageTypes().get(48);
     internal_static_com_elarian_hera_proto_ServerToAppPurseNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppPurseNotification_descriptor,
         new java.lang.String[] { "OrgId", "AppId", "PurseId", "CreatedAt", "PaymentStatus", "Entry", });
     internal_static_com_elarian_hera_proto_AppDataUpdate_descriptor =
-      getDescriptor().getMessageTypes().get(46);
+      getDescriptor().getMessageTypes().get(49);
     internal_static_com_elarian_hera_proto_AppDataUpdate_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_AppDataUpdate_descriptor,
         new java.lang.String[] { "Data", });
     internal_static_com_elarian_hera_proto_ServerToAppNotificationReply_descriptor =
-      getDescriptor().getMessageTypes().get(47);
+      getDescriptor().getMessageTypes().get(50);
     internal_static_com_elarian_hera_proto_ServerToAppNotificationReply_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppNotificationReply_descriptor,
         new java.lang.String[] { "DataUpdate", "Message", });
     internal_static_com_elarian_hera_proto_ReminderNotification_descriptor =
-      getDescriptor().getMessageTypes().get(48);
+      getDescriptor().getMessageTypes().get(51);
     internal_static_com_elarian_hera_proto_ReminderNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReminderNotification_descriptor,
         new java.lang.String[] { "Reminder", "Tag", "WorkId", });
     internal_static_com_elarian_hera_proto_MessagingSessionStartedNotification_descriptor =
-      getDescriptor().getMessageTypes().get(49);
+      getDescriptor().getMessageTypes().get(52);
     internal_static_com_elarian_hera_proto_MessagingSessionStartedNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingSessionStartedNotification_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "SessionId", "ExpiresAt", });
     internal_static_com_elarian_hera_proto_MessagingSessionRenewedNotification_descriptor =
-      getDescriptor().getMessageTypes().get(50);
+      getDescriptor().getMessageTypes().get(53);
     internal_static_com_elarian_hera_proto_MessagingSessionRenewedNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingSessionRenewedNotification_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "SessionId", "ExpiresAt", });
     internal_static_com_elarian_hera_proto_MessagingSessionEndedNotification_descriptor =
-      getDescriptor().getMessageTypes().get(51);
+      getDescriptor().getMessageTypes().get(54);
     internal_static_com_elarian_hera_proto_MessagingSessionEndedNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingSessionEndedNotification_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "SessionId", "Duration", "Reason", });
     internal_static_com_elarian_hera_proto_MessagingConsentUpdateNotification_descriptor =
-      getDescriptor().getMessageTypes().get(52);
+      getDescriptor().getMessageTypes().get(55);
     internal_static_com_elarian_hera_proto_MessagingConsentUpdateNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessagingConsentUpdateNotification_descriptor,
         new java.lang.String[] { "CustomerNumber", "ChannelNumber", "Update", "Status", });
     internal_static_com_elarian_hera_proto_ReceivedMessageNotification_descriptor =
-      getDescriptor().getMessageTypes().get(53);
+      getDescriptor().getMessageTypes().get(56);
     internal_static_com_elarian_hera_proto_ReceivedMessageNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceivedMessageNotification_descriptor,
         new java.lang.String[] { "MessageId", "CustomerNumber", "ChannelNumber", "Parts", "SessionId", "InReplyTo", });
     internal_static_com_elarian_hera_proto_MessageStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(54);
+      getDescriptor().getMessageTypes().get(57);
     internal_static_com_elarian_hera_proto_MessageStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessageStatusNotification_descriptor,
         new java.lang.String[] { "MessageId", "Status", });
     internal_static_com_elarian_hera_proto_SentMessageReactionNotification_descriptor =
-      getDescriptor().getMessageTypes().get(55);
+      getDescriptor().getMessageTypes().get(58);
     internal_static_com_elarian_hera_proto_SentMessageReactionNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SentMessageReactionNotification_descriptor,
         new java.lang.String[] { "MessageId", "CustomerNumber", "ChannelNumber", "Reaction", });
     internal_static_com_elarian_hera_proto_ReceivedPaymentNotification_descriptor =
-      getDescriptor().getMessageTypes().get(56);
+      getDescriptor().getMessageTypes().get(59);
     internal_static_com_elarian_hera_proto_ReceivedPaymentNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReceivedPaymentNotification_descriptor,
         new java.lang.String[] { "PurseId", "TransactionId", "CustomerNumber", "ChannelNumber", "Value", "Status", });
     internal_static_com_elarian_hera_proto_PaymentStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(57);
+      getDescriptor().getMessageTypes().get(60);
     internal_static_com_elarian_hera_proto_PaymentStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentStatusNotification_descriptor,
         new java.lang.String[] { "TransactionId", "Status", });
     internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(58);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor,
         new java.lang.String[] { "WalletId", "TransactionId", "Status", });
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_descriptor =
-      getDescriptor().getMessageTypes().get(59);
+      getDescriptor().getMessageTypes().get(62);
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerActivityNotification_descriptor,

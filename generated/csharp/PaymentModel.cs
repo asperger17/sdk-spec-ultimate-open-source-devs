@@ -57,7 +57,7 @@ namespace Com.Elarian.Hera.Proto {
             "dW50ZXJQYXJ0eUgAEkcKCGN1c3RvbWVyGAMgASgLMjMuY29tLmVsYXJpYW4u",
             "aGVyYS5wcm90by5QYXltZW50Q3VzdG9tZXJDb3VudGVyUGFydHlIABJFCgdj",
             "aGFubmVsGAQgASgLMjIuY29tLmVsYXJpYW4uaGVyYS5wcm90by5QYXltZW50",
-            "Q2hhbm5lbENvdW50ZXJQYXJ0eUgAQgcKBXBhcnR5IqMDChJQYXltZW50VHJh",
+            "Q2hhbm5lbENvdW50ZXJQYXJ0eUgAQgcKBXBhcnR5IuIDChJQYXltZW50VHJh",
             "bnNhY3Rpb24SFgoOdHJhbnNhY3Rpb25faWQYASABKAkSLAoGYXBwX2lkGAIg",
             "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEkAKC2RlYml0X3Bh",
             "cnR5GAQgASgLMisuY29tLmVsYXJpYW4uaGVyYS5wcm90by5QYXltZW50Q291",
@@ -67,25 +67,26 @@ namespace Com.Elarian.Hera.Proto {
             "KA4yJS5jb20uZWxhcmlhbi5oZXJhLnByb3RvLlBheW1lbnRTdGF0dXMSLgoK",
             "Y3JlYXRlZF9hdBgIIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3RhbXAS",
             "LgoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
-            "bXAqbAoOUGF5bWVudENoYW5uZWwSHwobUEFZTUVOVF9DSEFOTkVMX1VOU1BF",
-            "Q0lGSUVEEAASHAoYUEFZTUVOVF9DSEFOTkVMX0NFTExVTEFSEAESGwoXUEFZ",
-            "TUVOVF9DSEFOTkVMX0FJUlRJTUUQAiq/BQoNUGF5bWVudFN0YXR1cxIeChpQ",
-            "QVlNRU5UX1NUQVRVU19VTlNQRUNJRklFRBAAEhkKFVBBWU1FTlRfU1RBVFVT",
-            "X1FVRVVFRBBkEicKI1BBWU1FTlRfU1RBVFVTX1BFTkRJTkdfQ09ORklSTUFU",
-            "SU9OEGUSJQohUEFZTUVOVF9TVEFUVVNfUEVORElOR19WQUxJREFUSU9OEGYS",
-            "HAoYUEFZTUVOVF9TVEFUVVNfVkFMSURBVEVEEGcSIwoeUEFZTUVOVF9TVEFU",
-            "VVNfSU5WQUxJRF9SRVFVRVNUEMgBEiEKHFBBWU1FTlRfU1RBVFVTX05PVF9T",
-            "VVBQT1JURUQQyQESJgohUEFZTUVOVF9TVEFUVVNfSU5TVUZGSUNJRU5UX0ZV",
-            "TkRTEMoBEiUKIFBBWU1FTlRfU1RBVFVTX0FQUExJQ0FUSU9OX0VSUk9SEMsB",
-            "Eh8KGlBBWU1FTlRfU1RBVFVTX05PVF9BTExPV0VEEMwBEiUKIFBBWU1FTlRf",
-            "U1RBVFVTX0RVUExJQ0FURV9SRVFVRVNUEM0BEiEKHFBBWU1FTlRfU1RBVFVT",
-            "X0lOVkFMSURfUFVSU0UQzgESIgodUEFZTUVOVF9TVEFUVVNfSU5WQUxJRF9X",
-            "QUxMRVQQzwESLgopUEFZTUVOVF9TVEFUVVNfREVDT01NSVNTSU9ORURfQ1VT",
-            "VE9NRVJfSUQQqwISGwoWUEFZTUVOVF9TVEFUVVNfU1VDQ0VTUxCsAhIaChVQ",
-            "QVlNRU5UX1NUQVRVU19GQUlMRUQQkAMSHQoYUEFZTUVOVF9TVEFUVVNfVEhS",
-            "T1RUTEVEEJEDEhsKFlBBWU1FTlRfU1RBVFVTX0VYUElSRUQQkgMSHAoXUEFZ",
-            "TUVOVF9TVEFUVVNfUkVKRUNURUQQkwMSHAoXUEFZTUVOVF9TVEFUVVNfUkVW",
-            "RVJTRUQQ9ANiBnByb3RvMw=="));
+            "bXASPQoXcHJvdmlkZXJfdHJhbnNhY3Rpb25faWQYCiABKAsyHC5nb29nbGUu",
+            "cHJvdG9idWYuU3RyaW5nVmFsdWUqbAoOUGF5bWVudENoYW5uZWwSHwobUEFZ",
+            "TUVOVF9DSEFOTkVMX1VOU1BFQ0lGSUVEEAASHAoYUEFZTUVOVF9DSEFOTkVM",
+            "X0NFTExVTEFSEAESGwoXUEFZTUVOVF9DSEFOTkVMX0FJUlRJTUUQAiq/BQoN",
+            "UGF5bWVudFN0YXR1cxIeChpQQVlNRU5UX1NUQVRVU19VTlNQRUNJRklFRBAA",
+            "EhkKFVBBWU1FTlRfU1RBVFVTX1FVRVVFRBBkEicKI1BBWU1FTlRfU1RBVFVT",
+            "X1BFTkRJTkdfQ09ORklSTUFUSU9OEGUSJQohUEFZTUVOVF9TVEFUVVNfUEVO",
+            "RElOR19WQUxJREFUSU9OEGYSHAoYUEFZTUVOVF9TVEFUVVNfVkFMSURBVEVE",
+            "EGcSIwoeUEFZTUVOVF9TVEFUVVNfSU5WQUxJRF9SRVFVRVNUEMgBEiEKHFBB",
+            "WU1FTlRfU1RBVFVTX05PVF9TVVBQT1JURUQQyQESJgohUEFZTUVOVF9TVEFU",
+            "VVNfSU5TVUZGSUNJRU5UX0ZVTkRTEMoBEiUKIFBBWU1FTlRfU1RBVFVTX0FQ",
+            "UExJQ0FUSU9OX0VSUk9SEMsBEh8KGlBBWU1FTlRfU1RBVFVTX05PVF9BTExP",
+            "V0VEEMwBEiUKIFBBWU1FTlRfU1RBVFVTX0RVUExJQ0FURV9SRVFVRVNUEM0B",
+            "EiEKHFBBWU1FTlRfU1RBVFVTX0lOVkFMSURfUFVSU0UQzgESIgodUEFZTUVO",
+            "VF9TVEFUVVNfSU5WQUxJRF9XQUxMRVQQzwESLgopUEFZTUVOVF9TVEFUVVNf",
+            "REVDT01NSVNTSU9ORURfQ1VTVE9NRVJfSUQQqwISGwoWUEFZTUVOVF9TVEFU",
+            "VVNfU1VDQ0VTUxCsAhIaChVQQVlNRU5UX1NUQVRVU19GQUlMRUQQkAMSHQoY",
+            "UEFZTUVOVF9TVEFUVVNfVEhST1RUTEVEEJEDEhsKFlBBWU1FTlRfU1RBVFVT",
+            "X0VYUElSRUQQkgMSHAoXUEFZTUVOVF9TVEFUVVNfUkVKRUNURUQQkwMSHAoX",
+            "UEFZTUVOVF9TVEFUVVNfUkVWRVJTRUQQ9ANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Com.Elarian.Hera.Proto.CommonModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Com.Elarian.Hera.Proto.PaymentChannel), typeof(global::Com.Elarian.Hera.Proto.PaymentStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -97,7 +98,7 @@ namespace Com.Elarian.Hera.Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentCustomerCounterParty), global::Com.Elarian.Hera.Proto.PaymentCustomerCounterParty.Parser, new[]{ "CustomerNumber", "ChannelNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentChannelCounterParty), global::Com.Elarian.Hera.Proto.PaymentChannelCounterParty.Parser, new[]{ "Channel", "ChannelCode", "Source", "Destination", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentCounterParty), global::Com.Elarian.Hera.Proto.PaymentCounterParty.Parser, new[]{ "Purse", "Wallet", "Customer", "Channel" }, new[]{ "Party" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentTransaction), global::Com.Elarian.Hera.Proto.PaymentTransaction.Parser, new[]{ "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentTransaction), global::Com.Elarian.Hera.Proto.PaymentTransaction.Parser, new[]{ "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", "ProviderTransactionId" }, null, null, null, null)
           }));
     }
     #endregion
@@ -2274,6 +2275,7 @@ namespace Com.Elarian.Hera.Proto {
       status_ = other.status_;
       createdAt_ = other.createdAt_ != null ? other.createdAt_.Clone() : null;
       updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
+      ProviderTransactionId = other.ProviderTransactionId;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2372,6 +2374,19 @@ namespace Com.Elarian.Hera.Proto {
       }
     }
 
+    /// <summary>Field number for the "provider_transaction_id" field.</summary>
+    public const int ProviderTransactionIdFieldNumber = 10;
+    private static readonly pb::FieldCodec<string> _single_providerTransactionId_codec = pb::FieldCodec.ForClassWrapper<string>(82);
+    private string providerTransactionId_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string ProviderTransactionId {
+      get { return providerTransactionId_; }
+      set {
+        providerTransactionId_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PaymentTransaction);
@@ -2393,6 +2408,7 @@ namespace Com.Elarian.Hera.Proto {
       if (Status != other.Status) return false;
       if (!object.Equals(CreatedAt, other.CreatedAt)) return false;
       if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
+      if (ProviderTransactionId != other.ProviderTransactionId) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2407,6 +2423,7 @@ namespace Com.Elarian.Hera.Proto {
       if (Status != global::Com.Elarian.Hera.Proto.PaymentStatus.Unspecified) hash ^= Status.GetHashCode();
       if (createdAt_ != null) hash ^= CreatedAt.GetHashCode();
       if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
+      if (providerTransactionId_ != null) hash ^= ProviderTransactionId.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2454,6 +2471,9 @@ namespace Com.Elarian.Hera.Proto {
         output.WriteRawTag(74);
         output.WriteMessage(UpdatedAt);
       }
+      if (providerTransactionId_ != null) {
+        _single_providerTransactionId_codec.WriteTagAndValue(output, ProviderTransactionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2494,6 +2514,9 @@ namespace Com.Elarian.Hera.Proto {
         output.WriteRawTag(74);
         output.WriteMessage(UpdatedAt);
       }
+      if (providerTransactionId_ != null) {
+        _single_providerTransactionId_codec.WriteTagAndValue(ref output, ProviderTransactionId);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2526,6 +2549,9 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (updatedAt_ != null) {
         size += 1 + pb::CodedOutputStream.ComputeMessageSize(UpdatedAt);
+      }
+      if (providerTransactionId_ != null) {
+        size += _single_providerTransactionId_codec.CalculateSizeWithTag(ProviderTransactionId);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2578,6 +2604,11 @@ namespace Com.Elarian.Hera.Proto {
           UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
         }
         UpdatedAt.MergeFrom(other.UpdatedAt);
+      }
+      if (other.providerTransactionId_ != null) {
+        if (providerTransactionId_ == null || other.ProviderTransactionId != "") {
+          ProviderTransactionId = other.ProviderTransactionId;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -2643,6 +2674,13 @@ namespace Com.Elarian.Hera.Proto {
             input.ReadMessage(UpdatedAt);
             break;
           }
+          case 82: {
+            string value = _single_providerTransactionId_codec.Read(input);
+            if (providerTransactionId_ == null || value != "") {
+              ProviderTransactionId = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -2705,6 +2743,13 @@ namespace Com.Elarian.Hera.Proto {
               UpdatedAt = new global::Google.Protobuf.WellKnownTypes.Timestamp();
             }
             input.ReadMessage(UpdatedAt);
+            break;
+          }
+          case 82: {
+            string value = _single_providerTransactionId_codec.Read(ref input);
+            if (providerTransactionId_ == null || value != "") {
+              ProviderTransactionId = value;
+            }
             break;
           }
         }

@@ -329,6 +329,7 @@ typedef GPB_ENUM(PaymentTransaction_FieldNumber) {
   PaymentTransaction_FieldNumber_Status = 7,
   PaymentTransaction_FieldNumber_CreatedAt = 8,
   PaymentTransaction_FieldNumber_UpdatedAt = 9,
+  PaymentTransaction_FieldNumber_ProviderTransactionId = 10,
 };
 
 GPB_FINAL @interface PaymentTransaction : GPBMessage
@@ -360,6 +361,10 @@ GPB_FINAL @interface PaymentTransaction : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) GPBTimestamp *updatedAt;
 /** Test to see if @c updatedAt has been set. */
 @property(nonatomic, readwrite) BOOL hasUpdatedAt;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerTransactionId;
+/** Test to see if @c providerTransactionId has been set. */
+@property(nonatomic, readwrite) BOOL hasProviderTransactionId;
 
 @end
 

@@ -8197,6 +8197,21 @@ public final class PaymentModel {
      * <code>.google.protobuf.Timestamp updated_at = 9;</code>
      */
     com.google.protobuf.TimestampOrBuilder getUpdatedAtOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @return Whether the providerTransactionId field is set.
+     */
+    boolean hasProviderTransactionId();
+    /**
+     * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @return The providerTransactionId.
+     */
+    com.google.protobuf.StringValue getProviderTransactionId();
+    /**
+     * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getProviderTransactionIdOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentTransaction}
@@ -8331,6 +8346,19 @@ public final class PaymentModel {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(updatedAt_);
                 updatedAt_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 82: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (providerTransactionId_ != null) {
+                subBuilder = providerTransactionId_.toBuilder();
+              }
+              providerTransactionId_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(providerTransactionId_);
+                providerTransactionId_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8580,6 +8608,32 @@ public final class PaymentModel {
       return getUpdatedAt();
     }
 
+    public static final int PROVIDER_TRANSACTION_ID_FIELD_NUMBER = 10;
+    private com.google.protobuf.StringValue providerTransactionId_;
+    /**
+     * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @return Whether the providerTransactionId field is set.
+     */
+    @java.lang.Override
+    public boolean hasProviderTransactionId() {
+      return providerTransactionId_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     * @return The providerTransactionId.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getProviderTransactionId() {
+      return providerTransactionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerTransactionId_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getProviderTransactionIdOrBuilder() {
+      return getProviderTransactionId();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8617,6 +8671,9 @@ public final class PaymentModel {
       }
       if (updatedAt_ != null) {
         output.writeMessage(9, getUpdatedAt());
+      }
+      if (providerTransactionId_ != null) {
+        output.writeMessage(10, getProviderTransactionId());
       }
       unknownFields.writeTo(output);
     }
@@ -8657,6 +8714,10 @@ public final class PaymentModel {
       if (updatedAt_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(9, getUpdatedAt());
+      }
+      if (providerTransactionId_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(10, getProviderTransactionId());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8706,6 +8767,11 @@ public final class PaymentModel {
         if (!getUpdatedAt()
             .equals(other.getUpdatedAt())) return false;
       }
+      if (hasProviderTransactionId() != other.hasProviderTransactionId()) return false;
+      if (hasProviderTransactionId()) {
+        if (!getProviderTransactionId()
+            .equals(other.getProviderTransactionId())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8744,6 +8810,10 @@ public final class PaymentModel {
       if (hasUpdatedAt()) {
         hash = (37 * hash) + UPDATED_AT_FIELD_NUMBER;
         hash = (53 * hash) + getUpdatedAt().hashCode();
+      }
+      if (hasProviderTransactionId()) {
+        hash = (37 * hash) + PROVIDER_TRANSACTION_ID_FIELD_NUMBER;
+        hash = (53 * hash) + getProviderTransactionId().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8918,6 +8988,12 @@ public final class PaymentModel {
           updatedAt_ = null;
           updatedAtBuilder_ = null;
         }
+        if (providerTransactionIdBuilder_ == null) {
+          providerTransactionId_ = null;
+        } else {
+          providerTransactionId_ = null;
+          providerTransactionIdBuilder_ = null;
+        }
         return this;
       }
 
@@ -8975,6 +9051,11 @@ public final class PaymentModel {
           result.updatedAt_ = updatedAt_;
         } else {
           result.updatedAt_ = updatedAtBuilder_.build();
+        }
+        if (providerTransactionIdBuilder_ == null) {
+          result.providerTransactionId_ = providerTransactionId_;
+        } else {
+          result.providerTransactionId_ = providerTransactionIdBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9048,6 +9129,9 @@ public final class PaymentModel {
         }
         if (other.hasUpdatedAt()) {
           mergeUpdatedAt(other.getUpdatedAt());
+        }
+        if (other.hasProviderTransactionId()) {
+          mergeProviderTransactionId(other.getProviderTransactionId());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -9921,6 +10005,125 @@ public final class PaymentModel {
         }
         return updatedAtBuilder_;
       }
+
+      private com.google.protobuf.StringValue providerTransactionId_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> providerTransactionIdBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       * @return Whether the providerTransactionId field is set.
+       */
+      public boolean hasProviderTransactionId() {
+        return providerTransactionIdBuilder_ != null || providerTransactionId_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       * @return The providerTransactionId.
+       */
+      public com.google.protobuf.StringValue getProviderTransactionId() {
+        if (providerTransactionIdBuilder_ == null) {
+          return providerTransactionId_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : providerTransactionId_;
+        } else {
+          return providerTransactionIdBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      public Builder setProviderTransactionId(com.google.protobuf.StringValue value) {
+        if (providerTransactionIdBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          providerTransactionId_ = value;
+          onChanged();
+        } else {
+          providerTransactionIdBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      public Builder setProviderTransactionId(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (providerTransactionIdBuilder_ == null) {
+          providerTransactionId_ = builderForValue.build();
+          onChanged();
+        } else {
+          providerTransactionIdBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      public Builder mergeProviderTransactionId(com.google.protobuf.StringValue value) {
+        if (providerTransactionIdBuilder_ == null) {
+          if (providerTransactionId_ != null) {
+            providerTransactionId_ =
+              com.google.protobuf.StringValue.newBuilder(providerTransactionId_).mergeFrom(value).buildPartial();
+          } else {
+            providerTransactionId_ = value;
+          }
+          onChanged();
+        } else {
+          providerTransactionIdBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      public Builder clearProviderTransactionId() {
+        if (providerTransactionIdBuilder_ == null) {
+          providerTransactionId_ = null;
+          onChanged();
+        } else {
+          providerTransactionId_ = null;
+          providerTransactionIdBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getProviderTransactionIdBuilder() {
+        
+        onChanged();
+        return getProviderTransactionIdFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getProviderTransactionIdOrBuilder() {
+        if (providerTransactionIdBuilder_ != null) {
+          return providerTransactionIdBuilder_.getMessageOrBuilder();
+        } else {
+          return providerTransactionId_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : providerTransactionId_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getProviderTransactionIdFieldBuilder() {
+        if (providerTransactionIdBuilder_ == null) {
+          providerTransactionIdBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getProviderTransactionId(),
+                  getParentForChildren(),
+                  isClean());
+          providerTransactionId_ = null;
+        }
+        return providerTransactionIdBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10070,7 +10273,7 @@ public final class PaymentModel {
       "H\000\022G\n\010customer\030\003 \001(\01323.com.elarian.hera." +
       "proto.PaymentCustomerCounterPartyH\000\022E\n\007c" +
       "hannel\030\004 \001(\01322.com.elarian.hera.proto.Pa" +
-      "ymentChannelCounterPartyH\000B\007\n\005party\"\243\003\n\022" +
+      "ymentChannelCounterPartyH\000B\007\n\005party\"\342\003\n\022" +
       "PaymentTransaction\022\026\n\016transaction_id\030\001 \001" +
       "(\t\022,\n\006app_id\030\002 \001(\0132\034.google.protobuf.Str" +
       "ingValue\022@\n\013debit_party\030\004 \001(\0132+.com.elar" +
@@ -10081,28 +10284,29 @@ public final class PaymentModel {
       "(\0162%.com.elarian.hera.proto.PaymentStatu" +
       "s\022.\n\ncreated_at\030\010 \001(\0132\032.google.protobuf." +
       "Timestamp\022.\n\nupdated_at\030\t \001(\0132\032.google.p" +
-      "rotobuf.Timestamp*l\n\016PaymentChannel\022\037\n\033P" +
-      "AYMENT_CHANNEL_UNSPECIFIED\020\000\022\034\n\030PAYMENT_" +
-      "CHANNEL_CELLULAR\020\001\022\033\n\027PAYMENT_CHANNEL_AI" +
-      "RTIME\020\002*\277\005\n\rPaymentStatus\022\036\n\032PAYMENT_STA" +
-      "TUS_UNSPECIFIED\020\000\022\031\n\025PAYMENT_STATUS_QUEU" +
-      "ED\020d\022\'\n#PAYMENT_STATUS_PENDING_CONFIRMAT" +
-      "ION\020e\022%\n!PAYMENT_STATUS_PENDING_VALIDATI" +
-      "ON\020f\022\034\n\030PAYMENT_STATUS_VALIDATED\020g\022#\n\036PA" +
-      "YMENT_STATUS_INVALID_REQUEST\020\310\001\022!\n\034PAYME" +
-      "NT_STATUS_NOT_SUPPORTED\020\311\001\022&\n!PAYMENT_ST" +
-      "ATUS_INSUFFICIENT_FUNDS\020\312\001\022%\n PAYMENT_ST" +
-      "ATUS_APPLICATION_ERROR\020\313\001\022\037\n\032PAYMENT_STA" +
-      "TUS_NOT_ALLOWED\020\314\001\022%\n PAYMENT_STATUS_DUP" +
-      "LICATE_REQUEST\020\315\001\022!\n\034PAYMENT_STATUS_INVA" +
-      "LID_PURSE\020\316\001\022\"\n\035PAYMENT_STATUS_INVALID_W" +
-      "ALLET\020\317\001\022.\n)PAYMENT_STATUS_DECOMMISSIONE" +
-      "D_CUSTOMER_ID\020\253\002\022\033\n\026PAYMENT_STATUS_SUCCE" +
-      "SS\020\254\002\022\032\n\025PAYMENT_STATUS_FAILED\020\220\003\022\035\n\030PAY" +
-      "MENT_STATUS_THROTTLED\020\221\003\022\033\n\026PAYMENT_STAT" +
-      "US_EXPIRED\020\222\003\022\034\n\027PAYMENT_STATUS_REJECTED" +
-      "\020\223\003\022\034\n\027PAYMENT_STATUS_REVERSED\020\364\003b\006proto" +
-      "3"
+      "rotobuf.Timestamp\022=\n\027provider_transactio" +
+      "n_id\030\n \001(\0132\034.google.protobuf.StringValue" +
+      "*l\n\016PaymentChannel\022\037\n\033PAYMENT_CHANNEL_UN" +
+      "SPECIFIED\020\000\022\034\n\030PAYMENT_CHANNEL_CELLULAR\020" +
+      "\001\022\033\n\027PAYMENT_CHANNEL_AIRTIME\020\002*\277\005\n\rPayme" +
+      "ntStatus\022\036\n\032PAYMENT_STATUS_UNSPECIFIED\020\000" +
+      "\022\031\n\025PAYMENT_STATUS_QUEUED\020d\022\'\n#PAYMENT_S" +
+      "TATUS_PENDING_CONFIRMATION\020e\022%\n!PAYMENT_" +
+      "STATUS_PENDING_VALIDATION\020f\022\034\n\030PAYMENT_S" +
+      "TATUS_VALIDATED\020g\022#\n\036PAYMENT_STATUS_INVA" +
+      "LID_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUP" +
+      "PORTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFFICIENT" +
+      "_FUNDS\020\312\001\022%\n PAYMENT_STATUS_APPLICATION_" +
+      "ERROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314" +
+      "\001\022%\n PAYMENT_STATUS_DUPLICATE_REQUEST\020\315\001" +
+      "\022!\n\034PAYMENT_STATUS_INVALID_PURSE\020\316\001\022\"\n\035P" +
+      "AYMENT_STATUS_INVALID_WALLET\020\317\001\022.\n)PAYME" +
+      "NT_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\253\002\022" +
+      "\033\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022\032\n\025PAYMENT_" +
+      "STATUS_FAILED\020\220\003\022\035\n\030PAYMENT_STATUS_THROT" +
+      "TLED\020\221\003\022\033\n\026PAYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027" +
+      "PAYMENT_STATUS_REJECTED\020\223\003\022\034\n\027PAYMENT_ST" +
+      "ATUS_REVERSED\020\364\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10170,7 +10374,7 @@ public final class PaymentModel {
     internal_static_com_elarian_hera_proto_PaymentTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentTransaction_descriptor,
-        new java.lang.String[] { "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", });
+        new java.lang.String[] { "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", "ProviderTransactionId", });
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.elarian.hera.proto.CommonModel.getDescriptor();

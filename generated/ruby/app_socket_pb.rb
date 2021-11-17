@@ -56,6 +56,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
         optional :replay_message_status_update, :message, 27, "com.elarian.hera.proto.ReplayMessageStatusUpdateCommand"
         optional :replay_message_reaction_update, :message, 28, "com.elarian.hera.proto.ReplayMessageReactionUpdateCommand"
         optional :replay_messaging_session, :message, 29, "com.elarian.hera.proto.ReplayMessagingSessionCommand"
+        optional :replay_payment, :message, 30, "com.elarian.hera.proto.ReplayPaymentCommand"
+        optional :replay_payment_status_update, :message, 31, "com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand"
       end
     end
     add_message "com.elarian.hera.proto.AppToServerCommandReply" do
@@ -70,6 +72,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
         optional :initiate_payment, :message, 8, "com.elarian.hera.proto.InitiatePaymentReply"
         optional :tag_command, :message, 9, "com.elarian.hera.proto.TagCommandReply"
         optional :customer_activity, :message, 10, "com.elarian.hera.proto.CustomerActivityReply"
+        optional :replay_payment, :message, 11, "com.elarian.hera.proto.ReplayPaymentReply"
       end
     end
     add_message "com.elarian.hera.proto.GenerateAuthTokenCommand" do
@@ -257,6 +260,27 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "com.elarian.hera.proto.InitiatePaymentReply" do
       optional :status, :enum, 1, "com.elarian.hera.proto.PaymentStatus"
+      optional :description, :string, 2
+      optional :transaction_id, :message, 3, "google.protobuf.StringValue"
+      optional :debit_customer_id, :message, 4, "google.protobuf.StringValue"
+      optional :credit_customer_id, :message, 5, "google.protobuf.StringValue"
+    end
+    add_message "com.elarian.hera.proto.ReplayPaymentCommand" do
+      optional :provider_transaction_id, :string, 1
+      optional :created_at, :message, 2, "google.protobuf.Timestamp"
+      optional :debit_party, :message, 3, "com.elarian.hera.proto.PaymentCounterParty"
+      optional :credit_party, :message, 4, "com.elarian.hera.proto.PaymentCounterParty"
+      optional :status, :enum, 5, "com.elarian.hera.proto.PaymentStatus"
+      optional :value, :message, 6, "com.elarian.hera.proto.Cash"
+    end
+    add_message "com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand" do
+      optional :customer_number, :message, 1, "com.elarian.hera.proto.CustomerNumber"
+      optional :provider_transaction_id, :string, 2
+      optional :updated_at, :message, 3, "google.protobuf.Timestamp"
+      optional :status, :enum, 4, "com.elarian.hera.proto.PaymentStatus"
+    end
+    add_message "com.elarian.hera.proto.ReplayPaymentReply" do
+      optional :status, :bool, 1
       optional :description, :string, 2
       optional :transaction_id, :message, 3, "google.protobuf.StringValue"
       optional :debit_customer_id, :message, 4, "google.protobuf.StringValue"
@@ -487,6 +511,9 @@ module Com
         UpdateMessagingConsentReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.UpdateMessagingConsentReply").msgclass
         InitiatePaymentCommand = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.InitiatePaymentCommand").msgclass
         InitiatePaymentReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.InitiatePaymentReply").msgclass
+        ReplayPaymentCommand = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.ReplayPaymentCommand").msgclass
+        ReplayPaymentStatusUpdateCommand = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand").msgclass
+        ReplayPaymentReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.ReplayPaymentReply").msgclass
         TagCommandReply = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.TagCommandReply").msgclass
         CustomerActivityCommand = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.CustomerActivityCommand").msgclass
         ReplayMessagingConsentUpdateCommand = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.ReplayMessagingConsentUpdateCommand").msgclass

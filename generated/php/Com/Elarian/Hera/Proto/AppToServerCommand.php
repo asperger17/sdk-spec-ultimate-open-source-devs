@@ -50,6 +50,8 @@ class AppToServerCommand extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\ReplayMessageStatusUpdateCommand $replay_message_status_update
      *     @type \Com\Elarian\Hera\Proto\ReplayMessageReactionUpdateCommand $replay_message_reaction_update
      *     @type \Com\Elarian\Hera\Proto\ReplayMessagingSessionCommand $replay_messaging_session
+     *     @type \Com\Elarian\Hera\Proto\ReplayPaymentCommand $replay_payment
+     *     @type \Com\Elarian\Hera\Proto\ReplayPaymentStatusUpdateCommand $replay_payment_status_update
      * }
      */
     public function __construct($data = NULL) {
@@ -836,6 +838,60 @@ class AppToServerCommand extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayMessagingSessionCommand::class);
         $this->writeOneof(29, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayPaymentCommand
+     */
+    public function getReplayPayment()
+    {
+        return $this->readOneof(30);
+    }
+
+    public function hasReplayPayment()
+    {
+        return $this->hasOneof(30);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayPaymentCommand $var
+     * @return $this
+     */
+    public function setReplayPayment($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayPaymentCommand::class);
+        $this->writeOneof(30, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayPaymentStatusUpdateCommand
+     */
+    public function getReplayPaymentStatusUpdate()
+    {
+        return $this->readOneof(31);
+    }
+
+    public function hasReplayPaymentStatusUpdate()
+    {
+        return $this->hasOneof(31);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayPaymentStatusUpdateCommand $var
+     * @return $this
+     */
+    public function setReplayPaymentStatusUpdate($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayPaymentStatusUpdateCommand::class);
+        $this->writeOneof(31, $var);
 
         return $this;
     }

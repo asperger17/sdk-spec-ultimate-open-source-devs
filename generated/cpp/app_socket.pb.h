@@ -61,7 +61,7 @@ struct TableStruct_app_5fsocket_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[62]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[65]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -192,6 +192,15 @@ extern ReplayMessagingConsentUpdateCommandDefaultTypeInternal _ReplayMessagingCo
 class ReplayMessagingSessionCommand;
 class ReplayMessagingSessionCommandDefaultTypeInternal;
 extern ReplayMessagingSessionCommandDefaultTypeInternal _ReplayMessagingSessionCommand_default_instance_;
+class ReplayPaymentCommand;
+class ReplayPaymentCommandDefaultTypeInternal;
+extern ReplayPaymentCommandDefaultTypeInternal _ReplayPaymentCommand_default_instance_;
+class ReplayPaymentReply;
+class ReplayPaymentReplyDefaultTypeInternal;
+extern ReplayPaymentReplyDefaultTypeInternal _ReplayPaymentReply_default_instance_;
+class ReplayPaymentStatusUpdateCommand;
+class ReplayPaymentStatusUpdateCommandDefaultTypeInternal;
+extern ReplayPaymentStatusUpdateCommandDefaultTypeInternal _ReplayPaymentStatusUpdateCommand_default_instance_;
 class ReplayReceivedMessageCommand;
 class ReplayReceivedMessageCommandDefaultTypeInternal;
 extern ReplayReceivedMessageCommandDefaultTypeInternal _ReplayReceivedMessageCommand_default_instance_;
@@ -303,6 +312,9 @@ template<> ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand* Aren
 template<> ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand>(Arena*);
 template<> ::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand>(Arena*);
 template<> ::com::elarian::hera::proto::ReplayMessagingSessionCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayMessagingSessionCommand>(Arena*);
+template<> ::com::elarian::hera::proto::ReplayPaymentCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayPaymentCommand>(Arena*);
+template<> ::com::elarian::hera::proto::ReplayPaymentReply* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayPaymentReply>(Arena*);
+template<> ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand>(Arena*);
 template<> ::com::elarian::hera::proto::ReplayReceivedMessageCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplayReceivedMessageCommand>(Arena*);
 template<> ::com::elarian::hera::proto::ReplaySentMessageCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplaySentMessageCommand>(Arena*);
 template<> ::com::elarian::hera::proto::ReplyToMessageCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::ReplyToMessageCommand>(Arena*);
@@ -622,6 +634,8 @@ class AppToServerCommand PROTOBUF_FINAL :
     kReplayMessageStatusUpdate = 27,
     kReplayMessageReactionUpdate = 28,
     kReplayMessagingSession = 29,
+    kReplayPayment = 30,
+    kReplayPaymentStatusUpdate = 31,
     ENTRY_NOT_SET = 0,
   };
 
@@ -730,6 +744,8 @@ class AppToServerCommand PROTOBUF_FINAL :
     kReplayMessageStatusUpdateFieldNumber = 27,
     kReplayMessageReactionUpdateFieldNumber = 28,
     kReplayMessagingSessionFieldNumber = 29,
+    kReplayPaymentFieldNumber = 30,
+    kReplayPaymentStatusUpdateFieldNumber = 31,
   };
   // .com.elarian.hera.proto.GenerateAuthTokenCommand generate_auth_token = 1;
   bool has_generate_auth_token() const;
@@ -1253,6 +1269,42 @@ class AppToServerCommand PROTOBUF_FINAL :
       ::com::elarian::hera::proto::ReplayMessagingSessionCommand* replay_messaging_session);
   ::com::elarian::hera::proto::ReplayMessagingSessionCommand* unsafe_arena_release_replay_messaging_session();
 
+  // .com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;
+  bool has_replay_payment() const;
+  private:
+  bool _internal_has_replay_payment() const;
+  public:
+  void clear_replay_payment();
+  const ::com::elarian::hera::proto::ReplayPaymentCommand& replay_payment() const;
+  ::com::elarian::hera::proto::ReplayPaymentCommand* release_replay_payment();
+  ::com::elarian::hera::proto::ReplayPaymentCommand* mutable_replay_payment();
+  void set_allocated_replay_payment(::com::elarian::hera::proto::ReplayPaymentCommand* replay_payment);
+  private:
+  const ::com::elarian::hera::proto::ReplayPaymentCommand& _internal_replay_payment() const;
+  ::com::elarian::hera::proto::ReplayPaymentCommand* _internal_mutable_replay_payment();
+  public:
+  void unsafe_arena_set_allocated_replay_payment(
+      ::com::elarian::hera::proto::ReplayPaymentCommand* replay_payment);
+  ::com::elarian::hera::proto::ReplayPaymentCommand* unsafe_arena_release_replay_payment();
+
+  // .com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;
+  bool has_replay_payment_status_update() const;
+  private:
+  bool _internal_has_replay_payment_status_update() const;
+  public:
+  void clear_replay_payment_status_update();
+  const ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand& replay_payment_status_update() const;
+  ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* release_replay_payment_status_update();
+  ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* mutable_replay_payment_status_update();
+  void set_allocated_replay_payment_status_update(::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* replay_payment_status_update);
+  private:
+  const ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand& _internal_replay_payment_status_update() const;
+  ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* _internal_mutable_replay_payment_status_update();
+  public:
+  void unsafe_arena_set_allocated_replay_payment_status_update(
+      ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* replay_payment_status_update);
+  ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* unsafe_arena_release_replay_payment_status_update();
+
   void clear_entry();
   EntryCase entry_case() const;
   // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppToServerCommand)
@@ -1287,6 +1339,8 @@ class AppToServerCommand PROTOBUF_FINAL :
   void set_has_replay_message_status_update();
   void set_has_replay_message_reaction_update();
   void set_has_replay_messaging_session();
+  void set_has_replay_payment();
+  void set_has_replay_payment_status_update();
 
   inline bool has_entry() const;
   inline void clear_has_entry();
@@ -1325,6 +1379,8 @@ class AppToServerCommand PROTOBUF_FINAL :
     ::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand* replay_message_status_update_;
     ::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand* replay_message_reaction_update_;
     ::com::elarian::hera::proto::ReplayMessagingSessionCommand* replay_messaging_session_;
+    ::com::elarian::hera::proto::ReplayPaymentCommand* replay_payment_;
+    ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* replay_payment_status_update_;
   } entry_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -1380,6 +1436,7 @@ class AppToServerCommandReply PROTOBUF_FINAL :
     kInitiatePayment = 8,
     kTagCommand = 9,
     kCustomerActivity = 10,
+    kReplayPayment = 11,
     ENTRY_NOT_SET = 0,
   };
 
@@ -1469,6 +1526,7 @@ class AppToServerCommandReply PROTOBUF_FINAL :
     kInitiatePaymentFieldNumber = 8,
     kTagCommandFieldNumber = 9,
     kCustomerActivityFieldNumber = 10,
+    kReplayPaymentFieldNumber = 11,
   };
   // .com.elarian.hera.proto.GenerateAuthTokenReply generate_auth_token = 1;
   bool has_generate_auth_token() const;
@@ -1650,6 +1708,24 @@ class AppToServerCommandReply PROTOBUF_FINAL :
       ::com::elarian::hera::proto::CustomerActivityReply* customer_activity);
   ::com::elarian::hera::proto::CustomerActivityReply* unsafe_arena_release_customer_activity();
 
+  // .com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;
+  bool has_replay_payment() const;
+  private:
+  bool _internal_has_replay_payment() const;
+  public:
+  void clear_replay_payment();
+  const ::com::elarian::hera::proto::ReplayPaymentReply& replay_payment() const;
+  ::com::elarian::hera::proto::ReplayPaymentReply* release_replay_payment();
+  ::com::elarian::hera::proto::ReplayPaymentReply* mutable_replay_payment();
+  void set_allocated_replay_payment(::com::elarian::hera::proto::ReplayPaymentReply* replay_payment);
+  private:
+  const ::com::elarian::hera::proto::ReplayPaymentReply& _internal_replay_payment() const;
+  ::com::elarian::hera::proto::ReplayPaymentReply* _internal_mutable_replay_payment();
+  public:
+  void unsafe_arena_set_allocated_replay_payment(
+      ::com::elarian::hera::proto::ReplayPaymentReply* replay_payment);
+  ::com::elarian::hera::proto::ReplayPaymentReply* unsafe_arena_release_replay_payment();
+
   void clear_entry();
   EntryCase entry_case() const;
   // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.AppToServerCommandReply)
@@ -1665,6 +1741,7 @@ class AppToServerCommandReply PROTOBUF_FINAL :
   void set_has_initiate_payment();
   void set_has_tag_command();
   void set_has_customer_activity();
+  void set_has_replay_payment();
 
   inline bool has_entry() const;
   inline void clear_has_entry();
@@ -1684,6 +1761,7 @@ class AppToServerCommandReply PROTOBUF_FINAL :
     ::com::elarian::hera::proto::InitiatePaymentReply* initiate_payment_;
     ::com::elarian::hera::proto::TagCommandReply* tag_command_;
     ::com::elarian::hera::proto::CustomerActivityReply* customer_activity_;
+    ::com::elarian::hera::proto::ReplayPaymentReply* replay_payment_;
   } entry_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   ::PROTOBUF_NAMESPACE_ID::uint32 _oneof_case_[1];
@@ -7824,6 +7902,648 @@ class InitiatePaymentReply PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
+class ReplayPaymentCommand PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.elarian.hera.proto.ReplayPaymentCommand) */ {
+ public:
+  inline ReplayPaymentCommand() : ReplayPaymentCommand(nullptr) {}
+  virtual ~ReplayPaymentCommand();
+
+  ReplayPaymentCommand(const ReplayPaymentCommand& from);
+  ReplayPaymentCommand(ReplayPaymentCommand&& from) noexcept
+    : ReplayPaymentCommand() {
+    *this = ::std::move(from);
+  }
+
+  inline ReplayPaymentCommand& operator=(const ReplayPaymentCommand& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ReplayPaymentCommand& operator=(ReplayPaymentCommand&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ReplayPaymentCommand& default_instance();
+
+  static inline const ReplayPaymentCommand* internal_default_instance() {
+    return reinterpret_cast<const ReplayPaymentCommand*>(
+               &_ReplayPaymentCommand_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    35;
+
+  friend void swap(ReplayPaymentCommand& a, ReplayPaymentCommand& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ReplayPaymentCommand* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ReplayPaymentCommand* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReplayPaymentCommand* New() const final {
+    return CreateMaybeMessage<ReplayPaymentCommand>(nullptr);
+  }
+
+  ReplayPaymentCommand* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ReplayPaymentCommand>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ReplayPaymentCommand& from);
+  void MergeFrom(const ReplayPaymentCommand& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ReplayPaymentCommand* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "com.elarian.hera.proto.ReplayPaymentCommand";
+  }
+  protected:
+  explicit ReplayPaymentCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_app_5fsocket_2eproto);
+    return ::descriptor_table_app_5fsocket_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kProviderTransactionIdFieldNumber = 1,
+    kCreatedAtFieldNumber = 2,
+    kDebitPartyFieldNumber = 3,
+    kCreditPartyFieldNumber = 4,
+    kValueFieldNumber = 6,
+    kStatusFieldNumber = 5,
+  };
+  // string provider_transaction_id = 1;
+  void clear_provider_transaction_id();
+  const std::string& provider_transaction_id() const;
+  void set_provider_transaction_id(const std::string& value);
+  void set_provider_transaction_id(std::string&& value);
+  void set_provider_transaction_id(const char* value);
+  void set_provider_transaction_id(const char* value, size_t size);
+  std::string* mutable_provider_transaction_id();
+  std::string* release_provider_transaction_id();
+  void set_allocated_provider_transaction_id(std::string* provider_transaction_id);
+  private:
+  const std::string& _internal_provider_transaction_id() const;
+  void _internal_set_provider_transaction_id(const std::string& value);
+  std::string* _internal_mutable_provider_transaction_id();
+  public:
+
+  // .google.protobuf.Timestamp created_at = 2;
+  bool has_created_at() const;
+  private:
+  bool _internal_has_created_at() const;
+  public:
+  void clear_created_at();
+  const PROTOBUF_NAMESPACE_ID::Timestamp& created_at() const;
+  PROTOBUF_NAMESPACE_ID::Timestamp* release_created_at();
+  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_created_at();
+  void set_allocated_created_at(PROTOBUF_NAMESPACE_ID::Timestamp* created_at);
+  private:
+  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_created_at() const;
+  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_created_at();
+  public:
+  void unsafe_arena_set_allocated_created_at(
+      PROTOBUF_NAMESPACE_ID::Timestamp* created_at);
+  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_created_at();
+
+  // .com.elarian.hera.proto.PaymentCounterParty debit_party = 3;
+  bool has_debit_party() const;
+  private:
+  bool _internal_has_debit_party() const;
+  public:
+  void clear_debit_party();
+  const ::com::elarian::hera::proto::PaymentCounterParty& debit_party() const;
+  ::com::elarian::hera::proto::PaymentCounterParty* release_debit_party();
+  ::com::elarian::hera::proto::PaymentCounterParty* mutable_debit_party();
+  void set_allocated_debit_party(::com::elarian::hera::proto::PaymentCounterParty* debit_party);
+  private:
+  const ::com::elarian::hera::proto::PaymentCounterParty& _internal_debit_party() const;
+  ::com::elarian::hera::proto::PaymentCounterParty* _internal_mutable_debit_party();
+  public:
+  void unsafe_arena_set_allocated_debit_party(
+      ::com::elarian::hera::proto::PaymentCounterParty* debit_party);
+  ::com::elarian::hera::proto::PaymentCounterParty* unsafe_arena_release_debit_party();
+
+  // .com.elarian.hera.proto.PaymentCounterParty credit_party = 4;
+  bool has_credit_party() const;
+  private:
+  bool _internal_has_credit_party() const;
+  public:
+  void clear_credit_party();
+  const ::com::elarian::hera::proto::PaymentCounterParty& credit_party() const;
+  ::com::elarian::hera::proto::PaymentCounterParty* release_credit_party();
+  ::com::elarian::hera::proto::PaymentCounterParty* mutable_credit_party();
+  void set_allocated_credit_party(::com::elarian::hera::proto::PaymentCounterParty* credit_party);
+  private:
+  const ::com::elarian::hera::proto::PaymentCounterParty& _internal_credit_party() const;
+  ::com::elarian::hera::proto::PaymentCounterParty* _internal_mutable_credit_party();
+  public:
+  void unsafe_arena_set_allocated_credit_party(
+      ::com::elarian::hera::proto::PaymentCounterParty* credit_party);
+  ::com::elarian::hera::proto::PaymentCounterParty* unsafe_arena_release_credit_party();
+
+  // .com.elarian.hera.proto.Cash value = 6;
+  bool has_value() const;
+  private:
+  bool _internal_has_value() const;
+  public:
+  void clear_value();
+  const ::com::elarian::hera::proto::Cash& value() const;
+  ::com::elarian::hera::proto::Cash* release_value();
+  ::com::elarian::hera::proto::Cash* mutable_value();
+  void set_allocated_value(::com::elarian::hera::proto::Cash* value);
+  private:
+  const ::com::elarian::hera::proto::Cash& _internal_value() const;
+  ::com::elarian::hera::proto::Cash* _internal_mutable_value();
+  public:
+  void unsafe_arena_set_allocated_value(
+      ::com::elarian::hera::proto::Cash* value);
+  ::com::elarian::hera::proto::Cash* unsafe_arena_release_value();
+
+  // .com.elarian.hera.proto.PaymentStatus status = 5;
+  void clear_status();
+  ::com::elarian::hera::proto::PaymentStatus status() const;
+  void set_status(::com::elarian::hera::proto::PaymentStatus value);
+  private:
+  ::com::elarian::hera::proto::PaymentStatus _internal_status() const;
+  void _internal_set_status(::com::elarian::hera::proto::PaymentStatus value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplayPaymentCommand)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr provider_transaction_id_;
+  PROTOBUF_NAMESPACE_ID::Timestamp* created_at_;
+  ::com::elarian::hera::proto::PaymentCounterParty* debit_party_;
+  ::com::elarian::hera::proto::PaymentCounterParty* credit_party_;
+  ::com::elarian::hera::proto::Cash* value_;
+  int status_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fsocket_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ReplayPaymentStatusUpdateCommand PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand) */ {
+ public:
+  inline ReplayPaymentStatusUpdateCommand() : ReplayPaymentStatusUpdateCommand(nullptr) {}
+  virtual ~ReplayPaymentStatusUpdateCommand();
+
+  ReplayPaymentStatusUpdateCommand(const ReplayPaymentStatusUpdateCommand& from);
+  ReplayPaymentStatusUpdateCommand(ReplayPaymentStatusUpdateCommand&& from) noexcept
+    : ReplayPaymentStatusUpdateCommand() {
+    *this = ::std::move(from);
+  }
+
+  inline ReplayPaymentStatusUpdateCommand& operator=(const ReplayPaymentStatusUpdateCommand& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ReplayPaymentStatusUpdateCommand& operator=(ReplayPaymentStatusUpdateCommand&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ReplayPaymentStatusUpdateCommand& default_instance();
+
+  static inline const ReplayPaymentStatusUpdateCommand* internal_default_instance() {
+    return reinterpret_cast<const ReplayPaymentStatusUpdateCommand*>(
+               &_ReplayPaymentStatusUpdateCommand_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    36;
+
+  friend void swap(ReplayPaymentStatusUpdateCommand& a, ReplayPaymentStatusUpdateCommand& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ReplayPaymentStatusUpdateCommand* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ReplayPaymentStatusUpdateCommand* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReplayPaymentStatusUpdateCommand* New() const final {
+    return CreateMaybeMessage<ReplayPaymentStatusUpdateCommand>(nullptr);
+  }
+
+  ReplayPaymentStatusUpdateCommand* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ReplayPaymentStatusUpdateCommand>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ReplayPaymentStatusUpdateCommand& from);
+  void MergeFrom(const ReplayPaymentStatusUpdateCommand& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ReplayPaymentStatusUpdateCommand* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand";
+  }
+  protected:
+  explicit ReplayPaymentStatusUpdateCommand(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_app_5fsocket_2eproto);
+    return ::descriptor_table_app_5fsocket_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kProviderTransactionIdFieldNumber = 2,
+    kCustomerNumberFieldNumber = 1,
+    kUpdatedAtFieldNumber = 3,
+    kStatusFieldNumber = 4,
+  };
+  // string provider_transaction_id = 2;
+  void clear_provider_transaction_id();
+  const std::string& provider_transaction_id() const;
+  void set_provider_transaction_id(const std::string& value);
+  void set_provider_transaction_id(std::string&& value);
+  void set_provider_transaction_id(const char* value);
+  void set_provider_transaction_id(const char* value, size_t size);
+  std::string* mutable_provider_transaction_id();
+  std::string* release_provider_transaction_id();
+  void set_allocated_provider_transaction_id(std::string* provider_transaction_id);
+  private:
+  const std::string& _internal_provider_transaction_id() const;
+  void _internal_set_provider_transaction_id(const std::string& value);
+  std::string* _internal_mutable_provider_transaction_id();
+  public:
+
+  // .com.elarian.hera.proto.CustomerNumber customer_number = 1;
+  bool has_customer_number() const;
+  private:
+  bool _internal_has_customer_number() const;
+  public:
+  void clear_customer_number();
+  const ::com::elarian::hera::proto::CustomerNumber& customer_number() const;
+  ::com::elarian::hera::proto::CustomerNumber* release_customer_number();
+  ::com::elarian::hera::proto::CustomerNumber* mutable_customer_number();
+  void set_allocated_customer_number(::com::elarian::hera::proto::CustomerNumber* customer_number);
+  private:
+  const ::com::elarian::hera::proto::CustomerNumber& _internal_customer_number() const;
+  ::com::elarian::hera::proto::CustomerNumber* _internal_mutable_customer_number();
+  public:
+  void unsafe_arena_set_allocated_customer_number(
+      ::com::elarian::hera::proto::CustomerNumber* customer_number);
+  ::com::elarian::hera::proto::CustomerNumber* unsafe_arena_release_customer_number();
+
+  // .google.protobuf.Timestamp updated_at = 3;
+  bool has_updated_at() const;
+  private:
+  bool _internal_has_updated_at() const;
+  public:
+  void clear_updated_at();
+  const PROTOBUF_NAMESPACE_ID::Timestamp& updated_at() const;
+  PROTOBUF_NAMESPACE_ID::Timestamp* release_updated_at();
+  PROTOBUF_NAMESPACE_ID::Timestamp* mutable_updated_at();
+  void set_allocated_updated_at(PROTOBUF_NAMESPACE_ID::Timestamp* updated_at);
+  private:
+  const PROTOBUF_NAMESPACE_ID::Timestamp& _internal_updated_at() const;
+  PROTOBUF_NAMESPACE_ID::Timestamp* _internal_mutable_updated_at();
+  public:
+  void unsafe_arena_set_allocated_updated_at(
+      PROTOBUF_NAMESPACE_ID::Timestamp* updated_at);
+  PROTOBUF_NAMESPACE_ID::Timestamp* unsafe_arena_release_updated_at();
+
+  // .com.elarian.hera.proto.PaymentStatus status = 4;
+  void clear_status();
+  ::com::elarian::hera::proto::PaymentStatus status() const;
+  void set_status(::com::elarian::hera::proto::PaymentStatus value);
+  private:
+  ::com::elarian::hera::proto::PaymentStatus _internal_status() const;
+  void _internal_set_status(::com::elarian::hera::proto::PaymentStatus value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr provider_transaction_id_;
+  ::com::elarian::hera::proto::CustomerNumber* customer_number_;
+  PROTOBUF_NAMESPACE_ID::Timestamp* updated_at_;
+  int status_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fsocket_2eproto;
+};
+// -------------------------------------------------------------------
+
+class ReplayPaymentReply PROTOBUF_FINAL :
+    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.elarian.hera.proto.ReplayPaymentReply) */ {
+ public:
+  inline ReplayPaymentReply() : ReplayPaymentReply(nullptr) {}
+  virtual ~ReplayPaymentReply();
+
+  ReplayPaymentReply(const ReplayPaymentReply& from);
+  ReplayPaymentReply(ReplayPaymentReply&& from) noexcept
+    : ReplayPaymentReply() {
+    *this = ::std::move(from);
+  }
+
+  inline ReplayPaymentReply& operator=(const ReplayPaymentReply& from) {
+    CopyFrom(from);
+    return *this;
+  }
+  inline ReplayPaymentReply& operator=(ReplayPaymentReply&& from) noexcept {
+    if (GetArena() == from.GetArena()) {
+      if (this != &from) InternalSwap(&from);
+    } else {
+      CopyFrom(from);
+    }
+    return *this;
+  }
+
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
+    return GetDescriptor();
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
+    return GetMetadataStatic().descriptor;
+  }
+  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
+    return GetMetadataStatic().reflection;
+  }
+  static const ReplayPaymentReply& default_instance();
+
+  static inline const ReplayPaymentReply* internal_default_instance() {
+    return reinterpret_cast<const ReplayPaymentReply*>(
+               &_ReplayPaymentReply_default_instance_);
+  }
+  static constexpr int kIndexInFileMessages =
+    37;
+
+  friend void swap(ReplayPaymentReply& a, ReplayPaymentReply& b) {
+    a.Swap(&b);
+  }
+  inline void Swap(ReplayPaymentReply* other) {
+    if (other == this) return;
+    if (GetArena() == other->GetArena()) {
+      InternalSwap(other);
+    } else {
+      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
+    }
+  }
+  void UnsafeArenaSwap(ReplayPaymentReply* other) {
+    if (other == this) return;
+    GOOGLE_DCHECK(GetArena() == other->GetArena());
+    InternalSwap(other);
+  }
+
+  // implements Message ----------------------------------------------
+
+  inline ReplayPaymentReply* New() const final {
+    return CreateMaybeMessage<ReplayPaymentReply>(nullptr);
+  }
+
+  ReplayPaymentReply* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
+    return CreateMaybeMessage<ReplayPaymentReply>(arena);
+  }
+  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
+  void CopyFrom(const ReplayPaymentReply& from);
+  void MergeFrom(const ReplayPaymentReply& from);
+  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
+  bool IsInitialized() const final;
+
+  size_t ByteSizeLong() const final;
+  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
+  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
+      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
+  int GetCachedSize() const final { return _cached_size_.Get(); }
+
+  private:
+  inline void SharedCtor();
+  inline void SharedDtor();
+  void SetCachedSize(int size) const final;
+  void InternalSwap(ReplayPaymentReply* other);
+  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
+  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
+    return "com.elarian.hera.proto.ReplayPaymentReply";
+  }
+  protected:
+  explicit ReplayPaymentReply(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
+  public:
+
+  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
+  private:
+  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
+    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_app_5fsocket_2eproto);
+    return ::descriptor_table_app_5fsocket_2eproto.file_level_metadata[kIndexInFileMessages];
+  }
+
+  public:
+
+  // nested types ----------------------------------------------------
+
+  // accessors -------------------------------------------------------
+
+  enum : int {
+    kDescriptionFieldNumber = 2,
+    kTransactionIdFieldNumber = 3,
+    kDebitCustomerIdFieldNumber = 4,
+    kCreditCustomerIdFieldNumber = 5,
+    kStatusFieldNumber = 1,
+  };
+  // string description = 2;
+  void clear_description();
+  const std::string& description() const;
+  void set_description(const std::string& value);
+  void set_description(std::string&& value);
+  void set_description(const char* value);
+  void set_description(const char* value, size_t size);
+  std::string* mutable_description();
+  std::string* release_description();
+  void set_allocated_description(std::string* description);
+  private:
+  const std::string& _internal_description() const;
+  void _internal_set_description(const std::string& value);
+  std::string* _internal_mutable_description();
+  public:
+
+  // .google.protobuf.StringValue transaction_id = 3;
+  bool has_transaction_id() const;
+  private:
+  bool _internal_has_transaction_id() const;
+  public:
+  void clear_transaction_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& transaction_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_transaction_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_transaction_id();
+  void set_allocated_transaction_id(PROTOBUF_NAMESPACE_ID::StringValue* transaction_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_transaction_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_transaction_id();
+  public:
+  void unsafe_arena_set_allocated_transaction_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* transaction_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_transaction_id();
+
+  // .google.protobuf.StringValue debit_customer_id = 4;
+  bool has_debit_customer_id() const;
+  private:
+  bool _internal_has_debit_customer_id() const;
+  public:
+  void clear_debit_customer_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& debit_customer_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_debit_customer_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_debit_customer_id();
+  void set_allocated_debit_customer_id(PROTOBUF_NAMESPACE_ID::StringValue* debit_customer_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_debit_customer_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_debit_customer_id();
+  public:
+  void unsafe_arena_set_allocated_debit_customer_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* debit_customer_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_debit_customer_id();
+
+  // .google.protobuf.StringValue credit_customer_id = 5;
+  bool has_credit_customer_id() const;
+  private:
+  bool _internal_has_credit_customer_id() const;
+  public:
+  void clear_credit_customer_id();
+  const PROTOBUF_NAMESPACE_ID::StringValue& credit_customer_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_credit_customer_id();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_credit_customer_id();
+  void set_allocated_credit_customer_id(PROTOBUF_NAMESPACE_ID::StringValue* credit_customer_id);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_credit_customer_id() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_credit_customer_id();
+  public:
+  void unsafe_arena_set_allocated_credit_customer_id(
+      PROTOBUF_NAMESPACE_ID::StringValue* credit_customer_id);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_credit_customer_id();
+
+  // bool status = 1;
+  void clear_status();
+  bool status() const;
+  void set_status(bool value);
+  private:
+  bool _internal_status() const;
+  void _internal_set_status(bool value);
+  public:
+
+  // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.ReplayPaymentReply)
+ private:
+  class _Internal;
+
+  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr description_;
+  PROTOBUF_NAMESPACE_ID::StringValue* transaction_id_;
+  PROTOBUF_NAMESPACE_ID::StringValue* debit_customer_id_;
+  PROTOBUF_NAMESPACE_ID::StringValue* credit_customer_id_;
+  bool status_;
+  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
+  friend struct ::TableStruct_app_5fsocket_2eproto;
+};
+// -------------------------------------------------------------------
+
 class TagCommandReply PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.elarian.hera.proto.TagCommandReply) */ {
  public:
@@ -7865,7 +8585,7 @@ class TagCommandReply PROTOBUF_FINAL :
                &_TagCommandReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    35;
+    38;
 
   friend void swap(TagCommandReply& a, TagCommandReply& b) {
     a.Swap(&b);
@@ -8022,7 +8742,7 @@ public:
   private:
   static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
     ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_app_5fsocket_2eproto);
-    return ::descriptor_table_app_5fsocket_2eproto.file_level_metadata[36];
+    return ::descriptor_table_app_5fsocket_2eproto.file_level_metadata[39];
   }
 
   public:
@@ -8071,7 +8791,7 @@ class CustomerActivityCommand PROTOBUF_FINAL :
                &_CustomerActivityCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    37;
+    40;
 
   friend void swap(CustomerActivityCommand& a, CustomerActivityCommand& b) {
     a.Swap(&b);
@@ -8294,7 +9014,7 @@ class ReplayMessagingConsentUpdateCommand PROTOBUF_FINAL :
                &_ReplayMessagingConsentUpdateCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    38;
+    41;
 
   friend void swap(ReplayMessagingConsentUpdateCommand& a, ReplayMessagingConsentUpdateCommand& b) {
     a.Swap(&b);
@@ -8490,7 +9210,7 @@ class ReplayReceivedMessageCommand PROTOBUF_FINAL :
                &_ReplayReceivedMessageCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    39;
+    42;
 
   friend void swap(ReplayReceivedMessageCommand& a, ReplayReceivedMessageCommand& b) {
     a.Swap(&b);
@@ -8784,7 +9504,7 @@ class ReplaySentMessageCommand PROTOBUF_FINAL :
                &_ReplaySentMessageCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    40;
+    43;
 
   friend void swap(ReplaySentMessageCommand& a, ReplaySentMessageCommand& b) {
     a.Swap(&b);
@@ -9089,7 +9809,7 @@ class ReplayMessageStatusUpdateCommand PROTOBUF_FINAL :
                &_ReplayMessageStatusUpdateCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    41;
+    44;
 
   friend void swap(ReplayMessageStatusUpdateCommand& a, ReplayMessageStatusUpdateCommand& b) {
     a.Swap(&b);
@@ -9323,7 +10043,7 @@ class ReplayMessageReactionUpdateCommand PROTOBUF_FINAL :
                &_ReplayMessageReactionUpdateCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    42;
+    45;
 
   friend void swap(ReplayMessageReactionUpdateCommand& a, ReplayMessageReactionUpdateCommand& b) {
     a.Swap(&b);
@@ -9537,7 +10257,7 @@ class ReplayMessagingSessionCommand PROTOBUF_FINAL :
                &_ReplayMessagingSessionCommand_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    43;
+    46;
 
   friend void swap(ReplayMessagingSessionCommand& a, ReplayMessagingSessionCommand& b) {
     a.Swap(&b);
@@ -9791,7 +10511,7 @@ class CustomerActivityReply PROTOBUF_FINAL :
                &_CustomerActivityReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    44;
+    47;
 
   friend void swap(CustomerActivityReply& a, CustomerActivityReply& b) {
     a.Swap(&b);
@@ -9971,7 +10691,7 @@ class ServerToAppNotification PROTOBUF_FINAL :
                &_ServerToAppNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    45;
+    48;
 
   friend void swap(ServerToAppNotification& a, ServerToAppNotification& b) {
     a.Swap(&b);
@@ -10164,7 +10884,7 @@ class ServerToAppCustomerNotification PROTOBUF_FINAL :
                &_ServerToAppCustomerNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    46;
+    49;
 
   friend void swap(ServerToAppCustomerNotification& a, ServerToAppCustomerNotification& b) {
     a.Swap(&b);
@@ -10650,7 +11370,7 @@ class ServerToAppPurseNotification PROTOBUF_FINAL :
                &_ServerToAppPurseNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    47;
+    50;
 
   friend void swap(ServerToAppPurseNotification& a, ServerToAppPurseNotification& b) {
     a.Swap(&b);
@@ -10880,7 +11600,7 @@ class AppDataUpdate PROTOBUF_FINAL :
                &_AppDataUpdate_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    48;
+    51;
 
   friend void swap(AppDataUpdate& a, AppDataUpdate& b) {
     a.Swap(&b);
@@ -11025,7 +11745,7 @@ class ServerToAppNotificationReply PROTOBUF_FINAL :
                &_ServerToAppNotificationReply_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    49;
+    52;
 
   friend void swap(ServerToAppNotificationReply& a, ServerToAppNotificationReply& b) {
     a.Swap(&b);
@@ -11190,7 +11910,7 @@ class ReminderNotification PROTOBUF_FINAL :
                &_ReminderNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    50;
+    53;
 
   friend void swap(ReminderNotification& a, ReminderNotification& b) {
     a.Swap(&b);
@@ -11375,7 +12095,7 @@ class MessagingSessionStartedNotification PROTOBUF_FINAL :
                &_MessagingSessionStartedNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    51;
+    54;
 
   friend void swap(MessagingSessionStartedNotification& a, MessagingSessionStartedNotification& b) {
     a.Swap(&b);
@@ -11578,7 +12298,7 @@ class MessagingSessionRenewedNotification PROTOBUF_FINAL :
                &_MessagingSessionRenewedNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    52;
+    55;
 
   friend void swap(MessagingSessionRenewedNotification& a, MessagingSessionRenewedNotification& b) {
     a.Swap(&b);
@@ -11781,7 +12501,7 @@ class MessagingSessionEndedNotification PROTOBUF_FINAL :
                &_MessagingSessionEndedNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    53;
+    56;
 
   friend void swap(MessagingSessionEndedNotification& a, MessagingSessionEndedNotification& b) {
     a.Swap(&b);
@@ -11995,7 +12715,7 @@ class MessagingConsentUpdateNotification PROTOBUF_FINAL :
                &_MessagingConsentUpdateNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    54;
+    57;
 
   friend void swap(MessagingConsentUpdateNotification& a, MessagingConsentUpdateNotification& b) {
     a.Swap(&b);
@@ -12182,7 +12902,7 @@ class ReceivedMessageNotification PROTOBUF_FINAL :
                &_ReceivedMessageNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    55;
+    58;
 
   friend void swap(ReceivedMessageNotification& a, ReceivedMessageNotification& b) {
     a.Swap(&b);
@@ -12425,7 +13145,7 @@ class MessageStatusNotification PROTOBUF_FINAL :
                &_MessageStatusNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    56;
+    59;
 
   friend void swap(MessageStatusNotification& a, MessageStatusNotification& b) {
     a.Swap(&b);
@@ -12579,7 +13299,7 @@ class SentMessageReactionNotification PROTOBUF_FINAL :
                &_SentMessageReactionNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    57;
+    60;
 
   friend void swap(SentMessageReactionNotification& a, SentMessageReactionNotification& b) {
     a.Swap(&b);
@@ -12773,7 +13493,7 @@ class ReceivedPaymentNotification PROTOBUF_FINAL :
                &_ReceivedPaymentNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    58;
+    61;
 
   friend void swap(ReceivedPaymentNotification& a, ReceivedPaymentNotification& b) {
     a.Swap(&b);
@@ -13005,7 +13725,7 @@ class PaymentStatusNotification PROTOBUF_FINAL :
                &_PaymentStatusNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    59;
+    62;
 
   friend void swap(PaymentStatusNotification& a, PaymentStatusNotification& b) {
     a.Swap(&b);
@@ -13159,7 +13879,7 @@ class WalletPaymentStatusNotification PROTOBUF_FINAL :
                &_WalletPaymentStatusNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    60;
+    63;
 
   friend void swap(WalletPaymentStatusNotification& a, WalletPaymentStatusNotification& b) {
     a.Swap(&b);
@@ -13331,7 +14051,7 @@ class CustomerActivityNotification PROTOBUF_FINAL :
                &_CustomerActivityNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    61;
+    64;
 
   friend void swap(CustomerActivityNotification& a, CustomerActivityNotification& b) {
     a.Swap(&b);
@@ -15937,6 +16657,152 @@ inline ::com::elarian::hera::proto::ReplayMessagingSessionCommand* AppToServerCo
   return _internal_mutable_replay_messaging_session();
 }
 
+// .com.elarian.hera.proto.ReplayPaymentCommand replay_payment = 30;
+inline bool AppToServerCommand::_internal_has_replay_payment() const {
+  return entry_case() == kReplayPayment;
+}
+inline bool AppToServerCommand::has_replay_payment() const {
+  return _internal_has_replay_payment();
+}
+inline void AppToServerCommand::set_has_replay_payment() {
+  _oneof_case_[0] = kReplayPayment;
+}
+inline void AppToServerCommand::clear_replay_payment() {
+  if (_internal_has_replay_payment()) {
+    if (GetArena() == nullptr) {
+      delete entry_.replay_payment_;
+    }
+    clear_has_entry();
+  }
+}
+inline ::com::elarian::hera::proto::ReplayPaymentCommand* AppToServerCommand::release_replay_payment() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.AppToServerCommand.replay_payment)
+  if (_internal_has_replay_payment()) {
+    clear_has_entry();
+      ::com::elarian::hera::proto::ReplayPaymentCommand* temp = entry_.replay_payment_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    entry_.replay_payment_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::com::elarian::hera::proto::ReplayPaymentCommand& AppToServerCommand::_internal_replay_payment() const {
+  return _internal_has_replay_payment()
+      ? *entry_.replay_payment_
+      : reinterpret_cast< ::com::elarian::hera::proto::ReplayPaymentCommand&>(::com::elarian::hera::proto::_ReplayPaymentCommand_default_instance_);
+}
+inline const ::com::elarian::hera::proto::ReplayPaymentCommand& AppToServerCommand::replay_payment() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.AppToServerCommand.replay_payment)
+  return _internal_replay_payment();
+}
+inline ::com::elarian::hera::proto::ReplayPaymentCommand* AppToServerCommand::unsafe_arena_release_replay_payment() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:com.elarian.hera.proto.AppToServerCommand.replay_payment)
+  if (_internal_has_replay_payment()) {
+    clear_has_entry();
+    ::com::elarian::hera::proto::ReplayPaymentCommand* temp = entry_.replay_payment_;
+    entry_.replay_payment_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void AppToServerCommand::unsafe_arena_set_allocated_replay_payment(::com::elarian::hera::proto::ReplayPaymentCommand* replay_payment) {
+  clear_entry();
+  if (replay_payment) {
+    set_has_replay_payment();
+    entry_.replay_payment_ = replay_payment;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_payment)
+}
+inline ::com::elarian::hera::proto::ReplayPaymentCommand* AppToServerCommand::_internal_mutable_replay_payment() {
+  if (!_internal_has_replay_payment()) {
+    clear_entry();
+    set_has_replay_payment();
+    entry_.replay_payment_ = CreateMaybeMessage< ::com::elarian::hera::proto::ReplayPaymentCommand >(GetArena());
+  }
+  return entry_.replay_payment_;
+}
+inline ::com::elarian::hera::proto::ReplayPaymentCommand* AppToServerCommand::mutable_replay_payment() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.AppToServerCommand.replay_payment)
+  return _internal_mutable_replay_payment();
+}
+
+// .com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand replay_payment_status_update = 31;
+inline bool AppToServerCommand::_internal_has_replay_payment_status_update() const {
+  return entry_case() == kReplayPaymentStatusUpdate;
+}
+inline bool AppToServerCommand::has_replay_payment_status_update() const {
+  return _internal_has_replay_payment_status_update();
+}
+inline void AppToServerCommand::set_has_replay_payment_status_update() {
+  _oneof_case_[0] = kReplayPaymentStatusUpdate;
+}
+inline void AppToServerCommand::clear_replay_payment_status_update() {
+  if (_internal_has_replay_payment_status_update()) {
+    if (GetArena() == nullptr) {
+      delete entry_.replay_payment_status_update_;
+    }
+    clear_has_entry();
+  }
+}
+inline ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* AppToServerCommand::release_replay_payment_status_update() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.AppToServerCommand.replay_payment_status_update)
+  if (_internal_has_replay_payment_status_update()) {
+    clear_has_entry();
+      ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* temp = entry_.replay_payment_status_update_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    entry_.replay_payment_status_update_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand& AppToServerCommand::_internal_replay_payment_status_update() const {
+  return _internal_has_replay_payment_status_update()
+      ? *entry_.replay_payment_status_update_
+      : reinterpret_cast< ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand&>(::com::elarian::hera::proto::_ReplayPaymentStatusUpdateCommand_default_instance_);
+}
+inline const ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand& AppToServerCommand::replay_payment_status_update() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.AppToServerCommand.replay_payment_status_update)
+  return _internal_replay_payment_status_update();
+}
+inline ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* AppToServerCommand::unsafe_arena_release_replay_payment_status_update() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:com.elarian.hera.proto.AppToServerCommand.replay_payment_status_update)
+  if (_internal_has_replay_payment_status_update()) {
+    clear_has_entry();
+    ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* temp = entry_.replay_payment_status_update_;
+    entry_.replay_payment_status_update_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void AppToServerCommand::unsafe_arena_set_allocated_replay_payment_status_update(::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* replay_payment_status_update) {
+  clear_entry();
+  if (replay_payment_status_update) {
+    set_has_replay_payment_status_update();
+    entry_.replay_payment_status_update_ = replay_payment_status_update;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.AppToServerCommand.replay_payment_status_update)
+}
+inline ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* AppToServerCommand::_internal_mutable_replay_payment_status_update() {
+  if (!_internal_has_replay_payment_status_update()) {
+    clear_entry();
+    set_has_replay_payment_status_update();
+    entry_.replay_payment_status_update_ = CreateMaybeMessage< ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand >(GetArena());
+  }
+  return entry_.replay_payment_status_update_;
+}
+inline ::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand* AppToServerCommand::mutable_replay_payment_status_update() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.AppToServerCommand.replay_payment_status_update)
+  return _internal_mutable_replay_payment_status_update();
+}
+
 inline bool AppToServerCommand::has_entry() const {
   return entry_case() != ENTRY_NOT_SET;
 }
@@ -16678,6 +17544,79 @@ inline ::com::elarian::hera::proto::CustomerActivityReply* AppToServerCommandRep
 inline ::com::elarian::hera::proto::CustomerActivityReply* AppToServerCommandReply::mutable_customer_activity() {
   // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.AppToServerCommandReply.customer_activity)
   return _internal_mutable_customer_activity();
+}
+
+// .com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;
+inline bool AppToServerCommandReply::_internal_has_replay_payment() const {
+  return entry_case() == kReplayPayment;
+}
+inline bool AppToServerCommandReply::has_replay_payment() const {
+  return _internal_has_replay_payment();
+}
+inline void AppToServerCommandReply::set_has_replay_payment() {
+  _oneof_case_[0] = kReplayPayment;
+}
+inline void AppToServerCommandReply::clear_replay_payment() {
+  if (_internal_has_replay_payment()) {
+    if (GetArena() == nullptr) {
+      delete entry_.replay_payment_;
+    }
+    clear_has_entry();
+  }
+}
+inline ::com::elarian::hera::proto::ReplayPaymentReply* AppToServerCommandReply::release_replay_payment() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.AppToServerCommandReply.replay_payment)
+  if (_internal_has_replay_payment()) {
+    clear_has_entry();
+      ::com::elarian::hera::proto::ReplayPaymentReply* temp = entry_.replay_payment_;
+    if (GetArena() != nullptr) {
+      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+    }
+    entry_.replay_payment_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline const ::com::elarian::hera::proto::ReplayPaymentReply& AppToServerCommandReply::_internal_replay_payment() const {
+  return _internal_has_replay_payment()
+      ? *entry_.replay_payment_
+      : reinterpret_cast< ::com::elarian::hera::proto::ReplayPaymentReply&>(::com::elarian::hera::proto::_ReplayPaymentReply_default_instance_);
+}
+inline const ::com::elarian::hera::proto::ReplayPaymentReply& AppToServerCommandReply::replay_payment() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.AppToServerCommandReply.replay_payment)
+  return _internal_replay_payment();
+}
+inline ::com::elarian::hera::proto::ReplayPaymentReply* AppToServerCommandReply::unsafe_arena_release_replay_payment() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:com.elarian.hera.proto.AppToServerCommandReply.replay_payment)
+  if (_internal_has_replay_payment()) {
+    clear_has_entry();
+    ::com::elarian::hera::proto::ReplayPaymentReply* temp = entry_.replay_payment_;
+    entry_.replay_payment_ = nullptr;
+    return temp;
+  } else {
+    return nullptr;
+  }
+}
+inline void AppToServerCommandReply::unsafe_arena_set_allocated_replay_payment(::com::elarian::hera::proto::ReplayPaymentReply* replay_payment) {
+  clear_entry();
+  if (replay_payment) {
+    set_has_replay_payment();
+    entry_.replay_payment_ = replay_payment;
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.AppToServerCommandReply.replay_payment)
+}
+inline ::com::elarian::hera::proto::ReplayPaymentReply* AppToServerCommandReply::_internal_mutable_replay_payment() {
+  if (!_internal_has_replay_payment()) {
+    clear_entry();
+    set_has_replay_payment();
+    entry_.replay_payment_ = CreateMaybeMessage< ::com::elarian::hera::proto::ReplayPaymentReply >(GetArena());
+  }
+  return entry_.replay_payment_;
+}
+inline ::com::elarian::hera::proto::ReplayPaymentReply* AppToServerCommandReply::mutable_replay_payment() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.AppToServerCommandReply.replay_payment)
+  return _internal_mutable_replay_payment();
 }
 
 inline bool AppToServerCommandReply::has_entry() const {
@@ -24008,6 +24947,954 @@ inline void InitiatePaymentReply::set_allocated_credit_customer_id(PROTOBUF_NAME
   }
   credit_customer_id_ = credit_customer_id;
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.InitiatePaymentReply.credit_customer_id)
+}
+
+// -------------------------------------------------------------------
+
+// ReplayPaymentCommand
+
+// string provider_transaction_id = 1;
+inline void ReplayPaymentCommand::clear_provider_transaction_id() {
+  provider_transaction_id_.ClearToEmpty();
+}
+inline const std::string& ReplayPaymentCommand::provider_transaction_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+  return _internal_provider_transaction_id();
+}
+inline void ReplayPaymentCommand::set_provider_transaction_id(const std::string& value) {
+  _internal_set_provider_transaction_id(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+}
+inline std::string* ReplayPaymentCommand::mutable_provider_transaction_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+  return _internal_mutable_provider_transaction_id();
+}
+inline const std::string& ReplayPaymentCommand::_internal_provider_transaction_id() const {
+  return provider_transaction_id_.Get();
+}
+inline void ReplayPaymentCommand::_internal_set_provider_transaction_id(const std::string& value) {
+  
+  provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void ReplayPaymentCommand::set_provider_transaction_id(std::string&& value) {
+  
+  provider_transaction_id_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+}
+inline void ReplayPaymentCommand::set_provider_transaction_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+}
+inline void ReplayPaymentCommand::set_provider_transaction_id(const char* value,
+    size_t size) {
+  
+  provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+}
+inline std::string* ReplayPaymentCommand::_internal_mutable_provider_transaction_id() {
+  
+  return provider_transaction_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* ReplayPaymentCommand::release_provider_transaction_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+  return provider_transaction_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void ReplayPaymentCommand::set_allocated_provider_transaction_id(std::string* provider_transaction_id) {
+  if (provider_transaction_id != nullptr) {
+    
+  } else {
+    
+  }
+  provider_transaction_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), provider_transaction_id,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.provider_transaction_id)
+}
+
+// .google.protobuf.Timestamp created_at = 2;
+inline bool ReplayPaymentCommand::_internal_has_created_at() const {
+  return this != internal_default_instance() && created_at_ != nullptr;
+}
+inline bool ReplayPaymentCommand::has_created_at() const {
+  return _internal_has_created_at();
+}
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& ReplayPaymentCommand::_internal_created_at() const {
+  const PROTOBUF_NAMESPACE_ID::Timestamp* p = created_at_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp&>(
+      PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& ReplayPaymentCommand::created_at() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.created_at)
+  return _internal_created_at();
+}
+inline void ReplayPaymentCommand::unsafe_arena_set_allocated_created_at(
+    PROTOBUF_NAMESPACE_ID::Timestamp* created_at) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(created_at_);
+  }
+  created_at_ = created_at;
+  if (created_at) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.created_at)
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentCommand::release_created_at() {
+  
+  PROTOBUF_NAMESPACE_ID::Timestamp* temp = created_at_;
+  created_at_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentCommand::unsafe_arena_release_created_at() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentCommand.created_at)
+  
+  PROTOBUF_NAMESPACE_ID::Timestamp* temp = created_at_;
+  created_at_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentCommand::_internal_mutable_created_at() {
+  
+  if (created_at_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
+    created_at_ = p;
+  }
+  return created_at_;
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentCommand::mutable_created_at() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentCommand.created_at)
+  return _internal_mutable_created_at();
+}
+inline void ReplayPaymentCommand::set_allocated_created_at(PROTOBUF_NAMESPACE_ID::Timestamp* created_at) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(created_at_);
+  }
+  if (created_at) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(created_at)->GetArena();
+    if (message_arena != submessage_arena) {
+      created_at = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, created_at, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  created_at_ = created_at;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.created_at)
+}
+
+// .com.elarian.hera.proto.PaymentCounterParty debit_party = 3;
+inline bool ReplayPaymentCommand::_internal_has_debit_party() const {
+  return this != internal_default_instance() && debit_party_ != nullptr;
+}
+inline bool ReplayPaymentCommand::has_debit_party() const {
+  return _internal_has_debit_party();
+}
+inline const ::com::elarian::hera::proto::PaymentCounterParty& ReplayPaymentCommand::_internal_debit_party() const {
+  const ::com::elarian::hera::proto::PaymentCounterParty* p = debit_party_;
+  return p != nullptr ? *p : reinterpret_cast<const ::com::elarian::hera::proto::PaymentCounterParty&>(
+      ::com::elarian::hera::proto::_PaymentCounterParty_default_instance_);
+}
+inline const ::com::elarian::hera::proto::PaymentCounterParty& ReplayPaymentCommand::debit_party() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.debit_party)
+  return _internal_debit_party();
+}
+inline void ReplayPaymentCommand::unsafe_arena_set_allocated_debit_party(
+    ::com::elarian::hera::proto::PaymentCounterParty* debit_party) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(debit_party_);
+  }
+  debit_party_ = debit_party;
+  if (debit_party) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.debit_party)
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::release_debit_party() {
+  
+  ::com::elarian::hera::proto::PaymentCounterParty* temp = debit_party_;
+  debit_party_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::unsafe_arena_release_debit_party() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentCommand.debit_party)
+  
+  ::com::elarian::hera::proto::PaymentCounterParty* temp = debit_party_;
+  debit_party_ = nullptr;
+  return temp;
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::_internal_mutable_debit_party() {
+  
+  if (debit_party_ == nullptr) {
+    auto* p = CreateMaybeMessage<::com::elarian::hera::proto::PaymentCounterParty>(GetArena());
+    debit_party_ = p;
+  }
+  return debit_party_;
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::mutable_debit_party() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentCommand.debit_party)
+  return _internal_mutable_debit_party();
+}
+inline void ReplayPaymentCommand::set_allocated_debit_party(::com::elarian::hera::proto::PaymentCounterParty* debit_party) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(debit_party_);
+  }
+  if (debit_party) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(debit_party)->GetArena();
+    if (message_arena != submessage_arena) {
+      debit_party = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, debit_party, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  debit_party_ = debit_party;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.debit_party)
+}
+
+// .com.elarian.hera.proto.PaymentCounterParty credit_party = 4;
+inline bool ReplayPaymentCommand::_internal_has_credit_party() const {
+  return this != internal_default_instance() && credit_party_ != nullptr;
+}
+inline bool ReplayPaymentCommand::has_credit_party() const {
+  return _internal_has_credit_party();
+}
+inline const ::com::elarian::hera::proto::PaymentCounterParty& ReplayPaymentCommand::_internal_credit_party() const {
+  const ::com::elarian::hera::proto::PaymentCounterParty* p = credit_party_;
+  return p != nullptr ? *p : reinterpret_cast<const ::com::elarian::hera::proto::PaymentCounterParty&>(
+      ::com::elarian::hera::proto::_PaymentCounterParty_default_instance_);
+}
+inline const ::com::elarian::hera::proto::PaymentCounterParty& ReplayPaymentCommand::credit_party() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.credit_party)
+  return _internal_credit_party();
+}
+inline void ReplayPaymentCommand::unsafe_arena_set_allocated_credit_party(
+    ::com::elarian::hera::proto::PaymentCounterParty* credit_party) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(credit_party_);
+  }
+  credit_party_ = credit_party;
+  if (credit_party) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.credit_party)
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::release_credit_party() {
+  
+  ::com::elarian::hera::proto::PaymentCounterParty* temp = credit_party_;
+  credit_party_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::unsafe_arena_release_credit_party() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentCommand.credit_party)
+  
+  ::com::elarian::hera::proto::PaymentCounterParty* temp = credit_party_;
+  credit_party_ = nullptr;
+  return temp;
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::_internal_mutable_credit_party() {
+  
+  if (credit_party_ == nullptr) {
+    auto* p = CreateMaybeMessage<::com::elarian::hera::proto::PaymentCounterParty>(GetArena());
+    credit_party_ = p;
+  }
+  return credit_party_;
+}
+inline ::com::elarian::hera::proto::PaymentCounterParty* ReplayPaymentCommand::mutable_credit_party() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentCommand.credit_party)
+  return _internal_mutable_credit_party();
+}
+inline void ReplayPaymentCommand::set_allocated_credit_party(::com::elarian::hera::proto::PaymentCounterParty* credit_party) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(credit_party_);
+  }
+  if (credit_party) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(credit_party)->GetArena();
+    if (message_arena != submessage_arena) {
+      credit_party = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, credit_party, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  credit_party_ = credit_party;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.credit_party)
+}
+
+// .com.elarian.hera.proto.PaymentStatus status = 5;
+inline void ReplayPaymentCommand::clear_status() {
+  status_ = 0;
+}
+inline ::com::elarian::hera::proto::PaymentStatus ReplayPaymentCommand::_internal_status() const {
+  return static_cast< ::com::elarian::hera::proto::PaymentStatus >(status_);
+}
+inline ::com::elarian::hera::proto::PaymentStatus ReplayPaymentCommand::status() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.status)
+  return _internal_status();
+}
+inline void ReplayPaymentCommand::_internal_set_status(::com::elarian::hera::proto::PaymentStatus value) {
+  
+  status_ = value;
+}
+inline void ReplayPaymentCommand::set_status(::com::elarian::hera::proto::PaymentStatus value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentCommand.status)
+}
+
+// .com.elarian.hera.proto.Cash value = 6;
+inline bool ReplayPaymentCommand::_internal_has_value() const {
+  return this != internal_default_instance() && value_ != nullptr;
+}
+inline bool ReplayPaymentCommand::has_value() const {
+  return _internal_has_value();
+}
+inline const ::com::elarian::hera::proto::Cash& ReplayPaymentCommand::_internal_value() const {
+  const ::com::elarian::hera::proto::Cash* p = value_;
+  return p != nullptr ? *p : reinterpret_cast<const ::com::elarian::hera::proto::Cash&>(
+      ::com::elarian::hera::proto::_Cash_default_instance_);
+}
+inline const ::com::elarian::hera::proto::Cash& ReplayPaymentCommand::value() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.value)
+  return _internal_value();
+}
+inline void ReplayPaymentCommand::unsafe_arena_set_allocated_value(
+    ::com::elarian::hera::proto::Cash* value) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(value_);
+  }
+  value_ = value;
+  if (value) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.value)
+}
+inline ::com::elarian::hera::proto::Cash* ReplayPaymentCommand::release_value() {
+  
+  ::com::elarian::hera::proto::Cash* temp = value_;
+  value_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::com::elarian::hera::proto::Cash* ReplayPaymentCommand::unsafe_arena_release_value() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentCommand.value)
+  
+  ::com::elarian::hera::proto::Cash* temp = value_;
+  value_ = nullptr;
+  return temp;
+}
+inline ::com::elarian::hera::proto::Cash* ReplayPaymentCommand::_internal_mutable_value() {
+  
+  if (value_ == nullptr) {
+    auto* p = CreateMaybeMessage<::com::elarian::hera::proto::Cash>(GetArena());
+    value_ = p;
+  }
+  return value_;
+}
+inline ::com::elarian::hera::proto::Cash* ReplayPaymentCommand::mutable_value() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentCommand.value)
+  return _internal_mutable_value();
+}
+inline void ReplayPaymentCommand::set_allocated_value(::com::elarian::hera::proto::Cash* value) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(value_);
+  }
+  if (value) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(value)->GetArena();
+    if (message_arena != submessage_arena) {
+      value = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, value, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  value_ = value;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.value)
+}
+
+// -------------------------------------------------------------------
+
+// ReplayPaymentStatusUpdateCommand
+
+// .com.elarian.hera.proto.CustomerNumber customer_number = 1;
+inline bool ReplayPaymentStatusUpdateCommand::_internal_has_customer_number() const {
+  return this != internal_default_instance() && customer_number_ != nullptr;
+}
+inline bool ReplayPaymentStatusUpdateCommand::has_customer_number() const {
+  return _internal_has_customer_number();
+}
+inline const ::com::elarian::hera::proto::CustomerNumber& ReplayPaymentStatusUpdateCommand::_internal_customer_number() const {
+  const ::com::elarian::hera::proto::CustomerNumber* p = customer_number_;
+  return p != nullptr ? *p : reinterpret_cast<const ::com::elarian::hera::proto::CustomerNumber&>(
+      ::com::elarian::hera::proto::_CustomerNumber_default_instance_);
+}
+inline const ::com::elarian::hera::proto::CustomerNumber& ReplayPaymentStatusUpdateCommand::customer_number() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.customer_number)
+  return _internal_customer_number();
+}
+inline void ReplayPaymentStatusUpdateCommand::unsafe_arena_set_allocated_customer_number(
+    ::com::elarian::hera::proto::CustomerNumber* customer_number) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(customer_number_);
+  }
+  customer_number_ = customer_number;
+  if (customer_number) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.customer_number)
+}
+inline ::com::elarian::hera::proto::CustomerNumber* ReplayPaymentStatusUpdateCommand::release_customer_number() {
+  
+  ::com::elarian::hera::proto::CustomerNumber* temp = customer_number_;
+  customer_number_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline ::com::elarian::hera::proto::CustomerNumber* ReplayPaymentStatusUpdateCommand::unsafe_arena_release_customer_number() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.customer_number)
+  
+  ::com::elarian::hera::proto::CustomerNumber* temp = customer_number_;
+  customer_number_ = nullptr;
+  return temp;
+}
+inline ::com::elarian::hera::proto::CustomerNumber* ReplayPaymentStatusUpdateCommand::_internal_mutable_customer_number() {
+  
+  if (customer_number_ == nullptr) {
+    auto* p = CreateMaybeMessage<::com::elarian::hera::proto::CustomerNumber>(GetArena());
+    customer_number_ = p;
+  }
+  return customer_number_;
+}
+inline ::com::elarian::hera::proto::CustomerNumber* ReplayPaymentStatusUpdateCommand::mutable_customer_number() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.customer_number)
+  return _internal_mutable_customer_number();
+}
+inline void ReplayPaymentStatusUpdateCommand::set_allocated_customer_number(::com::elarian::hera::proto::CustomerNumber* customer_number) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(customer_number_);
+  }
+  if (customer_number) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(customer_number)->GetArena();
+    if (message_arena != submessage_arena) {
+      customer_number = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, customer_number, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  customer_number_ = customer_number;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.customer_number)
+}
+
+// string provider_transaction_id = 2;
+inline void ReplayPaymentStatusUpdateCommand::clear_provider_transaction_id() {
+  provider_transaction_id_.ClearToEmpty();
+}
+inline const std::string& ReplayPaymentStatusUpdateCommand::provider_transaction_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+  return _internal_provider_transaction_id();
+}
+inline void ReplayPaymentStatusUpdateCommand::set_provider_transaction_id(const std::string& value) {
+  _internal_set_provider_transaction_id(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+}
+inline std::string* ReplayPaymentStatusUpdateCommand::mutable_provider_transaction_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+  return _internal_mutable_provider_transaction_id();
+}
+inline const std::string& ReplayPaymentStatusUpdateCommand::_internal_provider_transaction_id() const {
+  return provider_transaction_id_.Get();
+}
+inline void ReplayPaymentStatusUpdateCommand::_internal_set_provider_transaction_id(const std::string& value) {
+  
+  provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void ReplayPaymentStatusUpdateCommand::set_provider_transaction_id(std::string&& value) {
+  
+  provider_transaction_id_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+}
+inline void ReplayPaymentStatusUpdateCommand::set_provider_transaction_id(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+}
+inline void ReplayPaymentStatusUpdateCommand::set_provider_transaction_id(const char* value,
+    size_t size) {
+  
+  provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+}
+inline std::string* ReplayPaymentStatusUpdateCommand::_internal_mutable_provider_transaction_id() {
+  
+  return provider_transaction_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* ReplayPaymentStatusUpdateCommand::release_provider_transaction_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+  return provider_transaction_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void ReplayPaymentStatusUpdateCommand::set_allocated_provider_transaction_id(std::string* provider_transaction_id) {
+  if (provider_transaction_id != nullptr) {
+    
+  } else {
+    
+  }
+  provider_transaction_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), provider_transaction_id,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.provider_transaction_id)
+}
+
+// .google.protobuf.Timestamp updated_at = 3;
+inline bool ReplayPaymentStatusUpdateCommand::_internal_has_updated_at() const {
+  return this != internal_default_instance() && updated_at_ != nullptr;
+}
+inline bool ReplayPaymentStatusUpdateCommand::has_updated_at() const {
+  return _internal_has_updated_at();
+}
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& ReplayPaymentStatusUpdateCommand::_internal_updated_at() const {
+  const PROTOBUF_NAMESPACE_ID::Timestamp* p = updated_at_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::Timestamp&>(
+      PROTOBUF_NAMESPACE_ID::_Timestamp_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::Timestamp& ReplayPaymentStatusUpdateCommand::updated_at() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.updated_at)
+  return _internal_updated_at();
+}
+inline void ReplayPaymentStatusUpdateCommand::unsafe_arena_set_allocated_updated_at(
+    PROTOBUF_NAMESPACE_ID::Timestamp* updated_at) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(updated_at_);
+  }
+  updated_at_ = updated_at;
+  if (updated_at) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.updated_at)
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentStatusUpdateCommand::release_updated_at() {
+  
+  PROTOBUF_NAMESPACE_ID::Timestamp* temp = updated_at_;
+  updated_at_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentStatusUpdateCommand::unsafe_arena_release_updated_at() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.updated_at)
+  
+  PROTOBUF_NAMESPACE_ID::Timestamp* temp = updated_at_;
+  updated_at_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentStatusUpdateCommand::_internal_mutable_updated_at() {
+  
+  if (updated_at_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::Timestamp>(GetArena());
+    updated_at_ = p;
+  }
+  return updated_at_;
+}
+inline PROTOBUF_NAMESPACE_ID::Timestamp* ReplayPaymentStatusUpdateCommand::mutable_updated_at() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.updated_at)
+  return _internal_mutable_updated_at();
+}
+inline void ReplayPaymentStatusUpdateCommand::set_allocated_updated_at(PROTOBUF_NAMESPACE_ID::Timestamp* updated_at) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(updated_at_);
+  }
+  if (updated_at) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(updated_at)->GetArena();
+    if (message_arena != submessage_arena) {
+      updated_at = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, updated_at, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  updated_at_ = updated_at;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.updated_at)
+}
+
+// .com.elarian.hera.proto.PaymentStatus status = 4;
+inline void ReplayPaymentStatusUpdateCommand::clear_status() {
+  status_ = 0;
+}
+inline ::com::elarian::hera::proto::PaymentStatus ReplayPaymentStatusUpdateCommand::_internal_status() const {
+  return static_cast< ::com::elarian::hera::proto::PaymentStatus >(status_);
+}
+inline ::com::elarian::hera::proto::PaymentStatus ReplayPaymentStatusUpdateCommand::status() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.status)
+  return _internal_status();
+}
+inline void ReplayPaymentStatusUpdateCommand::_internal_set_status(::com::elarian::hera::proto::PaymentStatus value) {
+  
+  status_ = value;
+}
+inline void ReplayPaymentStatusUpdateCommand::set_status(::com::elarian::hera::proto::PaymentStatus value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand.status)
+}
+
+// -------------------------------------------------------------------
+
+// ReplayPaymentReply
+
+// bool status = 1;
+inline void ReplayPaymentReply::clear_status() {
+  status_ = false;
+}
+inline bool ReplayPaymentReply::_internal_status() const {
+  return status_;
+}
+inline bool ReplayPaymentReply::status() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentReply.status)
+  return _internal_status();
+}
+inline void ReplayPaymentReply::_internal_set_status(bool value) {
+  
+  status_ = value;
+}
+inline void ReplayPaymentReply::set_status(bool value) {
+  _internal_set_status(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentReply.status)
+}
+
+// string description = 2;
+inline void ReplayPaymentReply::clear_description() {
+  description_.ClearToEmpty();
+}
+inline const std::string& ReplayPaymentReply::description() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentReply.description)
+  return _internal_description();
+}
+inline void ReplayPaymentReply::set_description(const std::string& value) {
+  _internal_set_description(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentReply.description)
+}
+inline std::string* ReplayPaymentReply::mutable_description() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentReply.description)
+  return _internal_mutable_description();
+}
+inline const std::string& ReplayPaymentReply::_internal_description() const {
+  return description_.Get();
+}
+inline void ReplayPaymentReply::_internal_set_description(const std::string& value) {
+  
+  description_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void ReplayPaymentReply::set_description(std::string&& value) {
+  
+  description_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.ReplayPaymentReply.description)
+}
+inline void ReplayPaymentReply::set_description(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  description_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.ReplayPaymentReply.description)
+}
+inline void ReplayPaymentReply::set_description(const char* value,
+    size_t size) {
+  
+  description_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.ReplayPaymentReply.description)
+}
+inline std::string* ReplayPaymentReply::_internal_mutable_description() {
+  
+  return description_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* ReplayPaymentReply::release_description() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentReply.description)
+  return description_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void ReplayPaymentReply::set_allocated_description(std::string* description) {
+  if (description != nullptr) {
+    
+  } else {
+    
+  }
+  description_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), description,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.description)
+}
+
+// .google.protobuf.StringValue transaction_id = 3;
+inline bool ReplayPaymentReply::_internal_has_transaction_id() const {
+  return this != internal_default_instance() && transaction_id_ != nullptr;
+}
+inline bool ReplayPaymentReply::has_transaction_id() const {
+  return _internal_has_transaction_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReplayPaymentReply::_internal_transaction_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = transaction_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReplayPaymentReply::transaction_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentReply.transaction_id)
+  return _internal_transaction_id();
+}
+inline void ReplayPaymentReply::unsafe_arena_set_allocated_transaction_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* transaction_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(transaction_id_);
+  }
+  transaction_id_ = transaction_id;
+  if (transaction_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.transaction_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::release_transaction_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = transaction_id_;
+  transaction_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::unsafe_arena_release_transaction_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentReply.transaction_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = transaction_id_;
+  transaction_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::_internal_mutable_transaction_id() {
+  
+  if (transaction_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    transaction_id_ = p;
+  }
+  return transaction_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::mutable_transaction_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentReply.transaction_id)
+  return _internal_mutable_transaction_id();
+}
+inline void ReplayPaymentReply::set_allocated_transaction_id(PROTOBUF_NAMESPACE_ID::StringValue* transaction_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(transaction_id_);
+  }
+  if (transaction_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(transaction_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      transaction_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, transaction_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  transaction_id_ = transaction_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.transaction_id)
+}
+
+// .google.protobuf.StringValue debit_customer_id = 4;
+inline bool ReplayPaymentReply::_internal_has_debit_customer_id() const {
+  return this != internal_default_instance() && debit_customer_id_ != nullptr;
+}
+inline bool ReplayPaymentReply::has_debit_customer_id() const {
+  return _internal_has_debit_customer_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReplayPaymentReply::_internal_debit_customer_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = debit_customer_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReplayPaymentReply::debit_customer_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentReply.debit_customer_id)
+  return _internal_debit_customer_id();
+}
+inline void ReplayPaymentReply::unsafe_arena_set_allocated_debit_customer_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* debit_customer_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(debit_customer_id_);
+  }
+  debit_customer_id_ = debit_customer_id;
+  if (debit_customer_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.debit_customer_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::release_debit_customer_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = debit_customer_id_;
+  debit_customer_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::unsafe_arena_release_debit_customer_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentReply.debit_customer_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = debit_customer_id_;
+  debit_customer_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::_internal_mutable_debit_customer_id() {
+  
+  if (debit_customer_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    debit_customer_id_ = p;
+  }
+  return debit_customer_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::mutable_debit_customer_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentReply.debit_customer_id)
+  return _internal_mutable_debit_customer_id();
+}
+inline void ReplayPaymentReply::set_allocated_debit_customer_id(PROTOBUF_NAMESPACE_ID::StringValue* debit_customer_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(debit_customer_id_);
+  }
+  if (debit_customer_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(debit_customer_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      debit_customer_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, debit_customer_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  debit_customer_id_ = debit_customer_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.debit_customer_id)
+}
+
+// .google.protobuf.StringValue credit_customer_id = 5;
+inline bool ReplayPaymentReply::_internal_has_credit_customer_id() const {
+  return this != internal_default_instance() && credit_customer_id_ != nullptr;
+}
+inline bool ReplayPaymentReply::has_credit_customer_id() const {
+  return _internal_has_credit_customer_id();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReplayPaymentReply::_internal_credit_customer_id() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = credit_customer_id_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& ReplayPaymentReply::credit_customer_id() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentReply.credit_customer_id)
+  return _internal_credit_customer_id();
+}
+inline void ReplayPaymentReply::unsafe_arena_set_allocated_credit_customer_id(
+    PROTOBUF_NAMESPACE_ID::StringValue* credit_customer_id) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(credit_customer_id_);
+  }
+  credit_customer_id_ = credit_customer_id;
+  if (credit_customer_id) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.credit_customer_id)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::release_credit_customer_id() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = credit_customer_id_;
+  credit_customer_id_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::unsafe_arena_release_credit_customer_id() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentReply.credit_customer_id)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = credit_customer_id_;
+  credit_customer_id_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::_internal_mutable_credit_customer_id() {
+  
+  if (credit_customer_id_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    credit_customer_id_ = p;
+  }
+  return credit_customer_id_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* ReplayPaymentReply::mutable_credit_customer_id() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentReply.credit_customer_id)
+  return _internal_mutable_credit_customer_id();
+}
+inline void ReplayPaymentReply::set_allocated_credit_customer_id(PROTOBUF_NAMESPACE_ID::StringValue* credit_customer_id) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(credit_customer_id_);
+  }
+  if (credit_customer_id) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(credit_customer_id)->GetArena();
+    if (message_arena != submessage_arena) {
+      credit_customer_id = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, credit_customer_id, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  credit_customer_id_ = credit_customer_id;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentReply.credit_customer_id)
 }
 
 // -------------------------------------------------------------------
@@ -32231,6 +34118,12 @@ inline void CustomerActivityNotification::set_allocated_activity(::com::elarian:
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
+// -------------------------------------------------------------------
+
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------

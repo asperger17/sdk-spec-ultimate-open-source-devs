@@ -31,6 +31,7 @@ class AppToServerCommandReply extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\InitiatePaymentReply $initiate_payment
      *     @type \Com\Elarian\Hera\Proto\TagCommandReply $tag_command
      *     @type \Com\Elarian\Hera\Proto\CustomerActivityReply $customer_activity
+     *     @type \Com\Elarian\Hera\Proto\ReplayPaymentReply $replay_payment
      * }
      */
     public function __construct($data = NULL) {
@@ -304,6 +305,33 @@ class AppToServerCommandReply extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\CustomerActivityReply::class);
         $this->writeOneof(10, $var);
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     * @return \Com\Elarian\Hera\Proto\ReplayPaymentReply
+     */
+    public function getReplayPayment()
+    {
+        return $this->readOneof(11);
+    }
+
+    public function hasReplayPayment()
+    {
+        return $this->hasOneof(11);
+    }
+
+    /**
+     * Generated from protobuf field <code>.com.elarian.hera.proto.ReplayPaymentReply replay_payment = 11;</code>
+     * @param \Com\Elarian\Hera\Proto\ReplayPaymentReply $var
+     * @return $this
+     */
+    public function setReplayPayment($var)
+    {
+        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\ReplayPaymentReply::class);
+        $this->writeOneof(11, $var);
 
         return $this;
     }
