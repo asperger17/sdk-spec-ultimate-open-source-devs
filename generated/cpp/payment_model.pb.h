@@ -1792,6 +1792,7 @@ class PaymentTransaction PROTOBUF_FINAL :
     kCreatedAtFieldNumber = 8,
     kUpdatedAtFieldNumber = 9,
     kProviderTransactionIdFieldNumber = 10,
+    kNarrationFieldNumber = 11,
     kStatusFieldNumber = 7,
   };
   // string transaction_id = 1;
@@ -1936,6 +1937,24 @@ class PaymentTransaction PROTOBUF_FINAL :
       PROTOBUF_NAMESPACE_ID::StringValue* provider_transaction_id);
   PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_provider_transaction_id();
 
+  // .google.protobuf.StringValue narration = 11;
+  bool has_narration() const;
+  private:
+  bool _internal_has_narration() const;
+  public:
+  void clear_narration();
+  const PROTOBUF_NAMESPACE_ID::StringValue& narration() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_narration();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_narration();
+  void set_allocated_narration(PROTOBUF_NAMESPACE_ID::StringValue* narration);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_narration() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_narration();
+  public:
+  void unsafe_arena_set_allocated_narration(
+      PROTOBUF_NAMESPACE_ID::StringValue* narration);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_narration();
+
   // .com.elarian.hera.proto.PaymentStatus status = 7;
   void clear_status();
   ::com::elarian::hera::proto::PaymentStatus status() const;
@@ -1960,6 +1979,7 @@ class PaymentTransaction PROTOBUF_FINAL :
   PROTOBUF_NAMESPACE_ID::Timestamp* created_at_;
   PROTOBUF_NAMESPACE_ID::Timestamp* updated_at_;
   PROTOBUF_NAMESPACE_ID::StringValue* provider_transaction_id_;
+  PROTOBUF_NAMESPACE_ID::StringValue* narration_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_payment_5fmodel_2eproto;
@@ -4098,6 +4118,83 @@ inline void PaymentTransaction::set_allocated_provider_transaction_id(PROTOBUF_N
   }
   provider_transaction_id_ = provider_transaction_id;
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.PaymentTransaction.provider_transaction_id)
+}
+
+// .google.protobuf.StringValue narration = 11;
+inline bool PaymentTransaction::_internal_has_narration() const {
+  return this != internal_default_instance() && narration_ != nullptr;
+}
+inline bool PaymentTransaction::has_narration() const {
+  return _internal_has_narration();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& PaymentTransaction::_internal_narration() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = narration_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& PaymentTransaction::narration() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.PaymentTransaction.narration)
+  return _internal_narration();
+}
+inline void PaymentTransaction::unsafe_arena_set_allocated_narration(
+    PROTOBUF_NAMESPACE_ID::StringValue* narration) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(narration_);
+  }
+  narration_ = narration;
+  if (narration) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.PaymentTransaction.narration)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::release_narration() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = narration_;
+  narration_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::unsafe_arena_release_narration() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.PaymentTransaction.narration)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = narration_;
+  narration_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::_internal_mutable_narration() {
+  
+  if (narration_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    narration_ = p;
+  }
+  return narration_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::mutable_narration() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.PaymentTransaction.narration)
+  return _internal_mutable_narration();
+}
+inline void PaymentTransaction::set_allocated_narration(PROTOBUF_NAMESPACE_ID::StringValue* narration) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(narration_);
+  }
+  if (narration) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(narration)->GetArena();
+    if (message_arena != submessage_arena) {
+      narration = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, narration, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  narration_ = narration;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.PaymentTransaction.narration)
 }
 
 #ifdef __GNUC__

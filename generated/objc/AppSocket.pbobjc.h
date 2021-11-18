@@ -103,7 +103,6 @@ CF_EXTERN_C_BEGIN
 @class UpdateCustomerTagCommand;
 @class UpdateMessagingConsentCommand;
 @class UpdateMessagingConsentReply;
-@class WalletPaymentStatusNotification;
 GPB_ENUM_FWD_DECLARE(ChannelNumberProvider);
 GPB_ENUM_FWD_DECLARE(MessageDeliveryStatus);
 GPB_ENUM_FWD_DECLARE(MessageReaction);
@@ -1202,6 +1201,7 @@ typedef GPB_ENUM(InitiatePaymentCommand_FieldNumber) {
   InitiatePaymentCommand_FieldNumber_DebitParty = 1,
   InitiatePaymentCommand_FieldNumber_CreditParty = 2,
   InitiatePaymentCommand_FieldNumber_Value = 3,
+  InitiatePaymentCommand_FieldNumber_Narration = 4,
 };
 
 GPB_FINAL @interface InitiatePaymentCommand : GPBMessage
@@ -1217,6 +1217,8 @@ GPB_FINAL @interface InitiatePaymentCommand : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) Cash *value;
 /** Test to see if @c value has been set. */
 @property(nonatomic, readwrite) BOOL hasValue;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *narration;
 
 @end
 
@@ -1271,6 +1273,7 @@ typedef GPB_ENUM(ReplayPaymentCommand_FieldNumber) {
   ReplayPaymentCommand_FieldNumber_CreditParty = 4,
   ReplayPaymentCommand_FieldNumber_Status = 5,
   ReplayPaymentCommand_FieldNumber_Value = 6,
+  ReplayPaymentCommand_FieldNumber_Narration = 7,
 };
 
 GPB_FINAL @interface ReplayPaymentCommand : GPBMessage
@@ -1294,6 +1297,8 @@ GPB_FINAL @interface ReplayPaymentCommand : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) Cash *value;
 /** Test to see if @c value has been set. */
 @property(nonatomic, readwrite) BOOL hasValue;
+
+@property(nonatomic, readwrite, copy, null_resettable) NSString *narration;
 
 @end
 
@@ -1809,7 +1814,6 @@ typedef GPB_ENUM(ServerToAppCustomerNotification_FieldNumber) {
   ServerToAppCustomerNotification_FieldNumber_SentMessageReaction = 13,
   ServerToAppCustomerNotification_FieldNumber_ReceivedPayment = 14,
   ServerToAppCustomerNotification_FieldNumber_PaymentStatus = 15,
-  ServerToAppCustomerNotification_FieldNumber_WalletPaymentStatus = 16,
   ServerToAppCustomerNotification_FieldNumber_CustomerActivity = 17,
 };
 
@@ -1825,7 +1829,6 @@ typedef GPB_ENUM(ServerToAppCustomerNotification_Entry_OneOfCase) {
   ServerToAppCustomerNotification_Entry_OneOfCase_SentMessageReaction = 13,
   ServerToAppCustomerNotification_Entry_OneOfCase_ReceivedPayment = 14,
   ServerToAppCustomerNotification_Entry_OneOfCase_PaymentStatus = 15,
-  ServerToAppCustomerNotification_Entry_OneOfCase_WalletPaymentStatus = 16,
   ServerToAppCustomerNotification_Entry_OneOfCase_CustomerActivity = 17,
 };
 
@@ -1866,8 +1869,6 @@ GPB_FINAL @interface ServerToAppCustomerNotification : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) ReceivedPaymentNotification *receivedPayment;
 
 @property(nonatomic, readwrite, strong, null_resettable) PaymentStatusNotification *paymentStatus;
-
-@property(nonatomic, readwrite, strong, null_resettable) WalletPaymentStatusNotification *walletPaymentStatus;
 
 @property(nonatomic, readwrite, strong, null_resettable) CustomerActivityNotification *customerActivity;
 
@@ -2290,36 +2291,6 @@ int32_t PaymentStatusNotification_Status_RawValue(PaymentStatusNotification *mes
  * was generated.
  **/
 void SetPaymentStatusNotification_Status_RawValue(PaymentStatusNotification *message, int32_t value);
-
-#pragma mark - WalletPaymentStatusNotification
-
-typedef GPB_ENUM(WalletPaymentStatusNotification_FieldNumber) {
-  WalletPaymentStatusNotification_FieldNumber_WalletId = 1,
-  WalletPaymentStatusNotification_FieldNumber_TransactionId = 2,
-  WalletPaymentStatusNotification_FieldNumber_Status = 3,
-};
-
-GPB_FINAL @interface WalletPaymentStatusNotification : GPBMessage
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *walletId;
-
-@property(nonatomic, readwrite, copy, null_resettable) NSString *transactionId;
-
-@property(nonatomic, readwrite) enum PaymentStatus status;
-
-@end
-
-/**
- * Fetches the raw value of a @c WalletPaymentStatusNotification's @c status property, even
- * if the value was not defined by the enum at the time the code was generated.
- **/
-int32_t WalletPaymentStatusNotification_Status_RawValue(WalletPaymentStatusNotification *message);
-/**
- * Sets the raw value of an @c WalletPaymentStatusNotification's @c status property, allowing
- * it to be set to a value that was not defined by the enum at the time the code
- * was generated.
- **/
-void SetWalletPaymentStatusNotification_Status_RawValue(WalletPaymentStatusNotification *message, int32_t value);
 
 #pragma mark - CustomerActivityNotification
 

@@ -37,6 +37,10 @@ class ReplayPaymentCommand extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.com.elarian.hera.proto.Cash value = 6;</code>
      */
     protected $value = null;
+    /**
+     * Generated from protobuf field <code>string narration = 7;</code>
+     */
+    protected $narration = '';
 
     /**
      * Constructor.
@@ -50,6 +54,7 @@ class ReplayPaymentCommand extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\PaymentCounterParty $credit_party
      *     @type int $status
      *     @type \Com\Elarian\Hera\Proto\Cash $value
+     *     @type string $narration
      * }
      */
     public function __construct($data = NULL) {
@@ -225,6 +230,28 @@ class ReplayPaymentCommand extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\Cash::class);
         $this->value = $var;
+
+        return $this;
+    }
+
+    /**
+     * Generated from protobuf field <code>string narration = 7;</code>
+     * @return string
+     */
+    public function getNarration()
+    {
+        return $this->narration;
+    }
+
+    /**
+     * Generated from protobuf field <code>string narration = 7;</code>
+     * @param string $var
+     * @return $this
+     */
+    public function setNarration($var)
+    {
+        GPBUtil::checkString($var, True);
+        $this->narration = $var;
 
         return $this;
     }

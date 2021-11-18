@@ -77,7 +77,7 @@ extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::in
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_SendMessageReply_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_SendMessageTagCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_SentMessageReactionNotification_app_5fsocket_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<14> scc_info_ServerToAppCustomerNotification_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<13> scc_info_ServerToAppCustomerNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_ServerToAppPurseNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_TagCommandReply_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_UpdateCustomerAppDataCommand_app_5fsocket_2eproto;
@@ -89,7 +89,6 @@ extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::in
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_UpdateCustomerTagCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_UpdateMessagingConsentCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_UpdateMessagingConsentReply_app_5fsocket_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fduration_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Duration_google_2fprotobuf_2fduration_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2fwrappers_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_google_2fprotobuf_2ftimestamp_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto;
@@ -349,10 +348,6 @@ class PaymentStatusNotificationDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<PaymentStatusNotification> _instance;
 } _PaymentStatusNotification_default_instance_;
-class WalletPaymentStatusNotificationDefaultTypeInternal {
- public:
-  ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<WalletPaymentStatusNotification> _instance;
-} _WalletPaymentStatusNotification_default_instance_;
 class CustomerActivityNotificationDefaultTypeInternal {
  public:
   ::PROTOBUF_NAMESPACE_ID::internal::ExplicitlyConstructed<CustomerActivityNotification> _instance;
@@ -1167,8 +1162,8 @@ static void InitDefaultsscc_info_ServerToAppCustomerNotification_app_5fsocket_2e
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<14> scc_info_ServerToAppCustomerNotification_app_5fsocket_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 14, 0, InitDefaultsscc_info_ServerToAppCustomerNotification_app_5fsocket_2eproto}, {
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<13> scc_info_ServerToAppCustomerNotification_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 13, 0, InitDefaultsscc_info_ServerToAppCustomerNotification_app_5fsocket_2eproto}, {
       &scc_info_DataMapValue_common_5fmodel_2eproto.base,
       &scc_info_Timestamp_google_2fprotobuf_2ftimestamp_2eproto.base,
       &scc_info_ReminderNotification_app_5fsocket_2eproto.base,
@@ -1181,7 +1176,6 @@ static void InitDefaultsscc_info_ServerToAppCustomerNotification_app_5fsocket_2e
       &scc_info_SentMessageReactionNotification_app_5fsocket_2eproto.base,
       &scc_info_ReceivedPaymentNotification_app_5fsocket_2eproto.base,
       &scc_info_PaymentStatusNotification_app_5fsocket_2eproto.base,
-      &scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto.base,
       &scc_info_CustomerActivityNotification_app_5fsocket_2eproto.base,}};
 
 static void InitDefaultsscc_info_ServerToAppNotification_app_5fsocket_2eproto() {
@@ -1377,20 +1371,7 @@ static void InitDefaultsscc_info_UpdateMessagingConsentReply_app_5fsocket_2eprot
     {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_UpdateMessagingConsentReply_app_5fsocket_2eproto}, {
       &scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
 
-static void InitDefaultsscc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto() {
-  GOOGLE_PROTOBUF_VERIFY_VERSION;
-
-  {
-    void* ptr = &::com::elarian::hera::proto::_WalletPaymentStatusNotification_default_instance_;
-    new (ptr) ::com::elarian::hera::proto::WalletPaymentStatusNotification();
-    ::PROTOBUF_NAMESPACE_ID::internal::OnShutdownDestroyMessage(ptr);
-  }
-}
-
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto}, {}};
-
-static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fsocket_2eproto[65];
+static ::PROTOBUF_NAMESPACE_ID::Metadata file_level_metadata_app_5fsocket_2eproto[64];
 static constexpr ::PROTOBUF_NAMESPACE_ID::EnumDescriptor const** file_level_enum_descriptors_app_5fsocket_2eproto = nullptr;
 static constexpr ::PROTOBUF_NAMESPACE_ID::ServiceDescriptor const** file_level_service_descriptors_app_5fsocket_2eproto = nullptr;
 
@@ -1729,6 +1710,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::InitiatePaymentCommand, debit_party_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::InitiatePaymentCommand, credit_party_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::InitiatePaymentCommand, value_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::InitiatePaymentCommand, narration_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::InitiatePaymentReply, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1750,6 +1732,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayPaymentCommand, credit_party_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayPaymentCommand, status_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayPaymentCommand, value_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayPaymentCommand, narration_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -1904,7 +1887,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
-  ::PROTOBUF_NAMESPACE_ID::internal::kInvalidFieldOffsetTag,
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ServerToAppCustomerNotification, entry_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::ServerToAppPurseNotification, _internal_metadata_),
@@ -2021,14 +2003,6 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentStatusNotification, transaction_id_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentStatusNotification, status_),
   ~0u,  // no _has_bits_
-  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::WalletPaymentStatusNotification, _internal_metadata_),
-  ~0u,  // no _extensions_
-  ~0u,  // no _oneof_case_
-  ~0u,  // no _weak_field_map_
-  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::WalletPaymentStatusNotification, wallet_id_),
-  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::WalletPaymentStatusNotification, transaction_id_),
-  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::WalletPaymentStatusNotification, status_),
-  ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::CustomerActivityNotification, _internal_metadata_),
   ~0u,  // no _extensions_
   ~0u,  // no _oneof_case_
@@ -2073,37 +2047,36 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 310, -1, sizeof(::com::elarian::hera::proto::UpdateMessagingConsentCommand)},
   { 318, -1, sizeof(::com::elarian::hera::proto::UpdateMessagingConsentReply)},
   { 326, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentCommand)},
-  { 334, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentReply)},
-  { 344, -1, sizeof(::com::elarian::hera::proto::ReplayPaymentCommand)},
-  { 355, -1, sizeof(::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand)},
-  { 364, -1, sizeof(::com::elarian::hera::proto::ReplayPaymentReply)},
-  { 374, -1, sizeof(::com::elarian::hera::proto::TagCommandReply)},
-  { 382, 389, sizeof(::com::elarian::hera::proto::CustomerActivityCommand_PropertiesEntry_DoNotUse)},
-  { 391, -1, sizeof(::com::elarian::hera::proto::CustomerActivityCommand)},
-  { 401, -1, sizeof(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand)},
-  { 410, -1, sizeof(::com::elarian::hera::proto::ReplayReceivedMessageCommand)},
-  { 424, -1, sizeof(::com::elarian::hera::proto::ReplaySentMessageCommand)},
-  { 439, -1, sizeof(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand)},
-  { 450, -1, sizeof(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand)},
-  { 460, -1, sizeof(::com::elarian::hera::proto::ReplayMessagingSessionCommand)},
-  { 472, -1, sizeof(::com::elarian::hera::proto::CustomerActivityReply)},
-  { 480, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotification)},
-  { 488, -1, sizeof(::com::elarian::hera::proto::ServerToAppCustomerNotification)},
-  { 511, -1, sizeof(::com::elarian::hera::proto::ServerToAppPurseNotification)},
-  { 522, -1, sizeof(::com::elarian::hera::proto::AppDataUpdate)},
-  { 528, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotificationReply)},
-  { 535, -1, sizeof(::com::elarian::hera::proto::ReminderNotification)},
-  { 543, -1, sizeof(::com::elarian::hera::proto::MessagingSessionStartedNotification)},
-  { 552, -1, sizeof(::com::elarian::hera::proto::MessagingSessionRenewedNotification)},
-  { 561, -1, sizeof(::com::elarian::hera::proto::MessagingSessionEndedNotification)},
-  { 571, -1, sizeof(::com::elarian::hera::proto::MessagingConsentUpdateNotification)},
-  { 580, -1, sizeof(::com::elarian::hera::proto::ReceivedMessageNotification)},
-  { 591, -1, sizeof(::com::elarian::hera::proto::MessageStatusNotification)},
-  { 598, -1, sizeof(::com::elarian::hera::proto::SentMessageReactionNotification)},
-  { 607, -1, sizeof(::com::elarian::hera::proto::ReceivedPaymentNotification)},
-  { 618, -1, sizeof(::com::elarian::hera::proto::PaymentStatusNotification)},
-  { 625, -1, sizeof(::com::elarian::hera::proto::WalletPaymentStatusNotification)},
-  { 633, -1, sizeof(::com::elarian::hera::proto::CustomerActivityNotification)},
+  { 335, -1, sizeof(::com::elarian::hera::proto::InitiatePaymentReply)},
+  { 345, -1, sizeof(::com::elarian::hera::proto::ReplayPaymentCommand)},
+  { 357, -1, sizeof(::com::elarian::hera::proto::ReplayPaymentStatusUpdateCommand)},
+  { 366, -1, sizeof(::com::elarian::hera::proto::ReplayPaymentReply)},
+  { 376, -1, sizeof(::com::elarian::hera::proto::TagCommandReply)},
+  { 384, 391, sizeof(::com::elarian::hera::proto::CustomerActivityCommand_PropertiesEntry_DoNotUse)},
+  { 393, -1, sizeof(::com::elarian::hera::proto::CustomerActivityCommand)},
+  { 403, -1, sizeof(::com::elarian::hera::proto::ReplayMessagingConsentUpdateCommand)},
+  { 412, -1, sizeof(::com::elarian::hera::proto::ReplayReceivedMessageCommand)},
+  { 426, -1, sizeof(::com::elarian::hera::proto::ReplaySentMessageCommand)},
+  { 441, -1, sizeof(::com::elarian::hera::proto::ReplayMessageStatusUpdateCommand)},
+  { 452, -1, sizeof(::com::elarian::hera::proto::ReplayMessageReactionUpdateCommand)},
+  { 462, -1, sizeof(::com::elarian::hera::proto::ReplayMessagingSessionCommand)},
+  { 474, -1, sizeof(::com::elarian::hera::proto::CustomerActivityReply)},
+  { 482, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotification)},
+  { 490, -1, sizeof(::com::elarian::hera::proto::ServerToAppCustomerNotification)},
+  { 512, -1, sizeof(::com::elarian::hera::proto::ServerToAppPurseNotification)},
+  { 523, -1, sizeof(::com::elarian::hera::proto::AppDataUpdate)},
+  { 529, -1, sizeof(::com::elarian::hera::proto::ServerToAppNotificationReply)},
+  { 536, -1, sizeof(::com::elarian::hera::proto::ReminderNotification)},
+  { 544, -1, sizeof(::com::elarian::hera::proto::MessagingSessionStartedNotification)},
+  { 553, -1, sizeof(::com::elarian::hera::proto::MessagingSessionRenewedNotification)},
+  { 562, -1, sizeof(::com::elarian::hera::proto::MessagingSessionEndedNotification)},
+  { 572, -1, sizeof(::com::elarian::hera::proto::MessagingConsentUpdateNotification)},
+  { 581, -1, sizeof(::com::elarian::hera::proto::ReceivedMessageNotification)},
+  { 592, -1, sizeof(::com::elarian::hera::proto::MessageStatusNotification)},
+  { 599, -1, sizeof(::com::elarian::hera::proto::SentMessageReactionNotification)},
+  { 608, -1, sizeof(::com::elarian::hera::proto::ReceivedPaymentNotification)},
+  { 619, -1, sizeof(::com::elarian::hera::proto::PaymentStatusNotification)},
+  { 626, -1, sizeof(::com::elarian::hera::proto::CustomerActivityNotification)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -2170,7 +2143,6 @@ static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] =
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_SentMessageReactionNotification_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_ReceivedPaymentNotification_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_PaymentStatusNotification_default_instance_),
-  reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_WalletPaymentStatusNotification_default_instance_),
   reinterpret_cast<const ::PROTOBUF_NAMESPACE_ID::Message*>(&::com::elarian::hera::proto::_CustomerActivityNotification_default_instance_),
 };
 
@@ -2418,228 +2390,224 @@ const char descriptor_table_protodef_app_5fsocket_2eproto[] PROTOBUF_SECTION_VAR
   "atus\030\001 \001(\01624.com.elarian.hera.proto.Mess"
   "agingConsentUpdateStatus\022\023\n\013description\030"
   "\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.prot"
-  "obuf.StringValue\"\312\001\n\026InitiatePaymentComm"
+  "obuf.StringValue\"\335\001\n\026InitiatePaymentComm"
   "and\022@\n\013debit_party\030\001 \001(\0132+.com.elarian.h"
   "era.proto.PaymentCounterParty\022A\n\014credit_"
   "party\030\002 \001(\0132+.com.elarian.hera.proto.Pay"
   "mentCounterParty\022+\n\005value\030\003 \001(\0132\034.com.el"
-  "arian.hera.proto.Cash\"\213\002\n\024InitiatePaymen"
-  "tReply\0225\n\006status\030\001 \001(\0162%.com.elarian.her"
-  "a.proto.PaymentStatus\022\023\n\013description\030\002 \001"
-  "(\t\0224\n\016transaction_id\030\003 \001(\0132\034.google.prot"
-  "obuf.StringValue\0227\n\021debit_customer_id\030\004 "
-  "\001(\0132\034.google.protobuf.StringValue\0228\n\022cre"
-  "dit_customer_id\030\005 \001(\0132\034.google.protobuf."
-  "StringValue\"\320\002\n\024ReplayPaymentCommand\022\037\n\027"
-  "provider_transaction_id\030\001 \001(\t\022.\n\ncreated"
-  "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022@\n"
-  "\013debit_party\030\003 \001(\0132+.com.elarian.hera.pr"
-  "oto.PaymentCounterParty\022A\n\014credit_party\030"
-  "\004 \001(\0132+.com.elarian.hera.proto.PaymentCo"
-  "unterParty\0225\n\006status\030\005 \001(\0162%.com.elarian"
-  ".hera.proto.PaymentStatus\022+\n\005value\030\006 \001(\013"
-  "2\034.com.elarian.hera.proto.Cash\"\353\001\n Repla"
-  "yPaymentStatusUpdateCommand\022\?\n\017customer_"
-  "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu"
-  "stomerNumber\022\037\n\027provider_transaction_id\030"
-  "\002 \001(\t\022.\n\nupdated_at\030\003 \001(\0132\032.google.proto"
-  "buf.Timestamp\0225\n\006status\030\004 \001(\0162%.com.elar"
-  "ian.hera.proto.PaymentStatus\"\342\001\n\022ReplayP"
-  "aymentReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descripti"
-  "on\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.googl"
-  "e.protobuf.StringValue\0227\n\021debit_customer"
-  "_id\030\004 \001(\0132\034.google.protobuf.StringValue\022"
-  "8\n\022credit_customer_id\030\005 \001(\0132\034.google.pro"
-  "tobuf.StringValue\"e\n\017TagCommandReply\022\016\n\006"
-  "status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007wor"
-  "k_id\030\003 \001(\0132\034.google.protobuf.StringValue"
-  "\"\223\002\n\027CustomerActivityCommand\022\?\n\017customer"
-  "_number\030\001 \001(\0132&.com.elarian.hera.proto.C"
-  "ustomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession"
-  "_id\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003"
-  "(\0132\?.com.elarian.hera.proto.CustomerActi"
-  "vityCommand.PropertiesEntry\0321\n\017Propertie"
-  "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236"
-  "\002\n#ReplayMessagingConsentUpdateCommand\022\?"
-  "\n\017customer_number\030\001 \001(\0132&.com.elarian.he"
-  "ra.proto.CustomerNumber\022F\n\016channel_numbe"
-  "r\030\002 \001(\0132..com.elarian.hera.proto.Messagi"
-  "ngChannelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.go"
-  "ogle.protobuf.Timestamp\022>\n\006update\030\004 \001(\0162"
-  "..com.elarian.hera.proto.MessagingConsen"
-  "tUpdate\"\213\004\n\034ReplayReceivedMessageCommand"
-  "\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provide"
-  "r_session_id\030\002 \001(\0132\034.google.protobuf.Str"
-  "ingValue\022/\n\013received_at\030\003 \001(\0132\032.google.p"
-  "rotobuf.Timestamp\022\?\n\017customer_number\030\004 \001"
-  "(\0132&.com.elarian.hera.proto.CustomerNumb"
-  "er\022F\n\016channel_number\030\005 \001(\0132..com.elarian"
-  ".hera.proto.MessagingChannelNumber\0229\n\005pa"
-  "rts\030\006 \003(\0132*.com.elarian.hera.proto.Inbou"
-  "ndMessageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.goo"
-  "gle.protobuf.StringValue\022\?\n\010provider\030\010 \001"
-  "(\0162-.com.elarian.hera.proto.ChannelNumbe"
-  "rProvider\022*\n\004cost\030\t \001(\0132\034.com.elarian.he"
-  "ra.proto.Cash\"\301\004\n\030ReplaySentMessageComma"
-  "nd\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provi"
-  "der_session_id\030\002 \001(\0132\034.google.protobuf.S"
-  "tringValue\022+\n\007sent_at\030\003 \001(\0132\032.google.pro"
+  "arian.hera.proto.Cash\022\021\n\tnarration\030\004 \001(\t"
+  "\"\213\002\n\024InitiatePaymentReply\0225\n\006status\030\001 \001("
+  "\0162%.com.elarian.hera.proto.PaymentStatus"
+  "\022\023\n\013description\030\002 \001(\t\0224\n\016transaction_id\030"
+  "\003 \001(\0132\034.google.protobuf.StringValue\0227\n\021d"
+  "ebit_customer_id\030\004 \001(\0132\034.google.protobuf"
+  ".StringValue\0228\n\022credit_customer_id\030\005 \001(\013"
+  "2\034.google.protobuf.StringValue\"\343\002\n\024Repla"
+  "yPaymentCommand\022\037\n\027provider_transaction_"
+  "id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.google.pr"
+  "otobuf.Timestamp\022@\n\013debit_party\030\003 \001(\0132+."
+  "com.elarian.hera.proto.PaymentCounterPar"
+  "ty\022A\n\014credit_party\030\004 \001(\0132+.com.elarian.h"
+  "era.proto.PaymentCounterParty\0225\n\006status\030"
+  "\005 \001(\0162%.com.elarian.hera.proto.PaymentSt"
+  "atus\022+\n\005value\030\006 \001(\0132\034.com.elarian.hera.p"
+  "roto.Cash\022\021\n\tnarration\030\007 \001(\t\"\353\001\n ReplayP"
+  "aymentStatusUpdateCommand\022\?\n\017customer_nu"
+  "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022\037\n\027provider_transaction_id\030\002 "
+  "\001(\t\022.\n\nupdated_at\030\003 \001(\0132\032.google.protobu"
+  "f.Timestamp\0225\n\006status\030\004 \001(\0162%.com.elaria"
+  "n.hera.proto.PaymentStatus\"\342\001\n\022ReplayPay"
+  "mentReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description"
+  "\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.google."
+  "protobuf.StringValue\0227\n\021debit_customer_i"
+  "d\030\004 \001(\0132\034.google.protobuf.StringValue\0228\n"
+  "\022credit_customer_id\030\005 \001(\0132\034.google.proto"
+  "buf.StringValue\"e\n\017TagCommandReply\022\016\n\006st"
+  "atus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_"
+  "id\030\003 \001(\0132\034.google.protobuf.StringValue\"\223"
+  "\002\n\027CustomerActivityCommand\022\?\n\017customer_n"
+  "umber\030\001 \001(\0132&.com.elarian.hera.proto.Cus"
+  "tomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_i"
+  "d\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003(\013"
+  "2\?.com.elarian.hera.proto.CustomerActivi"
+  "tyCommand.PropertiesEntry\0321\n\017PropertiesE"
+  "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236\002\n"
+  "#ReplayMessagingConsentUpdateCommand\022\?\n\017"
+  "customer_number\030\001 \001(\0132&.com.elarian.hera"
+  ".proto.CustomerNumber\022F\n\016channel_number\030"
+  "\002 \001(\0132..com.elarian.hera.proto.Messaging"
+  "ChannelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.goog"
+  "le.protobuf.Timestamp\022>\n\006update\030\004 \001(\0162.."
+  "com.elarian.hera.proto.MessagingConsentU"
+  "pdate\"\213\004\n\034ReplayReceivedMessageCommand\022\033"
+  "\n\023provider_message_id\030\001 \001(\t\0229\n\023provider_"
+  "session_id\030\002 \001(\0132\034.google.protobuf.Strin"
+  "gValue\022/\n\013received_at\030\003 \001(\0132\032.google.pro"
   "tobuf.Timestamp\022\?\n\017customer_number\030\004 \001(\013"
   "2&.com.elarian.hera.proto.CustomerNumber"
   "\022F\n\016channel_number\030\005 \001(\0132..com.elarian.h"
-  "era.proto.MessagingChannelNumber\022\?\n\010prov"
-  "ider\030\006 \001(\0162-.com.elarian.hera.proto.Chan"
-  "nelNumberProvider\0228\n\007message\030\007 \001(\0132\'.com"
-  ".elarian.hera.proto.OutboundMessage\0221\n\013i"
-  "n_reply_to\030\010 \001(\0132\034.google.protobuf.Strin"
-  "gValue\022=\n\006status\030\t \001(\0162-.com.elarian.her"
-  "a.proto.MessageDeliveryStatus\022*\n\004cost\030\n "
-  "\001(\0132\034.com.elarian.hera.proto.Cash\"\343\002\n Re"
-  "playMessageStatusUpdateCommand\022\033\n\023provid"
-  "er_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132"
-  "\032.google.protobuf.Timestamp\022\?\n\017customer_"
-  "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu"
-  "stomerNumber\022F\n\016channel_number\030\004 \001(\0132..c"
-  "om.elarian.hera.proto.MessagingChannelNu"
-  "mber\022=\n\006status\030\005 \001(\0162-.com.elarian.hera."
-  "proto.MessageDeliveryStatus\022*\n\004cost\030\006 \001("
-  "\0132\034.com.elarian.hera.proto.Cash\"\265\002\n\"Repl"
-  "ayMessageReactionUpdateCommand\022\033\n\023provid"
-  "er_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132"
-  "\032.google.protobuf.Timestamp\022\?\n\017customer_"
-  "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu"
-  "stomerNumber\022F\n\016channel_number\030\004 \001(\0132..c"
-  "om.elarian.hera.proto.MessagingChannelNu"
-  "mber\0229\n\010reaction\030\005 \001(\0162\'.com.elarian.her"
-  "a.proto.MessageReaction\"\225\003\n\035ReplayMessag"
-  "ingSessionCommand\022\033\n\023provider_session_id"
-  "\030\001 \001(\t\022\?\n\017customer_number\030\002 \001(\0132&.com.el"
-  "arian.hera.proto.CustomerNumber\022F\n\016chann"
-  "el_number\030\003 \001(\0132..com.elarian.hera.proto"
-  ".MessagingChannelNumber\022.\n\nstarted_at\030\004 "
-  "\001(\0132\032.google.protobuf.Timestamp\022+\n\010durat"
-  "ion\030\005 \001(\0132\031.google.protobuf.Duration\022E\n\n"
-  "end_reason\030\006 \001(\01621.com.elarian.hera.prot"
-  "o.MessagingSessionEndReason\022*\n\004cost\030\007 \001("
-  "\0132\034.com.elarian.hera.proto.Cash\"o\n\025Custo"
-  "merActivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013desc"
-  "ription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goo"
-  "gle.protobuf.StringValue\"\266\001\n\027ServerToApp"
-  "Notification\022K\n\010customer\030\001 \001(\01327.com.ela"
-  "rian.hera.proto.ServerToAppCustomerNotif"
-  "icationH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.h"
-  "era.proto.ServerToAppPurseNotificationH\000"
-  "B\007\n\005entry\"\316\t\n\037ServerToAppCustomerNotific"
-  "ation\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n"
-  "\013customer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.c"
-  "om.elarian.hera.proto.DataMapValue\022.\n\ncr"
-  "eated_at\030\005 \001(\0132\032.google.protobuf.Timesta"
-  "mp\022@\n\010reminder\030\006 \001(\0132,.com.elarian.hera."
-  "proto.ReminderNotificationH\000\022`\n\031messagin"
-  "g_session_started\030\007 \001(\0132;.com.elarian.he"
-  "ra.proto.MessagingSessionStartedNotifica"
-  "tionH\000\022`\n\031messaging_session_renewed\030\010 \001("
-  "\0132;.com.elarian.hera.proto.MessagingSess"
-  "ionRenewedNotificationH\000\022\\\n\027messaging_se"
-  "ssion_ended\030\t \001(\01329.com.elarian.hera.pro"
-  "to.MessagingSessionEndedNotificationH\000\022^"
-  "\n\030messaging_consent_update\030\n \001(\0132:.com.e"
-  "larian.hera.proto.MessagingConsentUpdate"
-  "NotificationH\000\022O\n\020received_message\030\013 \001(\013"
-  "23.com.elarian.hera.proto.ReceivedMessag"
-  "eNotificationH\000\022K\n\016message_status\030\014 \001(\0132"
-  "1.com.elarian.hera.proto.MessageStatusNo"
-  "tificationH\000\022X\n\025sent_message_reaction\030\r "
-  "\001(\01327.com.elarian.hera.proto.SentMessage"
-  "ReactionNotificationH\000\022O\n\020received_payme"
-  "nt\030\016 \001(\01323.com.elarian.hera.proto.Receiv"
-  "edPaymentNotificationH\000\022K\n\016payment_statu"
-  "s\030\017 \001(\01321.com.elarian.hera.proto.Payment"
-  "StatusNotificationH\000\022X\n\025wallet_payment_s"
-  "tatus\030\020 \001(\01327.com.elarian.hera.proto.Wal"
-  "letPaymentStatusNotificationH\000\022Q\n\021custom"
-  "er_activity\030\021 \001(\01324.com.elarian.hera.pro"
-  "to.CustomerActivityNotificationH\000B\007\n\005ent"
-  "ry\"\326\001\n\034ServerToAppPurseNotification\022\016\n\006o"
-  "rg_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030"
-  "\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.proto"
-  "buf.Timestamp\022K\n\016payment_status\030\005 \001(\01321."
-  "com.elarian.hera.proto.PaymentStatusNoti"
-  "ficationH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004"
-  "data\030\001 \001(\0132$.com.elarian.hera.proto.Data"
-  "MapValue\"\224\001\n\034ServerToAppNotificationRepl"
-  "y\022:\n\013data_update\030\001 \001(\0132%.com.elarian.her"
-  "a.proto.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'"
-  ".com.elarian.hera.proto.OutboundMessage\""
-  "\265\001\n\024ReminderNotification\022:\n\010reminder\030\001 \001"
-  "(\0132(.com.elarian.hera.proto.CustomerRemi"
-  "nder\0222\n\003tag\030\002 \001(\0132%.com.elarian.hera.pro"
-  "to.CustomerIndex\022-\n\007work_id\030\003 \001(\0132\034.goog"
-  "le.protobuf.StringValue\"\362\001\n#MessagingSes"
-  "sionStartedNotification\022\?\n\017customer_numb"
-  "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom"
-  "erNumber\022F\n\016channel_number\030\002 \001(\0132..com.e"
-  "larian.hera.proto.MessagingChannelNumber"
-  "\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\013"
-  "2\032.google.protobuf.Timestamp\"\362\001\n#Messagi"
-  "ngSessionRenewedNotification\022\?\n\017customer"
-  "_number\030\001 \001(\0132&.com.elarian.hera.proto.C"
-  "ustomerNumber\022F\n\016channel_number\030\002 \001(\0132.."
-  "com.elarian.hera.proto.MessagingChannelN"
-  "umber\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030"
-  "\004 \001(\0132\032.google.protobuf.Timestamp\"\260\002\n!Me"
-  "ssagingSessionEndedNotification\022\?\n\017custo"
-  "mer_number\030\001 \001(\0132&.com.elarian.hera.prot"
-  "o.CustomerNumber\022F\n\016channel_number\030\002 \001(\013"
-  "2..com.elarian.hera.proto.MessagingChann"
-  "elNumber\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration"
-  "\030\004 \001(\0132\031.google.protobuf.Duration\022A\n\006rea"
-  "son\030\005 \001(\01621.com.elarian.hera.proto.Messa"
-  "gingSessionEndReason\"\263\002\n\"MessagingConsen"
-  "tUpdateNotification\022\?\n\017customer_number\030\001"
+  "era.proto.MessagingChannelNumber\0229\n\005part"
+  "s\030\006 \003(\0132*.com.elarian.hera.proto.Inbound"
+  "MessageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.googl"
+  "e.protobuf.StringValue\022\?\n\010provider\030\010 \001(\016"
+  "2-.com.elarian.hera.proto.ChannelNumberP"
+  "rovider\022*\n\004cost\030\t \001(\0132\034.com.elarian.hera"
+  ".proto.Cash\"\301\004\n\030ReplaySentMessageCommand"
+  "\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provide"
+  "r_session_id\030\002 \001(\0132\034.google.protobuf.Str"
+  "ingValue\022+\n\007sent_at\030\003 \001(\0132\032.google.proto"
+  "buf.Timestamp\022\?\n\017customer_number\030\004 \001(\0132&"
+  ".com.elarian.hera.proto.CustomerNumber\022F"
+  "\n\016channel_number\030\005 \001(\0132..com.elarian.her"
+  "a.proto.MessagingChannelNumber\022\?\n\010provid"
+  "er\030\006 \001(\0162-.com.elarian.hera.proto.Channe"
+  "lNumberProvider\0228\n\007message\030\007 \001(\0132\'.com.e"
+  "larian.hera.proto.OutboundMessage\0221\n\013in_"
+  "reply_to\030\010 \001(\0132\034.google.protobuf.StringV"
+  "alue\022=\n\006status\030\t \001(\0162-.com.elarian.hera."
+  "proto.MessageDeliveryStatus\022*\n\004cost\030\n \001("
+  "\0132\034.com.elarian.hera.proto.Cash\"\343\002\n Repl"
+  "ayMessageStatusUpdateCommand\022\033\n\023provider"
+  "_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032."
+  "google.protobuf.Timestamp\022\?\n\017customer_nu"
+  "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022F\n\016channel_number\030\004 \001(\0132..com"
+  ".elarian.hera.proto.MessagingChannelNumb"
+  "er\022=\n\006status\030\005 \001(\0162-.com.elarian.hera.pr"
+  "oto.MessageDeliveryStatus\022*\n\004cost\030\006 \001(\0132"
+  "\034.com.elarian.hera.proto.Cash\"\265\002\n\"Replay"
+  "MessageReactionUpdateCommand\022\033\n\023provider"
+  "_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032."
+  "google.protobuf.Timestamp\022\?\n\017customer_nu"
+  "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022F\n\016channel_number\030\004 \001(\0132..com"
+  ".elarian.hera.proto.MessagingChannelNumb"
+  "er\0229\n\010reaction\030\005 \001(\0162\'.com.elarian.hera."
+  "proto.MessageReaction\"\225\003\n\035ReplayMessagin"
+  "gSessionCommand\022\033\n\023provider_session_id\030\001"
+  " \001(\t\022\?\n\017customer_number\030\002 \001(\0132&.com.elar"
+  "ian.hera.proto.CustomerNumber\022F\n\016channel"
+  "_number\030\003 \001(\0132..com.elarian.hera.proto.M"
+  "essagingChannelNumber\022.\n\nstarted_at\030\004 \001("
+  "\0132\032.google.protobuf.Timestamp\022+\n\010duratio"
+  "n\030\005 \001(\0132\031.google.protobuf.Duration\022E\n\nen"
+  "d_reason\030\006 \001(\01621.com.elarian.hera.proto."
+  "MessagingSessionEndReason\022*\n\004cost\030\007 \001(\0132"
+  "\034.com.elarian.hera.proto.Cash\"o\n\025Custome"
+  "rActivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descri"
+  "ption\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.googl"
+  "e.protobuf.StringValue\"\266\001\n\027ServerToAppNo"
+  "tification\022K\n\010customer\030\001 \001(\01327.com.elari"
+  "an.hera.proto.ServerToAppCustomerNotific"
+  "ationH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.her"
+  "a.proto.ServerToAppPurseNotificationH\000B\007"
+  "\n\005entry\"\364\010\n\037ServerToAppCustomerNotificat"
+  "ion\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013c"
+  "ustomer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.com"
+  ".elarian.hera.proto.DataMapValue\022.\n\ncrea"
+  "ted_at\030\005 \001(\0132\032.google.protobuf.Timestamp"
+  "\022@\n\010reminder\030\006 \001(\0132,.com.elarian.hera.pr"
+  "oto.ReminderNotificationH\000\022`\n\031messaging_"
+  "session_started\030\007 \001(\0132;.com.elarian.hera"
+  ".proto.MessagingSessionStartedNotificati"
+  "onH\000\022`\n\031messaging_session_renewed\030\010 \001(\0132"
+  ";.com.elarian.hera.proto.MessagingSessio"
+  "nRenewedNotificationH\000\022\\\n\027messaging_sess"
+  "ion_ended\030\t \001(\01329.com.elarian.hera.proto"
+  ".MessagingSessionEndedNotificationH\000\022^\n\030"
+  "messaging_consent_update\030\n \001(\0132:.com.ela"
+  "rian.hera.proto.MessagingConsentUpdateNo"
+  "tificationH\000\022O\n\020received_message\030\013 \001(\01323"
+  ".com.elarian.hera.proto.ReceivedMessageN"
+  "otificationH\000\022K\n\016message_status\030\014 \001(\01321."
+  "com.elarian.hera.proto.MessageStatusNoti"
+  "ficationH\000\022X\n\025sent_message_reaction\030\r \001("
+  "\01327.com.elarian.hera.proto.SentMessageRe"
+  "actionNotificationH\000\022O\n\020received_payment"
+  "\030\016 \001(\01323.com.elarian.hera.proto.Received"
+  "PaymentNotificationH\000\022K\n\016payment_status\030"
+  "\017 \001(\01321.com.elarian.hera.proto.PaymentSt"
+  "atusNotificationH\000\022Q\n\021customer_activity\030"
+  "\021 \001(\01324.com.elarian.hera.proto.CustomerA"
+  "ctivityNotificationH\000B\007\n\005entry\"\326\001\n\034Serve"
+  "rToAppPurseNotification\022\016\n\006org_id\030\001 \001(\t\022"
+  "\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001(\t\022.\n\ncre"
+  "ated_at\030\004 \001(\0132\032.google.protobuf.Timestam"
+  "p\022K\n\016payment_status\030\005 \001(\01321.com.elarian."
+  "hera.proto.PaymentStatusNotificationH\000B\007"
+  "\n\005entry\"C\n\rAppDataUpdate\0222\n\004data\030\001 \001(\0132$"
+  ".com.elarian.hera.proto.DataMapValue\"\224\001\n"
+  "\034ServerToAppNotificationReply\022:\n\013data_up"
+  "date\030\001 \001(\0132%.com.elarian.hera.proto.AppD"
+  "ataUpdate\0228\n\007message\030\002 \001(\0132\'.com.elarian"
+  ".hera.proto.OutboundMessage\"\265\001\n\024Reminder"
+  "Notification\022:\n\010reminder\030\001 \001(\0132(.com.ela"
+  "rian.hera.proto.CustomerReminder\0222\n\003tag\030"
+  "\002 \001(\0132%.com.elarian.hera.proto.CustomerI"
+  "ndex\022-\n\007work_id\030\003 \001(\0132\034.google.protobuf."
+  "StringValue\"\362\001\n#MessagingSessionStartedN"
+  "otification\022\?\n\017customer_number\030\001 \001(\0132&.c"
+  "om.elarian.hera.proto.CustomerNumber\022F\n\016"
+  "channel_number\030\002 \001(\0132..com.elarian.hera."
+  "proto.MessagingChannelNumber\022\022\n\nsession_"
+  "id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.google.pr"
+  "otobuf.Timestamp\"\362\001\n#MessagingSessionRen"
+  "ewedNotification\022\?\n\017customer_number\030\001 \001("
+  "\0132&.com.elarian.hera.proto.CustomerNumbe"
+  "r\022F\n\016channel_number\030\002 \001(\0132..com.elarian."
+  "hera.proto.MessagingChannelNumber\022\022\n\nses"
+  "sion_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.goog"
+  "le.protobuf.Timestamp\"\260\002\n!MessagingSessi"
+  "onEndedNotification\022\?\n\017customer_number\030\001"
   " \001(\0132&.com.elarian.hera.proto.CustomerNu"
   "mber\022F\n\016channel_number\030\002 \001(\0132..com.elari"
-  "an.hera.proto.MessagingChannelNumber\022>\n\006"
-  "update\030\003 \001(\0162..com.elarian.hera.proto.Me"
-  "ssagingConsentUpdate\022D\n\006status\030\004 \001(\01624.c"
-  "om.elarian.hera.proto.MessagingConsentUp"
-  "dateStatus\"\332\002\n\033ReceivedMessageNotificati"
-  "on\022\022\n\nmessage_id\030\001 \001(\t\022\?\n\017customer_numbe"
-  "r\030\002 \001(\0132&.com.elarian.hera.proto.Custome"
-  "rNumber\022F\n\016channel_number\030\003 \001(\0132..com.el"
-  "arian.hera.proto.MessagingChannelNumber\022"
-  "9\n\005parts\030\004 \003(\0132*.com.elarian.hera.proto."
-  "InboundMessageBody\0220\n\nsession_id\030\005 \001(\0132\034"
-  ".google.protobuf.StringValue\0221\n\013in_reply"
-  "_to\030\006 \001(\0132\034.google.protobuf.StringValue\""
-  "n\n\031MessageStatusNotification\022\022\n\nmessage_"
-  "id\030\001 \001(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.h"
-  "era.proto.MessageDeliveryStatus\"\371\001\n\037Sent"
-  "MessageReactionNotification\022\022\n\nmessage_i"
-  "d\030\001 \001(\t\022\?\n\017customer_number\030\002 \001(\0132&.com.e"
+  "an.hera.proto.MessagingChannelNumber\022\022\n\n"
+  "session_id\030\003 \001(\t\022+\n\010duration\030\004 \001(\0132\031.goo"
+  "gle.protobuf.Duration\022A\n\006reason\030\005 \001(\01621."
+  "com.elarian.hera.proto.MessagingSessionE"
+  "ndReason\"\263\002\n\"MessagingConsentUpdateNotif"
+  "ication\022\?\n\017customer_number\030\001 \001(\0132&.com.e"
   "larian.hera.proto.CustomerNumber\022F\n\016chan"
-  "nel_number\030\003 \001(\0132..com.elarian.hera.prot"
-  "o.MessagingChannelNumber\0229\n\010reaction\030\004 \001"
-  "(\0162\'.com.elarian.hera.proto.MessageReact"
-  "ion\"\262\002\n\033ReceivedPaymentNotification\022\020\n\010p"
-  "urse_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022\?\n"
-  "\017customer_number\030\003 \001(\0132&.com.elarian.her"
-  "a.proto.CustomerNumber\022D\n\016channel_number"
-  "\030\004 \001(\0132,.com.elarian.hera.proto.PaymentC"
-  "hannelNumber\022+\n\005value\030\005 \001(\0132\034.com.elaria"
-  "n.hera.proto.Cash\0225\n\006status\030\006 \001(\0162%.com."
-  "elarian.hera.proto.PaymentStatus\"j\n\031Paym"
-  "entStatusNotification\022\026\n\016transaction_id\030"
-  "\001 \001(\t\0225\n\006status\030\002 \001(\0162%.com.elarian.hera"
-  ".proto.PaymentStatus\"\203\001\n\037WalletPaymentSt"
-  "atusNotification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016t"
-  "ransaction_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.co"
-  "m.elarian.hera.proto.PaymentStatus\"\277\001\n\034C"
-  "ustomerActivityNotification\022\?\n\017customer_"
-  "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu"
-  "stomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_"
-  "id\030\003 \001(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian"
-  ".hera.proto.CustomerActivityb\006proto3"
+  "nel_number\030\002 \001(\0132..com.elarian.hera.prot"
+  "o.MessagingChannelNumber\022>\n\006update\030\003 \001(\016"
+  "2..com.elarian.hera.proto.MessagingConse"
+  "ntUpdate\022D\n\006status\030\004 \001(\01624.com.elarian.h"
+  "era.proto.MessagingConsentUpdateStatus\"\332"
+  "\002\n\033ReceivedMessageNotification\022\022\n\nmessag"
+  "e_id\030\001 \001(\t\022\?\n\017customer_number\030\002 \001(\0132&.co"
+  "m.elarian.hera.proto.CustomerNumber\022F\n\016c"
+  "hannel_number\030\003 \001(\0132..com.elarian.hera.p"
+  "roto.MessagingChannelNumber\0229\n\005parts\030\004 \003"
+  "(\0132*.com.elarian.hera.proto.InboundMessa"
+  "geBody\0220\n\nsession_id\030\005 \001(\0132\034.google.prot"
+  "obuf.StringValue\0221\n\013in_reply_to\030\006 \001(\0132\034."
+  "google.protobuf.StringValue\"n\n\031MessageSt"
+  "atusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n\006"
+  "status\030\002 \001(\0162-.com.elarian.hera.proto.Me"
+  "ssageDeliveryStatus\"\371\001\n\037SentMessageReact"
+  "ionNotification\022\022\n\nmessage_id\030\001 \001(\t\022\?\n\017c"
+  "ustomer_number\030\002 \001(\0132&.com.elarian.hera."
+  "proto.CustomerNumber\022F\n\016channel_number\030\003"
+  " \001(\0132..com.elarian.hera.proto.MessagingC"
+  "hannelNumber\0229\n\010reaction\030\004 \001(\0162\'.com.ela"
+  "rian.hera.proto.MessageReaction\"\262\002\n\033Rece"
+  "ivedPaymentNotification\022\020\n\010purse_id\030\001 \001("
+  "\t\022\026\n\016transaction_id\030\002 \001(\t\022\?\n\017customer_nu"
+  "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022D\n\016channel_number\030\004 \001(\0132,.com"
+  ".elarian.hera.proto.PaymentChannelNumber"
+  "\022+\n\005value\030\005 \001(\0132\034.com.elarian.hera.proto"
+  ".Cash\0225\n\006status\030\006 \001(\0162%.com.elarian.hera"
+  ".proto.PaymentStatus\"j\n\031PaymentStatusNot"
+  "ification\022\026\n\016transaction_id\030\001 \001(\t\0225\n\006sta"
+  "tus\030\002 \001(\0162%.com.elarian.hera.proto.Payme"
+  "ntStatus\"\277\001\n\034CustomerActivityNotificatio"
+  "n\022\?\n\017customer_number\030\001 \001(\0132&.com.elarian"
+  ".hera.proto.CustomerNumber\022\016\n\006source\030\002 \001"
+  "(\t\022\022\n\nsession_id\030\003 \001(\t\022:\n\010activity\030\004 \001(\013"
+  "2(.com.elarian.hera.proto.CustomerActivi"
+  "tyb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_app_5fsocket_2eproto_deps[12] = {
   &::descriptor_table_activity_5fmodel_2eproto,
@@ -2655,7 +2623,7 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor
   &::descriptor_table_payment_5fmodel_2eproto,
   &::descriptor_table_payment_5fstate_2eproto,
 };
-static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app_5fsocket_2eproto_sccs[65] = {
+static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app_5fsocket_2eproto_sccs[64] = {
   &scc_info_AddCustomerReminderCommand_app_5fsocket_2eproto.base,
   &scc_info_AddCustomerReminderTagCommand_app_5fsocket_2eproto.base,
   &scc_info_AdoptCustomerStateCommand_app_5fsocket_2eproto.base,
@@ -2720,14 +2688,13 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app
   &scc_info_UpdateCustomerTagCommand_app_5fsocket_2eproto.base,
   &scc_info_UpdateMessagingConsentCommand_app_5fsocket_2eproto.base,
   &scc_info_UpdateMessagingConsentReply_app_5fsocket_2eproto.base,
-  &scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto.base,
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fsocket_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fsocket_2eproto = {
-  false, false, descriptor_table_protodef_app_5fsocket_2eproto, "app_socket.proto", 18596,
-  &descriptor_table_app_5fsocket_2eproto_once, descriptor_table_app_5fsocket_2eproto_sccs, descriptor_table_app_5fsocket_2eproto_deps, 65, 12,
+  false, false, descriptor_table_protodef_app_5fsocket_2eproto, "app_socket.proto", 18410,
+  &descriptor_table_app_5fsocket_2eproto_once, descriptor_table_app_5fsocket_2eproto_sccs, descriptor_table_app_5fsocket_2eproto_deps, 64, 12,
   schemas, file_default_instances, TableStruct_app_5fsocket_2eproto::offsets,
-  file_level_metadata_app_5fsocket_2eproto, 65, file_level_enum_descriptors_app_5fsocket_2eproto, file_level_service_descriptors_app_5fsocket_2eproto,
+  file_level_metadata_app_5fsocket_2eproto, 64, file_level_enum_descriptors_app_5fsocket_2eproto, file_level_service_descriptors_app_5fsocket_2eproto,
 };
 
 // Force running AddDescriptors() at dynamic initialization time.
@@ -15781,6 +15748,11 @@ InitiatePaymentCommand::InitiatePaymentCommand(::PROTOBUF_NAMESPACE_ID::Arena* a
 InitiatePaymentCommand::InitiatePaymentCommand(const InitiatePaymentCommand& from)
   : ::PROTOBUF_NAMESPACE_ID::Message() {
   _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
+  narration_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_narration().empty()) {
+    narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_narration(), 
+      GetArena());
+  }
   if (from._internal_has_debit_party()) {
     debit_party_ = new ::com::elarian::hera::proto::PaymentCounterParty(*from.debit_party_);
   } else {
@@ -15801,6 +15773,7 @@ InitiatePaymentCommand::InitiatePaymentCommand(const InitiatePaymentCommand& fro
 
 void InitiatePaymentCommand::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_InitiatePaymentCommand_app_5fsocket_2eproto.base);
+  narration_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
       reinterpret_cast<char*>(&debit_party_) - reinterpret_cast<char*>(this)),
       0, static_cast<size_t>(reinterpret_cast<char*>(&value_) -
@@ -15815,6 +15788,7 @@ InitiatePaymentCommand::~InitiatePaymentCommand() {
 
 void InitiatePaymentCommand::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
+  narration_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete debit_party_;
   if (this != internal_default_instance()) delete credit_party_;
   if (this != internal_default_instance()) delete value_;
@@ -15841,6 +15815,7 @@ void InitiatePaymentCommand::Clear() {
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
 
+  narration_.ClearToEmpty();
   if (GetArena() == nullptr && debit_party_ != nullptr) {
     delete debit_party_;
   }
@@ -15881,6 +15856,15 @@ const char* InitiatePaymentCommand::_InternalParse(const char* ptr, ::PROTOBUF_N
       case 3:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
           ptr = ctx->ParseMessage(_internal_mutable_value(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string narration = 4;
+      case 4:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 34)) {
+          auto str = _internal_mutable_narration();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.InitiatePaymentCommand.narration"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -15936,6 +15920,16 @@ failure:
         3, _Internal::value(this), target, stream);
   }
 
+  // string narration = 4;
+  if (this->narration().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_narration().data(), static_cast<int>(this->_internal_narration().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.InitiatePaymentCommand.narration");
+    target = stream->WriteStringMaybeAliased(
+        4, this->_internal_narration(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -15951,6 +15945,13 @@ size_t InitiatePaymentCommand::ByteSizeLong() const {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   // Prevent compiler warnings about cached_has_bits being unused
   (void) cached_has_bits;
+
+  // string narration = 4;
+  if (this->narration().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_narration());
+  }
 
   // .com.elarian.hera.proto.PaymentCounterParty debit_party = 1;
   if (this->has_debit_party()) {
@@ -16004,6 +16005,9 @@ void InitiatePaymentCommand::MergeFrom(const InitiatePaymentCommand& from) {
   ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if (from.narration().size() > 0) {
+    _internal_set_narration(from._internal_narration());
+  }
   if (from.has_debit_party()) {
     _internal_mutable_debit_party()->::com::elarian::hera::proto::PaymentCounterParty::MergeFrom(from._internal_debit_party());
   }
@@ -16036,6 +16040,7 @@ bool InitiatePaymentCommand::IsInitialized() const {
 void InitiatePaymentCommand::InternalSwap(InitiatePaymentCommand* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
+  narration_.Swap(&other->narration_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(InitiatePaymentCommand, value_)
       + sizeof(InitiatePaymentCommand::value_)
@@ -16493,6 +16498,11 @@ ReplayPaymentCommand::ReplayPaymentCommand(const ReplayPaymentCommand& from)
     provider_transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_provider_transaction_id(), 
       GetArena());
   }
+  narration_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (!from._internal_narration().empty()) {
+    narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_narration(), 
+      GetArena());
+  }
   if (from._internal_has_created_at()) {
     created_at_ = new PROTOBUF_NAMESPACE_ID::Timestamp(*from.created_at_);
   } else {
@@ -16520,6 +16530,7 @@ ReplayPaymentCommand::ReplayPaymentCommand(const ReplayPaymentCommand& from)
 void ReplayPaymentCommand::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_ReplayPaymentCommand_app_5fsocket_2eproto.base);
   provider_transaction_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  narration_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
       reinterpret_cast<char*>(&created_at_) - reinterpret_cast<char*>(this)),
       0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
@@ -16535,6 +16546,7 @@ ReplayPaymentCommand::~ReplayPaymentCommand() {
 void ReplayPaymentCommand::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   provider_transaction_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  narration_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
   if (this != internal_default_instance()) delete created_at_;
   if (this != internal_default_instance()) delete debit_party_;
   if (this != internal_default_instance()) delete credit_party_;
@@ -16563,6 +16575,7 @@ void ReplayPaymentCommand::Clear() {
   (void) cached_has_bits;
 
   provider_transaction_id_.ClearToEmpty();
+  narration_.ClearToEmpty();
   if (GetArena() == nullptr && created_at_ != nullptr) {
     delete created_at_;
   }
@@ -16632,6 +16645,15 @@ const char* ReplayPaymentCommand::_InternalParse(const char* ptr, ::PROTOBUF_NAM
       case 6:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 50)) {
           ptr = ctx->ParseMessage(_internal_mutable_value(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // string narration = 7;
+      case 7:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 58)) {
+          auto str = _internal_mutable_narration();
+          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
+          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.ReplayPaymentCommand.narration"));
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -16712,6 +16734,16 @@ failure:
         6, _Internal::value(this), target, stream);
   }
 
+  // string narration = 7;
+  if (this->narration().size() > 0) {
+    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
+      this->_internal_narration().data(), static_cast<int>(this->_internal_narration().length()),
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
+      "com.elarian.hera.proto.ReplayPaymentCommand.narration");
+    target = stream->WriteStringMaybeAliased(
+        7, this->_internal_narration(), target);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -16733,6 +16765,13 @@ size_t ReplayPaymentCommand::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_provider_transaction_id());
+  }
+
+  // string narration = 7;
+  if (this->narration().size() > 0) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
+        this->_internal_narration());
   }
 
   // .google.protobuf.Timestamp created_at = 2;
@@ -16803,6 +16842,9 @@ void ReplayPaymentCommand::MergeFrom(const ReplayPaymentCommand& from) {
   if (from.provider_transaction_id().size() > 0) {
     _internal_set_provider_transaction_id(from._internal_provider_transaction_id());
   }
+  if (from.narration().size() > 0) {
+    _internal_set_narration(from._internal_narration());
+  }
   if (from.has_created_at()) {
     _internal_mutable_created_at()->PROTOBUF_NAMESPACE_ID::Timestamp::MergeFrom(from._internal_created_at());
   }
@@ -16842,6 +16884,7 @@ void ReplayPaymentCommand::InternalSwap(ReplayPaymentCommand* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   provider_transaction_id_.Swap(&other->provider_transaction_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+  narration_.Swap(&other->narration_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
   ::PROTOBUF_NAMESPACE_ID::internal::memswap<
       PROTOBUF_FIELD_OFFSET(ReplayPaymentCommand, status_)
       + sizeof(ReplayPaymentCommand::status_)
@@ -21649,7 +21692,6 @@ class ServerToAppCustomerNotification::_Internal {
   static const ::com::elarian::hera::proto::SentMessageReactionNotification& sent_message_reaction(const ServerToAppCustomerNotification* msg);
   static const ::com::elarian::hera::proto::ReceivedPaymentNotification& received_payment(const ServerToAppCustomerNotification* msg);
   static const ::com::elarian::hera::proto::PaymentStatusNotification& payment_status(const ServerToAppCustomerNotification* msg);
-  static const ::com::elarian::hera::proto::WalletPaymentStatusNotification& wallet_payment_status(const ServerToAppCustomerNotification* msg);
   static const ::com::elarian::hera::proto::CustomerActivityNotification& customer_activity(const ServerToAppCustomerNotification* msg);
 };
 
@@ -21700,10 +21742,6 @@ ServerToAppCustomerNotification::_Internal::received_payment(const ServerToAppCu
 const ::com::elarian::hera::proto::PaymentStatusNotification&
 ServerToAppCustomerNotification::_Internal::payment_status(const ServerToAppCustomerNotification* msg) {
   return *msg->entry_.payment_status_;
-}
-const ::com::elarian::hera::proto::WalletPaymentStatusNotification&
-ServerToAppCustomerNotification::_Internal::wallet_payment_status(const ServerToAppCustomerNotification* msg) {
-  return *msg->entry_.wallet_payment_status_;
 }
 const ::com::elarian::hera::proto::CustomerActivityNotification&
 ServerToAppCustomerNotification::_Internal::customer_activity(const ServerToAppCustomerNotification* msg) {
@@ -21871,21 +21909,6 @@ void ServerToAppCustomerNotification::set_allocated_payment_status(::com::elaria
   }
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ServerToAppCustomerNotification.payment_status)
 }
-void ServerToAppCustomerNotification::set_allocated_wallet_payment_status(::com::elarian::hera::proto::WalletPaymentStatusNotification* wallet_payment_status) {
-  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
-  clear_entry();
-  if (wallet_payment_status) {
-    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
-      ::PROTOBUF_NAMESPACE_ID::Arena::GetArena(wallet_payment_status);
-    if (message_arena != submessage_arena) {
-      wallet_payment_status = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
-          message_arena, wallet_payment_status, submessage_arena);
-    }
-    set_has_wallet_payment_status();
-    entry_.wallet_payment_status_ = wallet_payment_status;
-  }
-  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ServerToAppCustomerNotification.wallet_payment_status)
-}
 void ServerToAppCustomerNotification::set_allocated_customer_activity(::com::elarian::hera::proto::CustomerActivityNotification* customer_activity) {
   ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
   clear_entry();
@@ -21975,10 +21998,6 @@ ServerToAppCustomerNotification::ServerToAppCustomerNotification(const ServerToA
     }
     case kPaymentStatus: {
       _internal_mutable_payment_status()->::com::elarian::hera::proto::PaymentStatusNotification::MergeFrom(from._internal_payment_status());
-      break;
-    }
-    case kWalletPaymentStatus: {
-      _internal_mutable_wallet_payment_status()->::com::elarian::hera::proto::WalletPaymentStatusNotification::MergeFrom(from._internal_wallet_payment_status());
       break;
     }
     case kCustomerActivity: {
@@ -22097,12 +22116,6 @@ void ServerToAppCustomerNotification::clear_entry() {
     case kPaymentStatus: {
       if (GetArena() == nullptr) {
         delete entry_.payment_status_;
-      }
-      break;
-    }
-    case kWalletPaymentStatus: {
-      if (GetArena() == nullptr) {
-        delete entry_.wallet_payment_status_;
       }
       break;
     }
@@ -22256,13 +22269,6 @@ const char* ServerToAppCustomerNotification::_InternalParse(const char* ptr, ::P
       case 15:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
           ptr = ctx->ParseMessage(_internal_mutable_payment_status(), ptr);
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;
-      case 16:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 130)) {
-          ptr = ctx->ParseMessage(_internal_mutable_wallet_payment_status(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -22427,14 +22433,6 @@ failure:
         15, _Internal::payment_status(this), target, stream);
   }
 
-  // .com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;
-  if (_internal_has_wallet_payment_status()) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
-      InternalWriteMessage(
-        16, _Internal::wallet_payment_status(this), target, stream);
-  }
-
   // .com.elarian.hera.proto.CustomerActivityNotification customer_activity = 17;
   if (_internal_has_customer_activity()) {
     target = stream->EnsureSpace(target);
@@ -22565,13 +22563,6 @@ size_t ServerToAppCustomerNotification::ByteSizeLong() const {
           *entry_.payment_status_);
       break;
     }
-    // .com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;
-    case kWalletPaymentStatus: {
-      total_size += 2 +
-        ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
-          *entry_.wallet_payment_status_);
-      break;
-    }
     // .com.elarian.hera.proto.CustomerActivityNotification customer_activity = 17;
     case kCustomerActivity: {
       total_size += 2 +
@@ -22668,10 +22659,6 @@ void ServerToAppCustomerNotification::MergeFrom(const ServerToAppCustomerNotific
     }
     case kPaymentStatus: {
       _internal_mutable_payment_status()->::com::elarian::hera::proto::PaymentStatusNotification::MergeFrom(from._internal_payment_status());
-      break;
-    }
-    case kWalletPaymentStatus: {
-      _internal_mutable_wallet_payment_status()->::com::elarian::hera::proto::WalletPaymentStatusNotification::MergeFrom(from._internal_wallet_payment_status());
       break;
     }
     case kCustomerActivity: {
@@ -27008,278 +26995,6 @@ void PaymentStatusNotification::InternalSwap(PaymentStatusNotification* other) {
 
 // ===================================================================
 
-class WalletPaymentStatusNotification::_Internal {
- public:
-};
-
-WalletPaymentStatusNotification::WalletPaymentStatusNotification(::PROTOBUF_NAMESPACE_ID::Arena* arena)
-  : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
-  SharedCtor();
-  RegisterArenaDtor(arena);
-  // @@protoc_insertion_point(arena_constructor:com.elarian.hera.proto.WalletPaymentStatusNotification)
-}
-WalletPaymentStatusNotification::WalletPaymentStatusNotification(const WalletPaymentStatusNotification& from)
-  : ::PROTOBUF_NAMESPACE_ID::Message() {
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  wallet_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_wallet_id().empty()) {
-    wallet_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_wallet_id(), 
-      GetArena());
-  }
-  transaction_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  if (!from._internal_transaction_id().empty()) {
-    transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_transaction_id(), 
-      GetArena());
-  }
-  status_ = from.status_;
-  // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.WalletPaymentStatusNotification)
-}
-
-void WalletPaymentStatusNotification::SharedCtor() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto.base);
-  wallet_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  transaction_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  status_ = 0;
-}
-
-WalletPaymentStatusNotification::~WalletPaymentStatusNotification() {
-  // @@protoc_insertion_point(destructor:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  SharedDtor();
-  _internal_metadata_.Delete<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-void WalletPaymentStatusNotification::SharedDtor() {
-  GOOGLE_DCHECK(GetArena() == nullptr);
-  wallet_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  transaction_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-}
-
-void WalletPaymentStatusNotification::ArenaDtor(void* object) {
-  WalletPaymentStatusNotification* _this = reinterpret_cast< WalletPaymentStatusNotification* >(object);
-  (void)_this;
-}
-void WalletPaymentStatusNotification::RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena*) {
-}
-void WalletPaymentStatusNotification::SetCachedSize(int size) const {
-  _cached_size_.Set(size);
-}
-const WalletPaymentStatusNotification& WalletPaymentStatusNotification::default_instance() {
-  ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&::scc_info_WalletPaymentStatusNotification_app_5fsocket_2eproto.base);
-  return *internal_default_instance();
-}
-
-
-void WalletPaymentStatusNotification::Clear() {
-// @@protoc_insertion_point(message_clear_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  wallet_id_.ClearToEmpty();
-  transaction_id_.ClearToEmpty();
-  status_ = 0;
-  _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
-}
-
-const char* WalletPaymentStatusNotification::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) {
-#define CHK_(x) if (PROTOBUF_PREDICT_FALSE(!(x))) goto failure
-  while (!ctx->Done(&ptr)) {
-    ::PROTOBUF_NAMESPACE_ID::uint32 tag;
-    ptr = ::PROTOBUF_NAMESPACE_ID::internal::ReadTag(ptr, &tag);
-    CHK_(ptr);
-    switch (tag >> 3) {
-      // string wallet_id = 1;
-      case 1:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 10)) {
-          auto str = _internal_mutable_wallet_id();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // string transaction_id = 2;
-      case 2:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 18)) {
-          auto str = _internal_mutable_transaction_id();
-          ptr = ::PROTOBUF_NAMESPACE_ID::internal::InlineGreedyStringParser(str, ptr, ctx);
-          CHK_(::PROTOBUF_NAMESPACE_ID::internal::VerifyUTF8(str, "com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id"));
-          CHK_(ptr);
-        } else goto handle_unusual;
-        continue;
-      // .com.elarian.hera.proto.PaymentStatus status = 3;
-      case 3:
-        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 24)) {
-          ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
-          CHK_(ptr);
-          _internal_set_status(static_cast<::com::elarian::hera::proto::PaymentStatus>(val));
-        } else goto handle_unusual;
-        continue;
-      default: {
-      handle_unusual:
-        if ((tag & 7) == 4 || tag == 0) {
-          ctx->SetLastTag(tag);
-          goto success;
-        }
-        ptr = UnknownFieldParse(tag,
-            _internal_metadata_.mutable_unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(),
-            ptr, ctx);
-        CHK_(ptr != nullptr);
-        continue;
-      }
-    }  // switch
-  }  // while
-success:
-  return ptr;
-failure:
-  ptr = nullptr;
-  goto success;
-#undef CHK_
-}
-
-::PROTOBUF_NAMESPACE_ID::uint8* WalletPaymentStatusNotification::_InternalSerialize(
-    ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const {
-  // @@protoc_insertion_point(serialize_to_array_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  // string wallet_id = 1;
-  if (this->wallet_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_wallet_id().data(), static_cast<int>(this->_internal_wallet_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id");
-    target = stream->WriteStringMaybeAliased(
-        1, this->_internal_wallet_id(), target);
-  }
-
-  // string transaction_id = 2;
-  if (this->transaction_id().size() > 0) {
-    ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::VerifyUtf8String(
-      this->_internal_transaction_id().data(), static_cast<int>(this->_internal_transaction_id().length()),
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::SERIALIZE,
-      "com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id");
-    target = stream->WriteStringMaybeAliased(
-        2, this->_internal_transaction_id(), target);
-  }
-
-  // .com.elarian.hera.proto.PaymentStatus status = 3;
-  if (this->status() != 0) {
-    target = stream->EnsureSpace(target);
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::WriteEnumToArray(
-      3, this->_internal_status(), target);
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
-        _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
-  }
-  // @@protoc_insertion_point(serialize_to_array_end:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  return target;
-}
-
-size_t WalletPaymentStatusNotification::ByteSizeLong() const {
-// @@protoc_insertion_point(message_byte_size_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  size_t total_size = 0;
-
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  // Prevent compiler warnings about cached_has_bits being unused
-  (void) cached_has_bits;
-
-  // string wallet_id = 1;
-  if (this->wallet_id().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_wallet_id());
-  }
-
-  // string transaction_id = 2;
-  if (this->transaction_id().size() > 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
-        this->_internal_transaction_id());
-  }
-
-  // .com.elarian.hera.proto.PaymentStatus status = 3;
-  if (this->status() != 0) {
-    total_size += 1 +
-      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::EnumSize(this->_internal_status());
-  }
-
-  if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
-    return ::PROTOBUF_NAMESPACE_ID::internal::ComputeUnknownFieldsSize(
-        _internal_metadata_, total_size, &_cached_size_);
-  }
-  int cached_size = ::PROTOBUF_NAMESPACE_ID::internal::ToCachedSize(total_size);
-  SetCachedSize(cached_size);
-  return total_size;
-}
-
-void WalletPaymentStatusNotification::MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_merge_from_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  GOOGLE_DCHECK_NE(&from, this);
-  const WalletPaymentStatusNotification* source =
-      ::PROTOBUF_NAMESPACE_ID::DynamicCastToGenerated<WalletPaymentStatusNotification>(
-          &from);
-  if (source == nullptr) {
-  // @@protoc_insertion_point(generalized_merge_from_cast_fail:com.elarian.hera.proto.WalletPaymentStatusNotification)
-    ::PROTOBUF_NAMESPACE_ID::internal::ReflectionOps::Merge(from, this);
-  } else {
-  // @@protoc_insertion_point(generalized_merge_from_cast_success:com.elarian.hera.proto.WalletPaymentStatusNotification)
-    MergeFrom(*source);
-  }
-}
-
-void WalletPaymentStatusNotification::MergeFrom(const WalletPaymentStatusNotification& from) {
-// @@protoc_insertion_point(class_specific_merge_from_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  GOOGLE_DCHECK_NE(&from, this);
-  _internal_metadata_.MergeFrom<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(from._internal_metadata_);
-  ::PROTOBUF_NAMESPACE_ID::uint32 cached_has_bits = 0;
-  (void) cached_has_bits;
-
-  if (from.wallet_id().size() > 0) {
-    _internal_set_wallet_id(from._internal_wallet_id());
-  }
-  if (from.transaction_id().size() > 0) {
-    _internal_set_transaction_id(from._internal_transaction_id());
-  }
-  if (from.status() != 0) {
-    _internal_set_status(from._internal_status());
-  }
-}
-
-void WalletPaymentStatusNotification::CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) {
-// @@protoc_insertion_point(generalized_copy_from_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-void WalletPaymentStatusNotification::CopyFrom(const WalletPaymentStatusNotification& from) {
-// @@protoc_insertion_point(class_specific_copy_from_start:com.elarian.hera.proto.WalletPaymentStatusNotification)
-  if (&from == this) return;
-  Clear();
-  MergeFrom(from);
-}
-
-bool WalletPaymentStatusNotification::IsInitialized() const {
-  return true;
-}
-
-void WalletPaymentStatusNotification::InternalSwap(WalletPaymentStatusNotification* other) {
-  using std::swap;
-  _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
-  wallet_id_.Swap(&other->wallet_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  transaction_id_.Swap(&other->transaction_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(status_, other->status_);
-}
-
-::PROTOBUF_NAMESPACE_ID::Metadata WalletPaymentStatusNotification::GetMetadata() const {
-  return GetMetadataStatic();
-}
-
-
-// ===================================================================
-
 class CustomerActivityNotification::_Internal {
  public:
   static const ::com::elarian::hera::proto::CustomerNumber& customer_number(const CustomerActivityNotification* msg);
@@ -27818,9 +27533,6 @@ template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::ReceivedPaymentNotific
 }
 template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::PaymentStatusNotification* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::PaymentStatusNotification >(Arena* arena) {
   return Arena::CreateMessageInternal< ::com::elarian::hera::proto::PaymentStatusNotification >(arena);
-}
-template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::WalletPaymentStatusNotification* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::WalletPaymentStatusNotification >(Arena* arena) {
-  return Arena::CreateMessageInternal< ::com::elarian::hera::proto::WalletPaymentStatusNotification >(arena);
 }
 template<> PROTOBUF_NOINLINE ::com::elarian::hera::proto::CustomerActivityNotification* Arena::CreateMaybeMessage< ::com::elarian::hera::proto::CustomerActivityNotification >(Arena* arena) {
   return Arena::CreateMessageInternal< ::com::elarian::hera::proto::CustomerActivityNotification >(arena);

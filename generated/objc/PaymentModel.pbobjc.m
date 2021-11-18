@@ -771,6 +771,7 @@ void PaymentCounterParty_ClearPartyOneOfCase(PaymentCounterParty *message) {
 @dynamic hasCreatedAt, createdAt;
 @dynamic hasUpdatedAt, updatedAt;
 @dynamic hasProviderTransactionId, providerTransactionId;
+@dynamic hasNarration, narration;
 
 typedef struct PaymentTransaction__storage_ {
   uint32_t _has_storage_[1];
@@ -783,6 +784,7 @@ typedef struct PaymentTransaction__storage_ {
   GPBTimestamp *createdAt;
   GPBTimestamp *updatedAt;
   GPBStringValue *providerTransactionId;
+  GPBStringValue *narration;
 } PaymentTransaction__storage_;
 
 // This method is threadsafe because it is initially called
@@ -869,6 +871,15 @@ typedef struct PaymentTransaction__storage_ {
         .number = PaymentTransaction_FieldNumber_ProviderTransactionId,
         .hasIndex = 8,
         .offset = (uint32_t)offsetof(PaymentTransaction__storage_, providerTransactionId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "narration",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = PaymentTransaction_FieldNumber_Narration,
+        .hasIndex = 9,
+        .offset = (uint32_t)offsetof(PaymentTransaction__storage_, narration),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },

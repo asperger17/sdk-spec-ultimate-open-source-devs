@@ -56,7 +56,6 @@ class ServerToAppCustomerNotification extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\SentMessageReactionNotification $sent_message_reaction
      *     @type \Com\Elarian\Hera\Proto\ReceivedPaymentNotification $received_payment
      *     @type \Com\Elarian\Hera\Proto\PaymentStatusNotification $payment_status
-     *     @type \Com\Elarian\Hera\Proto\WalletPaymentStatusNotification $wallet_payment_status
      *     @type \Com\Elarian\Hera\Proto\CustomerActivityNotification $customer_activity
      * }
      */
@@ -461,33 +460,6 @@ class ServerToAppCustomerNotification extends \Google\Protobuf\Internal\Message
     {
         GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\PaymentStatusNotification::class);
         $this->writeOneof(15, $var);
-
-        return $this;
-    }
-
-    /**
-     * Generated from protobuf field <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     * @return \Com\Elarian\Hera\Proto\WalletPaymentStatusNotification
-     */
-    public function getWalletPaymentStatus()
-    {
-        return $this->readOneof(16);
-    }
-
-    public function hasWalletPaymentStatus()
-    {
-        return $this->hasOneof(16);
-    }
-
-    /**
-     * Generated from protobuf field <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     * @param \Com\Elarian\Hera\Proto\WalletPaymentStatusNotification $var
-     * @return $this
-     */
-    public function setWalletPaymentStatus($var)
-    {
-        GPBUtil::checkMessage($var, \Com\Elarian\Hera\Proto\WalletPaymentStatusNotification::class);
-        $this->writeOneof(16, $var);
 
         return $this;
     }

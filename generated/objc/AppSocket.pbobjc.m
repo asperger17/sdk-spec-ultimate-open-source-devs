@@ -110,7 +110,6 @@ GPBObjCClassDeclaration(UpdateCustomerStateReply);
 GPBObjCClassDeclaration(UpdateCustomerTagCommand);
 GPBObjCClassDeclaration(UpdateMessagingConsentCommand);
 GPBObjCClassDeclaration(UpdateMessagingConsentReply);
-GPBObjCClassDeclaration(WalletPaymentStatusNotification);
 
 #pragma mark - AppSocketRoot
 
@@ -3000,12 +2999,14 @@ void SetUpdateMessagingConsentReply_Status_RawValue(UpdateMessagingConsentReply 
 @dynamic hasDebitParty, debitParty;
 @dynamic hasCreditParty, creditParty;
 @dynamic hasValue, value;
+@dynamic narration;
 
 typedef struct InitiatePaymentCommand__storage_ {
   uint32_t _has_storage_[1];
   PaymentCounterParty *debitParty;
   PaymentCounterParty *creditParty;
   Cash *value;
+  NSString *narration;
 } InitiatePaymentCommand__storage_;
 
 // This method is threadsafe because it is initially called
@@ -3040,6 +3041,15 @@ typedef struct InitiatePaymentCommand__storage_ {
         .offset = (uint32_t)offsetof(InitiatePaymentCommand__storage_, value),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "narration",
+        .dataTypeSpecific.clazz = Nil,
+        .number = InitiatePaymentCommand_FieldNumber_Narration,
+        .hasIndex = 3,
+        .offset = (uint32_t)offsetof(InitiatePaymentCommand__storage_, narration),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -3171,6 +3181,7 @@ void SetInitiatePaymentReply_Status_RawValue(InitiatePaymentReply *message, int3
 @dynamic hasCreditParty, creditParty;
 @dynamic status;
 @dynamic hasValue, value;
+@dynamic narration;
 
 typedef struct ReplayPaymentCommand__storage_ {
   uint32_t _has_storage_[1];
@@ -3180,6 +3191,7 @@ typedef struct ReplayPaymentCommand__storage_ {
   PaymentCounterParty *debitParty;
   PaymentCounterParty *creditParty;
   Cash *value;
+  NSString *narration;
 } ReplayPaymentCommand__storage_;
 
 // This method is threadsafe because it is initially called
@@ -3241,6 +3253,15 @@ typedef struct ReplayPaymentCommand__storage_ {
         .offset = (uint32_t)offsetof(ReplayPaymentCommand__storage_, value),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "narration",
+        .dataTypeSpecific.clazz = Nil,
+        .number = ReplayPaymentCommand_FieldNumber_Narration,
+        .hasIndex = 6,
+        .offset = (uint32_t)offsetof(ReplayPaymentCommand__storage_, narration),
+        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
+        .dataType = GPBDataTypeString,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -4499,7 +4520,6 @@ void ServerToAppNotification_ClearEntryOneOfCase(ServerToAppNotification *messag
 @dynamic sentMessageReaction;
 @dynamic receivedPayment;
 @dynamic paymentStatus;
-@dynamic walletPaymentStatus;
 @dynamic customerActivity;
 
 typedef struct ServerToAppCustomerNotification__storage_ {
@@ -4519,7 +4539,6 @@ typedef struct ServerToAppCustomerNotification__storage_ {
   SentMessageReactionNotification *sentMessageReaction;
   ReceivedPaymentNotification *receivedPayment;
   PaymentStatusNotification *paymentStatus;
-  WalletPaymentStatusNotification *walletPaymentStatus;
   CustomerActivityNotification *customerActivity;
 } ServerToAppCustomerNotification__storage_;
 
@@ -4661,15 +4680,6 @@ typedef struct ServerToAppCustomerNotification__storage_ {
         .number = ServerToAppCustomerNotification_FieldNumber_PaymentStatus,
         .hasIndex = -1,
         .offset = (uint32_t)offsetof(ServerToAppCustomerNotification__storage_, paymentStatus),
-        .flags = GPBFieldOptional,
-        .dataType = GPBDataTypeMessage,
-      },
-      {
-        .name = "walletPaymentStatus",
-        .dataTypeSpecific.clazz = GPBObjCClass(WalletPaymentStatusNotification),
-        .number = ServerToAppCustomerNotification_FieldNumber_WalletPaymentStatus,
-        .hasIndex = -1,
-        .offset = (uint32_t)offsetof(ServerToAppCustomerNotification__storage_, walletPaymentStatus),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },
@@ -5775,85 +5785,6 @@ int32_t PaymentStatusNotification_Status_RawValue(PaymentStatusNotification *mes
 void SetPaymentStatusNotification_Status_RawValue(PaymentStatusNotification *message, int32_t value) {
   GPBDescriptor *descriptor = [PaymentStatusNotification descriptor];
   GPBFieldDescriptor *field = [descriptor fieldWithNumber:PaymentStatusNotification_FieldNumber_Status];
-  GPBSetMessageRawEnumField(message, field, value);
-}
-
-#pragma mark - WalletPaymentStatusNotification
-
-@implementation WalletPaymentStatusNotification
-
-@dynamic walletId;
-@dynamic transactionId;
-@dynamic status;
-
-typedef struct WalletPaymentStatusNotification__storage_ {
-  uint32_t _has_storage_[1];
-  PaymentStatus status;
-  NSString *walletId;
-  NSString *transactionId;
-} WalletPaymentStatusNotification__storage_;
-
-// This method is threadsafe because it is initially called
-// in +initialize for each subclass.
-+ (GPBDescriptor *)descriptor {
-  static GPBDescriptor *descriptor = nil;
-  if (!descriptor) {
-    static GPBMessageFieldDescription fields[] = {
-      {
-        .name = "walletId",
-        .dataTypeSpecific.clazz = Nil,
-        .number = WalletPaymentStatusNotification_FieldNumber_WalletId,
-        .hasIndex = 0,
-        .offset = (uint32_t)offsetof(WalletPaymentStatusNotification__storage_, walletId),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "transactionId",
-        .dataTypeSpecific.clazz = Nil,
-        .number = WalletPaymentStatusNotification_FieldNumber_TransactionId,
-        .hasIndex = 1,
-        .offset = (uint32_t)offsetof(WalletPaymentStatusNotification__storage_, transactionId),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldClearHasIvarOnZero),
-        .dataType = GPBDataTypeString,
-      },
-      {
-        .name = "status",
-        .dataTypeSpecific.enumDescFunc = PaymentStatus_EnumDescriptor,
-        .number = WalletPaymentStatusNotification_FieldNumber_Status,
-        .hasIndex = 2,
-        .offset = (uint32_t)offsetof(WalletPaymentStatusNotification__storage_, status),
-        .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
-        .dataType = GPBDataTypeEnum,
-      },
-    };
-    GPBDescriptor *localDescriptor =
-        [GPBDescriptor allocDescriptorForClass:[WalletPaymentStatusNotification class]
-                                     rootClass:[AppSocketRoot class]
-                                          file:AppSocketRoot_FileDescriptor()
-                                        fields:fields
-                                    fieldCount:(uint32_t)(sizeof(fields) / sizeof(GPBMessageFieldDescription))
-                                   storageSize:sizeof(WalletPaymentStatusNotification__storage_)
-                                         flags:(GPBDescriptorInitializationFlags)(GPBDescriptorInitializationFlag_UsesClassRefs | GPBDescriptorInitializationFlag_Proto3OptionalKnown)];
-    #if defined(DEBUG) && DEBUG
-      NSAssert(descriptor == nil, @"Startup recursed!");
-    #endif  // DEBUG
-    descriptor = localDescriptor;
-  }
-  return descriptor;
-}
-
-@end
-
-int32_t WalletPaymentStatusNotification_Status_RawValue(WalletPaymentStatusNotification *message) {
-  GPBDescriptor *descriptor = [WalletPaymentStatusNotification descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:WalletPaymentStatusNotification_FieldNumber_Status];
-  return GPBGetMessageRawEnumField(message, field);
-}
-
-void SetWalletPaymentStatusNotification_Status_RawValue(WalletPaymentStatusNotification *message, int32_t value) {
-  GPBDescriptor *descriptor = [WalletPaymentStatusNotification descriptor];
-  GPBFieldDescriptor *field = [descriptor fieldWithNumber:WalletPaymentStatusNotification_FieldNumber_Status];
   GPBSetMessageRawEnumField(message, field, value);
 }
 

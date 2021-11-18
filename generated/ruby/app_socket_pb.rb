@@ -257,6 +257,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :debit_party, :message, 1, "com.elarian.hera.proto.PaymentCounterParty"
       optional :credit_party, :message, 2, "com.elarian.hera.proto.PaymentCounterParty"
       optional :value, :message, 3, "com.elarian.hera.proto.Cash"
+      optional :narration, :string, 4
     end
     add_message "com.elarian.hera.proto.InitiatePaymentReply" do
       optional :status, :enum, 1, "com.elarian.hera.proto.PaymentStatus"
@@ -272,6 +273,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :credit_party, :message, 4, "com.elarian.hera.proto.PaymentCounterParty"
       optional :status, :enum, 5, "com.elarian.hera.proto.PaymentStatus"
       optional :value, :message, 6, "com.elarian.hera.proto.Cash"
+      optional :narration, :string, 7
     end
     add_message "com.elarian.hera.proto.ReplayPaymentStatusUpdateCommand" do
       optional :customer_number, :message, 1, "com.elarian.hera.proto.CustomerNumber"
@@ -379,7 +381,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
         optional :sent_message_reaction, :message, 13, "com.elarian.hera.proto.SentMessageReactionNotification"
         optional :received_payment, :message, 14, "com.elarian.hera.proto.ReceivedPaymentNotification"
         optional :payment_status, :message, 15, "com.elarian.hera.proto.PaymentStatusNotification"
-        optional :wallet_payment_status, :message, 16, "com.elarian.hera.proto.WalletPaymentStatusNotification"
         optional :customer_activity, :message, 17, "com.elarian.hera.proto.CustomerActivityNotification"
       end
     end
@@ -459,11 +460,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :transaction_id, :string, 1
       optional :status, :enum, 2, "com.elarian.hera.proto.PaymentStatus"
     end
-    add_message "com.elarian.hera.proto.WalletPaymentStatusNotification" do
-      optional :wallet_id, :string, 1
-      optional :transaction_id, :string, 2
-      optional :status, :enum, 3, "com.elarian.hera.proto.PaymentStatus"
-    end
     add_message "com.elarian.hera.proto.CustomerActivityNotification" do
       optional :customer_number, :message, 1, "com.elarian.hera.proto.CustomerNumber"
       optional :source, :string, 2
@@ -538,7 +534,6 @@ module Com
         SentMessageReactionNotification = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.SentMessageReactionNotification").msgclass
         ReceivedPaymentNotification = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.ReceivedPaymentNotification").msgclass
         PaymentStatusNotification = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.PaymentStatusNotification").msgclass
-        WalletPaymentStatusNotification = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.WalletPaymentStatusNotification").msgclass
         CustomerActivityNotification = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("com.elarian.hera.proto.CustomerActivityNotification").msgclass
       end
     end

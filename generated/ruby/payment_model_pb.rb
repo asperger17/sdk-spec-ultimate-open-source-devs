@@ -60,6 +60,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :created_at, :message, 8, "google.protobuf.Timestamp"
       optional :updated_at, :message, 9, "google.protobuf.Timestamp"
       optional :provider_transaction_id, :message, 10, "google.protobuf.StringValue"
+      optional :narration, :message, 11, "google.protobuf.StringValue"
     end
     add_enum "com.elarian.hera.proto.PaymentChannel" do
       value :PAYMENT_CHANNEL_UNSPECIFIED, 0

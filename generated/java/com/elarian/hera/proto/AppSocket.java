@@ -43551,6 +43551,18 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 3;</code>
      */
     com.elarian.hera.proto.CommonModel.CashOrBuilder getValueOrBuilder();
+
+    /**
+     * <code>string narration = 4;</code>
+     * @return The narration.
+     */
+    java.lang.String getNarration();
+    /**
+     * <code>string narration = 4;</code>
+     * @return The bytes for narration.
+     */
+    com.google.protobuf.ByteString
+        getNarrationBytes();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.InitiatePaymentCommand}
@@ -43565,6 +43577,7 @@ public final class AppSocket {
       super(builder);
     }
     private InitiatePaymentCommand() {
+      narration_ = "";
     }
 
     @java.lang.Override
@@ -43634,6 +43647,12 @@ public final class AppSocket {
                 value_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 34: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              narration_ = s;
               break;
             }
             default: {
@@ -43746,6 +43765,44 @@ public final class AppSocket {
       return getValue();
     }
 
+    public static final int NARRATION_FIELD_NUMBER = 4;
+    private volatile java.lang.Object narration_;
+    /**
+     * <code>string narration = 4;</code>
+     * @return The narration.
+     */
+    @java.lang.Override
+    public java.lang.String getNarration() {
+      java.lang.Object ref = narration_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        narration_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string narration = 4;</code>
+     * @return The bytes for narration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNarrationBytes() {
+      java.lang.Object ref = narration_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        narration_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -43769,6 +43826,9 @@ public final class AppSocket {
       if (value_ != null) {
         output.writeMessage(3, getValue());
       }
+      if (!getNarrationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 4, narration_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -43789,6 +43849,9 @@ public final class AppSocket {
       if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(3, getValue());
+      }
+      if (!getNarrationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(4, narration_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -43820,6 +43883,8 @@ public final class AppSocket {
         if (!getValue()
             .equals(other.getValue())) return false;
       }
+      if (!getNarration()
+          .equals(other.getNarration())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -43843,6 +43908,8 @@ public final class AppSocket {
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
       }
+      hash = (37 * hash) + NARRATION_FIELD_NUMBER;
+      hash = (53 * hash) + getNarration().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -43994,6 +44061,8 @@ public final class AppSocket {
           value_ = null;
           valueBuilder_ = null;
         }
+        narration_ = "";
+
         return this;
       }
 
@@ -44035,6 +44104,7 @@ public final class AppSocket {
         } else {
           result.value_ = valueBuilder_.build();
         }
+        result.narration_ = narration_;
         onBuilt();
         return result;
       }
@@ -44091,6 +44161,10 @@ public final class AppSocket {
         }
         if (other.hasValue()) {
           mergeValue(other.getValue());
+        }
+        if (!other.getNarration().isEmpty()) {
+          narration_ = other.narration_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -44476,6 +44550,82 @@ public final class AppSocket {
           value_ = null;
         }
         return valueBuilder_;
+      }
+
+      private java.lang.Object narration_ = "";
+      /**
+       * <code>string narration = 4;</code>
+       * @return The narration.
+       */
+      public java.lang.String getNarration() {
+        java.lang.Object ref = narration_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          narration_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string narration = 4;</code>
+       * @return The bytes for narration.
+       */
+      public com.google.protobuf.ByteString
+          getNarrationBytes() {
+        java.lang.Object ref = narration_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          narration_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string narration = 4;</code>
+       * @param value The narration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNarration(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        narration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string narration = 4;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNarration() {
+        
+        narration_ = getDefaultInstance().getNarration();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string narration = 4;</code>
+       * @param value The bytes for narration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNarrationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        narration_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -45900,6 +46050,18 @@ public final class AppSocket {
      * <code>.com.elarian.hera.proto.Cash value = 6;</code>
      */
     com.elarian.hera.proto.CommonModel.CashOrBuilder getValueOrBuilder();
+
+    /**
+     * <code>string narration = 7;</code>
+     * @return The narration.
+     */
+    java.lang.String getNarration();
+    /**
+     * <code>string narration = 7;</code>
+     * @return The bytes for narration.
+     */
+    com.google.protobuf.ByteString
+        getNarrationBytes();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.ReplayPaymentCommand}
@@ -45916,6 +46078,7 @@ public final class AppSocket {
     private ReplayPaymentCommand() {
       providerTransactionId_ = "";
       status_ = 0;
+      narration_ = "";
     }
 
     @java.lang.Override
@@ -46010,6 +46173,12 @@ public final class AppSocket {
                 value_ = subBuilder.buildPartial();
               }
 
+              break;
+            }
+            case 58: {
+              java.lang.String s = input.readStringRequireUtf8();
+
+              narration_ = s;
               break;
             }
             default: {
@@ -46205,6 +46374,44 @@ public final class AppSocket {
       return getValue();
     }
 
+    public static final int NARRATION_FIELD_NUMBER = 7;
+    private volatile java.lang.Object narration_;
+    /**
+     * <code>string narration = 7;</code>
+     * @return The narration.
+     */
+    @java.lang.Override
+    public java.lang.String getNarration() {
+      java.lang.Object ref = narration_;
+      if (ref instanceof java.lang.String) {
+        return (java.lang.String) ref;
+      } else {
+        com.google.protobuf.ByteString bs = 
+            (com.google.protobuf.ByteString) ref;
+        java.lang.String s = bs.toStringUtf8();
+        narration_ = s;
+        return s;
+      }
+    }
+    /**
+     * <code>string narration = 7;</code>
+     * @return The bytes for narration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.ByteString
+        getNarrationBytes() {
+      java.lang.Object ref = narration_;
+      if (ref instanceof java.lang.String) {
+        com.google.protobuf.ByteString b = 
+            com.google.protobuf.ByteString.copyFromUtf8(
+                (java.lang.String) ref);
+        narration_ = b;
+        return b;
+      } else {
+        return (com.google.protobuf.ByteString) ref;
+      }
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -46237,6 +46444,9 @@ public final class AppSocket {
       if (value_ != null) {
         output.writeMessage(6, getValue());
       }
+      if (!getNarrationBytes().isEmpty()) {
+        com.google.protobuf.GeneratedMessageV3.writeString(output, 7, narration_);
+      }
       unknownFields.writeTo(output);
     }
 
@@ -46268,6 +46478,9 @@ public final class AppSocket {
       if (value_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(6, getValue());
+      }
+      if (!getNarrationBytes().isEmpty()) {
+        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(7, narration_);
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -46307,6 +46520,8 @@ public final class AppSocket {
         if (!getValue()
             .equals(other.getValue())) return false;
       }
+      if (!getNarration()
+          .equals(other.getNarration())) return false;
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -46338,6 +46553,8 @@ public final class AppSocket {
         hash = (37 * hash) + VALUE_FIELD_NUMBER;
         hash = (53 * hash) + getValue().hashCode();
       }
+      hash = (37 * hash) + NARRATION_FIELD_NUMBER;
+      hash = (53 * hash) + getNarration().hashCode();
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -46499,6 +46716,8 @@ public final class AppSocket {
           value_ = null;
           valueBuilder_ = null;
         }
+        narration_ = "";
+
         return this;
       }
 
@@ -46547,6 +46766,7 @@ public final class AppSocket {
         } else {
           result.value_ = valueBuilder_.build();
         }
+        result.narration_ = narration_;
         onBuilt();
         return result;
       }
@@ -46613,6 +46833,10 @@ public final class AppSocket {
         }
         if (other.hasValue()) {
           mergeValue(other.getValue());
+        }
+        if (!other.getNarration().isEmpty()) {
+          narration_ = other.narration_;
+          onChanged();
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -47247,6 +47471,82 @@ public final class AppSocket {
           value_ = null;
         }
         return valueBuilder_;
+      }
+
+      private java.lang.Object narration_ = "";
+      /**
+       * <code>string narration = 7;</code>
+       * @return The narration.
+       */
+      public java.lang.String getNarration() {
+        java.lang.Object ref = narration_;
+        if (!(ref instanceof java.lang.String)) {
+          com.google.protobuf.ByteString bs =
+              (com.google.protobuf.ByteString) ref;
+          java.lang.String s = bs.toStringUtf8();
+          narration_ = s;
+          return s;
+        } else {
+          return (java.lang.String) ref;
+        }
+      }
+      /**
+       * <code>string narration = 7;</code>
+       * @return The bytes for narration.
+       */
+      public com.google.protobuf.ByteString
+          getNarrationBytes() {
+        java.lang.Object ref = narration_;
+        if (ref instanceof String) {
+          com.google.protobuf.ByteString b = 
+              com.google.protobuf.ByteString.copyFromUtf8(
+                  (java.lang.String) ref);
+          narration_ = b;
+          return b;
+        } else {
+          return (com.google.protobuf.ByteString) ref;
+        }
+      }
+      /**
+       * <code>string narration = 7;</code>
+       * @param value The narration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNarration(
+          java.lang.String value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  
+        narration_ = value;
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string narration = 7;</code>
+       * @return This builder for chaining.
+       */
+      public Builder clearNarration() {
+        
+        narration_ = getDefaultInstance().getNarration();
+        onChanged();
+        return this;
+      }
+      /**
+       * <code>string narration = 7;</code>
+       * @param value The bytes for narration to set.
+       * @return This builder for chaining.
+       */
+      public Builder setNarrationBytes(
+          com.google.protobuf.ByteString value) {
+        if (value == null) {
+    throw new NullPointerException();
+  }
+  checkByteStringIsUtf8(value);
+        
+        narration_ = value;
+        onChanged();
+        return this;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -63939,21 +64239,6 @@ public final class AppSocket {
     com.elarian.hera.proto.AppSocket.PaymentStatusNotificationOrBuilder getPaymentStatusOrBuilder();
 
     /**
-     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     * @return Whether the walletPaymentStatus field is set.
-     */
-    boolean hasWalletPaymentStatus();
-    /**
-     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     * @return The walletPaymentStatus.
-     */
-    com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getWalletPaymentStatus();
-    /**
-     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     */
-    com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder getWalletPaymentStatusOrBuilder();
-
-    /**
      * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 17;</code>
      * @return Whether the customerActivity field is set.
      */
@@ -64202,20 +64487,6 @@ public final class AppSocket {
               entryCase_ = 15;
               break;
             }
-            case 130: {
-              com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder subBuilder = null;
-              if (entryCase_ == 16) {
-                subBuilder = ((com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_).toBuilder();
-              }
-              entry_ =
-                  input.readMessage(com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.parser(), extensionRegistry);
-              if (subBuilder != null) {
-                subBuilder.mergeFrom((com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_);
-                entry_ = subBuilder.buildPartial();
-              }
-              entryCase_ = 16;
-              break;
-            }
             case 138: {
               com.elarian.hera.proto.AppSocket.CustomerActivityNotification.Builder subBuilder = null;
               if (entryCase_ == 17) {
@@ -64277,7 +64548,6 @@ public final class AppSocket {
       SENT_MESSAGE_REACTION(13),
       RECEIVED_PAYMENT(14),
       PAYMENT_STATUS(15),
-      WALLET_PAYMENT_STATUS(16),
       CUSTOMER_ACTIVITY(17),
       ENTRY_NOT_SET(0);
       private final int value;
@@ -64306,7 +64576,6 @@ public final class AppSocket {
           case 13: return SENT_MESSAGE_REACTION;
           case 14: return RECEIVED_PAYMENT;
           case 15: return PAYMENT_STATUS;
-          case 16: return WALLET_PAYMENT_STATUS;
           case 17: return CUSTOMER_ACTIVITY;
           case 0: return ENTRY_NOT_SET;
           default: return null;
@@ -64799,37 +65068,6 @@ public final class AppSocket {
       return com.elarian.hera.proto.AppSocket.PaymentStatusNotification.getDefaultInstance();
     }
 
-    public static final int WALLET_PAYMENT_STATUS_FIELD_NUMBER = 16;
-    /**
-     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     * @return Whether the walletPaymentStatus field is set.
-     */
-    @java.lang.Override
-    public boolean hasWalletPaymentStatus() {
-      return entryCase_ == 16;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     * @return The walletPaymentStatus.
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getWalletPaymentStatus() {
-      if (entryCase_ == 16) {
-         return (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-    }
-    /**
-     * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-     */
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder getWalletPaymentStatusOrBuilder() {
-      if (entryCase_ == 16) {
-         return (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_;
-      }
-      return com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-    }
-
     public static final int CUSTOMER_ACTIVITY_FIELD_NUMBER = 17;
     /**
      * <code>.com.elarian.hera.proto.CustomerActivityNotification customer_activity = 17;</code>
@@ -64920,9 +65158,6 @@ public final class AppSocket {
       if (entryCase_ == 15) {
         output.writeMessage(15, (com.elarian.hera.proto.AppSocket.PaymentStatusNotification) entry_);
       }
-      if (entryCase_ == 16) {
-        output.writeMessage(16, (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_);
-      }
       if (entryCase_ == 17) {
         output.writeMessage(17, (com.elarian.hera.proto.AppSocket.CustomerActivityNotification) entry_);
       }
@@ -64991,10 +65226,6 @@ public final class AppSocket {
       if (entryCase_ == 15) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(15, (com.elarian.hera.proto.AppSocket.PaymentStatusNotification) entry_);
-      }
-      if (entryCase_ == 16) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeMessageSize(16, (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_);
       }
       if (entryCase_ == 17) {
         size += com.google.protobuf.CodedOutputStream
@@ -65073,10 +65304,6 @@ public final class AppSocket {
           if (!getPaymentStatus()
               .equals(other.getPaymentStatus())) return false;
           break;
-        case 16:
-          if (!getWalletPaymentStatus()
-              .equals(other.getWalletPaymentStatus())) return false;
-          break;
         case 17:
           if (!getCustomerActivity()
               .equals(other.getCustomerActivity())) return false;
@@ -65149,10 +65376,6 @@ public final class AppSocket {
         case 15:
           hash = (37 * hash) + PAYMENT_STATUS_FIELD_NUMBER;
           hash = (53 * hash) + getPaymentStatus().hashCode();
-          break;
-        case 16:
-          hash = (37 * hash) + WALLET_PAYMENT_STATUS_FIELD_NUMBER;
-          hash = (53 * hash) + getWalletPaymentStatus().hashCode();
           break;
         case 17:
           hash = (37 * hash) + CUSTOMER_ACTIVITY_FIELD_NUMBER;
@@ -65423,13 +65646,6 @@ public final class AppSocket {
             result.entry_ = paymentStatusBuilder_.build();
           }
         }
-        if (entryCase_ == 16) {
-          if (walletPaymentStatusBuilder_ == null) {
-            result.entry_ = entry_;
-          } else {
-            result.entry_ = walletPaymentStatusBuilder_.build();
-          }
-        }
         if (entryCase_ == 17) {
           if (customerActivityBuilder_ == null) {
             result.entry_ = entry_;
@@ -65543,10 +65759,6 @@ public final class AppSocket {
           }
           case PAYMENT_STATUS: {
             mergePaymentStatus(other.getPaymentStatus());
-            break;
-          }
-          case WALLET_PAYMENT_STATUS: {
-            mergeWalletPaymentStatus(other.getWalletPaymentStatus());
             break;
           }
           case CUSTOMER_ACTIVITY: {
@@ -67475,147 +67687,6 @@ public final class AppSocket {
         entryCase_ = 15;
         onChanged();;
         return paymentStatusBuilder_;
-      }
-
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder> walletPaymentStatusBuilder_;
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       * @return Whether the walletPaymentStatus field is set.
-       */
-      @java.lang.Override
-      public boolean hasWalletPaymentStatus() {
-        return entryCase_ == 16;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       * @return The walletPaymentStatus.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getWalletPaymentStatus() {
-        if (walletPaymentStatusBuilder_ == null) {
-          if (entryCase_ == 16) {
-            return (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_;
-          }
-          return com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-        } else {
-          if (entryCase_ == 16) {
-            return walletPaymentStatusBuilder_.getMessage();
-          }
-          return com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      public Builder setWalletPaymentStatus(com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification value) {
-        if (walletPaymentStatusBuilder_ == null) {
-          if (value == null) {
-            throw new NullPointerException();
-          }
-          entry_ = value;
-          onChanged();
-        } else {
-          walletPaymentStatusBuilder_.setMessage(value);
-        }
-        entryCase_ = 16;
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      public Builder setWalletPaymentStatus(
-          com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder builderForValue) {
-        if (walletPaymentStatusBuilder_ == null) {
-          entry_ = builderForValue.build();
-          onChanged();
-        } else {
-          walletPaymentStatusBuilder_.setMessage(builderForValue.build());
-        }
-        entryCase_ = 16;
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      public Builder mergeWalletPaymentStatus(com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification value) {
-        if (walletPaymentStatusBuilder_ == null) {
-          if (entryCase_ == 16 &&
-              entry_ != com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance()) {
-            entry_ = com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.newBuilder((com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_)
-                .mergeFrom(value).buildPartial();
-          } else {
-            entry_ = value;
-          }
-          onChanged();
-        } else {
-          if (entryCase_ == 16) {
-            walletPaymentStatusBuilder_.mergeFrom(value);
-          }
-          walletPaymentStatusBuilder_.setMessage(value);
-        }
-        entryCase_ = 16;
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      public Builder clearWalletPaymentStatus() {
-        if (walletPaymentStatusBuilder_ == null) {
-          if (entryCase_ == 16) {
-            entryCase_ = 0;
-            entry_ = null;
-            onChanged();
-          }
-        } else {
-          if (entryCase_ == 16) {
-            entryCase_ = 0;
-            entry_ = null;
-          }
-          walletPaymentStatusBuilder_.clear();
-        }
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder getWalletPaymentStatusBuilder() {
-        return getWalletPaymentStatusFieldBuilder().getBuilder();
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder getWalletPaymentStatusOrBuilder() {
-        if ((entryCase_ == 16) && (walletPaymentStatusBuilder_ != null)) {
-          return walletPaymentStatusBuilder_.getMessageOrBuilder();
-        } else {
-          if (entryCase_ == 16) {
-            return (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_;
-          }
-          return com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-        }
-      }
-      /**
-       * <code>.com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;</code>
-       */
-      private com.google.protobuf.SingleFieldBuilderV3<
-          com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder> 
-          getWalletPaymentStatusFieldBuilder() {
-        if (walletPaymentStatusBuilder_ == null) {
-          if (!(entryCase_ == 16)) {
-            entry_ = com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-          }
-          walletPaymentStatusBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
-              com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder>(
-                  (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) entry_,
-                  getParentForChildren(),
-                  isClean());
-          entry_ = null;
-        }
-        entryCase_ = 16;
-        onChanged();;
-        return walletPaymentStatusBuilder_;
       }
 
       private com.google.protobuf.SingleFieldBuilderV3<
@@ -81950,831 +82021,6 @@ public final class AppSocket {
 
   }
 
-  public interface WalletPaymentStatusNotificationOrBuilder extends
-      // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.WalletPaymentStatusNotification)
-      com.google.protobuf.MessageOrBuilder {
-
-    /**
-     * <code>string wallet_id = 1;</code>
-     * @return The walletId.
-     */
-    java.lang.String getWalletId();
-    /**
-     * <code>string wallet_id = 1;</code>
-     * @return The bytes for walletId.
-     */
-    com.google.protobuf.ByteString
-        getWalletIdBytes();
-
-    /**
-     * <code>string transaction_id = 2;</code>
-     * @return The transactionId.
-     */
-    java.lang.String getTransactionId();
-    /**
-     * <code>string transaction_id = 2;</code>
-     * @return The bytes for transactionId.
-     */
-    com.google.protobuf.ByteString
-        getTransactionIdBytes();
-
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    int getStatusValue();
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-     * @return The status.
-     */
-    com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
-  }
-  /**
-   * Protobuf type {@code com.elarian.hera.proto.WalletPaymentStatusNotification}
-   */
-  public static final class WalletPaymentStatusNotification extends
-      com.google.protobuf.GeneratedMessageV3 implements
-      // @@protoc_insertion_point(message_implements:com.elarian.hera.proto.WalletPaymentStatusNotification)
-      WalletPaymentStatusNotificationOrBuilder {
-  private static final long serialVersionUID = 0L;
-    // Use WalletPaymentStatusNotification.newBuilder() to construct.
-    private WalletPaymentStatusNotification(com.google.protobuf.GeneratedMessageV3.Builder<?> builder) {
-      super(builder);
-    }
-    private WalletPaymentStatusNotification() {
-      walletId_ = "";
-      transactionId_ = "";
-      status_ = 0;
-    }
-
-    @java.lang.Override
-    @SuppressWarnings({"unused"})
-    protected java.lang.Object newInstance(
-        UnusedPrivateParameter unused) {
-      return new WalletPaymentStatusNotification();
-    }
-
-    @java.lang.Override
-    public final com.google.protobuf.UnknownFieldSet
-    getUnknownFields() {
-      return this.unknownFields;
-    }
-    private WalletPaymentStatusNotification(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      this();
-      if (extensionRegistry == null) {
-        throw new java.lang.NullPointerException();
-      }
-      com.google.protobuf.UnknownFieldSet.Builder unknownFields =
-          com.google.protobuf.UnknownFieldSet.newBuilder();
-      try {
-        boolean done = false;
-        while (!done) {
-          int tag = input.readTag();
-          switch (tag) {
-            case 0:
-              done = true;
-              break;
-            case 10: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              walletId_ = s;
-              break;
-            }
-            case 18: {
-              java.lang.String s = input.readStringRequireUtf8();
-
-              transactionId_ = s;
-              break;
-            }
-            case 24: {
-              int rawValue = input.readEnum();
-
-              status_ = rawValue;
-              break;
-            }
-            default: {
-              if (!parseUnknownField(
-                  input, unknownFields, extensionRegistry, tag)) {
-                done = true;
-              }
-              break;
-            }
-          }
-        }
-      } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-        throw e.setUnfinishedMessage(this);
-      } catch (java.io.IOException e) {
-        throw new com.google.protobuf.InvalidProtocolBufferException(
-            e).setUnfinishedMessage(this);
-      } finally {
-        this.unknownFields = unknownFields.build();
-        makeExtensionsImmutable();
-      }
-    }
-    public static final com.google.protobuf.Descriptors.Descriptor
-        getDescriptor() {
-      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor;
-    }
-
-    @java.lang.Override
-    protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-        internalGetFieldAccessorTable() {
-      return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_fieldAccessorTable
-          .ensureFieldAccessorsInitialized(
-              com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.class, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder.class);
-    }
-
-    public static final int WALLET_ID_FIELD_NUMBER = 1;
-    private volatile java.lang.Object walletId_;
-    /**
-     * <code>string wallet_id = 1;</code>
-     * @return The walletId.
-     */
-    @java.lang.Override
-    public java.lang.String getWalletId() {
-      java.lang.Object ref = walletId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        walletId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string wallet_id = 1;</code>
-     * @return The bytes for walletId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getWalletIdBytes() {
-      java.lang.Object ref = walletId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        walletId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int TRANSACTION_ID_FIELD_NUMBER = 2;
-    private volatile java.lang.Object transactionId_;
-    /**
-     * <code>string transaction_id = 2;</code>
-     * @return The transactionId.
-     */
-    @java.lang.Override
-    public java.lang.String getTransactionId() {
-      java.lang.Object ref = transactionId_;
-      if (ref instanceof java.lang.String) {
-        return (java.lang.String) ref;
-      } else {
-        com.google.protobuf.ByteString bs = 
-            (com.google.protobuf.ByteString) ref;
-        java.lang.String s = bs.toStringUtf8();
-        transactionId_ = s;
-        return s;
-      }
-    }
-    /**
-     * <code>string transaction_id = 2;</code>
-     * @return The bytes for transactionId.
-     */
-    @java.lang.Override
-    public com.google.protobuf.ByteString
-        getTransactionIdBytes() {
-      java.lang.Object ref = transactionId_;
-      if (ref instanceof java.lang.String) {
-        com.google.protobuf.ByteString b = 
-            com.google.protobuf.ByteString.copyFromUtf8(
-                (java.lang.String) ref);
-        transactionId_ = b;
-        return b;
-      } else {
-        return (com.google.protobuf.ByteString) ref;
-      }
-    }
-
-    public static final int STATUS_FIELD_NUMBER = 3;
-    private int status_;
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-     * @return The enum numeric value on the wire for status.
-     */
-    @java.lang.Override public int getStatusValue() {
-      return status_;
-    }
-    /**
-     * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-     * @return The status.
-     */
-    @java.lang.Override public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
-      @SuppressWarnings("deprecation")
-      com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.valueOf(status_);
-      return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
-    }
-
-    private byte memoizedIsInitialized = -1;
-    @java.lang.Override
-    public final boolean isInitialized() {
-      byte isInitialized = memoizedIsInitialized;
-      if (isInitialized == 1) return true;
-      if (isInitialized == 0) return false;
-
-      memoizedIsInitialized = 1;
-      return true;
-    }
-
-    @java.lang.Override
-    public void writeTo(com.google.protobuf.CodedOutputStream output)
-                        throws java.io.IOException {
-      if (!getWalletIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 1, walletId_);
-      }
-      if (!getTransactionIdBytes().isEmpty()) {
-        com.google.protobuf.GeneratedMessageV3.writeString(output, 2, transactionId_);
-      }
-      if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
-        output.writeEnum(3, status_);
-      }
-      unknownFields.writeTo(output);
-    }
-
-    @java.lang.Override
-    public int getSerializedSize() {
-      int size = memoizedSize;
-      if (size != -1) return size;
-
-      size = 0;
-      if (!getWalletIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(1, walletId_);
-      }
-      if (!getTransactionIdBytes().isEmpty()) {
-        size += com.google.protobuf.GeneratedMessageV3.computeStringSize(2, transactionId_);
-      }
-      if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
-        size += com.google.protobuf.CodedOutputStream
-          .computeEnumSize(3, status_);
-      }
-      size += unknownFields.getSerializedSize();
-      memoizedSize = size;
-      return size;
-    }
-
-    @java.lang.Override
-    public boolean equals(final java.lang.Object obj) {
-      if (obj == this) {
-       return true;
-      }
-      if (!(obj instanceof com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification)) {
-        return super.equals(obj);
-      }
-      com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification other = (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) obj;
-
-      if (!getWalletId()
-          .equals(other.getWalletId())) return false;
-      if (!getTransactionId()
-          .equals(other.getTransactionId())) return false;
-      if (status_ != other.status_) return false;
-      if (!unknownFields.equals(other.unknownFields)) return false;
-      return true;
-    }
-
-    @java.lang.Override
-    public int hashCode() {
-      if (memoizedHashCode != 0) {
-        return memoizedHashCode;
-      }
-      int hash = 41;
-      hash = (19 * hash) + getDescriptor().hashCode();
-      hash = (37 * hash) + WALLET_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getWalletId().hashCode();
-      hash = (37 * hash) + TRANSACTION_ID_FIELD_NUMBER;
-      hash = (53 * hash) + getTransactionId().hashCode();
-      hash = (37 * hash) + STATUS_FIELD_NUMBER;
-      hash = (53 * hash) + status_;
-      hash = (29 * hash) + unknownFields.hashCode();
-      memoizedHashCode = hash;
-      return hash;
-    }
-
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        java.nio.ByteBuffer data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        java.nio.ByteBuffer data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        com.google.protobuf.ByteString data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        com.google.protobuf.ByteString data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(byte[] data)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        byte[] data,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws com.google.protobuf.InvalidProtocolBufferException {
-      return PARSER.parseFrom(data, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseDelimitedFrom(java.io.InputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseDelimitedFrom(
-        java.io.InputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseDelimitedWithIOException(PARSER, input, extensionRegistry);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        com.google.protobuf.CodedInputStream input)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input);
-    }
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parseFrom(
-        com.google.protobuf.CodedInputStream input,
-        com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-        throws java.io.IOException {
-      return com.google.protobuf.GeneratedMessageV3
-          .parseWithIOException(PARSER, input, extensionRegistry);
-    }
-
-    @java.lang.Override
-    public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder() {
-      return DEFAULT_INSTANCE.toBuilder();
-    }
-    public static Builder newBuilder(com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification prototype) {
-      return DEFAULT_INSTANCE.toBuilder().mergeFrom(prototype);
-    }
-    @java.lang.Override
-    public Builder toBuilder() {
-      return this == DEFAULT_INSTANCE
-          ? new Builder() : new Builder().mergeFrom(this);
-    }
-
-    @java.lang.Override
-    protected Builder newBuilderForType(
-        com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-      Builder builder = new Builder(parent);
-      return builder;
-    }
-    /**
-     * Protobuf type {@code com.elarian.hera.proto.WalletPaymentStatusNotification}
-     */
-    public static final class Builder extends
-        com.google.protobuf.GeneratedMessageV3.Builder<Builder> implements
-        // @@protoc_insertion_point(builder_implements:com.elarian.hera.proto.WalletPaymentStatusNotification)
-        com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotificationOrBuilder {
-      public static final com.google.protobuf.Descriptors.Descriptor
-          getDescriptor() {
-        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor;
-      }
-
-      @java.lang.Override
-      protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-          internalGetFieldAccessorTable() {
-        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_fieldAccessorTable
-            .ensureFieldAccessorsInitialized(
-                com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.class, com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.Builder.class);
-      }
-
-      // Construct using com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.newBuilder()
-      private Builder() {
-        maybeForceBuilderInitialization();
-      }
-
-      private Builder(
-          com.google.protobuf.GeneratedMessageV3.BuilderParent parent) {
-        super(parent);
-        maybeForceBuilderInitialization();
-      }
-      private void maybeForceBuilderInitialization() {
-        if (com.google.protobuf.GeneratedMessageV3
-                .alwaysUseFieldBuilders) {
-        }
-      }
-      @java.lang.Override
-      public Builder clear() {
-        super.clear();
-        walletId_ = "";
-
-        transactionId_ = "";
-
-        status_ = 0;
-
-        return this;
-      }
-
-      @java.lang.Override
-      public com.google.protobuf.Descriptors.Descriptor
-          getDescriptorForType() {
-        return com.elarian.hera.proto.AppSocket.internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor;
-      }
-
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getDefaultInstanceForType() {
-        return com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance();
-      }
-
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification build() {
-        com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification result = buildPartial();
-        if (!result.isInitialized()) {
-          throw newUninitializedMessageException(result);
-        }
-        return result;
-      }
-
-      @java.lang.Override
-      public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification buildPartial() {
-        com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification result = new com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification(this);
-        result.walletId_ = walletId_;
-        result.transactionId_ = transactionId_;
-        result.status_ = status_;
-        onBuilt();
-        return result;
-      }
-
-      @java.lang.Override
-      public Builder clone() {
-        return super.clone();
-      }
-      @java.lang.Override
-      public Builder setField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.setField(field, value);
-      }
-      @java.lang.Override
-      public Builder clearField(
-          com.google.protobuf.Descriptors.FieldDescriptor field) {
-        return super.clearField(field);
-      }
-      @java.lang.Override
-      public Builder clearOneof(
-          com.google.protobuf.Descriptors.OneofDescriptor oneof) {
-        return super.clearOneof(oneof);
-      }
-      @java.lang.Override
-      public Builder setRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          int index, java.lang.Object value) {
-        return super.setRepeatedField(field, index, value);
-      }
-      @java.lang.Override
-      public Builder addRepeatedField(
-          com.google.protobuf.Descriptors.FieldDescriptor field,
-          java.lang.Object value) {
-        return super.addRepeatedField(field, value);
-      }
-      @java.lang.Override
-      public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) {
-          return mergeFrom((com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification)other);
-        } else {
-          super.mergeFrom(other);
-          return this;
-        }
-      }
-
-      public Builder mergeFrom(com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification other) {
-        if (other == com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification.getDefaultInstance()) return this;
-        if (!other.getWalletId().isEmpty()) {
-          walletId_ = other.walletId_;
-          onChanged();
-        }
-        if (!other.getTransactionId().isEmpty()) {
-          transactionId_ = other.transactionId_;
-          onChanged();
-        }
-        if (other.status_ != 0) {
-          setStatusValue(other.getStatusValue());
-        }
-        this.mergeUnknownFields(other.unknownFields);
-        onChanged();
-        return this;
-      }
-
-      @java.lang.Override
-      public final boolean isInitialized() {
-        return true;
-      }
-
-      @java.lang.Override
-      public Builder mergeFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws java.io.IOException {
-        com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification parsedMessage = null;
-        try {
-          parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
-        } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification) e.getUnfinishedMessage();
-          throw e.unwrapIOException();
-        } finally {
-          if (parsedMessage != null) {
-            mergeFrom(parsedMessage);
-          }
-        }
-        return this;
-      }
-
-      private java.lang.Object walletId_ = "";
-      /**
-       * <code>string wallet_id = 1;</code>
-       * @return The walletId.
-       */
-      public java.lang.String getWalletId() {
-        java.lang.Object ref = walletId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          walletId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string wallet_id = 1;</code>
-       * @return The bytes for walletId.
-       */
-      public com.google.protobuf.ByteString
-          getWalletIdBytes() {
-        java.lang.Object ref = walletId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          walletId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string wallet_id = 1;</code>
-       * @param value The walletId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWalletId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        walletId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string wallet_id = 1;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearWalletId() {
-        
-        walletId_ = getDefaultInstance().getWalletId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string wallet_id = 1;</code>
-       * @param value The bytes for walletId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setWalletIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        walletId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private java.lang.Object transactionId_ = "";
-      /**
-       * <code>string transaction_id = 2;</code>
-       * @return The transactionId.
-       */
-      public java.lang.String getTransactionId() {
-        java.lang.Object ref = transactionId_;
-        if (!(ref instanceof java.lang.String)) {
-          com.google.protobuf.ByteString bs =
-              (com.google.protobuf.ByteString) ref;
-          java.lang.String s = bs.toStringUtf8();
-          transactionId_ = s;
-          return s;
-        } else {
-          return (java.lang.String) ref;
-        }
-      }
-      /**
-       * <code>string transaction_id = 2;</code>
-       * @return The bytes for transactionId.
-       */
-      public com.google.protobuf.ByteString
-          getTransactionIdBytes() {
-        java.lang.Object ref = transactionId_;
-        if (ref instanceof String) {
-          com.google.protobuf.ByteString b = 
-              com.google.protobuf.ByteString.copyFromUtf8(
-                  (java.lang.String) ref);
-          transactionId_ = b;
-          return b;
-        } else {
-          return (com.google.protobuf.ByteString) ref;
-        }
-      }
-      /**
-       * <code>string transaction_id = 2;</code>
-       * @param value The transactionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTransactionId(
-          java.lang.String value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string transaction_id = 2;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearTransactionId() {
-        
-        transactionId_ = getDefaultInstance().getTransactionId();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>string transaction_id = 2;</code>
-       * @param value The bytes for transactionId to set.
-       * @return This builder for chaining.
-       */
-      public Builder setTransactionIdBytes(
-          com.google.protobuf.ByteString value) {
-        if (value == null) {
-    throw new NullPointerException();
-  }
-  checkByteStringIsUtf8(value);
-        
-        transactionId_ = value;
-        onChanged();
-        return this;
-      }
-
-      private int status_ = 0;
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-       * @return The enum numeric value on the wire for status.
-       */
-      @java.lang.Override public int getStatusValue() {
-        return status_;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-       * @param value The enum numeric value on the wire for status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatusValue(int value) {
-        
-        status_ = value;
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-       * @return The status.
-       */
-      @java.lang.Override
-      public com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus() {
-        @SuppressWarnings("deprecation")
-        com.elarian.hera.proto.PaymentModel.PaymentStatus result = com.elarian.hera.proto.PaymentModel.PaymentStatus.valueOf(status_);
-        return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-       * @param value The status to set.
-       * @return This builder for chaining.
-       */
-      public Builder setStatus(com.elarian.hera.proto.PaymentModel.PaymentStatus value) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        
-        status_ = value.getNumber();
-        onChanged();
-        return this;
-      }
-      /**
-       * <code>.com.elarian.hera.proto.PaymentStatus status = 3;</code>
-       * @return This builder for chaining.
-       */
-      public Builder clearStatus() {
-        
-        status_ = 0;
-        onChanged();
-        return this;
-      }
-      @java.lang.Override
-      public final Builder setUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.setUnknownFields(unknownFields);
-      }
-
-      @java.lang.Override
-      public final Builder mergeUnknownFields(
-          final com.google.protobuf.UnknownFieldSet unknownFields) {
-        return super.mergeUnknownFields(unknownFields);
-      }
-
-
-      // @@protoc_insertion_point(builder_scope:com.elarian.hera.proto.WalletPaymentStatusNotification)
-    }
-
-    // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WalletPaymentStatusNotification)
-    private static final com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification DEFAULT_INSTANCE;
-    static {
-      DEFAULT_INSTANCE = new com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification();
-    }
-
-    public static com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getDefaultInstance() {
-      return DEFAULT_INSTANCE;
-    }
-
-    private static final com.google.protobuf.Parser<WalletPaymentStatusNotification>
-        PARSER = new com.google.protobuf.AbstractParser<WalletPaymentStatusNotification>() {
-      @java.lang.Override
-      public WalletPaymentStatusNotification parsePartialFrom(
-          com.google.protobuf.CodedInputStream input,
-          com.google.protobuf.ExtensionRegistryLite extensionRegistry)
-          throws com.google.protobuf.InvalidProtocolBufferException {
-        return new WalletPaymentStatusNotification(input, extensionRegistry);
-      }
-    };
-
-    public static com.google.protobuf.Parser<WalletPaymentStatusNotification> parser() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.google.protobuf.Parser<WalletPaymentStatusNotification> getParserForType() {
-      return PARSER;
-    }
-
-    @java.lang.Override
-    public com.elarian.hera.proto.AppSocket.WalletPaymentStatusNotification getDefaultInstanceForType() {
-      return DEFAULT_INSTANCE;
-    }
-
-  }
-
   public interface CustomerActivityNotificationOrBuilder extends
       // @@protoc_insertion_point(interface_extends:com.elarian.hera.proto.CustomerActivityNotification)
       com.google.protobuf.MessageOrBuilder {
@@ -84215,11 +83461,6 @@ public final class AppSocket {
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internal_static_com_elarian_hera_proto_PaymentStatusNotification_fieldAccessorTable;
   private static final com.google.protobuf.Descriptors.Descriptor
-    internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor;
-  private static final 
-    com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
-      internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_fieldAccessorTable;
-  private static final com.google.protobuf.Descriptors.Descriptor
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_descriptor;
   private static final 
     com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
@@ -84476,228 +83717,224 @@ public final class AppSocket {
       "atus\030\001 \001(\01624.com.elarian.hera.proto.Mess" +
       "agingConsentUpdateStatus\022\023\n\013description\030" +
       "\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.google.prot" +
-      "obuf.StringValue\"\312\001\n\026InitiatePaymentComm" +
+      "obuf.StringValue\"\335\001\n\026InitiatePaymentComm" +
       "and\022@\n\013debit_party\030\001 \001(\0132+.com.elarian.h" +
       "era.proto.PaymentCounterParty\022A\n\014credit_" +
       "party\030\002 \001(\0132+.com.elarian.hera.proto.Pay" +
       "mentCounterParty\022+\n\005value\030\003 \001(\0132\034.com.el" +
-      "arian.hera.proto.Cash\"\213\002\n\024InitiatePaymen" +
-      "tReply\0225\n\006status\030\001 \001(\0162%.com.elarian.her" +
-      "a.proto.PaymentStatus\022\023\n\013description\030\002 \001" +
-      "(\t\0224\n\016transaction_id\030\003 \001(\0132\034.google.prot" +
-      "obuf.StringValue\0227\n\021debit_customer_id\030\004 " +
-      "\001(\0132\034.google.protobuf.StringValue\0228\n\022cre" +
-      "dit_customer_id\030\005 \001(\0132\034.google.protobuf." +
-      "StringValue\"\320\002\n\024ReplayPaymentCommand\022\037\n\027" +
-      "provider_transaction_id\030\001 \001(\t\022.\n\ncreated" +
-      "_at\030\002 \001(\0132\032.google.protobuf.Timestamp\022@\n" +
-      "\013debit_party\030\003 \001(\0132+.com.elarian.hera.pr" +
-      "oto.PaymentCounterParty\022A\n\014credit_party\030" +
-      "\004 \001(\0132+.com.elarian.hera.proto.PaymentCo" +
-      "unterParty\0225\n\006status\030\005 \001(\0162%.com.elarian" +
-      ".hera.proto.PaymentStatus\022+\n\005value\030\006 \001(\013" +
-      "2\034.com.elarian.hera.proto.Cash\"\353\001\n Repla" +
-      "yPaymentStatusUpdateCommand\022?\n\017customer_" +
-      "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu" +
-      "stomerNumber\022\037\n\027provider_transaction_id\030" +
-      "\002 \001(\t\022.\n\nupdated_at\030\003 \001(\0132\032.google.proto" +
-      "buf.Timestamp\0225\n\006status\030\004 \001(\0162%.com.elar" +
-      "ian.hera.proto.PaymentStatus\"\342\001\n\022ReplayP" +
-      "aymentReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descripti" +
-      "on\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.googl" +
-      "e.protobuf.StringValue\0227\n\021debit_customer" +
-      "_id\030\004 \001(\0132\034.google.protobuf.StringValue\022" +
-      "8\n\022credit_customer_id\030\005 \001(\0132\034.google.pro" +
-      "tobuf.StringValue\"e\n\017TagCommandReply\022\016\n\006" +
-      "status\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007wor" +
-      "k_id\030\003 \001(\0132\034.google.protobuf.StringValue" +
-      "\"\223\002\n\027CustomerActivityCommand\022?\n\017customer" +
-      "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
-      "ustomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession" +
-      "_id\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003" +
-      "(\0132?.com.elarian.hera.proto.CustomerActi" +
-      "vityCommand.PropertiesEntry\0321\n\017Propertie" +
-      "sEntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236" +
-      "\002\n#ReplayMessagingConsentUpdateCommand\022?" +
-      "\n\017customer_number\030\001 \001(\0132&.com.elarian.he" +
-      "ra.proto.CustomerNumber\022F\n\016channel_numbe" +
-      "r\030\002 \001(\0132..com.elarian.hera.proto.Messagi" +
-      "ngChannelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.go" +
-      "ogle.protobuf.Timestamp\022>\n\006update\030\004 \001(\0162" +
-      "..com.elarian.hera.proto.MessagingConsen" +
-      "tUpdate\"\213\004\n\034ReplayReceivedMessageCommand" +
-      "\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provide" +
-      "r_session_id\030\002 \001(\0132\034.google.protobuf.Str" +
-      "ingValue\022/\n\013received_at\030\003 \001(\0132\032.google.p" +
-      "rotobuf.Timestamp\022?\n\017customer_number\030\004 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "er\022F\n\016channel_number\030\005 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\0229\n\005pa" +
-      "rts\030\006 \003(\0132*.com.elarian.hera.proto.Inbou" +
-      "ndMessageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\022?\n\010provider\030\010 \001" +
-      "(\0162-.com.elarian.hera.proto.ChannelNumbe" +
-      "rProvider\022*\n\004cost\030\t \001(\0132\034.com.elarian.he" +
-      "ra.proto.Cash\"\301\004\n\030ReplaySentMessageComma" +
-      "nd\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provi" +
-      "der_session_id\030\002 \001(\0132\034.google.protobuf.S" +
-      "tringValue\022+\n\007sent_at\030\003 \001(\0132\032.google.pro" +
+      "arian.hera.proto.Cash\022\021\n\tnarration\030\004 \001(\t" +
+      "\"\213\002\n\024InitiatePaymentReply\0225\n\006status\030\001 \001(" +
+      "\0162%.com.elarian.hera.proto.PaymentStatus" +
+      "\022\023\n\013description\030\002 \001(\t\0224\n\016transaction_id\030" +
+      "\003 \001(\0132\034.google.protobuf.StringValue\0227\n\021d" +
+      "ebit_customer_id\030\004 \001(\0132\034.google.protobuf" +
+      ".StringValue\0228\n\022credit_customer_id\030\005 \001(\013" +
+      "2\034.google.protobuf.StringValue\"\343\002\n\024Repla" +
+      "yPaymentCommand\022\037\n\027provider_transaction_" +
+      "id\030\001 \001(\t\022.\n\ncreated_at\030\002 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\022@\n\013debit_party\030\003 \001(\0132+." +
+      "com.elarian.hera.proto.PaymentCounterPar" +
+      "ty\022A\n\014credit_party\030\004 \001(\0132+.com.elarian.h" +
+      "era.proto.PaymentCounterParty\0225\n\006status\030" +
+      "\005 \001(\0162%.com.elarian.hera.proto.PaymentSt" +
+      "atus\022+\n\005value\030\006 \001(\0132\034.com.elarian.hera.p" +
+      "roto.Cash\022\021\n\tnarration\030\007 \001(\t\"\353\001\n ReplayP" +
+      "aymentStatusUpdateCommand\022?\n\017customer_nu" +
+      "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022\037\n\027provider_transaction_id\030\002 " +
+      "\001(\t\022.\n\nupdated_at\030\003 \001(\0132\032.google.protobu" +
+      "f.Timestamp\0225\n\006status\030\004 \001(\0162%.com.elaria" +
+      "n.hera.proto.PaymentStatus\"\342\001\n\022ReplayPay" +
+      "mentReply\022\016\n\006status\030\001 \001(\010\022\023\n\013description" +
+      "\030\002 \001(\t\0224\n\016transaction_id\030\003 \001(\0132\034.google." +
+      "protobuf.StringValue\0227\n\021debit_customer_i" +
+      "d\030\004 \001(\0132\034.google.protobuf.StringValue\0228\n" +
+      "\022credit_customer_id\030\005 \001(\0132\034.google.proto" +
+      "buf.StringValue\"e\n\017TagCommandReply\022\016\n\006st" +
+      "atus\030\001 \001(\010\022\023\n\013description\030\002 \001(\t\022-\n\007work_" +
+      "id\030\003 \001(\0132\034.google.protobuf.StringValue\"\223" +
+      "\002\n\027CustomerActivityCommand\022?\n\017customer_n" +
+      "umber\030\001 \001(\0132&.com.elarian.hera.proto.Cus" +
+      "tomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_i" +
+      "d\030\003 \001(\t\022\013\n\003key\030\004 \001(\t\022S\n\nproperties\030\005 \003(\013" +
+      "2?.com.elarian.hera.proto.CustomerActivi" +
+      "tyCommand.PropertiesEntry\0321\n\017PropertiesE" +
+      "ntry\022\013\n\003key\030\001 \001(\t\022\r\n\005value\030\002 \001(\t:\0028\001\"\236\002\n" +
+      "#ReplayMessagingConsentUpdateCommand\022?\n\017" +
+      "customer_number\030\001 \001(\0132&.com.elarian.hera" +
+      ".proto.CustomerNumber\022F\n\016channel_number\030" +
+      "\002 \001(\0132..com.elarian.hera.proto.Messaging" +
+      "ChannelNumber\022.\n\nupdated_at\030\003 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\022>\n\006update\030\004 \001(\0162.." +
+      "com.elarian.hera.proto.MessagingConsentU" +
+      "pdate\"\213\004\n\034ReplayReceivedMessageCommand\022\033" +
+      "\n\023provider_message_id\030\001 \001(\t\0229\n\023provider_" +
+      "session_id\030\002 \001(\0132\034.google.protobuf.Strin" +
+      "gValue\022/\n\013received_at\030\003 \001(\0132\032.google.pro" +
       "tobuf.Timestamp\022?\n\017customer_number\030\004 \001(\013" +
       "2&.com.elarian.hera.proto.CustomerNumber" +
       "\022F\n\016channel_number\030\005 \001(\0132..com.elarian.h" +
-      "era.proto.MessagingChannelNumber\022?\n\010prov" +
-      "ider\030\006 \001(\0162-.com.elarian.hera.proto.Chan" +
-      "nelNumberProvider\0228\n\007message\030\007 \001(\0132\'.com" +
-      ".elarian.hera.proto.OutboundMessage\0221\n\013i" +
-      "n_reply_to\030\010 \001(\0132\034.google.protobuf.Strin" +
-      "gValue\022=\n\006status\030\t \001(\0162-.com.elarian.her" +
-      "a.proto.MessageDeliveryStatus\022*\n\004cost\030\n " +
-      "\001(\0132\034.com.elarian.hera.proto.Cash\"\343\002\n Re" +
-      "playMessageStatusUpdateCommand\022\033\n\023provid" +
-      "er_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022?\n\017customer_" +
-      "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu" +
-      "stomerNumber\022F\n\016channel_number\030\004 \001(\0132..c" +
-      "om.elarian.hera.proto.MessagingChannelNu" +
-      "mber\022=\n\006status\030\005 \001(\0162-.com.elarian.hera." +
-      "proto.MessageDeliveryStatus\022*\n\004cost\030\006 \001(" +
-      "\0132\034.com.elarian.hera.proto.Cash\"\265\002\n\"Repl" +
-      "ayMessageReactionUpdateCommand\022\033\n\023provid" +
-      "er_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022?\n\017customer_" +
-      "number\030\003 \001(\0132&.com.elarian.hera.proto.Cu" +
-      "stomerNumber\022F\n\016channel_number\030\004 \001(\0132..c" +
-      "om.elarian.hera.proto.MessagingChannelNu" +
-      "mber\0229\n\010reaction\030\005 \001(\0162\'.com.elarian.her" +
-      "a.proto.MessageReaction\"\225\003\n\035ReplayMessag" +
-      "ingSessionCommand\022\033\n\023provider_session_id" +
-      "\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.el" +
-      "arian.hera.proto.CustomerNumber\022F\n\016chann" +
-      "el_number\030\003 \001(\0132..com.elarian.hera.proto" +
-      ".MessagingChannelNumber\022.\n\nstarted_at\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022+\n\010durat" +
-      "ion\030\005 \001(\0132\031.google.protobuf.Duration\022E\n\n" +
-      "end_reason\030\006 \001(\01621.com.elarian.hera.prot" +
-      "o.MessagingSessionEndReason\022*\n\004cost\030\007 \001(" +
-      "\0132\034.com.elarian.hera.proto.Cash\"o\n\025Custo" +
-      "merActivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013desc" +
-      "ription\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"\266\001\n\027ServerToApp" +
-      "Notification\022K\n\010customer\030\001 \001(\01327.com.ela" +
-      "rian.hera.proto.ServerToAppCustomerNotif" +
-      "icationH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.h" +
-      "era.proto.ServerToAppPurseNotificationH\000" +
-      "B\007\n\005entry\"\316\t\n\037ServerToAppCustomerNotific" +
-      "ation\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n" +
-      "\013customer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.c" +
-      "om.elarian.hera.proto.DataMapValue\022.\n\ncr" +
-      "eated_at\030\005 \001(\0132\032.google.protobuf.Timesta" +
-      "mp\022@\n\010reminder\030\006 \001(\0132,.com.elarian.hera." +
-      "proto.ReminderNotificationH\000\022`\n\031messagin" +
-      "g_session_started\030\007 \001(\0132;.com.elarian.he" +
-      "ra.proto.MessagingSessionStartedNotifica" +
-      "tionH\000\022`\n\031messaging_session_renewed\030\010 \001(" +
-      "\0132;.com.elarian.hera.proto.MessagingSess" +
-      "ionRenewedNotificationH\000\022\\\n\027messaging_se" +
-      "ssion_ended\030\t \001(\01329.com.elarian.hera.pro" +
-      "to.MessagingSessionEndedNotificationH\000\022^" +
-      "\n\030messaging_consent_update\030\n \001(\0132:.com.e" +
-      "larian.hera.proto.MessagingConsentUpdate" +
-      "NotificationH\000\022O\n\020received_message\030\013 \001(\013" +
-      "23.com.elarian.hera.proto.ReceivedMessag" +
-      "eNotificationH\000\022K\n\016message_status\030\014 \001(\0132" +
-      "1.com.elarian.hera.proto.MessageStatusNo" +
-      "tificationH\000\022X\n\025sent_message_reaction\030\r " +
-      "\001(\01327.com.elarian.hera.proto.SentMessage" +
-      "ReactionNotificationH\000\022O\n\020received_payme" +
-      "nt\030\016 \001(\01323.com.elarian.hera.proto.Receiv" +
-      "edPaymentNotificationH\000\022K\n\016payment_statu" +
-      "s\030\017 \001(\01321.com.elarian.hera.proto.Payment" +
-      "StatusNotificationH\000\022X\n\025wallet_payment_s" +
-      "tatus\030\020 \001(\01327.com.elarian.hera.proto.Wal" +
-      "letPaymentStatusNotificationH\000\022Q\n\021custom" +
-      "er_activity\030\021 \001(\01324.com.elarian.hera.pro" +
-      "to.CustomerActivityNotificationH\000B\007\n\005ent" +
-      "ry\"\326\001\n\034ServerToAppPurseNotification\022\016\n\006o" +
-      "rg_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030" +
-      "\003 \001(\t\022.\n\ncreated_at\030\004 \001(\0132\032.google.proto" +
-      "buf.Timestamp\022K\n\016payment_status\030\005 \001(\01321." +
-      "com.elarian.hera.proto.PaymentStatusNoti" +
-      "ficationH\000B\007\n\005entry\"C\n\rAppDataUpdate\0222\n\004" +
-      "data\030\001 \001(\0132$.com.elarian.hera.proto.Data" +
-      "MapValue\"\224\001\n\034ServerToAppNotificationRepl" +
-      "y\022:\n\013data_update\030\001 \001(\0132%.com.elarian.her" +
-      "a.proto.AppDataUpdate\0228\n\007message\030\002 \001(\0132\'" +
-      ".com.elarian.hera.proto.OutboundMessage\"" +
-      "\265\001\n\024ReminderNotification\022:\n\010reminder\030\001 \001" +
-      "(\0132(.com.elarian.hera.proto.CustomerRemi" +
-      "nder\0222\n\003tag\030\002 \001(\0132%.com.elarian.hera.pro" +
-      "to.CustomerIndex\022-\n\007work_id\030\003 \001(\0132\034.goog",
-      "le.protobuf.StringValue\"\362\001\n#MessagingSes" +
-      "sionStartedNotification\022?\n\017customer_numb" +
-      "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom" +
-      "erNumber\022F\n\016channel_number\030\002 \001(\0132..com.e" +
-      "larian.hera.proto.MessagingChannelNumber" +
-      "\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\"\362\001\n#Messagi" +
-      "ngSessionRenewedNotification\022?\n\017customer" +
-      "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
-      "ustomerNumber\022F\n\016channel_number\030\002 \001(\0132.." +
-      "com.elarian.hera.proto.MessagingChannelN" +
-      "umber\022\022\n\nsession_id\030\003 \001(\t\022.\n\nexpires_at\030" +
-      "\004 \001(\0132\032.google.protobuf.Timestamp\"\260\002\n!Me" +
-      "ssagingSessionEndedNotification\022?\n\017custo" +
-      "mer_number\030\001 \001(\0132&.com.elarian.hera.prot" +
-      "o.CustomerNumber\022F\n\016channel_number\030\002 \001(\013" +
-      "2..com.elarian.hera.proto.MessagingChann" +
-      "elNumber\022\022\n\nsession_id\030\003 \001(\t\022+\n\010duration" +
-      "\030\004 \001(\0132\031.google.protobuf.Duration\022A\n\006rea" +
-      "son\030\005 \001(\01621.com.elarian.hera.proto.Messa" +
-      "gingSessionEndReason\"\263\002\n\"MessagingConsen" +
-      "tUpdateNotification\022?\n\017customer_number\030\001" +
+      "era.proto.MessagingChannelNumber\0229\n\005part" +
+      "s\030\006 \003(\0132*.com.elarian.hera.proto.Inbound" +
+      "MessageBody\0221\n\013in_reply_to\030\007 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\022?\n\010provider\030\010 \001(\016" +
+      "2-.com.elarian.hera.proto.ChannelNumberP" +
+      "rovider\022*\n\004cost\030\t \001(\0132\034.com.elarian.hera" +
+      ".proto.Cash\"\301\004\n\030ReplaySentMessageCommand" +
+      "\022\033\n\023provider_message_id\030\001 \001(\t\0229\n\023provide" +
+      "r_session_id\030\002 \001(\0132\034.google.protobuf.Str" +
+      "ingValue\022+\n\007sent_at\030\003 \001(\0132\032.google.proto" +
+      "buf.Timestamp\022?\n\017customer_number\030\004 \001(\0132&" +
+      ".com.elarian.hera.proto.CustomerNumber\022F" +
+      "\n\016channel_number\030\005 \001(\0132..com.elarian.her" +
+      "a.proto.MessagingChannelNumber\022?\n\010provid" +
+      "er\030\006 \001(\0162-.com.elarian.hera.proto.Channe" +
+      "lNumberProvider\0228\n\007message\030\007 \001(\0132\'.com.e" +
+      "larian.hera.proto.OutboundMessage\0221\n\013in_" +
+      "reply_to\030\010 \001(\0132\034.google.protobuf.StringV" +
+      "alue\022=\n\006status\030\t \001(\0162-.com.elarian.hera." +
+      "proto.MessageDeliveryStatus\022*\n\004cost\030\n \001(" +
+      "\0132\034.com.elarian.hera.proto.Cash\"\343\002\n Repl" +
+      "ayMessageStatusUpdateCommand\022\033\n\023provider" +
+      "_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032." +
+      "google.protobuf.Timestamp\022?\n\017customer_nu" +
+      "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022F\n\016channel_number\030\004 \001(\0132..com" +
+      ".elarian.hera.proto.MessagingChannelNumb" +
+      "er\022=\n\006status\030\005 \001(\0162-.com.elarian.hera.pr" +
+      "oto.MessageDeliveryStatus\022*\n\004cost\030\006 \001(\0132" +
+      "\034.com.elarian.hera.proto.Cash\"\265\002\n\"Replay" +
+      "MessageReactionUpdateCommand\022\033\n\023provider" +
+      "_message_id\030\001 \001(\t\022.\n\nupdated_at\030\002 \001(\0132\032." +
+      "google.protobuf.Timestamp\022?\n\017customer_nu" +
+      "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022F\n\016channel_number\030\004 \001(\0132..com" +
+      ".elarian.hera.proto.MessagingChannelNumb" +
+      "er\0229\n\010reaction\030\005 \001(\0162\'.com.elarian.hera." +
+      "proto.MessageReaction\"\225\003\n\035ReplayMessagin" +
+      "gSessionCommand\022\033\n\023provider_session_id\030\001" +
+      " \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.elar" +
+      "ian.hera.proto.CustomerNumber\022F\n\016channel" +
+      "_number\030\003 \001(\0132..com.elarian.hera.proto.M" +
+      "essagingChannelNumber\022.\n\nstarted_at\030\004 \001(" +
+      "\0132\032.google.protobuf.Timestamp\022+\n\010duratio" +
+      "n\030\005 \001(\0132\031.google.protobuf.Duration\022E\n\nen" +
+      "d_reason\030\006 \001(\01621.com.elarian.hera.proto." +
+      "MessagingSessionEndReason\022*\n\004cost\030\007 \001(\0132" +
+      "\034.com.elarian.hera.proto.Cash\"o\n\025Custome" +
+      "rActivityReply\022\016\n\006status\030\001 \001(\010\022\023\n\013descri" +
+      "ption\030\002 \001(\t\0221\n\013customer_id\030\003 \001(\0132\034.googl" +
+      "e.protobuf.StringValue\"\266\001\n\027ServerToAppNo" +
+      "tification\022K\n\010customer\030\001 \001(\01327.com.elari" +
+      "an.hera.proto.ServerToAppCustomerNotific" +
+      "ationH\000\022E\n\005purse\030\002 \001(\01324.com.elarian.her" +
+      "a.proto.ServerToAppPurseNotificationH\000B\007" +
+      "\n\005entry\"\364\010\n\037ServerToAppCustomerNotificat" +
+      "ion\022\016\n\006org_id\030\001 \001(\t\022\016\n\006app_id\030\002 \001(\t\022\023\n\013c" +
+      "ustomer_id\030\003 \001(\t\0226\n\010app_data\030\004 \001(\0132$.com" +
+      ".elarian.hera.proto.DataMapValue\022.\n\ncrea" +
+      "ted_at\030\005 \001(\0132\032.google.protobuf.Timestamp" +
+      "\022@\n\010reminder\030\006 \001(\0132,.com.elarian.hera.pr" +
+      "oto.ReminderNotificationH\000\022`\n\031messaging_" +
+      "session_started\030\007 \001(\0132;.com.elarian.hera" +
+      ".proto.MessagingSessionStartedNotificati" +
+      "onH\000\022`\n\031messaging_session_renewed\030\010 \001(\0132" +
+      ";.com.elarian.hera.proto.MessagingSessio" +
+      "nRenewedNotificationH\000\022\\\n\027messaging_sess" +
+      "ion_ended\030\t \001(\01329.com.elarian.hera.proto" +
+      ".MessagingSessionEndedNotificationH\000\022^\n\030" +
+      "messaging_consent_update\030\n \001(\0132:.com.ela" +
+      "rian.hera.proto.MessagingConsentUpdateNo" +
+      "tificationH\000\022O\n\020received_message\030\013 \001(\01323" +
+      ".com.elarian.hera.proto.ReceivedMessageN" +
+      "otificationH\000\022K\n\016message_status\030\014 \001(\01321." +
+      "com.elarian.hera.proto.MessageStatusNoti" +
+      "ficationH\000\022X\n\025sent_message_reaction\030\r \001(" +
+      "\01327.com.elarian.hera.proto.SentMessageRe" +
+      "actionNotificationH\000\022O\n\020received_payment" +
+      "\030\016 \001(\01323.com.elarian.hera.proto.Received" +
+      "PaymentNotificationH\000\022K\n\016payment_status\030" +
+      "\017 \001(\01321.com.elarian.hera.proto.PaymentSt" +
+      "atusNotificationH\000\022Q\n\021customer_activity\030" +
+      "\021 \001(\01324.com.elarian.hera.proto.CustomerA" +
+      "ctivityNotificationH\000B\007\n\005entry\"\326\001\n\034Serve" +
+      "rToAppPurseNotification\022\016\n\006org_id\030\001 \001(\t\022" +
+      "\016\n\006app_id\030\002 \001(\t\022\020\n\010purse_id\030\003 \001(\t\022.\n\ncre" +
+      "ated_at\030\004 \001(\0132\032.google.protobuf.Timestam" +
+      "p\022K\n\016payment_status\030\005 \001(\01321.com.elarian." +
+      "hera.proto.PaymentStatusNotificationH\000B\007" +
+      "\n\005entry\"C\n\rAppDataUpdate\0222\n\004data\030\001 \001(\0132$" +
+      ".com.elarian.hera.proto.DataMapValue\"\224\001\n" +
+      "\034ServerToAppNotificationReply\022:\n\013data_up" +
+      "date\030\001 \001(\0132%.com.elarian.hera.proto.AppD" +
+      "ataUpdate\0228\n\007message\030\002 \001(\0132\'.com.elarian" +
+      ".hera.proto.OutboundMessage\"\265\001\n\024Reminder" +
+      "Notification\022:\n\010reminder\030\001 \001(\0132(.com.ela" +
+      "rian.hera.proto.CustomerReminder\0222\n\003tag\030" +
+      "\002 \001(\0132%.com.elarian.hera.proto.CustomerI" +
+      "ndex\022-\n\007work_id\030\003 \001(\0132\034.google.protobuf." +
+      "StringValue\"\362\001\n#MessagingSessionStartedN",
+      "otification\022?\n\017customer_number\030\001 \001(\0132&.c" +
+      "om.elarian.hera.proto.CustomerNumber\022F\n\016" +
+      "channel_number\030\002 \001(\0132..com.elarian.hera." +
+      "proto.MessagingChannelNumber\022\022\n\nsession_" +
+      "id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.google.pr" +
+      "otobuf.Timestamp\"\362\001\n#MessagingSessionRen" +
+      "ewedNotification\022?\n\017customer_number\030\001 \001(" +
+      "\0132&.com.elarian.hera.proto.CustomerNumbe" +
+      "r\022F\n\016channel_number\030\002 \001(\0132..com.elarian." +
+      "hera.proto.MessagingChannelNumber\022\022\n\nses" +
+      "sion_id\030\003 \001(\t\022.\n\nexpires_at\030\004 \001(\0132\032.goog" +
+      "le.protobuf.Timestamp\"\260\002\n!MessagingSessi" +
+      "onEndedNotification\022?\n\017customer_number\030\001" +
       " \001(\0132&.com.elarian.hera.proto.CustomerNu" +
       "mber\022F\n\016channel_number\030\002 \001(\0132..com.elari" +
-      "an.hera.proto.MessagingChannelNumber\022>\n\006" +
-      "update\030\003 \001(\0162..com.elarian.hera.proto.Me" +
-      "ssagingConsentUpdate\022D\n\006status\030\004 \001(\01624.c" +
-      "om.elarian.hera.proto.MessagingConsentUp" +
-      "dateStatus\"\332\002\n\033ReceivedMessageNotificati" +
-      "on\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017customer_numbe" +
-      "r\030\002 \001(\0132&.com.elarian.hera.proto.Custome" +
-      "rNumber\022F\n\016channel_number\030\003 \001(\0132..com.el" +
-      "arian.hera.proto.MessagingChannelNumber\022" +
-      "9\n\005parts\030\004 \003(\0132*.com.elarian.hera.proto." +
-      "InboundMessageBody\0220\n\nsession_id\030\005 \001(\0132\034" +
-      ".google.protobuf.StringValue\0221\n\013in_reply" +
-      "_to\030\006 \001(\0132\034.google.protobuf.StringValue\"" +
-      "n\n\031MessageStatusNotification\022\022\n\nmessage_" +
-      "id\030\001 \001(\t\022=\n\006status\030\002 \001(\0162-.com.elarian.h" +
-      "era.proto.MessageDeliveryStatus\"\371\001\n\037Sent" +
-      "MessageReactionNotification\022\022\n\nmessage_i" +
-      "d\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.e" +
+      "an.hera.proto.MessagingChannelNumber\022\022\n\n" +
+      "session_id\030\003 \001(\t\022+\n\010duration\030\004 \001(\0132\031.goo" +
+      "gle.protobuf.Duration\022A\n\006reason\030\005 \001(\01621." +
+      "com.elarian.hera.proto.MessagingSessionE" +
+      "ndReason\"\263\002\n\"MessagingConsentUpdateNotif" +
+      "ication\022?\n\017customer_number\030\001 \001(\0132&.com.e" +
       "larian.hera.proto.CustomerNumber\022F\n\016chan" +
-      "nel_number\030\003 \001(\0132..com.elarian.hera.prot" +
-      "o.MessagingChannelNumber\0229\n\010reaction\030\004 \001" +
-      "(\0162\'.com.elarian.hera.proto.MessageReact" +
-      "ion\"\262\002\n\033ReceivedPaymentNotification\022\020\n\010p" +
-      "urse_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n" +
-      "\017customer_number\030\003 \001(\0132&.com.elarian.her" +
-      "a.proto.CustomerNumber\022D\n\016channel_number" +
-      "\030\004 \001(\0132,.com.elarian.hera.proto.PaymentC" +
-      "hannelNumber\022+\n\005value\030\005 \001(\0132\034.com.elaria" +
-      "n.hera.proto.Cash\0225\n\006status\030\006 \001(\0162%.com." +
-      "elarian.hera.proto.PaymentStatus\"j\n\031Paym" +
-      "entStatusNotification\022\026\n\016transaction_id\030" +
-      "\001 \001(\t\0225\n\006status\030\002 \001(\0162%.com.elarian.hera" +
-      ".proto.PaymentStatus\"\203\001\n\037WalletPaymentSt" +
-      "atusNotification\022\021\n\twallet_id\030\001 \001(\t\022\026\n\016t" +
-      "ransaction_id\030\002 \001(\t\0225\n\006status\030\003 \001(\0162%.co" +
-      "m.elarian.hera.proto.PaymentStatus\"\277\001\n\034C" +
-      "ustomerActivityNotification\022?\n\017customer_" +
-      "number\030\001 \001(\0132&.com.elarian.hera.proto.Cu" +
-      "stomerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_" +
-      "id\030\003 \001(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian" +
-      ".hera.proto.CustomerActivityb\006proto3"
+      "nel_number\030\002 \001(\0132..com.elarian.hera.prot" +
+      "o.MessagingChannelNumber\022>\n\006update\030\003 \001(\016" +
+      "2..com.elarian.hera.proto.MessagingConse" +
+      "ntUpdate\022D\n\006status\030\004 \001(\01624.com.elarian.h" +
+      "era.proto.MessagingConsentUpdateStatus\"\332" +
+      "\002\n\033ReceivedMessageNotification\022\022\n\nmessag" +
+      "e_id\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.co" +
+      "m.elarian.hera.proto.CustomerNumber\022F\n\016c" +
+      "hannel_number\030\003 \001(\0132..com.elarian.hera.p" +
+      "roto.MessagingChannelNumber\0229\n\005parts\030\004 \003" +
+      "(\0132*.com.elarian.hera.proto.InboundMessa" +
+      "geBody\0220\n\nsession_id\030\005 \001(\0132\034.google.prot" +
+      "obuf.StringValue\0221\n\013in_reply_to\030\006 \001(\0132\034." +
+      "google.protobuf.StringValue\"n\n\031MessageSt" +
+      "atusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n\006" +
+      "status\030\002 \001(\0162-.com.elarian.hera.proto.Me" +
+      "ssageDeliveryStatus\"\371\001\n\037SentMessageReact" +
+      "ionNotification\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017c" +
+      "ustomer_number\030\002 \001(\0132&.com.elarian.hera." +
+      "proto.CustomerNumber\022F\n\016channel_number\030\003" +
+      " \001(\0132..com.elarian.hera.proto.MessagingC" +
+      "hannelNumber\0229\n\010reaction\030\004 \001(\0162\'.com.ela" +
+      "rian.hera.proto.MessageReaction\"\262\002\n\033Rece" +
+      "ivedPaymentNotification\022\020\n\010purse_id\030\001 \001(" +
+      "\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n\017customer_nu" +
+      "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022D\n\016channel_number\030\004 \001(\0132,.com" +
+      ".elarian.hera.proto.PaymentChannelNumber" +
+      "\022+\n\005value\030\005 \001(\0132\034.com.elarian.hera.proto" +
+      ".Cash\0225\n\006status\030\006 \001(\0162%.com.elarian.hera" +
+      ".proto.PaymentStatus\"j\n\031PaymentStatusNot" +
+      "ification\022\026\n\016transaction_id\030\001 \001(\t\0225\n\006sta" +
+      "tus\030\002 \001(\0162%.com.elarian.hera.proto.Payme" +
+      "ntStatus\"\277\001\n\034CustomerActivityNotificatio" +
+      "n\022?\n\017customer_number\030\001 \001(\0132&.com.elarian" +
+      ".hera.proto.CustomerNumber\022\016\n\006source\030\002 \001" +
+      "(\t\022\022\n\nsession_id\030\003 \001(\t\022:\n\010activity\030\004 \001(\013" +
+      "2(.com.elarian.hera.proto.CustomerActivi" +
+      "tyb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -84918,7 +84155,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_InitiatePaymentCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_InitiatePaymentCommand_descriptor,
-        new java.lang.String[] { "DebitParty", "CreditParty", "Value", });
+        new java.lang.String[] { "DebitParty", "CreditParty", "Value", "Narration", });
     internal_static_com_elarian_hera_proto_InitiatePaymentReply_descriptor =
       getDescriptor().getMessageTypes().get(33);
     internal_static_com_elarian_hera_proto_InitiatePaymentReply_fieldAccessorTable = new
@@ -84930,7 +84167,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_ReplayPaymentCommand_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ReplayPaymentCommand_descriptor,
-        new java.lang.String[] { "ProviderTransactionId", "CreatedAt", "DebitParty", "CreditParty", "Status", "Value", });
+        new java.lang.String[] { "ProviderTransactionId", "CreatedAt", "DebitParty", "CreditParty", "Status", "Value", "Narration", });
     internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_descriptor =
       getDescriptor().getMessageTypes().get(35);
     internal_static_com_elarian_hera_proto_ReplayPaymentStatusUpdateCommand_fieldAccessorTable = new
@@ -85014,7 +84251,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_ServerToAppCustomerNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_ServerToAppCustomerNotification_descriptor,
-        new java.lang.String[] { "OrgId", "AppId", "CustomerId", "AppData", "CreatedAt", "Reminder", "MessagingSessionStarted", "MessagingSessionRenewed", "MessagingSessionEnded", "MessagingConsentUpdate", "ReceivedMessage", "MessageStatus", "SentMessageReaction", "ReceivedPayment", "PaymentStatus", "WalletPaymentStatus", "CustomerActivity", "Entry", });
+        new java.lang.String[] { "OrgId", "AppId", "CustomerId", "AppData", "CreatedAt", "Reminder", "MessagingSessionStarted", "MessagingSessionRenewed", "MessagingSessionEnded", "MessagingConsentUpdate", "ReceivedMessage", "MessageStatus", "SentMessageReaction", "ReceivedPayment", "PaymentStatus", "CustomerActivity", "Entry", });
     internal_static_com_elarian_hera_proto_ServerToAppPurseNotification_descriptor =
       getDescriptor().getMessageTypes().get(48);
     internal_static_com_elarian_hera_proto_ServerToAppPurseNotification_fieldAccessorTable = new
@@ -85093,14 +84330,8 @@ public final class AppSocket {
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentStatusNotification_descriptor,
         new java.lang.String[] { "TransactionId", "Status", });
-    internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor =
-      getDescriptor().getMessageTypes().get(61);
-    internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_fieldAccessorTable = new
-      com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
-        internal_static_com_elarian_hera_proto_WalletPaymentStatusNotification_descriptor,
-        new java.lang.String[] { "WalletId", "TransactionId", "Status", });
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_descriptor =
-      getDescriptor().getMessageTypes().get(62);
+      getDescriptor().getMessageTypes().get(61);
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_CustomerActivityNotification_descriptor,

@@ -8212,6 +8212,21 @@ public final class PaymentModel {
      * <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
      */
     com.google.protobuf.StringValueOrBuilder getProviderTransactionIdOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue narration = 11;</code>
+     * @return Whether the narration field is set.
+     */
+    boolean hasNarration();
+    /**
+     * <code>.google.protobuf.StringValue narration = 11;</code>
+     * @return The narration.
+     */
+    com.google.protobuf.StringValue getNarration();
+    /**
+     * <code>.google.protobuf.StringValue narration = 11;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getNarrationOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentTransaction}
@@ -8359,6 +8374,19 @@ public final class PaymentModel {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(providerTransactionId_);
                 providerTransactionId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 90: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (narration_ != null) {
+                subBuilder = narration_.toBuilder();
+              }
+              narration_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(narration_);
+                narration_ = subBuilder.buildPartial();
               }
 
               break;
@@ -8634,6 +8662,32 @@ public final class PaymentModel {
       return getProviderTransactionId();
     }
 
+    public static final int NARRATION_FIELD_NUMBER = 11;
+    private com.google.protobuf.StringValue narration_;
+    /**
+     * <code>.google.protobuf.StringValue narration = 11;</code>
+     * @return Whether the narration field is set.
+     */
+    @java.lang.Override
+    public boolean hasNarration() {
+      return narration_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue narration = 11;</code>
+     * @return The narration.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getNarration() {
+      return narration_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : narration_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue narration = 11;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getNarrationOrBuilder() {
+      return getNarration();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -8674,6 +8728,9 @@ public final class PaymentModel {
       }
       if (providerTransactionId_ != null) {
         output.writeMessage(10, getProviderTransactionId());
+      }
+      if (narration_ != null) {
+        output.writeMessage(11, getNarration());
       }
       unknownFields.writeTo(output);
     }
@@ -8718,6 +8775,10 @@ public final class PaymentModel {
       if (providerTransactionId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(10, getProviderTransactionId());
+      }
+      if (narration_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(11, getNarration());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -8772,6 +8833,11 @@ public final class PaymentModel {
         if (!getProviderTransactionId()
             .equals(other.getProviderTransactionId())) return false;
       }
+      if (hasNarration() != other.hasNarration()) return false;
+      if (hasNarration()) {
+        if (!getNarration()
+            .equals(other.getNarration())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -8814,6 +8880,10 @@ public final class PaymentModel {
       if (hasProviderTransactionId()) {
         hash = (37 * hash) + PROVIDER_TRANSACTION_ID_FIELD_NUMBER;
         hash = (53 * hash) + getProviderTransactionId().hashCode();
+      }
+      if (hasNarration()) {
+        hash = (37 * hash) + NARRATION_FIELD_NUMBER;
+        hash = (53 * hash) + getNarration().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -8994,6 +9064,12 @@ public final class PaymentModel {
           providerTransactionId_ = null;
           providerTransactionIdBuilder_ = null;
         }
+        if (narrationBuilder_ == null) {
+          narration_ = null;
+        } else {
+          narration_ = null;
+          narrationBuilder_ = null;
+        }
         return this;
       }
 
@@ -9056,6 +9132,11 @@ public final class PaymentModel {
           result.providerTransactionId_ = providerTransactionId_;
         } else {
           result.providerTransactionId_ = providerTransactionIdBuilder_.build();
+        }
+        if (narrationBuilder_ == null) {
+          result.narration_ = narration_;
+        } else {
+          result.narration_ = narrationBuilder_.build();
         }
         onBuilt();
         return result;
@@ -9132,6 +9213,9 @@ public final class PaymentModel {
         }
         if (other.hasProviderTransactionId()) {
           mergeProviderTransactionId(other.getProviderTransactionId());
+        }
+        if (other.hasNarration()) {
+          mergeNarration(other.getNarration());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -10124,6 +10208,125 @@ public final class PaymentModel {
         }
         return providerTransactionIdBuilder_;
       }
+
+      private com.google.protobuf.StringValue narration_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> narrationBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       * @return Whether the narration field is set.
+       */
+      public boolean hasNarration() {
+        return narrationBuilder_ != null || narration_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       * @return The narration.
+       */
+      public com.google.protobuf.StringValue getNarration() {
+        if (narrationBuilder_ == null) {
+          return narration_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : narration_;
+        } else {
+          return narrationBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      public Builder setNarration(com.google.protobuf.StringValue value) {
+        if (narrationBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          narration_ = value;
+          onChanged();
+        } else {
+          narrationBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      public Builder setNarration(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (narrationBuilder_ == null) {
+          narration_ = builderForValue.build();
+          onChanged();
+        } else {
+          narrationBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      public Builder mergeNarration(com.google.protobuf.StringValue value) {
+        if (narrationBuilder_ == null) {
+          if (narration_ != null) {
+            narration_ =
+              com.google.protobuf.StringValue.newBuilder(narration_).mergeFrom(value).buildPartial();
+          } else {
+            narration_ = value;
+          }
+          onChanged();
+        } else {
+          narrationBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      public Builder clearNarration() {
+        if (narrationBuilder_ == null) {
+          narration_ = null;
+          onChanged();
+        } else {
+          narration_ = null;
+          narrationBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getNarrationBuilder() {
+        
+        onChanged();
+        return getNarrationFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getNarrationOrBuilder() {
+        if (narrationBuilder_ != null) {
+          return narrationBuilder_.getMessageOrBuilder();
+        } else {
+          return narration_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : narration_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue narration = 11;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getNarrationFieldBuilder() {
+        if (narrationBuilder_ == null) {
+          narrationBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getNarration(),
+                  getParentForChildren(),
+                  isClean());
+          narration_ = null;
+        }
+        return narrationBuilder_;
+      }
       @java.lang.Override
       public final Builder setUnknownFields(
           final com.google.protobuf.UnknownFieldSet unknownFields) {
@@ -10273,7 +10476,7 @@ public final class PaymentModel {
       "H\000\022G\n\010customer\030\003 \001(\01323.com.elarian.hera." +
       "proto.PaymentCustomerCounterPartyH\000\022E\n\007c" +
       "hannel\030\004 \001(\01322.com.elarian.hera.proto.Pa" +
-      "ymentChannelCounterPartyH\000B\007\n\005party\"\342\003\n\022" +
+      "ymentChannelCounterPartyH\000B\007\n\005party\"\223\004\n\022" +
       "PaymentTransaction\022\026\n\016transaction_id\030\001 \001" +
       "(\t\022,\n\006app_id\030\002 \001(\0132\034.google.protobuf.Str" +
       "ingValue\022@\n\013debit_party\030\004 \001(\0132+.com.elar" +
@@ -10286,27 +10489,28 @@ public final class PaymentModel {
       "Timestamp\022.\n\nupdated_at\030\t \001(\0132\032.google.p" +
       "rotobuf.Timestamp\022=\n\027provider_transactio" +
       "n_id\030\n \001(\0132\034.google.protobuf.StringValue" +
-      "*l\n\016PaymentChannel\022\037\n\033PAYMENT_CHANNEL_UN" +
-      "SPECIFIED\020\000\022\034\n\030PAYMENT_CHANNEL_CELLULAR\020" +
-      "\001\022\033\n\027PAYMENT_CHANNEL_AIRTIME\020\002*\277\005\n\rPayme" +
-      "ntStatus\022\036\n\032PAYMENT_STATUS_UNSPECIFIED\020\000" +
-      "\022\031\n\025PAYMENT_STATUS_QUEUED\020d\022\'\n#PAYMENT_S" +
-      "TATUS_PENDING_CONFIRMATION\020e\022%\n!PAYMENT_" +
-      "STATUS_PENDING_VALIDATION\020f\022\034\n\030PAYMENT_S" +
-      "TATUS_VALIDATED\020g\022#\n\036PAYMENT_STATUS_INVA" +
-      "LID_REQUEST\020\310\001\022!\n\034PAYMENT_STATUS_NOT_SUP" +
-      "PORTED\020\311\001\022&\n!PAYMENT_STATUS_INSUFFICIENT" +
-      "_FUNDS\020\312\001\022%\n PAYMENT_STATUS_APPLICATION_" +
-      "ERROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_ALLOWED\020\314" +
-      "\001\022%\n PAYMENT_STATUS_DUPLICATE_REQUEST\020\315\001" +
-      "\022!\n\034PAYMENT_STATUS_INVALID_PURSE\020\316\001\022\"\n\035P" +
-      "AYMENT_STATUS_INVALID_WALLET\020\317\001\022.\n)PAYME" +
-      "NT_STATUS_DECOMMISSIONED_CUSTOMER_ID\020\253\002\022" +
-      "\033\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022\032\n\025PAYMENT_" +
-      "STATUS_FAILED\020\220\003\022\035\n\030PAYMENT_STATUS_THROT" +
-      "TLED\020\221\003\022\033\n\026PAYMENT_STATUS_EXPIRED\020\222\003\022\034\n\027" +
-      "PAYMENT_STATUS_REJECTED\020\223\003\022\034\n\027PAYMENT_ST" +
-      "ATUS_REVERSED\020\364\003b\006proto3"
+      "\022/\n\tnarration\030\013 \001(\0132\034.google.protobuf.St" +
+      "ringValue*l\n\016PaymentChannel\022\037\n\033PAYMENT_C" +
+      "HANNEL_UNSPECIFIED\020\000\022\034\n\030PAYMENT_CHANNEL_" +
+      "CELLULAR\020\001\022\033\n\027PAYMENT_CHANNEL_AIRTIME\020\002*" +
+      "\277\005\n\rPaymentStatus\022\036\n\032PAYMENT_STATUS_UNSP" +
+      "ECIFIED\020\000\022\031\n\025PAYMENT_STATUS_QUEUED\020d\022\'\n#" +
+      "PAYMENT_STATUS_PENDING_CONFIRMATION\020e\022%\n" +
+      "!PAYMENT_STATUS_PENDING_VALIDATION\020f\022\034\n\030" +
+      "PAYMENT_STATUS_VALIDATED\020g\022#\n\036PAYMENT_ST" +
+      "ATUS_INVALID_REQUEST\020\310\001\022!\n\034PAYMENT_STATU" +
+      "S_NOT_SUPPORTED\020\311\001\022&\n!PAYMENT_STATUS_INS" +
+      "UFFICIENT_FUNDS\020\312\001\022%\n PAYMENT_STATUS_APP" +
+      "LICATION_ERROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_" +
+      "ALLOWED\020\314\001\022%\n PAYMENT_STATUS_DUPLICATE_R" +
+      "EQUEST\020\315\001\022!\n\034PAYMENT_STATUS_INVALID_PURS" +
+      "E\020\316\001\022\"\n\035PAYMENT_STATUS_INVALID_WALLET\020\317\001" +
+      "\022.\n)PAYMENT_STATUS_DECOMMISSIONED_CUSTOM" +
+      "ER_ID\020\253\002\022\033\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022\032\n" +
+      "\025PAYMENT_STATUS_FAILED\020\220\003\022\035\n\030PAYMENT_STA" +
+      "TUS_THROTTLED\020\221\003\022\033\n\026PAYMENT_STATUS_EXPIR" +
+      "ED\020\222\003\022\034\n\027PAYMENT_STATUS_REJECTED\020\223\003\022\034\n\027P" +
+      "AYMENT_STATUS_REVERSED\020\364\003b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -10374,7 +10578,7 @@ public final class PaymentModel {
     internal_static_com_elarian_hera_proto_PaymentTransaction_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentTransaction_descriptor,
-        new java.lang.String[] { "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", "ProviderTransactionId", });
+        new java.lang.String[] { "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", "ProviderTransactionId", "Narration", });
     com.google.protobuf.WrappersProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.elarian.hera.proto.CommonModel.getDescriptor();

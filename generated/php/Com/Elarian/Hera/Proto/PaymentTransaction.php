@@ -49,6 +49,10 @@ class PaymentTransaction extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.StringValue provider_transaction_id = 10;</code>
      */
     protected $provider_transaction_id = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue narration = 11;</code>
+     */
+    protected $narration = null;
 
     /**
      * Constructor.
@@ -65,6 +69,7 @@ class PaymentTransaction extends \Google\Protobuf\Internal\Message
      *     @type \Google\Protobuf\Timestamp $created_at
      *     @type \Google\Protobuf\Timestamp $updated_at
      *     @type \Google\Protobuf\StringValue $provider_transaction_id
+     *     @type \Google\Protobuf\StringValue $narration
      * }
      */
     public function __construct($data = NULL) {
@@ -384,6 +389,61 @@ class PaymentTransaction extends \Google\Protobuf\Internal\Message
     public function setProviderTransactionIdUnwrapped($var)
     {
         $this->writeWrapperValue("provider_transaction_id", $var);
+        return $this;}
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue narration = 11;</code>
+     * @return \Google\Protobuf\StringValue
+     */
+    public function getNarration()
+    {
+        return isset($this->narration) ? $this->narration : null;
+    }
+
+    public function hasNarration()
+    {
+        return isset($this->narration);
+    }
+
+    public function clearNarration()
+    {
+        unset($this->narration);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getNarration()</code>
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue narration = 11;</code>
+     * @return string|null
+     */
+    public function getNarrationUnwrapped()
+    {
+        return $this->readWrapperValue("narration");
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue narration = 11;</code>
+     * @param \Google\Protobuf\StringValue $var
+     * @return $this
+     */
+    public function setNarration($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        $this->narration = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\StringValue object.
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue narration = 11;</code>
+     * @param string|null $var
+     * @return $this
+     */
+    public function setNarrationUnwrapped($var)
+    {
+        $this->writeWrapperValue("narration", $var);
         return $this;}
 
 }

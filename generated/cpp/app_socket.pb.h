@@ -61,7 +61,7 @@ struct TableStruct_app_5fsocket_2eproto {
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::AuxiliaryParseTableField aux[]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
-  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[65]
+  static const ::PROTOBUF_NAMESPACE_ID::internal::ParseTable schema[64]
     PROTOBUF_SECTION_VARIABLE(protodesc_cold);
   static const ::PROTOBUF_NAMESPACE_ID::internal::FieldMetadata field_metadata[];
   static const ::PROTOBUF_NAMESPACE_ID::internal::SerializationTable serialization_table[];
@@ -264,9 +264,6 @@ extern UpdateMessagingConsentCommandDefaultTypeInternal _UpdateMessagingConsentC
 class UpdateMessagingConsentReply;
 class UpdateMessagingConsentReplyDefaultTypeInternal;
 extern UpdateMessagingConsentReplyDefaultTypeInternal _UpdateMessagingConsentReply_default_instance_;
-class WalletPaymentStatusNotification;
-class WalletPaymentStatusNotificationDefaultTypeInternal;
-extern WalletPaymentStatusNotificationDefaultTypeInternal _WalletPaymentStatusNotification_default_instance_;
 }  // namespace proto
 }  // namespace hera
 }  // namespace elarian
@@ -336,7 +333,6 @@ template<> ::com::elarian::hera::proto::UpdateCustomerStateReply* Arena::CreateM
 template<> ::com::elarian::hera::proto::UpdateCustomerTagCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::UpdateCustomerTagCommand>(Arena*);
 template<> ::com::elarian::hera::proto::UpdateMessagingConsentCommand* Arena::CreateMaybeMessage<::com::elarian::hera::proto::UpdateMessagingConsentCommand>(Arena*);
 template<> ::com::elarian::hera::proto::UpdateMessagingConsentReply* Arena::CreateMaybeMessage<::com::elarian::hera::proto::UpdateMessagingConsentReply>(Arena*);
-template<> ::com::elarian::hera::proto::WalletPaymentStatusNotification* Arena::CreateMaybeMessage<::com::elarian::hera::proto::WalletPaymentStatusNotification>(Arena*);
 PROTOBUF_NAMESPACE_CLOSE
 namespace com {
 namespace elarian {
@@ -7615,10 +7611,27 @@ class InitiatePaymentCommand PROTOBUF_FINAL :
   // accessors -------------------------------------------------------
 
   enum : int {
+    kNarrationFieldNumber = 4,
     kDebitPartyFieldNumber = 1,
     kCreditPartyFieldNumber = 2,
     kValueFieldNumber = 3,
   };
+  // string narration = 4;
+  void clear_narration();
+  const std::string& narration() const;
+  void set_narration(const std::string& value);
+  void set_narration(std::string&& value);
+  void set_narration(const char* value);
+  void set_narration(const char* value, size_t size);
+  std::string* mutable_narration();
+  std::string* release_narration();
+  void set_allocated_narration(std::string* narration);
+  private:
+  const std::string& _internal_narration() const;
+  void _internal_set_narration(const std::string& value);
+  std::string* _internal_mutable_narration();
+  public:
+
   // .com.elarian.hera.proto.PaymentCounterParty debit_party = 1;
   bool has_debit_party() const;
   private:
@@ -7680,6 +7693,7 @@ class InitiatePaymentCommand PROTOBUF_FINAL :
   template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr narration_;
   ::com::elarian::hera::proto::PaymentCounterParty* debit_party_;
   ::com::elarian::hera::proto::PaymentCounterParty* credit_party_;
   ::com::elarian::hera::proto::Cash* value_;
@@ -8015,6 +8029,7 @@ class ReplayPaymentCommand PROTOBUF_FINAL :
 
   enum : int {
     kProviderTransactionIdFieldNumber = 1,
+    kNarrationFieldNumber = 7,
     kCreatedAtFieldNumber = 2,
     kDebitPartyFieldNumber = 3,
     kCreditPartyFieldNumber = 4,
@@ -8035,6 +8050,22 @@ class ReplayPaymentCommand PROTOBUF_FINAL :
   const std::string& _internal_provider_transaction_id() const;
   void _internal_set_provider_transaction_id(const std::string& value);
   std::string* _internal_mutable_provider_transaction_id();
+  public:
+
+  // string narration = 7;
+  void clear_narration();
+  const std::string& narration() const;
+  void set_narration(const std::string& value);
+  void set_narration(std::string&& value);
+  void set_narration(const char* value);
+  void set_narration(const char* value, size_t size);
+  std::string* mutable_narration();
+  std::string* release_narration();
+  void set_allocated_narration(std::string* narration);
+  private:
+  const std::string& _internal_narration() const;
+  void _internal_set_narration(const std::string& value);
+  std::string* _internal_mutable_narration();
   public:
 
   // .google.protobuf.Timestamp created_at = 2;
@@ -8126,6 +8157,7 @@ class ReplayPaymentCommand PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr provider_transaction_id_;
+  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr narration_;
   PROTOBUF_NAMESPACE_ID::Timestamp* created_at_;
   ::com::elarian::hera::proto::PaymentCounterParty* debit_party_;
   ::com::elarian::hera::proto::PaymentCounterParty* credit_party_;
@@ -10874,7 +10906,6 @@ class ServerToAppCustomerNotification PROTOBUF_FINAL :
     kSentMessageReaction = 13,
     kReceivedPayment = 14,
     kPaymentStatus = 15,
-    kWalletPaymentStatus = 16,
     kCustomerActivity = 17,
     ENTRY_NOT_SET = 0,
   };
@@ -10970,7 +11001,6 @@ class ServerToAppCustomerNotification PROTOBUF_FINAL :
     kSentMessageReactionFieldNumber = 13,
     kReceivedPaymentFieldNumber = 14,
     kPaymentStatusFieldNumber = 15,
-    kWalletPaymentStatusFieldNumber = 16,
     kCustomerActivityFieldNumber = 17,
   };
   // string org_id = 1;
@@ -11237,24 +11267,6 @@ class ServerToAppCustomerNotification PROTOBUF_FINAL :
       ::com::elarian::hera::proto::PaymentStatusNotification* payment_status);
   ::com::elarian::hera::proto::PaymentStatusNotification* unsafe_arena_release_payment_status();
 
-  // .com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;
-  bool has_wallet_payment_status() const;
-  private:
-  bool _internal_has_wallet_payment_status() const;
-  public:
-  void clear_wallet_payment_status();
-  const ::com::elarian::hera::proto::WalletPaymentStatusNotification& wallet_payment_status() const;
-  ::com::elarian::hera::proto::WalletPaymentStatusNotification* release_wallet_payment_status();
-  ::com::elarian::hera::proto::WalletPaymentStatusNotification* mutable_wallet_payment_status();
-  void set_allocated_wallet_payment_status(::com::elarian::hera::proto::WalletPaymentStatusNotification* wallet_payment_status);
-  private:
-  const ::com::elarian::hera::proto::WalletPaymentStatusNotification& _internal_wallet_payment_status() const;
-  ::com::elarian::hera::proto::WalletPaymentStatusNotification* _internal_mutable_wallet_payment_status();
-  public:
-  void unsafe_arena_set_allocated_wallet_payment_status(
-      ::com::elarian::hera::proto::WalletPaymentStatusNotification* wallet_payment_status);
-  ::com::elarian::hera::proto::WalletPaymentStatusNotification* unsafe_arena_release_wallet_payment_status();
-
   // .com.elarian.hera.proto.CustomerActivityNotification customer_activity = 17;
   bool has_customer_activity() const;
   private:
@@ -11288,7 +11300,6 @@ class ServerToAppCustomerNotification PROTOBUF_FINAL :
   void set_has_sent_message_reaction();
   void set_has_received_payment();
   void set_has_payment_status();
-  void set_has_wallet_payment_status();
   void set_has_customer_activity();
 
   inline bool has_entry() const;
@@ -11314,7 +11325,6 @@ class ServerToAppCustomerNotification PROTOBUF_FINAL :
     ::com::elarian::hera::proto::SentMessageReactionNotification* sent_message_reaction_;
     ::com::elarian::hera::proto::ReceivedPaymentNotification* received_payment_;
     ::com::elarian::hera::proto::PaymentStatusNotification* payment_status_;
-    ::com::elarian::hera::proto::WalletPaymentStatusNotification* wallet_payment_status_;
     ::com::elarian::hera::proto::CustomerActivityNotification* customer_activity_;
   } entry_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
@@ -13838,178 +13848,6 @@ class PaymentStatusNotification PROTOBUF_FINAL :
 };
 // -------------------------------------------------------------------
 
-class WalletPaymentStatusNotification PROTOBUF_FINAL :
-    public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.elarian.hera.proto.WalletPaymentStatusNotification) */ {
- public:
-  inline WalletPaymentStatusNotification() : WalletPaymentStatusNotification(nullptr) {}
-  virtual ~WalletPaymentStatusNotification();
-
-  WalletPaymentStatusNotification(const WalletPaymentStatusNotification& from);
-  WalletPaymentStatusNotification(WalletPaymentStatusNotification&& from) noexcept
-    : WalletPaymentStatusNotification() {
-    *this = ::std::move(from);
-  }
-
-  inline WalletPaymentStatusNotification& operator=(const WalletPaymentStatusNotification& from) {
-    CopyFrom(from);
-    return *this;
-  }
-  inline WalletPaymentStatusNotification& operator=(WalletPaymentStatusNotification&& from) noexcept {
-    if (GetArena() == from.GetArena()) {
-      if (this != &from) InternalSwap(&from);
-    } else {
-      CopyFrom(from);
-    }
-    return *this;
-  }
-
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* descriptor() {
-    return GetDescriptor();
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Descriptor* GetDescriptor() {
-    return GetMetadataStatic().descriptor;
-  }
-  static const ::PROTOBUF_NAMESPACE_ID::Reflection* GetReflection() {
-    return GetMetadataStatic().reflection;
-  }
-  static const WalletPaymentStatusNotification& default_instance();
-
-  static inline const WalletPaymentStatusNotification* internal_default_instance() {
-    return reinterpret_cast<const WalletPaymentStatusNotification*>(
-               &_WalletPaymentStatusNotification_default_instance_);
-  }
-  static constexpr int kIndexInFileMessages =
-    63;
-
-  friend void swap(WalletPaymentStatusNotification& a, WalletPaymentStatusNotification& b) {
-    a.Swap(&b);
-  }
-  inline void Swap(WalletPaymentStatusNotification* other) {
-    if (other == this) return;
-    if (GetArena() == other->GetArena()) {
-      InternalSwap(other);
-    } else {
-      ::PROTOBUF_NAMESPACE_ID::internal::GenericSwap(this, other);
-    }
-  }
-  void UnsafeArenaSwap(WalletPaymentStatusNotification* other) {
-    if (other == this) return;
-    GOOGLE_DCHECK(GetArena() == other->GetArena());
-    InternalSwap(other);
-  }
-
-  // implements Message ----------------------------------------------
-
-  inline WalletPaymentStatusNotification* New() const final {
-    return CreateMaybeMessage<WalletPaymentStatusNotification>(nullptr);
-  }
-
-  WalletPaymentStatusNotification* New(::PROTOBUF_NAMESPACE_ID::Arena* arena) const final {
-    return CreateMaybeMessage<WalletPaymentStatusNotification>(arena);
-  }
-  void CopyFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void MergeFrom(const ::PROTOBUF_NAMESPACE_ID::Message& from) final;
-  void CopyFrom(const WalletPaymentStatusNotification& from);
-  void MergeFrom(const WalletPaymentStatusNotification& from);
-  PROTOBUF_ATTRIBUTE_REINITIALIZES void Clear() final;
-  bool IsInitialized() const final;
-
-  size_t ByteSizeLong() const final;
-  const char* _InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID::internal::ParseContext* ctx) final;
-  ::PROTOBUF_NAMESPACE_ID::uint8* _InternalSerialize(
-      ::PROTOBUF_NAMESPACE_ID::uint8* target, ::PROTOBUF_NAMESPACE_ID::io::EpsCopyOutputStream* stream) const final;
-  int GetCachedSize() const final { return _cached_size_.Get(); }
-
-  private:
-  inline void SharedCtor();
-  inline void SharedDtor();
-  void SetCachedSize(int size) const final;
-  void InternalSwap(WalletPaymentStatusNotification* other);
-  friend class ::PROTOBUF_NAMESPACE_ID::internal::AnyMetadata;
-  static ::PROTOBUF_NAMESPACE_ID::StringPiece FullMessageName() {
-    return "com.elarian.hera.proto.WalletPaymentStatusNotification";
-  }
-  protected:
-  explicit WalletPaymentStatusNotification(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  private:
-  static void ArenaDtor(void* object);
-  inline void RegisterArenaDtor(::PROTOBUF_NAMESPACE_ID::Arena* arena);
-  public:
-
-  ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadata() const final;
-  private:
-  static ::PROTOBUF_NAMESPACE_ID::Metadata GetMetadataStatic() {
-    ::PROTOBUF_NAMESPACE_ID::internal::AssignDescriptors(&::descriptor_table_app_5fsocket_2eproto);
-    return ::descriptor_table_app_5fsocket_2eproto.file_level_metadata[kIndexInFileMessages];
-  }
-
-  public:
-
-  // nested types ----------------------------------------------------
-
-  // accessors -------------------------------------------------------
-
-  enum : int {
-    kWalletIdFieldNumber = 1,
-    kTransactionIdFieldNumber = 2,
-    kStatusFieldNumber = 3,
-  };
-  // string wallet_id = 1;
-  void clear_wallet_id();
-  const std::string& wallet_id() const;
-  void set_wallet_id(const std::string& value);
-  void set_wallet_id(std::string&& value);
-  void set_wallet_id(const char* value);
-  void set_wallet_id(const char* value, size_t size);
-  std::string* mutable_wallet_id();
-  std::string* release_wallet_id();
-  void set_allocated_wallet_id(std::string* wallet_id);
-  private:
-  const std::string& _internal_wallet_id() const;
-  void _internal_set_wallet_id(const std::string& value);
-  std::string* _internal_mutable_wallet_id();
-  public:
-
-  // string transaction_id = 2;
-  void clear_transaction_id();
-  const std::string& transaction_id() const;
-  void set_transaction_id(const std::string& value);
-  void set_transaction_id(std::string&& value);
-  void set_transaction_id(const char* value);
-  void set_transaction_id(const char* value, size_t size);
-  std::string* mutable_transaction_id();
-  std::string* release_transaction_id();
-  void set_allocated_transaction_id(std::string* transaction_id);
-  private:
-  const std::string& _internal_transaction_id() const;
-  void _internal_set_transaction_id(const std::string& value);
-  std::string* _internal_mutable_transaction_id();
-  public:
-
-  // .com.elarian.hera.proto.PaymentStatus status = 3;
-  void clear_status();
-  ::com::elarian::hera::proto::PaymentStatus status() const;
-  void set_status(::com::elarian::hera::proto::PaymentStatus value);
-  private:
-  ::com::elarian::hera::proto::PaymentStatus _internal_status() const;
-  void _internal_set_status(::com::elarian::hera::proto::PaymentStatus value);
-  public:
-
-  // @@protoc_insertion_point(class_scope:com.elarian.hera.proto.WalletPaymentStatusNotification)
- private:
-  class _Internal;
-
-  template <typename T> friend class ::PROTOBUF_NAMESPACE_ID::Arena::InternalHelper;
-  typedef void InternalArenaConstructable_;
-  typedef void DestructorSkippable_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr wallet_id_;
-  ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr transaction_id_;
-  int status_;
-  mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
-  friend struct ::TableStruct_app_5fsocket_2eproto;
-};
-// -------------------------------------------------------------------
-
 class CustomerActivityNotification PROTOBUF_FINAL :
     public ::PROTOBUF_NAMESPACE_ID::Message /* @@protoc_insertion_point(class_definition:com.elarian.hera.proto.CustomerActivityNotification) */ {
  public:
@@ -14051,7 +13889,7 @@ class CustomerActivityNotification PROTOBUF_FINAL :
                &_CustomerActivityNotification_default_instance_);
   }
   static constexpr int kIndexInFileMessages =
-    64;
+    63;
 
   friend void swap(CustomerActivityNotification& a, CustomerActivityNotification& b) {
     a.Swap(&b);
@@ -24633,6 +24471,67 @@ inline void InitiatePaymentCommand::set_allocated_value(::com::elarian::hera::pr
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.InitiatePaymentCommand.value)
 }
 
+// string narration = 4;
+inline void InitiatePaymentCommand::clear_narration() {
+  narration_.ClearToEmpty();
+}
+inline const std::string& InitiatePaymentCommand::narration() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+  return _internal_narration();
+}
+inline void InitiatePaymentCommand::set_narration(const std::string& value) {
+  _internal_set_narration(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+}
+inline std::string* InitiatePaymentCommand::mutable_narration() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+  return _internal_mutable_narration();
+}
+inline const std::string& InitiatePaymentCommand::_internal_narration() const {
+  return narration_.Get();
+}
+inline void InitiatePaymentCommand::_internal_set_narration(const std::string& value) {
+  
+  narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void InitiatePaymentCommand::set_narration(std::string&& value) {
+  
+  narration_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+}
+inline void InitiatePaymentCommand::set_narration(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+}
+inline void InitiatePaymentCommand::set_narration(const char* value,
+    size_t size) {
+  
+  narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+}
+inline std::string* InitiatePaymentCommand::_internal_mutable_narration() {
+  
+  return narration_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* InitiatePaymentCommand::release_narration() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+  return narration_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void InitiatePaymentCommand::set_allocated_narration(std::string* narration) {
+  if (narration != nullptr) {
+    
+  } else {
+    
+  }
+  narration_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), narration,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.InitiatePaymentCommand.narration)
+}
+
 // -------------------------------------------------------------------
 
 // InitiatePaymentReply
@@ -25340,6 +25239,67 @@ inline void ReplayPaymentCommand::set_allocated_value(::com::elarian::hera::prot
   }
   value_ = value;
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.value)
+}
+
+// string narration = 7;
+inline void ReplayPaymentCommand::clear_narration() {
+  narration_.ClearToEmpty();
+}
+inline const std::string& ReplayPaymentCommand::narration() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+  return _internal_narration();
+}
+inline void ReplayPaymentCommand::set_narration(const std::string& value) {
+  _internal_set_narration(value);
+  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+}
+inline std::string* ReplayPaymentCommand::mutable_narration() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+  return _internal_mutable_narration();
+}
+inline const std::string& ReplayPaymentCommand::_internal_narration() const {
+  return narration_.Get();
+}
+inline void ReplayPaymentCommand::_internal_set_narration(const std::string& value) {
+  
+  narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
+}
+inline void ReplayPaymentCommand::set_narration(std::string&& value) {
+  
+  narration_.Set(
+    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
+  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+}
+inline void ReplayPaymentCommand::set_narration(const char* value) {
+  GOOGLE_DCHECK(value != nullptr);
+  
+  narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
+  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+}
+inline void ReplayPaymentCommand::set_narration(const char* value,
+    size_t size) {
+  
+  narration_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArena());
+  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+}
+inline std::string* ReplayPaymentCommand::_internal_mutable_narration() {
+  
+  return narration_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
+}
+inline std::string* ReplayPaymentCommand::release_narration() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ReplayPaymentCommand.narration)
+  return narration_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
+}
+inline void ReplayPaymentCommand::set_allocated_narration(std::string* narration) {
+  if (narration != nullptr) {
+    
+  } else {
+    
+  }
+  narration_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), narration,
+      GetArena());
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.ReplayPaymentCommand.narration)
 }
 
 // -------------------------------------------------------------------
@@ -30407,79 +30367,6 @@ inline ::com::elarian::hera::proto::PaymentStatusNotification* ServerToAppCustom
   return _internal_mutable_payment_status();
 }
 
-// .com.elarian.hera.proto.WalletPaymentStatusNotification wallet_payment_status = 16;
-inline bool ServerToAppCustomerNotification::_internal_has_wallet_payment_status() const {
-  return entry_case() == kWalletPaymentStatus;
-}
-inline bool ServerToAppCustomerNotification::has_wallet_payment_status() const {
-  return _internal_has_wallet_payment_status();
-}
-inline void ServerToAppCustomerNotification::set_has_wallet_payment_status() {
-  _oneof_case_[0] = kWalletPaymentStatus;
-}
-inline void ServerToAppCustomerNotification::clear_wallet_payment_status() {
-  if (_internal_has_wallet_payment_status()) {
-    if (GetArena() == nullptr) {
-      delete entry_.wallet_payment_status_;
-    }
-    clear_has_entry();
-  }
-}
-inline ::com::elarian::hera::proto::WalletPaymentStatusNotification* ServerToAppCustomerNotification::release_wallet_payment_status() {
-  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.ServerToAppCustomerNotification.wallet_payment_status)
-  if (_internal_has_wallet_payment_status()) {
-    clear_has_entry();
-      ::com::elarian::hera::proto::WalletPaymentStatusNotification* temp = entry_.wallet_payment_status_;
-    if (GetArena() != nullptr) {
-      temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
-    }
-    entry_.wallet_payment_status_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline const ::com::elarian::hera::proto::WalletPaymentStatusNotification& ServerToAppCustomerNotification::_internal_wallet_payment_status() const {
-  return _internal_has_wallet_payment_status()
-      ? *entry_.wallet_payment_status_
-      : reinterpret_cast< ::com::elarian::hera::proto::WalletPaymentStatusNotification&>(::com::elarian::hera::proto::_WalletPaymentStatusNotification_default_instance_);
-}
-inline const ::com::elarian::hera::proto::WalletPaymentStatusNotification& ServerToAppCustomerNotification::wallet_payment_status() const {
-  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.ServerToAppCustomerNotification.wallet_payment_status)
-  return _internal_wallet_payment_status();
-}
-inline ::com::elarian::hera::proto::WalletPaymentStatusNotification* ServerToAppCustomerNotification::unsafe_arena_release_wallet_payment_status() {
-  // @@protoc_insertion_point(field_unsafe_arena_release:com.elarian.hera.proto.ServerToAppCustomerNotification.wallet_payment_status)
-  if (_internal_has_wallet_payment_status()) {
-    clear_has_entry();
-    ::com::elarian::hera::proto::WalletPaymentStatusNotification* temp = entry_.wallet_payment_status_;
-    entry_.wallet_payment_status_ = nullptr;
-    return temp;
-  } else {
-    return nullptr;
-  }
-}
-inline void ServerToAppCustomerNotification::unsafe_arena_set_allocated_wallet_payment_status(::com::elarian::hera::proto::WalletPaymentStatusNotification* wallet_payment_status) {
-  clear_entry();
-  if (wallet_payment_status) {
-    set_has_wallet_payment_status();
-    entry_.wallet_payment_status_ = wallet_payment_status;
-  }
-  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.ServerToAppCustomerNotification.wallet_payment_status)
-}
-inline ::com::elarian::hera::proto::WalletPaymentStatusNotification* ServerToAppCustomerNotification::_internal_mutable_wallet_payment_status() {
-  if (!_internal_has_wallet_payment_status()) {
-    clear_entry();
-    set_has_wallet_payment_status();
-    entry_.wallet_payment_status_ = CreateMaybeMessage< ::com::elarian::hera::proto::WalletPaymentStatusNotification >(GetArena());
-  }
-  return entry_.wallet_payment_status_;
-}
-inline ::com::elarian::hera::proto::WalletPaymentStatusNotification* ServerToAppCustomerNotification::mutable_wallet_payment_status() {
-  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.ServerToAppCustomerNotification.wallet_payment_status)
-  return _internal_mutable_wallet_payment_status();
-}
-
 // .com.elarian.hera.proto.CustomerActivityNotification customer_activity = 17;
 inline bool ServerToAppCustomerNotification::_internal_has_customer_activity() const {
   return entry_case() == kCustomerActivity;
@@ -33691,152 +33578,6 @@ inline void PaymentStatusNotification::set_status(::com::elarian::hera::proto::P
 
 // -------------------------------------------------------------------
 
-// WalletPaymentStatusNotification
-
-// string wallet_id = 1;
-inline void WalletPaymentStatusNotification::clear_wallet_id() {
-  wallet_id_.ClearToEmpty();
-}
-inline const std::string& WalletPaymentStatusNotification::wallet_id() const {
-  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-  return _internal_wallet_id();
-}
-inline void WalletPaymentStatusNotification::set_wallet_id(const std::string& value) {
-  _internal_set_wallet_id(value);
-  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-}
-inline std::string* WalletPaymentStatusNotification::mutable_wallet_id() {
-  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-  return _internal_mutable_wallet_id();
-}
-inline const std::string& WalletPaymentStatusNotification::_internal_wallet_id() const {
-  return wallet_id_.Get();
-}
-inline void WalletPaymentStatusNotification::_internal_set_wallet_id(const std::string& value) {
-  
-  wallet_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void WalletPaymentStatusNotification::set_wallet_id(std::string&& value) {
-  
-  wallet_id_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-}
-inline void WalletPaymentStatusNotification::set_wallet_id(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  wallet_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-}
-inline void WalletPaymentStatusNotification::set_wallet_id(const char* value,
-    size_t size) {
-  
-  wallet_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-}
-inline std::string* WalletPaymentStatusNotification::_internal_mutable_wallet_id() {
-  
-  return wallet_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* WalletPaymentStatusNotification::release_wallet_id() {
-  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-  return wallet_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void WalletPaymentStatusNotification::set_allocated_wallet_id(std::string* wallet_id) {
-  if (wallet_id != nullptr) {
-    
-  } else {
-    
-  }
-  wallet_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), wallet_id,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.WalletPaymentStatusNotification.wallet_id)
-}
-
-// string transaction_id = 2;
-inline void WalletPaymentStatusNotification::clear_transaction_id() {
-  transaction_id_.ClearToEmpty();
-}
-inline const std::string& WalletPaymentStatusNotification::transaction_id() const {
-  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-  return _internal_transaction_id();
-}
-inline void WalletPaymentStatusNotification::set_transaction_id(const std::string& value) {
-  _internal_set_transaction_id(value);
-  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-}
-inline std::string* WalletPaymentStatusNotification::mutable_transaction_id() {
-  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-  return _internal_mutable_transaction_id();
-}
-inline const std::string& WalletPaymentStatusNotification::_internal_transaction_id() const {
-  return transaction_id_.Get();
-}
-inline void WalletPaymentStatusNotification::_internal_set_transaction_id(const std::string& value) {
-  
-  transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, value, GetArena());
-}
-inline void WalletPaymentStatusNotification::set_transaction_id(std::string&& value) {
-  
-  transaction_id_.Set(
-    ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::move(value), GetArena());
-  // @@protoc_insertion_point(field_set_rvalue:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-}
-inline void WalletPaymentStatusNotification::set_transaction_id(const char* value) {
-  GOOGLE_DCHECK(value != nullptr);
-  
-  transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(value), GetArena());
-  // @@protoc_insertion_point(field_set_char:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-}
-inline void WalletPaymentStatusNotification::set_transaction_id(const char* value,
-    size_t size) {
-  
-  transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, ::std::string(
-      reinterpret_cast<const char*>(value), size), GetArena());
-  // @@protoc_insertion_point(field_set_pointer:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-}
-inline std::string* WalletPaymentStatusNotification::_internal_mutable_transaction_id() {
-  
-  return transaction_id_.Mutable(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, GetArena());
-}
-inline std::string* WalletPaymentStatusNotification::release_transaction_id() {
-  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-  return transaction_id_.Release(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-}
-inline void WalletPaymentStatusNotification::set_allocated_transaction_id(std::string* transaction_id) {
-  if (transaction_id != nullptr) {
-    
-  } else {
-    
-  }
-  transaction_id_.SetAllocated(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), transaction_id,
-      GetArena());
-  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.WalletPaymentStatusNotification.transaction_id)
-}
-
-// .com.elarian.hera.proto.PaymentStatus status = 3;
-inline void WalletPaymentStatusNotification::clear_status() {
-  status_ = 0;
-}
-inline ::com::elarian::hera::proto::PaymentStatus WalletPaymentStatusNotification::_internal_status() const {
-  return static_cast< ::com::elarian::hera::proto::PaymentStatus >(status_);
-}
-inline ::com::elarian::hera::proto::PaymentStatus WalletPaymentStatusNotification::status() const {
-  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.WalletPaymentStatusNotification.status)
-  return _internal_status();
-}
-inline void WalletPaymentStatusNotification::_internal_set_status(::com::elarian::hera::proto::PaymentStatus value) {
-  
-  status_ = value;
-}
-inline void WalletPaymentStatusNotification::set_status(::com::elarian::hera::proto::PaymentStatus value) {
-  _internal_set_status(value);
-  // @@protoc_insertion_point(field_set:com.elarian.hera.proto.WalletPaymentStatusNotification.status)
-}
-
-// -------------------------------------------------------------------
-
 // CustomerActivityNotification
 
 // .com.elarian.hera.proto.CustomerNumber customer_number = 1;
@@ -34118,8 +33859,6 @@ inline void CustomerActivityNotification::set_allocated_activity(::com::elarian:
 #ifdef __GNUC__
   #pragma GCC diagnostic pop
 #endif  // __GNUC__
-// -------------------------------------------------------------------
-
 // -------------------------------------------------------------------
 
 // -------------------------------------------------------------------
