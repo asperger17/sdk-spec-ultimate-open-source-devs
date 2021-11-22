@@ -126,10 +126,7 @@ The following notifications will be received as part of the ***ServerToAppNotifi
 - *SentMessageReaction*
 - *ReceivedPayment*
 - *PaymentStatus*
-- *WalletPaymentStatus*
 - *CustomerActivity*
-
-- *WalletPaymentStatus*
 
 With responses going back as ***ServerToAppNotificationReply***
 
@@ -187,6 +184,10 @@ The SDK should have the following classes with methods that correspond to the ab
 - `replayMessageReactionUpdate(customer: CustomerNumber, channel: MessagingChannel,  messageId: string, reaction: MessageReaction, updatedAt: Long): Future<CustomerStateUpdateReply>`
 
 - `replayMessagingSession(customer: CustomerNumber, channel: MessagingChannel, update: MessageSessionUpdate): Future<CustomerStateUpdateReply>`
+
+- `replayPayment(transactionId: String, debitParty: PaymentCounterParty, creditParty: PaymentCounterParty, status: PaymentStatus, value: Cash, narration: String): Future<ReplayPaymentReply>`
+
+- `replayPaymentStatusUpdate(customer: CustomerNumber, transactionId: String, status: PaymentStatus, updatedAt: Long): Future<ReplayPaymentReply>`
 
 
 For example, a node application **could** connect like this:
@@ -320,6 +321,18 @@ customer.sendMessage(channel, message)
   status: Boolean
   customerId: String,
   description: String
+}
+```
+
+- **ReplayPaymentReply**
+
+```js
+{
+  status: Boolean,
+  description: String,
+  transactionId: String,
+  debitCustomerId: String,
+  creditCustomerId: String,
 }
 ```
 
@@ -872,12 +885,6 @@ function callback(message: Message?, appData: Map<String, Any>?): void
     REVERSED
   }
 }
- 
-{ // WalletPaymentStatusNotification extends Notification
-  walletId: String,
-  transactionId: String,
-  status: PaymentStatus
-}
 
 { // ReminderNotification extends Notification
   reminder: Reminder,
@@ -1092,8 +1099,6 @@ The SDK should allow developers to listen for and respond asynchronously to the 
 - `receivedPayment`
 
 - `paymentStatus`
-
-- `walletPaymentStatus`
 
 - `customerActivity`
 
