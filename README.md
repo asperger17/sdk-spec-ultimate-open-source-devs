@@ -185,7 +185,7 @@ The SDK should have the following classes with methods that correspond to the ab
 
 - `replayMessagingSession(customer: CustomerNumber, channel: MessagingChannel, update: MessageSessionUpdate): Future<CustomerStateUpdateReply>`
 
-- `replayPayment(transactionId: String, debitParty: PaymentCounterParty, creditParty: PaymentCounterParty, status: PaymentStatus, value: Cash, narration: String): Future<ReplayPaymentReply>`
+- `replayPayment(transactionId: String, debitParty: PaymentCounterParty, creditParty: PaymentCounterParty, status: PaymentStatus, value: Cash,narration: String, updatedAt: long): Future<ReplayPaymentReply>`
 
 - `replayPaymentStatusUpdate(customer: CustomerNumber, transactionId: String, status: PaymentStatus, updatedAt: Long): Future<ReplayPaymentReply>`
 
