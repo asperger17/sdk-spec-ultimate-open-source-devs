@@ -73,6 +73,7 @@ typedef GPB_ENUM(ChannelNumberProvider) {
   ChannelNumberProvider_ChannelNumberProviderMailgun = 3,
   ChannelNumberProvider_ChannelNumberProviderFacebook = 4,
   ChannelNumberProvider_ChannelNumberProviderTelegram = 5,
+  ChannelNumberProvider_ChannelNumberProviderMpesa = 6,
 };
 
 GPBEnumDescriptor *ChannelNumberProvider_EnumDescriptor(void);

@@ -111,7 +111,8 @@ GPBEnumDescriptor *ChannelNumberProvider_EnumDescriptor(void) {
         "NumberProviderAt\000ChannelNumberProviderTw"
         "ilio\000ChannelNumberProviderMailgun\000Channe"
         "lNumberProviderFacebook\000ChannelNumberPro"
-        "viderTelegram\000";
+        "viderTelegram\000ChannelNumberProviderMpesa"
+        "\000";
     static const int32_t values[] = {
         ChannelNumberProvider_ChannelNumberProviderUnspecified,
         ChannelNumberProvider_ChannelNumberProviderAt,
@@ -119,6 +120,7 @@ GPBEnumDescriptor *ChannelNumberProvider_EnumDescriptor(void) {
         ChannelNumberProvider_ChannelNumberProviderMailgun,
         ChannelNumberProvider_ChannelNumberProviderFacebook,
         ChannelNumberProvider_ChannelNumberProviderTelegram,
+        ChannelNumberProvider_ChannelNumberProviderMpesa,
     };
     GPBEnumDescriptor *worker =
         [GPBEnumDescriptor allocDescriptorForName:GPBNSStringifySymbol(ChannelNumberProvider)
@@ -142,6 +144,7 @@ BOOL ChannelNumberProvider_IsValidValue(int32_t value__) {
     case ChannelNumberProvider_ChannelNumberProviderMailgun:
     case ChannelNumberProvider_ChannelNumberProviderFacebook:
     case ChannelNumberProvider_ChannelNumberProviderTelegram:
+    case ChannelNumberProvider_ChannelNumberProviderMpesa:
       return YES;
     default:
       return NO;

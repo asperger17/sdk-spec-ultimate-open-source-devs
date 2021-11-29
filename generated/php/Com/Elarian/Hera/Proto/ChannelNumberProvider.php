@@ -35,6 +35,10 @@ class ChannelNumberProvider
      * Generated from protobuf enum <code>CHANNEL_NUMBER_PROVIDER_TELEGRAM = 5;</code>
      */
     const CHANNEL_NUMBER_PROVIDER_TELEGRAM = 5;
+    /**
+     * Generated from protobuf enum <code>CHANNEL_NUMBER_PROVIDER_MPESA = 6;</code>
+     */
+    const CHANNEL_NUMBER_PROVIDER_MPESA = 6;
 
     private static $valueToName = [
         self::CHANNEL_NUMBER_PROVIDER_UNSPECIFIED => 'CHANNEL_NUMBER_PROVIDER_UNSPECIFIED',
@@ -43,6 +47,7 @@ class ChannelNumberProvider
         self::CHANNEL_NUMBER_PROVIDER_MAILGUN => 'CHANNEL_NUMBER_PROVIDER_MAILGUN',
         self::CHANNEL_NUMBER_PROVIDER_FACEBOOK => 'CHANNEL_NUMBER_PROVIDER_FACEBOOK',
         self::CHANNEL_NUMBER_PROVIDER_TELEGRAM => 'CHANNEL_NUMBER_PROVIDER_TELEGRAM',
+        self::CHANNEL_NUMBER_PROVIDER_MPESA => 'CHANNEL_NUMBER_PROVIDER_MPESA',
     ];
 
     public static function name($value)

@@ -131,12 +131,13 @@ enum ChannelNumberProvider : int {
   CHANNEL_NUMBER_PROVIDER_MAILGUN = 3,
   CHANNEL_NUMBER_PROVIDER_FACEBOOK = 4,
   CHANNEL_NUMBER_PROVIDER_TELEGRAM = 5,
+  CHANNEL_NUMBER_PROVIDER_MPESA = 6,
   ChannelNumberProvider_INT_MIN_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::min(),
   ChannelNumberProvider_INT_MAX_SENTINEL_DO_NOT_USE_ = std::numeric_limits<::PROTOBUF_NAMESPACE_ID::int32>::max()
 };
 bool ChannelNumberProvider_IsValid(int value);
 constexpr ChannelNumberProvider ChannelNumberProvider_MIN = CHANNEL_NUMBER_PROVIDER_UNSPECIFIED;
-constexpr ChannelNumberProvider ChannelNumberProvider_MAX = CHANNEL_NUMBER_PROVIDER_TELEGRAM;
+constexpr ChannelNumberProvider ChannelNumberProvider_MAX = CHANNEL_NUMBER_PROVIDER_MPESA;
 constexpr int ChannelNumberProvider_ARRAYSIZE = ChannelNumberProvider_MAX + 1;
 
 const ::PROTOBUF_NAMESPACE_ID::EnumDescriptor* ChannelNumberProvider_descriptor();
