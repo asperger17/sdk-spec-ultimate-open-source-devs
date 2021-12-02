@@ -78182,6 +78182,21 @@ public final class AppSocket {
      * @return The status.
      */
     com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus getStatus();
+
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return The description.
+     */
+    com.google.protobuf.StringValue getDescription();
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.MessageStatusNotification}
@@ -78240,6 +78255,19 @@ public final class AppSocket {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (description_ != null) {
+                subBuilder = description_.toBuilder();
+              }
+              description_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(description_);
+                description_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -78331,6 +78359,32 @@ public final class AppSocket {
       return result == null ? com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.UNRECOGNIZED : result;
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue description_;
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDescription() {
+      return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
+      return getDescription();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -78351,6 +78405,9 @@ public final class AppSocket {
       if (status_ != com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, status_);
       }
+      if (description_ != null) {
+        output.writeMessage(3, getDescription());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -78366,6 +78423,10 @@ public final class AppSocket {
       if (status_ != com.elarian.hera.proto.MessagingModel.MessageDeliveryStatus.MESSAGE_DELIVERY_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
+      }
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDescription());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -78385,6 +78446,11 @@ public final class AppSocket {
       if (!getMessageId()
           .equals(other.getMessageId())) return false;
       if (status_ != other.status_) return false;
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -78400,6 +78466,10 @@ public final class AppSocket {
       hash = (53 * hash) + getMessageId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -78537,6 +78607,12 @@ public final class AppSocket {
 
         status_ = 0;
 
+        if (descriptionBuilder_ == null) {
+          description_ = null;
+        } else {
+          description_ = null;
+          descriptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -78565,6 +78641,11 @@ public final class AppSocket {
         com.elarian.hera.proto.AppSocket.MessageStatusNotification result = new com.elarian.hera.proto.AppSocket.MessageStatusNotification(this);
         result.messageId_ = messageId_;
         result.status_ = status_;
+        if (descriptionBuilder_ == null) {
+          result.description_ = description_;
+        } else {
+          result.description_ = descriptionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -78619,6 +78700,9 @@ public final class AppSocket {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -78777,6 +78861,125 @@ public final class AppSocket {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return descriptionBuilder_ != null || description_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       * @return The description.
+       */
+      public com.google.protobuf.StringValue getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder setDescription(com.google.protobuf.StringValue value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+          onChanged();
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder setDescription(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+          onChanged();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder mergeDescription(com.google.protobuf.StringValue value) {
+        if (descriptionBuilder_ == null) {
+          if (description_ != null) {
+            description_ =
+              com.google.protobuf.StringValue.newBuilder(description_).mergeFrom(value).buildPartial();
+          } else {
+            description_ = value;
+          }
+          onChanged();
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder clearDescription() {
+        if (descriptionBuilder_ == null) {
+          description_ = null;
+          onChanged();
+        } else {
+          description_ = null;
+          descriptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDescriptionBuilder() {
+        
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -81372,6 +81575,21 @@ public final class AppSocket {
      * @return The status.
      */
     com.elarian.hera.proto.PaymentModel.PaymentStatus getStatus();
+
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return The description.
+     */
+    com.google.protobuf.StringValue getDescription();
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.PaymentStatusNotification}
@@ -81430,6 +81648,19 @@ public final class AppSocket {
               int rawValue = input.readEnum();
 
               status_ = rawValue;
+              break;
+            }
+            case 26: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (description_ != null) {
+                subBuilder = description_.toBuilder();
+              }
+              description_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(description_);
+                description_ = subBuilder.buildPartial();
+              }
+
               break;
             }
             default: {
@@ -81521,6 +81752,32 @@ public final class AppSocket {
       return result == null ? com.elarian.hera.proto.PaymentModel.PaymentStatus.UNRECOGNIZED : result;
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 3;
+    private com.google.protobuf.StringValue description_;
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDescription() {
+      return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue description = 3;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
+      return getDescription();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -81541,6 +81798,9 @@ public final class AppSocket {
       if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
         output.writeEnum(2, status_);
       }
+      if (description_ != null) {
+        output.writeMessage(3, getDescription());
+      }
       unknownFields.writeTo(output);
     }
 
@@ -81556,6 +81816,10 @@ public final class AppSocket {
       if (status_ != com.elarian.hera.proto.PaymentModel.PaymentStatus.PAYMENT_STATUS_UNSPECIFIED.getNumber()) {
         size += com.google.protobuf.CodedOutputStream
           .computeEnumSize(2, status_);
+      }
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(3, getDescription());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -81575,6 +81839,11 @@ public final class AppSocket {
       if (!getTransactionId()
           .equals(other.getTransactionId())) return false;
       if (status_ != other.status_) return false;
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -81590,6 +81859,10 @@ public final class AppSocket {
       hash = (53 * hash) + getTransactionId().hashCode();
       hash = (37 * hash) + STATUS_FIELD_NUMBER;
       hash = (53 * hash) + status_;
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
+      }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
       return hash;
@@ -81727,6 +82000,12 @@ public final class AppSocket {
 
         status_ = 0;
 
+        if (descriptionBuilder_ == null) {
+          description_ = null;
+        } else {
+          description_ = null;
+          descriptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -81755,6 +82034,11 @@ public final class AppSocket {
         com.elarian.hera.proto.AppSocket.PaymentStatusNotification result = new com.elarian.hera.proto.AppSocket.PaymentStatusNotification(this);
         result.transactionId_ = transactionId_;
         result.status_ = status_;
+        if (descriptionBuilder_ == null) {
+          result.description_ = description_;
+        } else {
+          result.description_ = descriptionBuilder_.build();
+        }
         onBuilt();
         return result;
       }
@@ -81809,6 +82093,9 @@ public final class AppSocket {
         }
         if (other.status_ != 0) {
           setStatusValue(other.getStatusValue());
+        }
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -81967,6 +82254,125 @@ public final class AppSocket {
         status_ = 0;
         onChanged();
         return this;
+      }
+
+      private com.google.protobuf.StringValue description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return descriptionBuilder_ != null || description_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       * @return The description.
+       */
+      public com.google.protobuf.StringValue getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder setDescription(com.google.protobuf.StringValue value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+          onChanged();
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder setDescription(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+          onChanged();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder mergeDescription(com.google.protobuf.StringValue value) {
+        if (descriptionBuilder_ == null) {
+          if (description_ != null) {
+            description_ =
+              com.google.protobuf.StringValue.newBuilder(description_).mergeFrom(value).buildPartial();
+          } else {
+            description_ = value;
+          }
+          onChanged();
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public Builder clearDescription() {
+        if (descriptionBuilder_ == null) {
+          description_ = null;
+          onChanged();
+        } else {
+          description_ = null;
+          descriptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDescriptionBuilder() {
+        
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 3;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -83909,32 +84315,34 @@ public final class AppSocket {
       "(\0132*.com.elarian.hera.proto.InboundMessa" +
       "geBody\0220\n\nsession_id\030\005 \001(\0132\034.google.prot" +
       "obuf.StringValue\0221\n\013in_reply_to\030\006 \001(\0132\034." +
-      "google.protobuf.StringValue\"n\n\031MessageSt" +
-      "atusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n\006" +
-      "status\030\002 \001(\0162-.com.elarian.hera.proto.Me" +
-      "ssageDeliveryStatus\"\371\001\n\037SentMessageReact" +
-      "ionNotification\022\022\n\nmessage_id\030\001 \001(\t\022?\n\017c" +
-      "ustomer_number\030\002 \001(\0132&.com.elarian.hera." +
-      "proto.CustomerNumber\022F\n\016channel_number\030\003" +
-      " \001(\0132..com.elarian.hera.proto.MessagingC" +
-      "hannelNumber\0229\n\010reaction\030\004 \001(\0162\'.com.ela" +
-      "rian.hera.proto.MessageReaction\"\262\002\n\033Rece" +
-      "ivedPaymentNotification\022\020\n\010purse_id\030\001 \001(" +
-      "\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n\017customer_nu" +
-      "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust" +
-      "omerNumber\022D\n\016channel_number\030\004 \001(\0132,.com" +
-      ".elarian.hera.proto.PaymentChannelNumber" +
-      "\022+\n\005value\030\005 \001(\0132\034.com.elarian.hera.proto" +
-      ".Cash\0225\n\006status\030\006 \001(\0162%.com.elarian.hera" +
-      ".proto.PaymentStatus\"j\n\031PaymentStatusNot" +
-      "ification\022\026\n\016transaction_id\030\001 \001(\t\0225\n\006sta" +
-      "tus\030\002 \001(\0162%.com.elarian.hera.proto.Payme" +
-      "ntStatus\"\277\001\n\034CustomerActivityNotificatio" +
-      "n\022?\n\017customer_number\030\001 \001(\0132&.com.elarian" +
-      ".hera.proto.CustomerNumber\022\016\n\006source\030\002 \001" +
-      "(\t\022\022\n\nsession_id\030\003 \001(\t\022:\n\010activity\030\004 \001(\013" +
-      "2(.com.elarian.hera.proto.CustomerActivi" +
-      "tyb\006proto3"
+      "google.protobuf.StringValue\"\241\001\n\031MessageS" +
+      "tatusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n" +
+      "\006status\030\002 \001(\0162-.com.elarian.hera.proto.M" +
+      "essageDeliveryStatus\0221\n\013description\030\003 \001(" +
+      "\0132\034.google.protobuf.StringValue\"\371\001\n\037Sent" +
+      "MessageReactionNotification\022\022\n\nmessage_i" +
+      "d\030\001 \001(\t\022?\n\017customer_number\030\002 \001(\0132&.com.e" +
+      "larian.hera.proto.CustomerNumber\022F\n\016chan" +
+      "nel_number\030\003 \001(\0132..com.elarian.hera.prot" +
+      "o.MessagingChannelNumber\0229\n\010reaction\030\004 \001" +
+      "(\0162\'.com.elarian.hera.proto.MessageReact" +
+      "ion\"\262\002\n\033ReceivedPaymentNotification\022\020\n\010p" +
+      "urse_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022?\n" +
+      "\017customer_number\030\003 \001(\0132&.com.elarian.her" +
+      "a.proto.CustomerNumber\022D\n\016channel_number" +
+      "\030\004 \001(\0132,.com.elarian.hera.proto.PaymentC" +
+      "hannelNumber\022+\n\005value\030\005 \001(\0132\034.com.elaria" +
+      "n.hera.proto.Cash\0225\n\006status\030\006 \001(\0162%.com." +
+      "elarian.hera.proto.PaymentStatus\"\235\001\n\031Pay" +
+      "mentStatusNotification\022\026\n\016transaction_id" +
+      "\030\001 \001(\t\0225\n\006status\030\002 \001(\0162%.com.elarian.her" +
+      "a.proto.PaymentStatus\0221\n\013description\030\003 \001" +
+      "(\0132\034.google.protobuf.StringValue\"\277\001\n\034Cus" +
+      "tomerActivityNotification\022?\n\017customer_nu" +
+      "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust" +
+      "omerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id" +
+      "\030\003 \001(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian.h" +
+      "era.proto.CustomerActivityb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -84311,7 +84719,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_MessageStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_MessageStatusNotification_descriptor,
-        new java.lang.String[] { "MessageId", "Status", });
+        new java.lang.String[] { "MessageId", "Status", "Description", });
     internal_static_com_elarian_hera_proto_SentMessageReactionNotification_descriptor =
       getDescriptor().getMessageTypes().get(58);
     internal_static_com_elarian_hera_proto_SentMessageReactionNotification_fieldAccessorTable = new
@@ -84329,7 +84737,7 @@ public final class AppSocket {
     internal_static_com_elarian_hera_proto_PaymentStatusNotification_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_PaymentStatusNotification_descriptor,
-        new java.lang.String[] { "TransactionId", "Status", });
+        new java.lang.String[] { "TransactionId", "Status", "Description", });
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_descriptor =
       getDescriptor().getMessageTypes().get(61);
     internal_static_com_elarian_hera_proto_CustomerActivityNotification_fieldAccessorTable = new

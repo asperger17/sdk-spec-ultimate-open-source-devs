@@ -13227,6 +13227,7 @@ class MessageStatusNotification PROTOBUF_FINAL :
 
   enum : int {
     kMessageIdFieldNumber = 1,
+    kDescriptionFieldNumber = 3,
     kStatusFieldNumber = 2,
   };
   // string message_id = 1;
@@ -13245,6 +13246,24 @@ class MessageStatusNotification PROTOBUF_FINAL :
   std::string* _internal_mutable_message_id();
   public:
 
+  // .google.protobuf.StringValue description = 3;
+  bool has_description() const;
+  private:
+  bool _internal_has_description() const;
+  public:
+  void clear_description();
+  const PROTOBUF_NAMESPACE_ID::StringValue& description() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_description();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_description();
+  void set_allocated_description(PROTOBUF_NAMESPACE_ID::StringValue* description);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_description() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_description();
+  public:
+  void unsafe_arena_set_allocated_description(
+      PROTOBUF_NAMESPACE_ID::StringValue* description);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_description();
+
   // .com.elarian.hera.proto.MessageDeliveryStatus status = 2;
   void clear_status();
   ::com::elarian::hera::proto::MessageDeliveryStatus status() const;
@@ -13262,6 +13281,7 @@ class MessageStatusNotification PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr message_id_;
+  PROTOBUF_NAMESPACE_ID::StringValue* description_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fsocket_2eproto;
@@ -13807,6 +13827,7 @@ class PaymentStatusNotification PROTOBUF_FINAL :
 
   enum : int {
     kTransactionIdFieldNumber = 1,
+    kDescriptionFieldNumber = 3,
     kStatusFieldNumber = 2,
   };
   // string transaction_id = 1;
@@ -13825,6 +13846,24 @@ class PaymentStatusNotification PROTOBUF_FINAL :
   std::string* _internal_mutable_transaction_id();
   public:
 
+  // .google.protobuf.StringValue description = 3;
+  bool has_description() const;
+  private:
+  bool _internal_has_description() const;
+  public:
+  void clear_description();
+  const PROTOBUF_NAMESPACE_ID::StringValue& description() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_description();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_description();
+  void set_allocated_description(PROTOBUF_NAMESPACE_ID::StringValue* description);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_description() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_description();
+  public:
+  void unsafe_arena_set_allocated_description(
+      PROTOBUF_NAMESPACE_ID::StringValue* description);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_description();
+
   // .com.elarian.hera.proto.PaymentStatus status = 2;
   void clear_status();
   ::com::elarian::hera::proto::PaymentStatus status() const;
@@ -13842,6 +13881,7 @@ class PaymentStatusNotification PROTOBUF_FINAL :
   typedef void InternalArenaConstructable_;
   typedef void DestructorSkippable_;
   ::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr transaction_id_;
+  PROTOBUF_NAMESPACE_ID::StringValue* description_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_app_5fsocket_2eproto;
@@ -32875,6 +32915,83 @@ inline void MessageStatusNotification::set_status(::com::elarian::hera::proto::M
   // @@protoc_insertion_point(field_set:com.elarian.hera.proto.MessageStatusNotification.status)
 }
 
+// .google.protobuf.StringValue description = 3;
+inline bool MessageStatusNotification::_internal_has_description() const {
+  return this != internal_default_instance() && description_ != nullptr;
+}
+inline bool MessageStatusNotification::has_description() const {
+  return _internal_has_description();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& MessageStatusNotification::_internal_description() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = description_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& MessageStatusNotification::description() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.MessageStatusNotification.description)
+  return _internal_description();
+}
+inline void MessageStatusNotification::unsafe_arena_set_allocated_description(
+    PROTOBUF_NAMESPACE_ID::StringValue* description) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(description_);
+  }
+  description_ = description;
+  if (description) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.MessageStatusNotification.description)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* MessageStatusNotification::release_description() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = description_;
+  description_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* MessageStatusNotification::unsafe_arena_release_description() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.MessageStatusNotification.description)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = description_;
+  description_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* MessageStatusNotification::_internal_mutable_description() {
+  
+  if (description_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    description_ = p;
+  }
+  return description_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* MessageStatusNotification::mutable_description() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.MessageStatusNotification.description)
+  return _internal_mutable_description();
+}
+inline void MessageStatusNotification::set_allocated_description(PROTOBUF_NAMESPACE_ID::StringValue* description) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(description_);
+  }
+  if (description) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(description)->GetArena();
+    if (message_arena != submessage_arena) {
+      description = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, description, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  description_ = description;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.MessageStatusNotification.description)
+}
+
 // -------------------------------------------------------------------
 
 // SentMessageReactionNotification
@@ -33574,6 +33691,83 @@ inline void PaymentStatusNotification::_internal_set_status(::com::elarian::hera
 inline void PaymentStatusNotification::set_status(::com::elarian::hera::proto::PaymentStatus value) {
   _internal_set_status(value);
   // @@protoc_insertion_point(field_set:com.elarian.hera.proto.PaymentStatusNotification.status)
+}
+
+// .google.protobuf.StringValue description = 3;
+inline bool PaymentStatusNotification::_internal_has_description() const {
+  return this != internal_default_instance() && description_ != nullptr;
+}
+inline bool PaymentStatusNotification::has_description() const {
+  return _internal_has_description();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& PaymentStatusNotification::_internal_description() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = description_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& PaymentStatusNotification::description() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.PaymentStatusNotification.description)
+  return _internal_description();
+}
+inline void PaymentStatusNotification::unsafe_arena_set_allocated_description(
+    PROTOBUF_NAMESPACE_ID::StringValue* description) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(description_);
+  }
+  description_ = description;
+  if (description) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.PaymentStatusNotification.description)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentStatusNotification::release_description() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = description_;
+  description_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentStatusNotification::unsafe_arena_release_description() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.PaymentStatusNotification.description)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = description_;
+  description_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentStatusNotification::_internal_mutable_description() {
+  
+  if (description_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    description_ = p;
+  }
+  return description_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentStatusNotification::mutable_description() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.PaymentStatusNotification.description)
+  return _internal_mutable_description();
+}
+inline void PaymentStatusNotification::set_allocated_description(PROTOBUF_NAMESPACE_ID::StringValue* description) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(description_);
+  }
+  if (description) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(description)->GetArena();
+    if (message_arena != submessage_arena) {
+      description = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, description, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  description_ = description;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.PaymentStatusNotification.description)
 }
 
 // -------------------------------------------------------------------

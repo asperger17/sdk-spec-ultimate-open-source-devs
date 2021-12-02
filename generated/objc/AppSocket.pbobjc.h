@@ -2161,6 +2161,7 @@ GPB_FINAL @interface ReceivedMessageNotification : GPBMessage
 typedef GPB_ENUM(MessageStatusNotification_FieldNumber) {
   MessageStatusNotification_FieldNumber_MessageId = 1,
   MessageStatusNotification_FieldNumber_Status = 2,
+  MessageStatusNotification_FieldNumber_Description_p = 3,
 };
 
 GPB_FINAL @interface MessageStatusNotification : GPBMessage
@@ -2168,6 +2169,10 @@ GPB_FINAL @interface MessageStatusNotification : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *messageId;
 
 @property(nonatomic, readwrite) enum MessageDeliveryStatus status;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
 
 @end
 
@@ -2270,6 +2275,7 @@ void SetReceivedPaymentNotification_Status_RawValue(ReceivedPaymentNotification 
 typedef GPB_ENUM(PaymentStatusNotification_FieldNumber) {
   PaymentStatusNotification_FieldNumber_TransactionId = 1,
   PaymentStatusNotification_FieldNumber_Status = 2,
+  PaymentStatusNotification_FieldNumber_Description_p = 3,
 };
 
 GPB_FINAL @interface PaymentStatusNotification : GPBMessage
@@ -2277,6 +2283,10 @@ GPB_FINAL @interface PaymentStatusNotification : GPBMessage
 @property(nonatomic, readwrite, copy, null_resettable) NSString *transactionId;
 
 @property(nonatomic, readwrite) enum PaymentStatus status;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
 
 @end
 

@@ -381,8 +381,8 @@ GPBEnumDescriptor *MessageDeliveryStatus_EnumDescriptor(void) {
         "issionedCustomerid\000MessageDeliveryStatus"
         "Rejected\000MessageDeliveryStatusInvalidReq"
         "uest\000MessageDeliveryStatusInsufficientCr"
-        "edits\000MessageDeliveryStatusApplicationEr"
-        "ror\000";
+        "edits\000MessageDeliveryStatusGatewayError\000"
+        "MessageDeliveryStatusApplicationError\000";
     static const int32_t values[] = {
         MessageDeliveryStatus_MessageDeliveryStatusUnspecified,
         MessageDeliveryStatus_MessageDeliveryStatusQueued,
@@ -409,6 +409,7 @@ GPBEnumDescriptor *MessageDeliveryStatus_EnumDescriptor(void) {
         MessageDeliveryStatus_MessageDeliveryStatusRejected,
         MessageDeliveryStatus_MessageDeliveryStatusInvalidRequest,
         MessageDeliveryStatus_MessageDeliveryStatusInsufficientCredits,
+        MessageDeliveryStatus_MessageDeliveryStatusGatewayError,
         MessageDeliveryStatus_MessageDeliveryStatusApplicationError,
     };
     GPBEnumDescriptor *worker =
@@ -452,6 +453,7 @@ BOOL MessageDeliveryStatus_IsValidValue(int32_t value__) {
     case MessageDeliveryStatus_MessageDeliveryStatusRejected:
     case MessageDeliveryStatus_MessageDeliveryStatusInvalidRequest:
     case MessageDeliveryStatus_MessageDeliveryStatusInsufficientCredits:
+    case MessageDeliveryStatus_MessageDeliveryStatusGatewayError:
     case MessageDeliveryStatus_MessageDeliveryStatusApplicationError:
       return YES;
     default:
@@ -479,7 +481,8 @@ GPBEnumDescriptor *VoiceCallStatus_EnumDescriptor(void) {
         "inationNotSupported\000VoiceCallStatusDecom"
         "missionedCustomerid\000VoiceCallStatusExpir"
         "ed\000VoiceCallStatusInvalidChannelNumber\000V"
-        "oiceCallStatusApplicationError\000";
+        "oiceCallStatusGatewayError\000VoiceCallStat"
+        "usApplicationError\000";
     static const int32_t values[] = {
         VoiceCallStatus_VoiceCallStatusUnspecified,
         VoiceCallStatus_VoiceCallStatusQueued,
@@ -501,6 +504,7 @@ GPBEnumDescriptor *VoiceCallStatus_EnumDescriptor(void) {
         VoiceCallStatus_VoiceCallStatusDecommissionedCustomerid,
         VoiceCallStatus_VoiceCallStatusExpired,
         VoiceCallStatus_VoiceCallStatusInvalidChannelNumber,
+        VoiceCallStatus_VoiceCallStatusGatewayError,
         VoiceCallStatus_VoiceCallStatusApplicationError,
     };
     GPBEnumDescriptor *worker =
@@ -539,6 +543,7 @@ BOOL VoiceCallStatus_IsValidValue(int32_t value__) {
     case VoiceCallStatus_VoiceCallStatusDecommissionedCustomerid:
     case VoiceCallStatus_VoiceCallStatusExpired:
     case VoiceCallStatus_VoiceCallStatusInvalidChannelNumber:
+    case VoiceCallStatus_VoiceCallStatusGatewayError:
     case VoiceCallStatus_VoiceCallStatusApplicationError:
       return YES;
     default:

@@ -441,6 +441,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "com.elarian.hera.proto.MessageStatusNotification" do
       optional :message_id, :string, 1
       optional :status, :enum, 2, "com.elarian.hera.proto.MessageDeliveryStatus"
+      optional :description, :message, 3, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.SentMessageReactionNotification" do
       optional :message_id, :string, 1
@@ -459,6 +460,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "com.elarian.hera.proto.PaymentStatusNotification" do
       optional :transaction_id, :string, 1
       optional :status, :enum, 2, "com.elarian.hera.proto.PaymentStatus"
+      optional :description, :message, 3, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.CustomerActivityNotification" do
       optional :customer_number, :message, 1, "com.elarian.hera.proto.CustomerNumber"

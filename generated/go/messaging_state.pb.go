@@ -174,6 +174,7 @@ type SentMessage struct {
 	Message           *OutboundMessage        `protobuf:"bytes,12,opt,name=message,proto3" json:"message,omitempty"`
 	Cost              *Cash                   `protobuf:"bytes,13,opt,name=cost,proto3" json:"cost,omitempty"`
 	ProviderMessageId *wrapperspb.StringValue `protobuf:"bytes,14,opt,name=provider_message_id,json=providerMessageId,proto3" json:"provider_message_id,omitempty"`
+	Description       *wrapperspb.StringValue `protobuf:"bytes,15,opt,name=description,proto3" json:"description,omitempty"`
 }
 
 func (x *SentMessage) Reset() {
@@ -302,6 +303,13 @@ func (x *SentMessage) GetCost() *Cash {
 func (x *SentMessage) GetProviderMessageId() *wrapperspb.StringValue {
 	if x != nil {
 		return x.ProviderMessageId
+	}
+	return nil
+}
+
+func (x *SentMessage) GetDescription() *wrapperspb.StringValue {
+	if x != nil {
+		return x.Description
 	}
 	return nil
 }
@@ -1076,7 +1084,7 @@ var file_messaging_state_proto_rawDesc = []byte{
 	0x73, 0x61, 0x67, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x0b, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e,
 	0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e,
 	0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x52, 0x11, 0x70, 0x72, 0x6f,
-	0x76, 0x69, 0x64, 0x65, 0x72, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x49, 0x64, 0x22, 0x9b,
+	0x76, 0x69, 0x64, 0x65, 0x72, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x49, 0x64, 0x22, 0xdb,
 	0x07, 0x0a, 0x0b, 0x53, 0x65, 0x6e, 0x74, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x12, 0x4f,
 	0x0a, 0x0f, 0x63, 0x75, 0x73, 0x74, 0x6f, 0x6d, 0x65, 0x72, 0x5f, 0x6e, 0x75, 0x6d, 0x62, 0x65,
 	0x72, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x26, 0x2e, 0x63, 0x6f, 0x6d, 0x2e, 0x65, 0x6c,
@@ -1134,7 +1142,11 @@ var file_messaging_state_proto_rawDesc = []byte{
 	0x67, 0x65, 0x5f, 0x69, 0x64, 0x18, 0x0e, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1c, 0x2e, 0x67, 0x6f,
 	0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f, 0x62, 0x75, 0x66, 0x2e, 0x53, 0x74,
 	0x72, 0x69, 0x6e, 0x67, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x52, 0x11, 0x70, 0x72, 0x6f, 0x76, 0x69,
-	0x64, 0x65, 0x72, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x49, 0x64, 0x22, 0x96, 0x01, 0x0a,
+	0x64, 0x65, 0x72, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x49, 0x64, 0x12, 0x3e, 0x0a, 0x0b,
+	0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x18, 0x0f, 0x20, 0x01, 0x28,
+	0x0b, 0x32, 0x1c, 0x2e, 0x67, 0x6f, 0x6f, 0x67, 0x6c, 0x65, 0x2e, 0x70, 0x72, 0x6f, 0x74, 0x6f,
+	0x62, 0x75, 0x66, 0x2e, 0x53, 0x74, 0x72, 0x69, 0x6e, 0x67, 0x56, 0x61, 0x6c, 0x75, 0x65, 0x52,
+	0x0b, 0x64, 0x65, 0x73, 0x63, 0x72, 0x69, 0x70, 0x74, 0x69, 0x6f, 0x6e, 0x22, 0x96, 0x01, 0x0a,
 	0x14, 0x4d, 0x65, 0x73, 0x73, 0x61, 0x67, 0x65, 0x52, 0x65, 0x61, 0x63, 0x74, 0x69, 0x6f, 0x6e,
 	0x53, 0x74, 0x61, 0x74, 0x65, 0x12, 0x39, 0x0a, 0x0a, 0x63, 0x72, 0x65, 0x61, 0x74, 0x65, 0x64,
 	0x5f, 0x61, 0x74, 0x18, 0x01, 0x20, 0x01, 0x28, 0x0b, 0x32, 0x1a, 0x2e, 0x67, 0x6f, 0x6f, 0x67,
@@ -1373,44 +1385,45 @@ var file_messaging_state_proto_depIdxs = []int32{
 	19, // 20: com.elarian.hera.proto.SentMessage.message:type_name -> com.elarian.hera.proto.OutboundMessage
 	17, // 21: com.elarian.hera.proto.SentMessage.cost:type_name -> com.elarian.hera.proto.Cash
 	14, // 22: com.elarian.hera.proto.SentMessage.provider_message_id:type_name -> google.protobuf.StringValue
-	13, // 23: com.elarian.hera.proto.MessageReactionState.created_at:type_name -> google.protobuf.Timestamp
-	20, // 24: com.elarian.hera.proto.MessageReactionState.reaction:type_name -> com.elarian.hera.proto.MessageReaction
-	13, // 25: com.elarian.hera.proto.MessageReplyToken.expires_at:type_name -> google.protobuf.Timestamp
-	0,  // 26: com.elarian.hera.proto.ChannelMessage.received:type_name -> com.elarian.hera.proto.ReceivedMessage
-	1,  // 27: com.elarian.hera.proto.ChannelMessage.sent:type_name -> com.elarian.hera.proto.SentMessage
-	11, // 28: com.elarian.hera.proto.CompleteMessagingSession.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
-	12, // 29: com.elarian.hera.proto.CompleteMessagingSession.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
-	13, // 30: com.elarian.hera.proto.CompleteMessagingSession.started_at:type_name -> google.protobuf.Timestamp
-	21, // 31: com.elarian.hera.proto.CompleteMessagingSession.duration:type_name -> google.protobuf.Duration
-	22, // 32: com.elarian.hera.proto.CompleteMessagingSession.end_reason:type_name -> com.elarian.hera.proto.MessagingSessionEndReason
-	17, // 33: com.elarian.hera.proto.CompleteMessagingSession.cost:type_name -> com.elarian.hera.proto.Cash
-	14, // 34: com.elarian.hera.proto.CompleteMessagingSession.provider_session_id:type_name -> google.protobuf.StringValue
-	11, // 35: com.elarian.hera.proto.BlockedMessagingChannelState.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
-	12, // 36: com.elarian.hera.proto.BlockedMessagingChannelState.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
-	3,  // 37: com.elarian.hera.proto.BlockedMessagingChannelState.reply_token:type_name -> com.elarian.hera.proto.MessageReplyToken
-	13, // 38: com.elarian.hera.proto.BlockedMessagingChannelState.blocked_at:type_name -> google.protobuf.Timestamp
-	11, // 39: com.elarian.hera.proto.ActiveMessagingChannelState.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
-	12, // 40: com.elarian.hera.proto.ActiveMessagingChannelState.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
-	3,  // 41: com.elarian.hera.proto.ActiveMessagingChannelState.reply_token:type_name -> com.elarian.hera.proto.MessageReplyToken
-	13, // 42: com.elarian.hera.proto.ActiveMessagingChannelState.allowed_at:type_name -> google.protobuf.Timestamp
-	11, // 43: com.elarian.hera.proto.InSessionMessagingChannelState.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
-	12, // 44: com.elarian.hera.proto.InSessionMessagingChannelState.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
-	3,  // 45: com.elarian.hera.proto.InSessionMessagingChannelState.reply_token:type_name -> com.elarian.hera.proto.MessageReplyToken
-	13, // 46: com.elarian.hera.proto.InSessionMessagingChannelState.allowed_at:type_name -> google.protobuf.Timestamp
-	13, // 47: com.elarian.hera.proto.InSessionMessagingChannelState.started_at:type_name -> google.protobuf.Timestamp
-	13, // 48: com.elarian.hera.proto.InSessionMessagingChannelState.expires_at:type_name -> google.protobuf.Timestamp
-	14, // 49: com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id:type_name -> google.protobuf.StringValue
-	6,  // 50: com.elarian.hera.proto.MessagingChannelState.blocked:type_name -> com.elarian.hera.proto.BlockedMessagingChannelState
-	7,  // 51: com.elarian.hera.proto.MessagingChannelState.active:type_name -> com.elarian.hera.proto.ActiveMessagingChannelState
-	8,  // 52: com.elarian.hera.proto.MessagingChannelState.in_session:type_name -> com.elarian.hera.proto.InSessionMessagingChannelState
-	9,  // 53: com.elarian.hera.proto.MessagingState.channels:type_name -> com.elarian.hera.proto.MessagingChannelState
-	4,  // 54: com.elarian.hera.proto.MessagingState.messages:type_name -> com.elarian.hera.proto.ChannelMessage
-	5,  // 55: com.elarian.hera.proto.MessagingState.sessions:type_name -> com.elarian.hera.proto.CompleteMessagingSession
-	56, // [56:56] is the sub-list for method output_type
-	56, // [56:56] is the sub-list for method input_type
-	56, // [56:56] is the sub-list for extension type_name
-	56, // [56:56] is the sub-list for extension extendee
-	0,  // [0:56] is the sub-list for field type_name
+	14, // 23: com.elarian.hera.proto.SentMessage.description:type_name -> google.protobuf.StringValue
+	13, // 24: com.elarian.hera.proto.MessageReactionState.created_at:type_name -> google.protobuf.Timestamp
+	20, // 25: com.elarian.hera.proto.MessageReactionState.reaction:type_name -> com.elarian.hera.proto.MessageReaction
+	13, // 26: com.elarian.hera.proto.MessageReplyToken.expires_at:type_name -> google.protobuf.Timestamp
+	0,  // 27: com.elarian.hera.proto.ChannelMessage.received:type_name -> com.elarian.hera.proto.ReceivedMessage
+	1,  // 28: com.elarian.hera.proto.ChannelMessage.sent:type_name -> com.elarian.hera.proto.SentMessage
+	11, // 29: com.elarian.hera.proto.CompleteMessagingSession.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
+	12, // 30: com.elarian.hera.proto.CompleteMessagingSession.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
+	13, // 31: com.elarian.hera.proto.CompleteMessagingSession.started_at:type_name -> google.protobuf.Timestamp
+	21, // 32: com.elarian.hera.proto.CompleteMessagingSession.duration:type_name -> google.protobuf.Duration
+	22, // 33: com.elarian.hera.proto.CompleteMessagingSession.end_reason:type_name -> com.elarian.hera.proto.MessagingSessionEndReason
+	17, // 34: com.elarian.hera.proto.CompleteMessagingSession.cost:type_name -> com.elarian.hera.proto.Cash
+	14, // 35: com.elarian.hera.proto.CompleteMessagingSession.provider_session_id:type_name -> google.protobuf.StringValue
+	11, // 36: com.elarian.hera.proto.BlockedMessagingChannelState.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
+	12, // 37: com.elarian.hera.proto.BlockedMessagingChannelState.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
+	3,  // 38: com.elarian.hera.proto.BlockedMessagingChannelState.reply_token:type_name -> com.elarian.hera.proto.MessageReplyToken
+	13, // 39: com.elarian.hera.proto.BlockedMessagingChannelState.blocked_at:type_name -> google.protobuf.Timestamp
+	11, // 40: com.elarian.hera.proto.ActiveMessagingChannelState.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
+	12, // 41: com.elarian.hera.proto.ActiveMessagingChannelState.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
+	3,  // 42: com.elarian.hera.proto.ActiveMessagingChannelState.reply_token:type_name -> com.elarian.hera.proto.MessageReplyToken
+	13, // 43: com.elarian.hera.proto.ActiveMessagingChannelState.allowed_at:type_name -> google.protobuf.Timestamp
+	11, // 44: com.elarian.hera.proto.InSessionMessagingChannelState.customer_number:type_name -> com.elarian.hera.proto.CustomerNumber
+	12, // 45: com.elarian.hera.proto.InSessionMessagingChannelState.channel_number:type_name -> com.elarian.hera.proto.MessagingChannelNumber
+	3,  // 46: com.elarian.hera.proto.InSessionMessagingChannelState.reply_token:type_name -> com.elarian.hera.proto.MessageReplyToken
+	13, // 47: com.elarian.hera.proto.InSessionMessagingChannelState.allowed_at:type_name -> google.protobuf.Timestamp
+	13, // 48: com.elarian.hera.proto.InSessionMessagingChannelState.started_at:type_name -> google.protobuf.Timestamp
+	13, // 49: com.elarian.hera.proto.InSessionMessagingChannelState.expires_at:type_name -> google.protobuf.Timestamp
+	14, // 50: com.elarian.hera.proto.InSessionMessagingChannelState.provider_session_id:type_name -> google.protobuf.StringValue
+	6,  // 51: com.elarian.hera.proto.MessagingChannelState.blocked:type_name -> com.elarian.hera.proto.BlockedMessagingChannelState
+	7,  // 52: com.elarian.hera.proto.MessagingChannelState.active:type_name -> com.elarian.hera.proto.ActiveMessagingChannelState
+	8,  // 53: com.elarian.hera.proto.MessagingChannelState.in_session:type_name -> com.elarian.hera.proto.InSessionMessagingChannelState
+	9,  // 54: com.elarian.hera.proto.MessagingState.channels:type_name -> com.elarian.hera.proto.MessagingChannelState
+	4,  // 55: com.elarian.hera.proto.MessagingState.messages:type_name -> com.elarian.hera.proto.ChannelMessage
+	5,  // 56: com.elarian.hera.proto.MessagingState.sessions:type_name -> com.elarian.hera.proto.CompleteMessagingSession
+	57, // [57:57] is the sub-list for method output_type
+	57, // [57:57] is the sub-list for method input_type
+	57, // [57:57] is the sub-list for extension type_name
+	57, // [57:57] is the sub-list for extension extendee
+	0,  // [0:57] is the sub-list for field type_name
 }
 
 func init() { file_messaging_state_proto_init() }

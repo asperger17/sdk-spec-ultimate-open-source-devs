@@ -313,6 +313,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_payment_5fmodel_2eproto::offse
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentTransaction, updated_at_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentTransaction, provider_transaction_id_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentTransaction, narration_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentTransaction, description_),
 };
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::com::elarian::hera::proto::PaymentChannelNumber)},
@@ -378,7 +379,7 @@ const char descriptor_table_protodef_payment_5fmodel_2eproto[] PROTOBUF_SECTION_
   "H\000\022G\n\010customer\030\003 \001(\01323.com.elarian.hera."
   "proto.PaymentCustomerCounterPartyH\000\022E\n\007c"
   "hannel\030\004 \001(\01322.com.elarian.hera.proto.Pa"
-  "ymentChannelCounterPartyH\000B\007\n\005party\"\223\004\n\022"
+  "ymentChannelCounterPartyH\000B\007\n\005party\"\306\004\n\022"
   "PaymentTransaction\022\026\n\016transaction_id\030\001 \001"
   "(\t\022,\n\006app_id\030\002 \001(\0132\034.google.protobuf.Str"
   "ingValue\022@\n\013debit_party\030\004 \001(\0132+.com.elar"
@@ -392,27 +393,31 @@ const char descriptor_table_protodef_payment_5fmodel_2eproto[] PROTOBUF_SECTION_
   "rotobuf.Timestamp\022=\n\027provider_transactio"
   "n_id\030\n \001(\0132\034.google.protobuf.StringValue"
   "\022/\n\tnarration\030\013 \001(\0132\034.google.protobuf.St"
-  "ringValue*l\n\016PaymentChannel\022\037\n\033PAYMENT_C"
-  "HANNEL_UNSPECIFIED\020\000\022\034\n\030PAYMENT_CHANNEL_"
-  "CELLULAR\020\001\022\033\n\027PAYMENT_CHANNEL_AIRTIME\020\002*"
-  "\277\005\n\rPaymentStatus\022\036\n\032PAYMENT_STATUS_UNSP"
-  "ECIFIED\020\000\022\031\n\025PAYMENT_STATUS_QUEUED\020d\022\'\n#"
-  "PAYMENT_STATUS_PENDING_CONFIRMATION\020e\022%\n"
-  "!PAYMENT_STATUS_PENDING_VALIDATION\020f\022\034\n\030"
-  "PAYMENT_STATUS_VALIDATED\020g\022#\n\036PAYMENT_ST"
-  "ATUS_INVALID_REQUEST\020\310\001\022!\n\034PAYMENT_STATU"
-  "S_NOT_SUPPORTED\020\311\001\022&\n!PAYMENT_STATUS_INS"
-  "UFFICIENT_FUNDS\020\312\001\022%\n PAYMENT_STATUS_APP"
-  "LICATION_ERROR\020\313\001\022\037\n\032PAYMENT_STATUS_NOT_"
-  "ALLOWED\020\314\001\022%\n PAYMENT_STATUS_DUPLICATE_R"
-  "EQUEST\020\315\001\022!\n\034PAYMENT_STATUS_INVALID_PURS"
-  "E\020\316\001\022\"\n\035PAYMENT_STATUS_INVALID_WALLET\020\317\001"
-  "\022.\n)PAYMENT_STATUS_DECOMMISSIONED_CUSTOM"
-  "ER_ID\020\253\002\022\033\n\026PAYMENT_STATUS_SUCCESS\020\254\002\022\032\n"
-  "\025PAYMENT_STATUS_FAILED\020\220\003\022\035\n\030PAYMENT_STA"
-  "TUS_THROTTLED\020\221\003\022\033\n\026PAYMENT_STATUS_EXPIR"
-  "ED\020\222\003\022\034\n\027PAYMENT_STATUS_REJECTED\020\223\003\022\034\n\027P"
-  "AYMENT_STATUS_REVERSED\020\364\003b\006proto3"
+  "ringValue\0221\n\013description\030\014 \001(\0132\034.google."
+  "protobuf.StringValue*l\n\016PaymentChannel\022\037"
+  "\n\033PAYMENT_CHANNEL_UNSPECIFIED\020\000\022\034\n\030PAYME"
+  "NT_CHANNEL_CELLULAR\020\001\022\033\n\027PAYMENT_CHANNEL"
+  "_AIRTIME\020\002*\225\006\n\rPaymentStatus\022\036\n\032PAYMENT_"
+  "STATUS_UNSPECIFIED\020\000\022\031\n\025PAYMENT_STATUS_Q"
+  "UEUED\020d\022\'\n#PAYMENT_STATUS_PENDING_CONFIR"
+  "MATION\020e\022%\n!PAYMENT_STATUS_PENDING_VALID"
+  "ATION\020f\022\034\n\030PAYMENT_STATUS_VALIDATED\020g\022#\n"
+  "\036PAYMENT_STATUS_INVALID_REQUEST\020\310\001\022!\n\034PA"
+  "YMENT_STATUS_NOT_SUPPORTED\020\311\001\022&\n!PAYMENT"
+  "_STATUS_INSUFFICIENT_FUNDS\020\312\001\022%\n PAYMENT"
+  "_STATUS_APPLICATION_ERROR\020\313\001\022\037\n\032PAYMENT_"
+  "STATUS_NOT_ALLOWED\020\314\001\022%\n PAYMENT_STATUS_"
+  "DUPLICATE_REQUEST\020\315\001\022!\n\034PAYMENT_STATUS_I"
+  "NVALID_PURSE\020\316\001\022)\n$PAYMENT_STATUS_INVALI"
+  "D_COUNTER_PARTY\020\317\001\022*\n%PAYMENT_STATUS_INV"
+  "ALID_CHANNEL_NUMBER\020\320\001\022!\n\034PAYMENT_STATUS"
+  "_GATEWAY_ERROR\020\321\001\022.\n)PAYMENT_STATUS_DECO"
+  "MMISSIONED_CUSTOMER_ID\020\253\002\022\033\n\026PAYMENT_STA"
+  "TUS_SUCCESS\020\254\002\022\032\n\025PAYMENT_STATUS_FAILED\020"
+  "\220\003\022\035\n\030PAYMENT_STATUS_THROTTLED\020\221\003\022\033\n\026PAY"
+  "MENT_STATUS_EXPIRED\020\222\003\022\034\n\027PAYMENT_STATUS"
+  "_REJECTED\020\223\003\022\034\n\027PAYMENT_STATUS_REVERSED\020"
+  "\364\003b\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_payment_5fmodel_2eproto_deps[3] = {
   &::descriptor_table_common_5fmodel_2eproto,
@@ -433,7 +438,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_pay
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_payment_5fmodel_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_payment_5fmodel_2eproto = {
-  false, false, descriptor_table_protodef_payment_5fmodel_2eproto, "payment_model.proto", 2873,
+  false, false, descriptor_table_protodef_payment_5fmodel_2eproto, "payment_model.proto", 3010,
   &descriptor_table_payment_5fmodel_2eproto_once, descriptor_table_payment_5fmodel_2eproto_sccs, descriptor_table_payment_5fmodel_2eproto_deps, 10, 3,
   schemas, file_default_instances, TableStruct_payment_5fmodel_2eproto::offsets,
   file_level_metadata_payment_5fmodel_2eproto, 10, file_level_enum_descriptors_payment_5fmodel_2eproto, file_level_service_descriptors_payment_5fmodel_2eproto,
@@ -479,6 +484,8 @@ bool PaymentStatus_IsValid(int value) {
     case 205:
     case 206:
     case 207:
+    case 208:
+    case 209:
     case 299:
     case 300:
     case 400:
@@ -2965,6 +2972,7 @@ class PaymentTransaction::_Internal {
   static const PROTOBUF_NAMESPACE_ID::Timestamp& updated_at(const PaymentTransaction* msg);
   static const PROTOBUF_NAMESPACE_ID::StringValue& provider_transaction_id(const PaymentTransaction* msg);
   static const PROTOBUF_NAMESPACE_ID::StringValue& narration(const PaymentTransaction* msg);
+  static const PROTOBUF_NAMESPACE_ID::StringValue& description(const PaymentTransaction* msg);
 };
 
 const PROTOBUF_NAMESPACE_ID::StringValue&
@@ -2998,6 +3006,10 @@ PaymentTransaction::_Internal::provider_transaction_id(const PaymentTransaction*
 const PROTOBUF_NAMESPACE_ID::StringValue&
 PaymentTransaction::_Internal::narration(const PaymentTransaction* msg) {
   return *msg->narration_;
+}
+const PROTOBUF_NAMESPACE_ID::StringValue&
+PaymentTransaction::_Internal::description(const PaymentTransaction* msg) {
+  return *msg->description_;
 }
 void PaymentTransaction::clear_app_id() {
   if (GetArena() == nullptr && app_id_ != nullptr) {
@@ -3034,6 +3046,12 @@ void PaymentTransaction::clear_narration() {
     delete narration_;
   }
   narration_ = nullptr;
+}
+void PaymentTransaction::clear_description() {
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
 }
 PaymentTransaction::PaymentTransaction(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
@@ -3089,6 +3107,11 @@ PaymentTransaction::PaymentTransaction(const PaymentTransaction& from)
   } else {
     narration_ = nullptr;
   }
+  if (from._internal_has_description()) {
+    description_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.description_);
+  } else {
+    description_ = nullptr;
+  }
   status_ = from.status_;
   // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.PaymentTransaction)
 }
@@ -3119,6 +3142,7 @@ void PaymentTransaction::SharedDtor() {
   if (this != internal_default_instance()) delete updated_at_;
   if (this != internal_default_instance()) delete provider_transaction_id_;
   if (this != internal_default_instance()) delete narration_;
+  if (this != internal_default_instance()) delete description_;
 }
 
 void PaymentTransaction::ArenaDtor(void* object) {
@@ -3175,6 +3199,10 @@ void PaymentTransaction::Clear() {
     delete narration_;
   }
   narration_ = nullptr;
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
   status_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -3256,6 +3284,13 @@ const char* PaymentTransaction::_InternalParse(const char* ptr, ::PROTOBUF_NAMES
       case 11:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 90)) {
           ptr = ctx->ParseMessage(_internal_mutable_narration(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue description = 12;
+      case 12:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 98)) {
+          ptr = ctx->ParseMessage(_internal_mutable_description(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -3368,6 +3403,14 @@ failure:
         11, _Internal::narration(this), target, stream);
   }
 
+  // .google.protobuf.StringValue description = 12;
+  if (this->has_description()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        12, _Internal::description(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -3447,6 +3490,13 @@ size_t PaymentTransaction::ByteSizeLong() const {
         *narration_);
   }
 
+  // .google.protobuf.StringValue description = 12;
+  if (this->has_description()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *description_);
+  }
+
   // .com.elarian.hera.proto.PaymentStatus status = 7;
   if (this->status() != 0) {
     total_size += 1 +
@@ -3510,6 +3560,9 @@ void PaymentTransaction::MergeFrom(const PaymentTransaction& from) {
   }
   if (from.has_narration()) {
     _internal_mutable_narration()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_narration());
+  }
+  if (from.has_description()) {
+    _internal_mutable_description()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_description());
   }
   if (from.status() != 0) {
     _internal_set_status(from._internal_status());

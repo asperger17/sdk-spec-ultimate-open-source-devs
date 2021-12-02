@@ -5456,11 +5456,13 @@ typedef struct ReceivedMessageNotification__storage_ {
 
 @dynamic messageId;
 @dynamic status;
+@dynamic hasDescription_p, description_p;
 
 typedef struct MessageStatusNotification__storage_ {
   uint32_t _has_storage_[1];
   MessageDeliveryStatus status;
   NSString *messageId;
+  GPBStringValue *description_p;
 } MessageStatusNotification__storage_;
 
 // This method is threadsafe because it is initially called
@@ -5486,6 +5488,15 @@ typedef struct MessageStatusNotification__storage_ {
         .offset = (uint32_t)offsetof(MessageStatusNotification__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = MessageStatusNotification_FieldNumber_Description_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(MessageStatusNotification__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =
@@ -5726,11 +5737,13 @@ void SetReceivedPaymentNotification_Status_RawValue(ReceivedPaymentNotification 
 
 @dynamic transactionId;
 @dynamic status;
+@dynamic hasDescription_p, description_p;
 
 typedef struct PaymentStatusNotification__storage_ {
   uint32_t _has_storage_[1];
   PaymentStatus status;
   NSString *transactionId;
+  GPBStringValue *description_p;
 } PaymentStatusNotification__storage_;
 
 // This method is threadsafe because it is initially called
@@ -5756,6 +5769,15 @@ typedef struct PaymentStatusNotification__storage_ {
         .offset = (uint32_t)offsetof(PaymentStatusNotification__storage_, status),
         .flags = (GPBFieldFlags)(GPBFieldOptional | GPBFieldHasEnumDescriptor | GPBFieldClearHasIvarOnZero),
         .dataType = GPBDataTypeEnum,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = PaymentStatusNotification_FieldNumber_Description_p,
+        .hasIndex = 2,
+        .offset = (uint32_t)offsetof(PaymentStatusNotification__storage_, description_p),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
       },
     };
     GPBDescriptor *localDescriptor =

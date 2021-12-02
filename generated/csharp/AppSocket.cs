@@ -411,29 +411,31 @@ namespace Com.Elarian.Hera.Proto {
             "KAsyKi5jb20uZWxhcmlhbi5oZXJhLnByb3RvLkluYm91bmRNZXNzYWdlQm9k",
             "eRIwCgpzZXNzaW9uX2lkGAUgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmlu",
             "Z1ZhbHVlEjEKC2luX3JlcGx5X3RvGAYgASgLMhwuZ29vZ2xlLnByb3RvYnVm",
-            "LlN0cmluZ1ZhbHVlIm4KGU1lc3NhZ2VTdGF0dXNOb3RpZmljYXRpb24SEgoK",
-            "bWVzc2FnZV9pZBgBIAEoCRI9CgZzdGF0dXMYAiABKA4yLS5jb20uZWxhcmlh",
-            "bi5oZXJhLnByb3RvLk1lc3NhZ2VEZWxpdmVyeVN0YXR1cyL5AQofU2VudE1l",
-            "c3NhZ2VSZWFjdGlvbk5vdGlmaWNhdGlvbhISCgptZXNzYWdlX2lkGAEgASgJ",
-            "Ej8KD2N1c3RvbWVyX251bWJlchgCIAEoCzImLmNvbS5lbGFyaWFuLmhlcmEu",
-            "cHJvdG8uQ3VzdG9tZXJOdW1iZXISRgoOY2hhbm5lbF9udW1iZXIYAyABKAsy",
-            "Li5jb20uZWxhcmlhbi5oZXJhLnByb3RvLk1lc3NhZ2luZ0NoYW5uZWxOdW1i",
-            "ZXISOQoIcmVhY3Rpb24YBCABKA4yJy5jb20uZWxhcmlhbi5oZXJhLnByb3Rv",
-            "Lk1lc3NhZ2VSZWFjdGlvbiKyAgobUmVjZWl2ZWRQYXltZW50Tm90aWZpY2F0",
-            "aW9uEhAKCHB1cnNlX2lkGAEgASgJEhYKDnRyYW5zYWN0aW9uX2lkGAIgASgJ",
-            "Ej8KD2N1c3RvbWVyX251bWJlchgDIAEoCzImLmNvbS5lbGFyaWFuLmhlcmEu",
-            "cHJvdG8uQ3VzdG9tZXJOdW1iZXISRAoOY2hhbm5lbF9udW1iZXIYBCABKAsy",
-            "LC5jb20uZWxhcmlhbi5oZXJhLnByb3RvLlBheW1lbnRDaGFubmVsTnVtYmVy",
-            "EisKBXZhbHVlGAUgASgLMhwuY29tLmVsYXJpYW4uaGVyYS5wcm90by5DYXNo",
-            "EjUKBnN0YXR1cxgGIAEoDjIlLmNvbS5lbGFyaWFuLmhlcmEucHJvdG8uUGF5",
-            "bWVudFN0YXR1cyJqChlQYXltZW50U3RhdHVzTm90aWZpY2F0aW9uEhYKDnRy",
-            "YW5zYWN0aW9uX2lkGAEgASgJEjUKBnN0YXR1cxgCIAEoDjIlLmNvbS5lbGFy",
-            "aWFuLmhlcmEucHJvdG8uUGF5bWVudFN0YXR1cyK/AQocQ3VzdG9tZXJBY3Rp",
-            "dml0eU5vdGlmaWNhdGlvbhI/Cg9jdXN0b21lcl9udW1iZXIYASABKAsyJi5j",
-            "b20uZWxhcmlhbi5oZXJhLnByb3RvLkN1c3RvbWVyTnVtYmVyEg4KBnNvdXJj",
-            "ZRgCIAEoCRISCgpzZXNzaW9uX2lkGAMgASgJEjoKCGFjdGl2aXR5GAQgASgL",
-            "MiguY29tLmVsYXJpYW4uaGVyYS5wcm90by5DdXN0b21lckFjdGl2aXR5YgZw",
-            "cm90bzM="));
+            "LlN0cmluZ1ZhbHVlIqEBChlNZXNzYWdlU3RhdHVzTm90aWZpY2F0aW9uEhIK",
+            "Cm1lc3NhZ2VfaWQYASABKAkSPQoGc3RhdHVzGAIgASgOMi0uY29tLmVsYXJp",
+            "YW4uaGVyYS5wcm90by5NZXNzYWdlRGVsaXZlcnlTdGF0dXMSMQoLZGVzY3Jp",
+            "cHRpb24YAyABKAsyHC5nb29nbGUucHJvdG9idWYuU3RyaW5nVmFsdWUi+QEK",
+            "H1NlbnRNZXNzYWdlUmVhY3Rpb25Ob3RpZmljYXRpb24SEgoKbWVzc2FnZV9p",
+            "ZBgBIAEoCRI/Cg9jdXN0b21lcl9udW1iZXIYAiABKAsyJi5jb20uZWxhcmlh",
+            "bi5oZXJhLnByb3RvLkN1c3RvbWVyTnVtYmVyEkYKDmNoYW5uZWxfbnVtYmVy",
+            "GAMgASgLMi4uY29tLmVsYXJpYW4uaGVyYS5wcm90by5NZXNzYWdpbmdDaGFu",
+            "bmVsTnVtYmVyEjkKCHJlYWN0aW9uGAQgASgOMicuY29tLmVsYXJpYW4uaGVy",
+            "YS5wcm90by5NZXNzYWdlUmVhY3Rpb24isgIKG1JlY2VpdmVkUGF5bWVudE5v",
+            "dGlmaWNhdGlvbhIQCghwdXJzZV9pZBgBIAEoCRIWCg50cmFuc2FjdGlvbl9p",
+            "ZBgCIAEoCRI/Cg9jdXN0b21lcl9udW1iZXIYAyABKAsyJi5jb20uZWxhcmlh",
+            "bi5oZXJhLnByb3RvLkN1c3RvbWVyTnVtYmVyEkQKDmNoYW5uZWxfbnVtYmVy",
+            "GAQgASgLMiwuY29tLmVsYXJpYW4uaGVyYS5wcm90by5QYXltZW50Q2hhbm5l",
+            "bE51bWJlchIrCgV2YWx1ZRgFIAEoCzIcLmNvbS5lbGFyaWFuLmhlcmEucHJv",
+            "dG8uQ2FzaBI1CgZzdGF0dXMYBiABKA4yJS5jb20uZWxhcmlhbi5oZXJhLnBy",
+            "b3RvLlBheW1lbnRTdGF0dXMinQEKGVBheW1lbnRTdGF0dXNOb3RpZmljYXRp",
+            "b24SFgoOdHJhbnNhY3Rpb25faWQYASABKAkSNQoGc3RhdHVzGAIgASgOMiUu",
+            "Y29tLmVsYXJpYW4uaGVyYS5wcm90by5QYXltZW50U3RhdHVzEjEKC2Rlc2Ny",
+            "aXB0aW9uGAMgASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlIr8B",
+            "ChxDdXN0b21lckFjdGl2aXR5Tm90aWZpY2F0aW9uEj8KD2N1c3RvbWVyX251",
+            "bWJlchgBIAEoCzImLmNvbS5lbGFyaWFuLmhlcmEucHJvdG8uQ3VzdG9tZXJO",
+            "dW1iZXISDgoGc291cmNlGAIgASgJEhIKCnNlc3Npb25faWQYAyABKAkSOgoI",
+            "YWN0aXZpdHkYBCABKAsyKC5jb20uZWxhcmlhbi5oZXJhLnByb3RvLkN1c3Rv",
+            "bWVyQWN0aXZpdHliBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.DurationReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Com.Elarian.Hera.Proto.CommonModelReflection.Descriptor, global::Com.Elarian.Hera.Proto.AppModelReflection.Descriptor, global::Com.Elarian.Hera.Proto.IdentityStateReflection.Descriptor, global::Com.Elarian.Hera.Proto.MessagingModelReflection.Descriptor, global::Com.Elarian.Hera.Proto.MessagingStateReflection.Descriptor, global::Com.Elarian.Hera.Proto.PaymentModelReflection.Descriptor, global::Com.Elarian.Hera.Proto.PaymentStateReflection.Descriptor, global::Com.Elarian.Hera.Proto.ActivityStateReflection.Descriptor, global::Com.Elarian.Hera.Proto.ActivityModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(null, null, new pbr::GeneratedClrTypeInfo[] {
@@ -494,10 +496,10 @@ namespace Com.Elarian.Hera.Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.MessagingSessionEndedNotification), global::Com.Elarian.Hera.Proto.MessagingSessionEndedNotification.Parser, new[]{ "CustomerNumber", "ChannelNumber", "SessionId", "Duration", "Reason" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.MessagingConsentUpdateNotification), global::Com.Elarian.Hera.Proto.MessagingConsentUpdateNotification.Parser, new[]{ "CustomerNumber", "ChannelNumber", "Update", "Status" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.ReceivedMessageNotification), global::Com.Elarian.Hera.Proto.ReceivedMessageNotification.Parser, new[]{ "MessageId", "CustomerNumber", "ChannelNumber", "Parts", "SessionId", "InReplyTo" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.MessageStatusNotification), global::Com.Elarian.Hera.Proto.MessageStatusNotification.Parser, new[]{ "MessageId", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.MessageStatusNotification), global::Com.Elarian.Hera.Proto.MessageStatusNotification.Parser, new[]{ "MessageId", "Status", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.SentMessageReactionNotification), global::Com.Elarian.Hera.Proto.SentMessageReactionNotification.Parser, new[]{ "MessageId", "CustomerNumber", "ChannelNumber", "Reaction" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.ReceivedPaymentNotification), global::Com.Elarian.Hera.Proto.ReceivedPaymentNotification.Parser, new[]{ "PurseId", "TransactionId", "CustomerNumber", "ChannelNumber", "Value", "Status" }, null, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentStatusNotification), global::Com.Elarian.Hera.Proto.PaymentStatusNotification.Parser, new[]{ "TransactionId", "Status" }, null, null, null, null),
+            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentStatusNotification), global::Com.Elarian.Hera.Proto.PaymentStatusNotification.Parser, new[]{ "TransactionId", "Status", "Description" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.CustomerActivityNotification), global::Com.Elarian.Hera.Proto.CustomerActivityNotification.Parser, new[]{ "CustomerNumber", "Source", "SessionId", "Activity" }, null, null, null, null)
           }));
     }
@@ -20631,6 +20633,7 @@ namespace Com.Elarian.Hera.Proto {
     public MessageStatusNotification(MessageStatusNotification other) : this() {
       messageId_ = other.messageId_;
       status_ = other.status_;
+      Description = other.Description;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -20661,6 +20664,19 @@ namespace Com.Elarian.Hera.Proto {
       }
     }
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _single_description_codec = pb::FieldCodec.ForClassWrapper<string>(26);
+    private string description_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as MessageStatusNotification);
@@ -20676,6 +20692,7 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (MessageId != other.MessageId) return false;
       if (Status != other.Status) return false;
+      if (Description != other.Description) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -20684,6 +20701,7 @@ namespace Com.Elarian.Hera.Proto {
       int hash = 1;
       if (MessageId.Length != 0) hash ^= MessageId.GetHashCode();
       if (Status != global::Com.Elarian.Hera.Proto.MessageDeliveryStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (description_ != null) hash ^= Description.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -20708,6 +20726,9 @@ namespace Com.Elarian.Hera.Proto {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
+      if (description_ != null) {
+        _single_description_codec.WriteTagAndValue(output, Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -20725,6 +20746,9 @@ namespace Com.Elarian.Hera.Proto {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
+      if (description_ != null) {
+        _single_description_codec.WriteTagAndValue(ref output, Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -20739,6 +20763,9 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (Status != global::Com.Elarian.Hera.Proto.MessageDeliveryStatus.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (description_ != null) {
+        size += _single_description_codec.CalculateSizeWithTag(Description);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -20756,6 +20783,11 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (other.Status != global::Com.Elarian.Hera.Proto.MessageDeliveryStatus.Unspecified) {
         Status = other.Status;
+      }
+      if (other.description_ != null) {
+        if (description_ == null || other.Description != "") {
+          Description = other.Description;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -20779,6 +20811,13 @@ namespace Com.Elarian.Hera.Proto {
             Status = (global::Com.Elarian.Hera.Proto.MessageDeliveryStatus) input.ReadEnum();
             break;
           }
+          case 26: {
+            string value = _single_description_codec.Read(input);
+            if (description_ == null || value != "") {
+              Description = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -20799,6 +20838,13 @@ namespace Com.Elarian.Hera.Proto {
           }
           case 16: {
             Status = (global::Com.Elarian.Hera.Proto.MessageDeliveryStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            string value = _single_description_codec.Read(ref input);
+            if (description_ == null || value != "") {
+              Description = value;
+            }
             break;
           }
         }
@@ -21516,6 +21562,7 @@ namespace Com.Elarian.Hera.Proto {
     public PaymentStatusNotification(PaymentStatusNotification other) : this() {
       transactionId_ = other.transactionId_;
       status_ = other.status_;
+      Description = other.Description;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -21546,6 +21593,19 @@ namespace Com.Elarian.Hera.Proto {
       }
     }
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 3;
+    private static readonly pb::FieldCodec<string> _single_description_codec = pb::FieldCodec.ForClassWrapper<string>(26);
+    private string description_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PaymentStatusNotification);
@@ -21561,6 +21621,7 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (TransactionId != other.TransactionId) return false;
       if (Status != other.Status) return false;
+      if (Description != other.Description) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -21569,6 +21630,7 @@ namespace Com.Elarian.Hera.Proto {
       int hash = 1;
       if (TransactionId.Length != 0) hash ^= TransactionId.GetHashCode();
       if (Status != global::Com.Elarian.Hera.Proto.PaymentStatus.Unspecified) hash ^= Status.GetHashCode();
+      if (description_ != null) hash ^= Description.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -21593,6 +21655,9 @@ namespace Com.Elarian.Hera.Proto {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
+      if (description_ != null) {
+        _single_description_codec.WriteTagAndValue(output, Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -21610,6 +21675,9 @@ namespace Com.Elarian.Hera.Proto {
         output.WriteRawTag(16);
         output.WriteEnum((int) Status);
       }
+      if (description_ != null) {
+        _single_description_codec.WriteTagAndValue(ref output, Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -21624,6 +21692,9 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (Status != global::Com.Elarian.Hera.Proto.PaymentStatus.Unspecified) {
         size += 1 + pb::CodedOutputStream.ComputeEnumSize((int) Status);
+      }
+      if (description_ != null) {
+        size += _single_description_codec.CalculateSizeWithTag(Description);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -21641,6 +21712,11 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (other.Status != global::Com.Elarian.Hera.Proto.PaymentStatus.Unspecified) {
         Status = other.Status;
+      }
+      if (other.description_ != null) {
+        if (description_ == null || other.Description != "") {
+          Description = other.Description;
+        }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
     }
@@ -21664,6 +21740,13 @@ namespace Com.Elarian.Hera.Proto {
             Status = (global::Com.Elarian.Hera.Proto.PaymentStatus) input.ReadEnum();
             break;
           }
+          case 26: {
+            string value = _single_description_codec.Read(input);
+            if (description_ == null || value != "") {
+              Description = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -21684,6 +21767,13 @@ namespace Com.Elarian.Hera.Proto {
           }
           case 16: {
             Status = (global::Com.Elarian.Hera.Proto.PaymentStatus) input.ReadEnum();
+            break;
+          }
+          case 26: {
+            string value = _single_description_codec.Read(ref input);
+            if (description_ == null || value != "") {
+              Description = value;
+            }
             break;
           }
         }

@@ -154,7 +154,9 @@ enum PaymentStatus : int {
   PAYMENT_STATUS_NOT_ALLOWED = 204,
   PAYMENT_STATUS_DUPLICATE_REQUEST = 205,
   PAYMENT_STATUS_INVALID_PURSE = 206,
-  PAYMENT_STATUS_INVALID_WALLET = 207,
+  PAYMENT_STATUS_INVALID_COUNTER_PARTY = 207,
+  PAYMENT_STATUS_INVALID_CHANNEL_NUMBER = 208,
+  PAYMENT_STATUS_GATEWAY_ERROR = 209,
   PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID = 299,
   PAYMENT_STATUS_SUCCESS = 300,
   PAYMENT_STATUS_FAILED = 400,
@@ -1793,6 +1795,7 @@ class PaymentTransaction PROTOBUF_FINAL :
     kUpdatedAtFieldNumber = 9,
     kProviderTransactionIdFieldNumber = 10,
     kNarrationFieldNumber = 11,
+    kDescriptionFieldNumber = 12,
     kStatusFieldNumber = 7,
   };
   // string transaction_id = 1;
@@ -1955,6 +1958,24 @@ class PaymentTransaction PROTOBUF_FINAL :
       PROTOBUF_NAMESPACE_ID::StringValue* narration);
   PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_narration();
 
+  // .google.protobuf.StringValue description = 12;
+  bool has_description() const;
+  private:
+  bool _internal_has_description() const;
+  public:
+  void clear_description();
+  const PROTOBUF_NAMESPACE_ID::StringValue& description() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* release_description();
+  PROTOBUF_NAMESPACE_ID::StringValue* mutable_description();
+  void set_allocated_description(PROTOBUF_NAMESPACE_ID::StringValue* description);
+  private:
+  const PROTOBUF_NAMESPACE_ID::StringValue& _internal_description() const;
+  PROTOBUF_NAMESPACE_ID::StringValue* _internal_mutable_description();
+  public:
+  void unsafe_arena_set_allocated_description(
+      PROTOBUF_NAMESPACE_ID::StringValue* description);
+  PROTOBUF_NAMESPACE_ID::StringValue* unsafe_arena_release_description();
+
   // .com.elarian.hera.proto.PaymentStatus status = 7;
   void clear_status();
   ::com::elarian::hera::proto::PaymentStatus status() const;
@@ -1980,6 +2001,7 @@ class PaymentTransaction PROTOBUF_FINAL :
   PROTOBUF_NAMESPACE_ID::Timestamp* updated_at_;
   PROTOBUF_NAMESPACE_ID::StringValue* provider_transaction_id_;
   PROTOBUF_NAMESPACE_ID::StringValue* narration_;
+  PROTOBUF_NAMESPACE_ID::StringValue* description_;
   int status_;
   mutable ::PROTOBUF_NAMESPACE_ID::internal::CachedSize _cached_size_;
   friend struct ::TableStruct_payment_5fmodel_2eproto;
@@ -4195,6 +4217,83 @@ inline void PaymentTransaction::set_allocated_narration(PROTOBUF_NAMESPACE_ID::S
   }
   narration_ = narration;
   // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.PaymentTransaction.narration)
+}
+
+// .google.protobuf.StringValue description = 12;
+inline bool PaymentTransaction::_internal_has_description() const {
+  return this != internal_default_instance() && description_ != nullptr;
+}
+inline bool PaymentTransaction::has_description() const {
+  return _internal_has_description();
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& PaymentTransaction::_internal_description() const {
+  const PROTOBUF_NAMESPACE_ID::StringValue* p = description_;
+  return p != nullptr ? *p : reinterpret_cast<const PROTOBUF_NAMESPACE_ID::StringValue&>(
+      PROTOBUF_NAMESPACE_ID::_StringValue_default_instance_);
+}
+inline const PROTOBUF_NAMESPACE_ID::StringValue& PaymentTransaction::description() const {
+  // @@protoc_insertion_point(field_get:com.elarian.hera.proto.PaymentTransaction.description)
+  return _internal_description();
+}
+inline void PaymentTransaction::unsafe_arena_set_allocated_description(
+    PROTOBUF_NAMESPACE_ID::StringValue* description) {
+  if (GetArena() == nullptr) {
+    delete reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(description_);
+  }
+  description_ = description;
+  if (description) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:com.elarian.hera.proto.PaymentTransaction.description)
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::release_description() {
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = description_;
+  description_ = nullptr;
+  if (GetArena() != nullptr) {
+    temp = ::PROTOBUF_NAMESPACE_ID::internal::DuplicateIfNonNull(temp);
+  }
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::unsafe_arena_release_description() {
+  // @@protoc_insertion_point(field_release:com.elarian.hera.proto.PaymentTransaction.description)
+  
+  PROTOBUF_NAMESPACE_ID::StringValue* temp = description_;
+  description_ = nullptr;
+  return temp;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::_internal_mutable_description() {
+  
+  if (description_ == nullptr) {
+    auto* p = CreateMaybeMessage<PROTOBUF_NAMESPACE_ID::StringValue>(GetArena());
+    description_ = p;
+  }
+  return description_;
+}
+inline PROTOBUF_NAMESPACE_ID::StringValue* PaymentTransaction::mutable_description() {
+  // @@protoc_insertion_point(field_mutable:com.elarian.hera.proto.PaymentTransaction.description)
+  return _internal_mutable_description();
+}
+inline void PaymentTransaction::set_allocated_description(PROTOBUF_NAMESPACE_ID::StringValue* description) {
+  ::PROTOBUF_NAMESPACE_ID::Arena* message_arena = GetArena();
+  if (message_arena == nullptr) {
+    delete reinterpret_cast< ::PROTOBUF_NAMESPACE_ID::MessageLite*>(description_);
+  }
+  if (description) {
+    ::PROTOBUF_NAMESPACE_ID::Arena* submessage_arena =
+      reinterpret_cast<::PROTOBUF_NAMESPACE_ID::MessageLite*>(description)->GetArena();
+    if (message_arena != submessage_arena) {
+      description = ::PROTOBUF_NAMESPACE_ID::internal::GetOwnedMessage(
+          message_arena, description, submessage_arena);
+    }
+    
+  } else {
+    
+  }
+  description_ = description;
+  // @@protoc_insertion_point(field_set_allocated:com.elarian.hera.proto.PaymentTransaction.description)
 }
 
 #ifdef __GNUC__

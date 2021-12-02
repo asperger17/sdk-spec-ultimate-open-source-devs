@@ -116,12 +116,13 @@ GPBEnumDescriptor *PaymentStatus_EnumDescriptor(void) {
         "nsufficientFunds\000PaymentStatusApplicatio"
         "nError\000PaymentStatusNotAllowed\000PaymentSt"
         "atusDuplicateRequest\000PaymentStatusInvali"
-        "dPurse\000PaymentStatusInvalidWallet\000Paymen"
-        "tStatusDecommissionedCustomerId\000PaymentS"
-        "tatusSuccess\000PaymentStatusFailed\000Payment"
-        "StatusThrottled\000PaymentStatusExpired\000Pay"
-        "mentStatusRejected\000PaymentStatusReversed"
-        "\000";
+        "dPurse\000PaymentStatusInvalidCounterParty\000"
+        "PaymentStatusInvalidChannelNumber\000Paymen"
+        "tStatusGatewayError\000PaymentStatusDecommi"
+        "ssionedCustomerId\000PaymentStatusSuccess\000P"
+        "aymentStatusFailed\000PaymentStatusThrottle"
+        "d\000PaymentStatusExpired\000PaymentStatusReje"
+        "cted\000PaymentStatusReversed\000";
     static const int32_t values[] = {
         PaymentStatus_PaymentStatusUnspecified,
         PaymentStatus_PaymentStatusQueued,
@@ -135,7 +136,9 @@ GPBEnumDescriptor *PaymentStatus_EnumDescriptor(void) {
         PaymentStatus_PaymentStatusNotAllowed,
         PaymentStatus_PaymentStatusDuplicateRequest,
         PaymentStatus_PaymentStatusInvalidPurse,
-        PaymentStatus_PaymentStatusInvalidWallet,
+        PaymentStatus_PaymentStatusInvalidCounterParty,
+        PaymentStatus_PaymentStatusInvalidChannelNumber,
+        PaymentStatus_PaymentStatusGatewayError,
         PaymentStatus_PaymentStatusDecommissionedCustomerId,
         PaymentStatus_PaymentStatusSuccess,
         PaymentStatus_PaymentStatusFailed,
@@ -172,7 +175,9 @@ BOOL PaymentStatus_IsValidValue(int32_t value__) {
     case PaymentStatus_PaymentStatusNotAllowed:
     case PaymentStatus_PaymentStatusDuplicateRequest:
     case PaymentStatus_PaymentStatusInvalidPurse:
-    case PaymentStatus_PaymentStatusInvalidWallet:
+    case PaymentStatus_PaymentStatusInvalidCounterParty:
+    case PaymentStatus_PaymentStatusInvalidChannelNumber:
+    case PaymentStatus_PaymentStatusGatewayError:
     case PaymentStatus_PaymentStatusDecommissionedCustomerId:
     case PaymentStatus_PaymentStatusSuccess:
     case PaymentStatus_PaymentStatusFailed:
@@ -772,6 +777,7 @@ void PaymentCounterParty_ClearPartyOneOfCase(PaymentCounterParty *message) {
 @dynamic hasUpdatedAt, updatedAt;
 @dynamic hasProviderTransactionId, providerTransactionId;
 @dynamic hasNarration, narration;
+@dynamic hasDescription_p, description_p;
 
 typedef struct PaymentTransaction__storage_ {
   uint32_t _has_storage_[1];
@@ -785,6 +791,7 @@ typedef struct PaymentTransaction__storage_ {
   GPBTimestamp *updatedAt;
   GPBStringValue *providerTransactionId;
   GPBStringValue *narration;
+  GPBStringValue *description_p;
 } PaymentTransaction__storage_;
 
 // This method is threadsafe because it is initially called
@@ -880,6 +887,15 @@ typedef struct PaymentTransaction__storage_ {
         .number = PaymentTransaction_FieldNumber_Narration,
         .hasIndex = 9,
         .offset = (uint32_t)offsetof(PaymentTransaction__storage_, narration),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = PaymentTransaction_FieldNumber_Description_p,
+        .hasIndex = 10,
+        .offset = (uint32_t)offsetof(PaymentTransaction__storage_, description_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },

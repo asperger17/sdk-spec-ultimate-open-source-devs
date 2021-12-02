@@ -38,6 +38,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :message, :message, 12, "com.elarian.hera.proto.OutboundMessage"
       optional :cost, :message, 13, "com.elarian.hera.proto.Cash"
       optional :provider_message_id, :message, 14, "google.protobuf.StringValue"
+      optional :description, :message, 15, "google.protobuf.StringValue"
     end
     add_message "com.elarian.hera.proto.MessageReactionState" do
       optional :created_at, :message, 1, "google.protobuf.Timestamp"

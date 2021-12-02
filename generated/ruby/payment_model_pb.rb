@@ -61,6 +61,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :updated_at, :message, 9, "google.protobuf.Timestamp"
       optional :provider_transaction_id, :message, 10, "google.protobuf.StringValue"
       optional :narration, :message, 11, "google.protobuf.StringValue"
+      optional :description, :message, 12, "google.protobuf.StringValue"
     end
     add_enum "com.elarian.hera.proto.PaymentChannel" do
       value :PAYMENT_CHANNEL_UNSPECIFIED, 0
@@ -80,7 +81,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :PAYMENT_STATUS_NOT_ALLOWED, 204
       value :PAYMENT_STATUS_DUPLICATE_REQUEST, 205
       value :PAYMENT_STATUS_INVALID_PURSE, 206
-      value :PAYMENT_STATUS_INVALID_WALLET, 207
+      value :PAYMENT_STATUS_INVALID_COUNTER_PARTY, 207
+      value :PAYMENT_STATUS_INVALID_CHANNEL_NUMBER, 208
+      value :PAYMENT_STATUS_GATEWAY_ERROR, 209
       value :PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID, 299
       value :PAYMENT_STATUS_SUCCESS, 300
       value :PAYMENT_STATUS_FAILED, 400

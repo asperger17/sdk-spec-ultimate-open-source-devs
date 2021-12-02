@@ -48,7 +48,7 @@ extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::in
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_InitiatePaymentReply_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LeaseCustomerAppDataCommand_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_LeaseCustomerAppDataReply_app_5fsocket_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MessageStatusNotification_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MessageStatusNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_messaging_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MessagingChannelNumber_messaging_5fmodel_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<2> scc_info_MessagingConsentUpdateNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_MessagingSessionEndedNotification_app_5fsocket_2eproto;
@@ -59,7 +59,7 @@ extern PROTOBUF_INTERNAL_EXPORT_messaging_5fmodel_2eproto ::PROTOBUF_NAMESPACE_I
 extern PROTOBUF_INTERNAL_EXPORT_payment_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentChannelNumber_payment_5fmodel_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_5fmodel_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_PaymentCounterParty_payment_5fmodel_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_payment_5fstate_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_PaymentState_payment_5fstate_2eproto;
-extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentStatusNotification_app_5fsocket_2eproto;
+extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentStatusNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<4> scc_info_ReceivedMessageNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReceivedPaymentNotification_app_5fsocket_2eproto;
 extern PROTOBUF_INTERNAL_EXPORT_app_5fsocket_2eproto ::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<3> scc_info_ReminderNotification_app_5fsocket_2eproto;
@@ -799,8 +799,9 @@ static void InitDefaultsscc_info_MessageStatusNotification_app_5fsocket_2eproto(
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_MessageStatusNotification_app_5fsocket_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_MessageStatusNotification_app_5fsocket_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_MessageStatusNotification_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_MessageStatusNotification_app_5fsocket_2eproto}, {
+      &scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
 
 static void InitDefaultsscc_info_MessagingConsentUpdateNotification_app_5fsocket_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -875,8 +876,9 @@ static void InitDefaultsscc_info_PaymentStatusNotification_app_5fsocket_2eproto(
   }
 }
 
-::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<0> scc_info_PaymentStatusNotification_app_5fsocket_2eproto =
-    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 0, 0, InitDefaultsscc_info_PaymentStatusNotification_app_5fsocket_2eproto}, {}};
+::PROTOBUF_NAMESPACE_ID::internal::SCCInfo<1> scc_info_PaymentStatusNotification_app_5fsocket_2eproto =
+    {{ATOMIC_VAR_INIT(::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase::kUninitialized), 1, 0, InitDefaultsscc_info_PaymentStatusNotification_app_5fsocket_2eproto}, {
+      &scc_info_StringValue_google_2fprotobuf_2fwrappers_2eproto.base,}};
 
 static void InitDefaultsscc_info_ReceivedMessageNotification_app_5fsocket_2eproto() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
@@ -1975,6 +1977,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::MessageStatusNotification, message_id_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::MessageStatusNotification, status_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::MessageStatusNotification, description_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::SentMessageReactionNotification, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2002,6 +2005,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_app_5fsocket_2eproto::offsets[
   ~0u,  // no _weak_field_map_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentStatusNotification, transaction_id_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentStatusNotification, status_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::PaymentStatusNotification, description_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::CustomerActivityNotification, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -2073,10 +2077,10 @@ static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOB
   { 572, -1, sizeof(::com::elarian::hera::proto::MessagingConsentUpdateNotification)},
   { 581, -1, sizeof(::com::elarian::hera::proto::ReceivedMessageNotification)},
   { 592, -1, sizeof(::com::elarian::hera::proto::MessageStatusNotification)},
-  { 599, -1, sizeof(::com::elarian::hera::proto::SentMessageReactionNotification)},
-  { 608, -1, sizeof(::com::elarian::hera::proto::ReceivedPaymentNotification)},
-  { 619, -1, sizeof(::com::elarian::hera::proto::PaymentStatusNotification)},
-  { 626, -1, sizeof(::com::elarian::hera::proto::CustomerActivityNotification)},
+  { 600, -1, sizeof(::com::elarian::hera::proto::SentMessageReactionNotification)},
+  { 609, -1, sizeof(::com::elarian::hera::proto::ReceivedPaymentNotification)},
+  { 620, -1, sizeof(::com::elarian::hera::proto::PaymentStatusNotification)},
+  { 628, -1, sizeof(::com::elarian::hera::proto::CustomerActivityNotification)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -2582,32 +2586,34 @@ const char descriptor_table_protodef_app_5fsocket_2eproto[] PROTOBUF_SECTION_VAR
   "(\0132*.com.elarian.hera.proto.InboundMessa"
   "geBody\0220\n\nsession_id\030\005 \001(\0132\034.google.prot"
   "obuf.StringValue\0221\n\013in_reply_to\030\006 \001(\0132\034."
-  "google.protobuf.StringValue\"n\n\031MessageSt"
-  "atusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n\006"
-  "status\030\002 \001(\0162-.com.elarian.hera.proto.Me"
-  "ssageDeliveryStatus\"\371\001\n\037SentMessageReact"
-  "ionNotification\022\022\n\nmessage_id\030\001 \001(\t\022\?\n\017c"
-  "ustomer_number\030\002 \001(\0132&.com.elarian.hera."
-  "proto.CustomerNumber\022F\n\016channel_number\030\003"
-  " \001(\0132..com.elarian.hera.proto.MessagingC"
-  "hannelNumber\0229\n\010reaction\030\004 \001(\0162\'.com.ela"
-  "rian.hera.proto.MessageReaction\"\262\002\n\033Rece"
-  "ivedPaymentNotification\022\020\n\010purse_id\030\001 \001("
-  "\t\022\026\n\016transaction_id\030\002 \001(\t\022\?\n\017customer_nu"
-  "mber\030\003 \001(\0132&.com.elarian.hera.proto.Cust"
-  "omerNumber\022D\n\016channel_number\030\004 \001(\0132,.com"
-  ".elarian.hera.proto.PaymentChannelNumber"
-  "\022+\n\005value\030\005 \001(\0132\034.com.elarian.hera.proto"
-  ".Cash\0225\n\006status\030\006 \001(\0162%.com.elarian.hera"
-  ".proto.PaymentStatus\"j\n\031PaymentStatusNot"
-  "ification\022\026\n\016transaction_id\030\001 \001(\t\0225\n\006sta"
-  "tus\030\002 \001(\0162%.com.elarian.hera.proto.Payme"
-  "ntStatus\"\277\001\n\034CustomerActivityNotificatio"
-  "n\022\?\n\017customer_number\030\001 \001(\0132&.com.elarian"
-  ".hera.proto.CustomerNumber\022\016\n\006source\030\002 \001"
-  "(\t\022\022\n\nsession_id\030\003 \001(\t\022:\n\010activity\030\004 \001(\013"
-  "2(.com.elarian.hera.proto.CustomerActivi"
-  "tyb\006proto3"
+  "google.protobuf.StringValue\"\241\001\n\031MessageS"
+  "tatusNotification\022\022\n\nmessage_id\030\001 \001(\t\022=\n"
+  "\006status\030\002 \001(\0162-.com.elarian.hera.proto.M"
+  "essageDeliveryStatus\0221\n\013description\030\003 \001("
+  "\0132\034.google.protobuf.StringValue\"\371\001\n\037Sent"
+  "MessageReactionNotification\022\022\n\nmessage_i"
+  "d\030\001 \001(\t\022\?\n\017customer_number\030\002 \001(\0132&.com.e"
+  "larian.hera.proto.CustomerNumber\022F\n\016chan"
+  "nel_number\030\003 \001(\0132..com.elarian.hera.prot"
+  "o.MessagingChannelNumber\0229\n\010reaction\030\004 \001"
+  "(\0162\'.com.elarian.hera.proto.MessageReact"
+  "ion\"\262\002\n\033ReceivedPaymentNotification\022\020\n\010p"
+  "urse_id\030\001 \001(\t\022\026\n\016transaction_id\030\002 \001(\t\022\?\n"
+  "\017customer_number\030\003 \001(\0132&.com.elarian.her"
+  "a.proto.CustomerNumber\022D\n\016channel_number"
+  "\030\004 \001(\0132,.com.elarian.hera.proto.PaymentC"
+  "hannelNumber\022+\n\005value\030\005 \001(\0132\034.com.elaria"
+  "n.hera.proto.Cash\0225\n\006status\030\006 \001(\0162%.com."
+  "elarian.hera.proto.PaymentStatus\"\235\001\n\031Pay"
+  "mentStatusNotification\022\026\n\016transaction_id"
+  "\030\001 \001(\t\0225\n\006status\030\002 \001(\0162%.com.elarian.her"
+  "a.proto.PaymentStatus\0221\n\013description\030\003 \001"
+  "(\0132\034.google.protobuf.StringValue\"\277\001\n\034Cus"
+  "tomerActivityNotification\022\?\n\017customer_nu"
+  "mber\030\001 \001(\0132&.com.elarian.hera.proto.Cust"
+  "omerNumber\022\016\n\006source\030\002 \001(\t\022\022\n\nsession_id"
+  "\030\003 \001(\t\022:\n\010activity\030\004 \001(\0132(.com.elarian.h"
+  "era.proto.CustomerActivityb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_app_5fsocket_2eproto_deps[12] = {
   &::descriptor_table_activity_5fmodel_2eproto,
@@ -2691,7 +2697,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_app
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_app_5fsocket_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_app_5fsocket_2eproto = {
-  false, false, descriptor_table_protodef_app_5fsocket_2eproto, "app_socket.proto", 18410,
+  false, false, descriptor_table_protodef_app_5fsocket_2eproto, "app_socket.proto", 18514,
   &descriptor_table_app_5fsocket_2eproto_once, descriptor_table_app_5fsocket_2eproto_sccs, descriptor_table_app_5fsocket_2eproto_deps, 64, 12,
   schemas, file_default_instances, TableStruct_app_5fsocket_2eproto::offsets,
   file_level_metadata_app_5fsocket_2eproto, 64, file_level_enum_descriptors_app_5fsocket_2eproto, file_level_service_descriptors_app_5fsocket_2eproto,
@@ -25777,8 +25783,19 @@ void ReceivedMessageNotification::InternalSwap(ReceivedMessageNotification* othe
 
 class MessageStatusNotification::_Internal {
  public:
+  static const PROTOBUF_NAMESPACE_ID::StringValue& description(const MessageStatusNotification* msg);
 };
 
+const PROTOBUF_NAMESPACE_ID::StringValue&
+MessageStatusNotification::_Internal::description(const MessageStatusNotification* msg) {
+  return *msg->description_;
+}
+void MessageStatusNotification::clear_description() {
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
+}
 MessageStatusNotification::MessageStatusNotification(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -25793,6 +25810,11 @@ MessageStatusNotification::MessageStatusNotification(const MessageStatusNotifica
     message_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_message_id(), 
       GetArena());
   }
+  if (from._internal_has_description()) {
+    description_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.description_);
+  } else {
+    description_ = nullptr;
+  }
   status_ = from.status_;
   // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.MessageStatusNotification)
 }
@@ -25800,7 +25822,10 @@ MessageStatusNotification::MessageStatusNotification(const MessageStatusNotifica
 void MessageStatusNotification::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_MessageStatusNotification_app_5fsocket_2eproto.base);
   message_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  status_ = 0;
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&description_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+      reinterpret_cast<char*>(&description_)) + sizeof(status_));
 }
 
 MessageStatusNotification::~MessageStatusNotification() {
@@ -25812,6 +25837,7 @@ MessageStatusNotification::~MessageStatusNotification() {
 void MessageStatusNotification::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   message_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete description_;
 }
 
 void MessageStatusNotification::ArenaDtor(void* object) {
@@ -25836,6 +25862,10 @@ void MessageStatusNotification::Clear() {
   (void) cached_has_bits;
 
   message_id_.ClearToEmpty();
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
   status_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -25862,6 +25892,13 @@ const char* MessageStatusNotification::_InternalParse(const char* ptr, ::PROTOBU
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_status(static_cast<::com::elarian::hera::proto::MessageDeliveryStatus>(val));
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue description = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_description(), ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
@@ -25909,6 +25946,14 @@ failure:
       2, this->_internal_status(), target);
   }
 
+  // .google.protobuf.StringValue description = 3;
+  if (this->has_description()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::description(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -25930,6 +25975,13 @@ size_t MessageStatusNotification::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_message_id());
+  }
+
+  // .google.protobuf.StringValue description = 3;
+  if (this->has_description()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *description_);
   }
 
   // .com.elarian.hera.proto.MessageDeliveryStatus status = 2;
@@ -25972,6 +26024,9 @@ void MessageStatusNotification::MergeFrom(const MessageStatusNotification& from)
   if (from.message_id().size() > 0) {
     _internal_set_message_id(from._internal_message_id());
   }
+  if (from.has_description()) {
+    _internal_mutable_description()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_description());
+  }
   if (from.status() != 0) {
     _internal_set_status(from._internal_status());
   }
@@ -25999,7 +26054,12 @@ void MessageStatusNotification::InternalSwap(MessageStatusNotification* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   message_id_.Swap(&other->message_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(status_, other->status_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(MessageStatusNotification, status_)
+      + sizeof(MessageStatusNotification::status_)
+      - PROTOBUF_FIELD_OFFSET(MessageStatusNotification, description_)>(
+          reinterpret_cast<char*>(&description_),
+          reinterpret_cast<char*>(&other->description_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata MessageStatusNotification::GetMetadata() const {
@@ -26763,8 +26823,19 @@ void ReceivedPaymentNotification::InternalSwap(ReceivedPaymentNotification* othe
 
 class PaymentStatusNotification::_Internal {
  public:
+  static const PROTOBUF_NAMESPACE_ID::StringValue& description(const PaymentStatusNotification* msg);
 };
 
+const PROTOBUF_NAMESPACE_ID::StringValue&
+PaymentStatusNotification::_Internal::description(const PaymentStatusNotification* msg) {
+  return *msg->description_;
+}
+void PaymentStatusNotification::clear_description() {
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
+}
 PaymentStatusNotification::PaymentStatusNotification(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena) {
   SharedCtor();
@@ -26779,6 +26850,11 @@ PaymentStatusNotification::PaymentStatusNotification(const PaymentStatusNotifica
     transaction_id_.Set(::PROTOBUF_NAMESPACE_ID::internal::ArenaStringPtr::EmptyDefault{}, from._internal_transaction_id(), 
       GetArena());
   }
+  if (from._internal_has_description()) {
+    description_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.description_);
+  } else {
+    description_ = nullptr;
+  }
   status_ = from.status_;
   // @@protoc_insertion_point(copy_constructor:com.elarian.hera.proto.PaymentStatusNotification)
 }
@@ -26786,7 +26862,10 @@ PaymentStatusNotification::PaymentStatusNotification(const PaymentStatusNotifica
 void PaymentStatusNotification::SharedCtor() {
   ::PROTOBUF_NAMESPACE_ID::internal::InitSCC(&scc_info_PaymentStatusNotification_app_5fsocket_2eproto.base);
   transaction_id_.UnsafeSetDefault(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
-  status_ = 0;
+  ::memset(reinterpret_cast<char*>(this) + static_cast<size_t>(
+      reinterpret_cast<char*>(&description_) - reinterpret_cast<char*>(this)),
+      0, static_cast<size_t>(reinterpret_cast<char*>(&status_) -
+      reinterpret_cast<char*>(&description_)) + sizeof(status_));
 }
 
 PaymentStatusNotification::~PaymentStatusNotification() {
@@ -26798,6 +26877,7 @@ PaymentStatusNotification::~PaymentStatusNotification() {
 void PaymentStatusNotification::SharedDtor() {
   GOOGLE_DCHECK(GetArena() == nullptr);
   transaction_id_.DestroyNoArena(&::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited());
+  if (this != internal_default_instance()) delete description_;
 }
 
 void PaymentStatusNotification::ArenaDtor(void* object) {
@@ -26822,6 +26902,10 @@ void PaymentStatusNotification::Clear() {
   (void) cached_has_bits;
 
   transaction_id_.ClearToEmpty();
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
   status_ = 0;
   _internal_metadata_.Clear<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>();
 }
@@ -26848,6 +26932,13 @@ const char* PaymentStatusNotification::_InternalParse(const char* ptr, ::PROTOBU
           ::PROTOBUF_NAMESPACE_ID::uint64 val = ::PROTOBUF_NAMESPACE_ID::internal::ReadVarint64(&ptr);
           CHK_(ptr);
           _internal_set_status(static_cast<::com::elarian::hera::proto::PaymentStatus>(val));
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue description = 3;
+      case 3:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 26)) {
+          ptr = ctx->ParseMessage(_internal_mutable_description(), ptr);
+          CHK_(ptr);
         } else goto handle_unusual;
         continue;
       default: {
@@ -26895,6 +26986,14 @@ failure:
       2, this->_internal_status(), target);
   }
 
+  // .google.protobuf.StringValue description = 3;
+  if (this->has_description()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        3, _Internal::description(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -26916,6 +27015,13 @@ size_t PaymentStatusNotification::ByteSizeLong() const {
     total_size += 1 +
       ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::StringSize(
         this->_internal_transaction_id());
+  }
+
+  // .google.protobuf.StringValue description = 3;
+  if (this->has_description()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *description_);
   }
 
   // .com.elarian.hera.proto.PaymentStatus status = 2;
@@ -26958,6 +27064,9 @@ void PaymentStatusNotification::MergeFrom(const PaymentStatusNotification& from)
   if (from.transaction_id().size() > 0) {
     _internal_set_transaction_id(from._internal_transaction_id());
   }
+  if (from.has_description()) {
+    _internal_mutable_description()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_description());
+  }
   if (from.status() != 0) {
     _internal_set_status(from._internal_status());
   }
@@ -26985,7 +27094,12 @@ void PaymentStatusNotification::InternalSwap(PaymentStatusNotification* other) {
   using std::swap;
   _internal_metadata_.Swap<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(&other->_internal_metadata_);
   transaction_id_.Swap(&other->transaction_id_, &::PROTOBUF_NAMESPACE_ID::internal::GetEmptyStringAlreadyInited(), GetArena());
-  swap(status_, other->status_);
+  ::PROTOBUF_NAMESPACE_ID::internal::memswap<
+      PROTOBUF_FIELD_OFFSET(PaymentStatusNotification, status_)
+      + sizeof(PaymentStatusNotification::status_)
+      - PROTOBUF_FIELD_OFFSET(PaymentStatusNotification, description_)>(
+          reinterpret_cast<char*>(&description_),
+          reinterpret_cast<char*>(&other->description_));
 }
 
 ::PROTOBUF_NAMESPACE_ID::Metadata PaymentStatusNotification::GetMetadata() const {

@@ -69,6 +69,10 @@ class SentMessage extends \Google\Protobuf\Internal\Message
      * Generated from protobuf field <code>.google.protobuf.StringValue provider_message_id = 14;</code>
      */
     protected $provider_message_id = null;
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue description = 15;</code>
+     */
+    protected $description = null;
 
     /**
      * Constructor.
@@ -90,6 +94,7 @@ class SentMessage extends \Google\Protobuf\Internal\Message
      *     @type \Com\Elarian\Hera\Proto\OutboundMessage $message
      *     @type \Com\Elarian\Hera\Proto\Cash $cost
      *     @type \Google\Protobuf\StringValue $provider_message_id
+     *     @type \Google\Protobuf\StringValue $description
      * }
      */
     public function __construct($data = NULL) {
@@ -595,6 +600,61 @@ class SentMessage extends \Google\Protobuf\Internal\Message
     public function setProviderMessageIdUnwrapped($var)
     {
         $this->writeWrapperValue("provider_message_id", $var);
+        return $this;}
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue description = 15;</code>
+     * @return \Google\Protobuf\StringValue
+     */
+    public function getDescription()
+    {
+        return isset($this->description) ? $this->description : null;
+    }
+
+    public function hasDescription()
+    {
+        return isset($this->description);
+    }
+
+    public function clearDescription()
+    {
+        unset($this->description);
+    }
+
+    /**
+     * Returns the unboxed value from <code>getDescription()</code>
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue description = 15;</code>
+     * @return string|null
+     */
+    public function getDescriptionUnwrapped()
+    {
+        return $this->readWrapperValue("description");
+    }
+
+    /**
+     * Generated from protobuf field <code>.google.protobuf.StringValue description = 15;</code>
+     * @param \Google\Protobuf\StringValue $var
+     * @return $this
+     */
+    public function setDescription($var)
+    {
+        GPBUtil::checkMessage($var, \Google\Protobuf\StringValue::class);
+        $this->description = $var;
+
+        return $this;
+    }
+
+    /**
+     * Sets the field by wrapping a primitive type in a Google\Protobuf\StringValue object.
+
+     * Generated from protobuf field <code>.google.protobuf.StringValue description = 15;</code>
+     * @param string|null $var
+     * @return $this
+     */
+    public function setDescriptionUnwrapped($var)
+    {
+        $this->writeWrapperValue("description", $var);
         return $this;}
 
 }

@@ -242,6 +242,7 @@ typedef GPB_ENUM(MessageDeliveryStatus) {
   MessageDeliveryStatus_MessageDeliveryStatusRejected = 415,
   MessageDeliveryStatus_MessageDeliveryStatusInvalidRequest = 416,
   MessageDeliveryStatus_MessageDeliveryStatusInsufficientCredits = 417,
+  MessageDeliveryStatus_MessageDeliveryStatusGatewayError = 418,
   MessageDeliveryStatus_MessageDeliveryStatusApplicationError = 501,
 };
 
@@ -282,6 +283,7 @@ typedef GPB_ENUM(VoiceCallStatus) {
   VoiceCallStatus_VoiceCallStatusDecommissionedCustomerid = 404,
   VoiceCallStatus_VoiceCallStatusExpired = 405,
   VoiceCallStatus_VoiceCallStatusInvalidChannelNumber = 406,
+  VoiceCallStatus_VoiceCallStatusGatewayError = 407,
   VoiceCallStatus_VoiceCallStatusApplicationError = 501,
 };
 

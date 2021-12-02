@@ -254,6 +254,7 @@ void SetReceivedMessage_Provider_RawValue(ReceivedMessage *message, int32_t valu
 @dynamic hasMessage, message;
 @dynamic hasCost, cost;
 @dynamic hasProviderMessageId, providerMessageId;
+@dynamic hasDescription_p, description_p;
 
 typedef struct SentMessage__storage_ {
   uint32_t _has_storage_[1];
@@ -271,6 +272,7 @@ typedef struct SentMessage__storage_ {
   OutboundMessage *message;
   Cash *cost;
   GPBStringValue *providerMessageId;
+  GPBStringValue *description_p;
 } SentMessage__storage_;
 
 // This method is threadsafe because it is initially called
@@ -402,6 +404,15 @@ typedef struct SentMessage__storage_ {
         .number = SentMessage_FieldNumber_ProviderMessageId,
         .hasIndex = 12,
         .offset = (uint32_t)offsetof(SentMessage__storage_, providerMessageId),
+        .flags = GPBFieldOptional,
+        .dataType = GPBDataTypeMessage,
+      },
+      {
+        .name = "description_p",
+        .dataTypeSpecific.clazz = GPBObjCClass(GPBStringValue),
+        .number = SentMessage_FieldNumber_Description_p,
+        .hasIndex = 13,
+        .offset = (uint32_t)offsetof(SentMessage__storage_, description_p),
         .flags = GPBFieldOptional,
         .dataType = GPBDataTypeMessage,
       },

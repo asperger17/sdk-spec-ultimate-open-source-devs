@@ -2899,6 +2899,21 @@ public final class MessagingStateOuterClass {
      * <code>.google.protobuf.StringValue provider_message_id = 14;</code>
      */
     com.google.protobuf.StringValueOrBuilder getProviderMessageIdOrBuilder();
+
+    /**
+     * <code>.google.protobuf.StringValue description = 15;</code>
+     * @return Whether the description field is set.
+     */
+    boolean hasDescription();
+    /**
+     * <code>.google.protobuf.StringValue description = 15;</code>
+     * @return The description.
+     */
+    com.google.protobuf.StringValue getDescription();
+    /**
+     * <code>.google.protobuf.StringValue description = 15;</code>
+     */
+    com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder();
   }
   /**
    * Protobuf type {@code com.elarian.hera.proto.SentMessage}
@@ -3103,6 +3118,19 @@ public final class MessagingStateOuterClass {
               if (subBuilder != null) {
                 subBuilder.mergeFrom(providerMessageId_);
                 providerMessageId_ = subBuilder.buildPartial();
+              }
+
+              break;
+            }
+            case 122: {
+              com.google.protobuf.StringValue.Builder subBuilder = null;
+              if (description_ != null) {
+                subBuilder = description_.toBuilder();
+              }
+              description_ = input.readMessage(com.google.protobuf.StringValue.parser(), extensionRegistry);
+              if (subBuilder != null) {
+                subBuilder.mergeFrom(description_);
+                description_ = subBuilder.buildPartial();
               }
 
               break;
@@ -3518,6 +3546,32 @@ public final class MessagingStateOuterClass {
       return getProviderMessageId();
     }
 
+    public static final int DESCRIPTION_FIELD_NUMBER = 15;
+    private com.google.protobuf.StringValue description_;
+    /**
+     * <code>.google.protobuf.StringValue description = 15;</code>
+     * @return Whether the description field is set.
+     */
+    @java.lang.Override
+    public boolean hasDescription() {
+      return description_ != null;
+    }
+    /**
+     * <code>.google.protobuf.StringValue description = 15;</code>
+     * @return The description.
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValue getDescription() {
+      return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
+    }
+    /**
+     * <code>.google.protobuf.StringValue description = 15;</code>
+     */
+    @java.lang.Override
+    public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
+      return getDescription();
+    }
+
     private byte memoizedIsInitialized = -1;
     @java.lang.Override
     public final boolean isInitialized() {
@@ -3573,6 +3627,9 @@ public final class MessagingStateOuterClass {
       }
       if (providerMessageId_ != null) {
         output.writeMessage(14, getProviderMessageId());
+      }
+      if (description_ != null) {
+        output.writeMessage(15, getDescription());
       }
       unknownFields.writeTo(output);
     }
@@ -3637,6 +3694,10 @@ public final class MessagingStateOuterClass {
       if (providerMessageId_ != null) {
         size += com.google.protobuf.CodedOutputStream
           .computeMessageSize(14, getProviderMessageId());
+      }
+      if (description_ != null) {
+        size += com.google.protobuf.CodedOutputStream
+          .computeMessageSize(15, getDescription());
       }
       size += unknownFields.getSerializedSize();
       memoizedSize = size;
@@ -3709,6 +3770,11 @@ public final class MessagingStateOuterClass {
         if (!getProviderMessageId()
             .equals(other.getProviderMessageId())) return false;
       }
+      if (hasDescription() != other.hasDescription()) return false;
+      if (hasDescription()) {
+        if (!getDescription()
+            .equals(other.getDescription())) return false;
+      }
       if (!unknownFields.equals(other.unknownFields)) return false;
       return true;
     }
@@ -3769,6 +3835,10 @@ public final class MessagingStateOuterClass {
       if (hasProviderMessageId()) {
         hash = (37 * hash) + PROVIDER_MESSAGE_ID_FIELD_NUMBER;
         hash = (53 * hash) + getProviderMessageId().hashCode();
+      }
+      if (hasDescription()) {
+        hash = (37 * hash) + DESCRIPTION_FIELD_NUMBER;
+        hash = (53 * hash) + getDescription().hashCode();
       }
       hash = (29 * hash) + unknownFields.hashCode();
       memoizedHashCode = hash;
@@ -3976,6 +4046,12 @@ public final class MessagingStateOuterClass {
           providerMessageId_ = null;
           providerMessageIdBuilder_ = null;
         }
+        if (descriptionBuilder_ == null) {
+          description_ = null;
+        } else {
+          description_ = null;
+          descriptionBuilder_ = null;
+        }
         return this;
       }
 
@@ -4064,6 +4140,11 @@ public final class MessagingStateOuterClass {
           result.providerMessageId_ = providerMessageId_;
         } else {
           result.providerMessageId_ = providerMessageIdBuilder_.build();
+        }
+        if (descriptionBuilder_ == null) {
+          result.description_ = description_;
+        } else {
+          result.description_ = descriptionBuilder_.build();
         }
         onBuilt();
         return result;
@@ -4178,6 +4259,9 @@ public final class MessagingStateOuterClass {
         }
         if (other.hasProviderMessageId()) {
           mergeProviderMessageId(other.getProviderMessageId());
+        }
+        if (other.hasDescription()) {
+          mergeDescription(other.getDescription());
         }
         this.mergeUnknownFields(other.unknownFields);
         onChanged();
@@ -5821,6 +5905,125 @@ public final class MessagingStateOuterClass {
           providerMessageId_ = null;
         }
         return providerMessageIdBuilder_;
+      }
+
+      private com.google.protobuf.StringValue description_;
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> descriptionBuilder_;
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       * @return Whether the description field is set.
+       */
+      public boolean hasDescription() {
+        return descriptionBuilder_ != null || description_ != null;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       * @return The description.
+       */
+      public com.google.protobuf.StringValue getDescription() {
+        if (descriptionBuilder_ == null) {
+          return description_ == null ? com.google.protobuf.StringValue.getDefaultInstance() : description_;
+        } else {
+          return descriptionBuilder_.getMessage();
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      public Builder setDescription(com.google.protobuf.StringValue value) {
+        if (descriptionBuilder_ == null) {
+          if (value == null) {
+            throw new NullPointerException();
+          }
+          description_ = value;
+          onChanged();
+        } else {
+          descriptionBuilder_.setMessage(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      public Builder setDescription(
+          com.google.protobuf.StringValue.Builder builderForValue) {
+        if (descriptionBuilder_ == null) {
+          description_ = builderForValue.build();
+          onChanged();
+        } else {
+          descriptionBuilder_.setMessage(builderForValue.build());
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      public Builder mergeDescription(com.google.protobuf.StringValue value) {
+        if (descriptionBuilder_ == null) {
+          if (description_ != null) {
+            description_ =
+              com.google.protobuf.StringValue.newBuilder(description_).mergeFrom(value).buildPartial();
+          } else {
+            description_ = value;
+          }
+          onChanged();
+        } else {
+          descriptionBuilder_.mergeFrom(value);
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      public Builder clearDescription() {
+        if (descriptionBuilder_ == null) {
+          description_ = null;
+          onChanged();
+        } else {
+          description_ = null;
+          descriptionBuilder_ = null;
+        }
+
+        return this;
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      public com.google.protobuf.StringValue.Builder getDescriptionBuilder() {
+        
+        onChanged();
+        return getDescriptionFieldBuilder().getBuilder();
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      public com.google.protobuf.StringValueOrBuilder getDescriptionOrBuilder() {
+        if (descriptionBuilder_ != null) {
+          return descriptionBuilder_.getMessageOrBuilder();
+        } else {
+          return description_ == null ?
+              com.google.protobuf.StringValue.getDefaultInstance() : description_;
+        }
+      }
+      /**
+       * <code>.google.protobuf.StringValue description = 15;</code>
+       */
+      private com.google.protobuf.SingleFieldBuilderV3<
+          com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder> 
+          getDescriptionFieldBuilder() {
+        if (descriptionBuilder_ == null) {
+          descriptionBuilder_ = new com.google.protobuf.SingleFieldBuilderV3<
+              com.google.protobuf.StringValue, com.google.protobuf.StringValue.Builder, com.google.protobuf.StringValueOrBuilder>(
+                  getDescription(),
+                  getParentForChildren(),
+                  isClean());
+          description_ = null;
+        }
+        return descriptionBuilder_;
       }
       @java.lang.Override
       public final Builder setUnknownFields(
@@ -17899,7 +18102,7 @@ public final class MessagingStateOuterClass {
       "*.com.elarian.hera.proto.InboundMessageB" +
       "ody\022*\n\004cost\030\n \001(\0132\034.com.elarian.hera.pro" +
       "to.Cash\0229\n\023provider_message_id\030\013 \001(\0132\034.g" +
-      "oogle.protobuf.StringValue\"\377\005\n\013SentMessa" +
+      "oogle.protobuf.StringValue\"\262\006\n\013SentMessa" +
       "ge\022?\n\017customer_number\030\001 \001(\0132&.com.elaria" +
       "n.hera.proto.CustomerNumber\022F\n\016channel_n" +
       "umber\030\002 \001(\0132..com.elarian.hera.proto.Mes" +
@@ -17918,66 +18121,67 @@ public final class MessagingStateOuterClass {
       "essage\030\014 \001(\0132\'.com.elarian.hera.proto.Ou" +
       "tboundMessage\022*\n\004cost\030\r \001(\0132\034.com.elaria" +
       "n.hera.proto.Cash\0229\n\023provider_message_id" +
-      "\030\016 \001(\0132\034.google.protobuf.StringValue\"\201\001\n" +
-      "\024MessageReactionState\022.\n\ncreated_at\030\001 \001(" +
-      "\0132\032.google.protobuf.Timestamp\0229\n\010reactio" +
-      "n\030\002 \001(\0162\'.com.elarian.hera.proto.Message" +
-      "Reaction\"R\n\021MessageReplyToken\022\r\n\005token\030\001" +
-      " \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.google.protob" +
-      "uf.Timestamp\"\213\001\n\016ChannelMessage\022;\n\010recei" +
-      "ved\030\001 \001(\0132\'.com.elarian.hera.proto.Recei" +
-      "vedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com.elarian" +
-      ".hera.proto.SentMessageH\000B\007\n\005entry\"\323\003\n\030C" +
-      "ompleteMessagingSession\022?\n\017customer_numb" +
-      "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom" +
-      "erNumber\022F\n\016channel_number\030\002 \001(\0132..com.e" +
-      "larian.hera.proto.MessagingChannelNumber" +
-      "\022\022\n\nsession_id\030\003 \001(\t\022.\n\nstarted_at\030\004 \001(\013" +
-      "2\032.google.protobuf.Timestamp\022+\n\010duration" +
-      "\030\005 \001(\0132\031.google.protobuf.Duration\022\017\n\007app" +
-      "_ids\030\006 \003(\t\022E\n\nend_reason\030\007 \001(\01621.com.ela" +
-      "rian.hera.proto.MessagingSessionEndReaso" +
-      "n\022*\n\004cost\030\010 \001(\0132\034.com.elarian.hera.proto" +
-      ".Cash\0229\n\023provider_session_id\030\t \001(\0132\034.goo" +
-      "gle.protobuf.StringValue\"\227\002\n\034BlockedMess" +
-      "agingChannelState\022?\n\017customer_number\030\001 \001" +
-      "(\0132&.com.elarian.hera.proto.CustomerNumb" +
-      "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian" +
-      ".hera.proto.MessagingChannelNumber\022>\n\013re" +
-      "ply_token\030\003 \001(\0132).com.elarian.hera.proto" +
-      ".MessageReplyToken\022.\n\nblocked_at\030\004 \001(\0132\032" +
-      ".google.protobuf.Timestamp\"\226\002\n\033ActiveMes" +
-      "sagingChannelState\022?\n\017customer_number\030\001 " +
-      "\001(\0132&.com.elarian.hera.proto.CustomerNum" +
-      "ber\022F\n\016channel_number\030\002 \001(\0132..com.elaria" +
-      "n.hera.proto.MessagingChannelNumber\022>\n\013r" +
-      "eply_token\030\003 \001(\0132).com.elarian.hera.prot" +
-      "o.MessageReplyToken\022.\n\nallowed_at\030\004 \001(\0132" +
-      "\032.google.protobuf.Timestamp\"\331\003\n\036InSessio" +
-      "nMessagingChannelState\022?\n\017customer_numbe" +
-      "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome" +
-      "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el" +
-      "arian.hera.proto.MessagingChannelNumber\022" +
-      ">\n\013reply_token\030\003 \001(\0132).com.elarian.hera." +
-      "proto.MessageReplyToken\022.\n\nallowed_at\030\004 " +
-      "\001(\0132\032.google.protobuf.Timestamp\022\022\n\nsessi" +
-      "on_id\030\005 \001(\t\022.\n\nstarted_at\030\006 \001(\0132\032.google" +
-      ".protobuf.Timestamp\022.\n\nexpires_at\030\007 \001(\0132" +
-      "\032.google.protobuf.Timestamp\022\017\n\007app_ids\030\010" +
-      " \003(\t\0229\n\023provider_session_id\030\t \001(\0132\034.goog" +
-      "le.protobuf.StringValue\"\376\001\n\025MessagingCha" +
-      "nnelState\022G\n\007blocked\030\001 \001(\01324.com.elarian" +
-      ".hera.proto.BlockedMessagingChannelState" +
-      "H\000\022E\n\006active\030\002 \001(\01323.com.elarian.hera.pr" +
-      "oto.ActiveMessagingChannelStateH\000\022L\n\nin_" +
-      "session\030\003 \001(\01326.com.elarian.hera.proto.I" +
-      "nSessionMessagingChannelStateH\000B\007\n\005state" +
-      "\"\317\001\n\016MessagingState\022?\n\010channels\030\001 \003(\0132-." +
-      "com.elarian.hera.proto.MessagingChannelS" +
-      "tate\0228\n\010messages\030\002 \003(\0132&.com.elarian.her" +
-      "a.proto.ChannelMessage\022B\n\010sessions\030\003 \003(\013" +
-      "20.com.elarian.hera.proto.CompleteMessag" +
-      "ingSessionb\006proto3"
+      "\030\016 \001(\0132\034.google.protobuf.StringValue\0221\n\013" +
+      "description\030\017 \001(\0132\034.google.protobuf.Stri" +
+      "ngValue\"\201\001\n\024MessageReactionState\022.\n\ncrea" +
+      "ted_at\030\001 \001(\0132\032.google.protobuf.Timestamp" +
+      "\0229\n\010reaction\030\002 \001(\0162\'.com.elarian.hera.pr" +
+      "oto.MessageReaction\"R\n\021MessageReplyToken" +
+      "\022\r\n\005token\030\001 \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.go" +
+      "ogle.protobuf.Timestamp\"\213\001\n\016ChannelMessa" +
+      "ge\022;\n\010received\030\001 \001(\0132\'.com.elarian.hera." +
+      "proto.ReceivedMessageH\000\0223\n\004sent\030\002 \001(\0132#." +
+      "com.elarian.hera.proto.SentMessageH\000B\007\n\005" +
+      "entry\"\323\003\n\030CompleteMessagingSession\022?\n\017cu" +
+      "stomer_number\030\001 \001(\0132&.com.elarian.hera.p" +
+      "roto.CustomerNumber\022F\n\016channel_number\030\002 " +
+      "\001(\0132..com.elarian.hera.proto.MessagingCh" +
+      "annelNumber\022\022\n\nsession_id\030\003 \001(\t\022.\n\nstart" +
+      "ed_at\030\004 \001(\0132\032.google.protobuf.Timestamp\022" +
+      "+\n\010duration\030\005 \001(\0132\031.google.protobuf.Dura" +
+      "tion\022\017\n\007app_ids\030\006 \003(\t\022E\n\nend_reason\030\007 \001(" +
+      "\01621.com.elarian.hera.proto.MessagingSess" +
+      "ionEndReason\022*\n\004cost\030\010 \001(\0132\034.com.elarian" +
+      ".hera.proto.Cash\0229\n\023provider_session_id\030" +
+      "\t \001(\0132\034.google.protobuf.StringValue\"\227\002\n\034" +
+      "BlockedMessagingChannelState\022?\n\017customer" +
+      "_number\030\001 \001(\0132&.com.elarian.hera.proto.C" +
+      "ustomerNumber\022F\n\016channel_number\030\002 \001(\0132.." +
+      "com.elarian.hera.proto.MessagingChannelN" +
+      "umber\022>\n\013reply_token\030\003 \001(\0132).com.elarian" +
+      ".hera.proto.MessageReplyToken\022.\n\nblocked" +
+      "_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"\226\002" +
+      "\n\033ActiveMessagingChannelState\022?\n\017custome" +
+      "r_number\030\001 \001(\0132&.com.elarian.hera.proto." +
+      "CustomerNumber\022F\n\016channel_number\030\002 \001(\0132." +
+      ".com.elarian.hera.proto.MessagingChannel" +
+      "Number\022>\n\013reply_token\030\003 \001(\0132).com.elaria" +
+      "n.hera.proto.MessageReplyToken\022.\n\nallowe" +
+      "d_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"\331" +
+      "\003\n\036InSessionMessagingChannelState\022?\n\017cus" +
+      "tomer_number\030\001 \001(\0132&.com.elarian.hera.pr" +
+      "oto.CustomerNumber\022F\n\016channel_number\030\002 \001" +
+      "(\0132..com.elarian.hera.proto.MessagingCha" +
+      "nnelNumber\022>\n\013reply_token\030\003 \001(\0132).com.el" +
+      "arian.hera.proto.MessageReplyToken\022.\n\nal" +
+      "lowed_at\030\004 \001(\0132\032.google.protobuf.Timesta" +
+      "mp\022\022\n\nsession_id\030\005 \001(\t\022.\n\nstarted_at\030\006 \001" +
+      "(\0132\032.google.protobuf.Timestamp\022.\n\nexpire" +
+      "s_at\030\007 \001(\0132\032.google.protobuf.Timestamp\022\017" +
+      "\n\007app_ids\030\010 \003(\t\0229\n\023provider_session_id\030\t" +
+      " \001(\0132\034.google.protobuf.StringValue\"\376\001\n\025M" +
+      "essagingChannelState\022G\n\007blocked\030\001 \001(\01324." +
+      "com.elarian.hera.proto.BlockedMessagingC" +
+      "hannelStateH\000\022E\n\006active\030\002 \001(\01323.com.elar" +
+      "ian.hera.proto.ActiveMessagingChannelSta" +
+      "teH\000\022L\n\nin_session\030\003 \001(\01326.com.elarian.h" +
+      "era.proto.InSessionMessagingChannelState" +
+      "H\000B\007\n\005state\"\317\001\n\016MessagingState\022?\n\010channe" +
+      "ls\030\001 \003(\0132-.com.elarian.hera.proto.Messag" +
+      "ingChannelState\0228\n\010messages\030\002 \003(\0132&.com." +
+      "elarian.hera.proto.ChannelMessage\022B\n\010ses" +
+      "sions\030\003 \003(\01320.com.elarian.hera.proto.Com" +
+      "pleteMessagingSessionb\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -17999,7 +18203,7 @@ public final class MessagingStateOuterClass {
     internal_static_com_elarian_hera_proto_SentMessage_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_elarian_hera_proto_SentMessage_descriptor,
-        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", "Cost", "ProviderMessageId", });
+        new java.lang.String[] { "CustomerNumber", "ChannelNumber", "MessageId", "CreatedAt", "SessionId", "InReplyTo", "Provider", "AppId", "UpdatedAt", "Status", "Reactions", "Message", "Cost", "ProviderMessageId", "Description", });
     internal_static_com_elarian_hera_proto_MessageReactionState_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_elarian_hera_proto_MessageReactionState_fieldAccessorTable = new

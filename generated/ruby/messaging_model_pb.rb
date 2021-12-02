@@ -241,6 +241,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :MESSAGE_DELIVERY_STATUS_REJECTED, 415
       value :MESSAGE_DELIVERY_STATUS_INVALID_REQUEST, 416
       value :MESSAGE_DELIVERY_STATUS_INSUFFICIENT_CREDITS, 417
+      value :MESSAGE_DELIVERY_STATUS_GATEWAY_ERROR, 418
       value :MESSAGE_DELIVERY_STATUS_APPLICATION_ERROR, 501
     end
     add_enum "com.elarian.hera.proto.VoiceCallStatus" do
@@ -264,6 +265,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :VOICE_CALL_STATUS_DECOMMISSIONED_CUSTOMERID, 404
       value :VOICE_CALL_STATUS_EXPIRED, 405
       value :VOICE_CALL_STATUS_INVALID_CHANNEL_NUMBER, 406
+      value :VOICE_CALL_STATUS_GATEWAY_ERROR, 407
       value :VOICE_CALL_STATUS_APPLICATION_ERROR, 501
     end
     add_enum "com.elarian.hera.proto.VoiceCallHangupCause" do

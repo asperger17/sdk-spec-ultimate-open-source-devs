@@ -57,7 +57,7 @@ namespace Com.Elarian.Hera.Proto {
             "dW50ZXJQYXJ0eUgAEkcKCGN1c3RvbWVyGAMgASgLMjMuY29tLmVsYXJpYW4u",
             "aGVyYS5wcm90by5QYXltZW50Q3VzdG9tZXJDb3VudGVyUGFydHlIABJFCgdj",
             "aGFubmVsGAQgASgLMjIuY29tLmVsYXJpYW4uaGVyYS5wcm90by5QYXltZW50",
-            "Q2hhbm5lbENvdW50ZXJQYXJ0eUgAQgcKBXBhcnR5IpMEChJQYXltZW50VHJh",
+            "Q2hhbm5lbENvdW50ZXJQYXJ0eUgAQgcKBXBhcnR5IsYEChJQYXltZW50VHJh",
             "bnNhY3Rpb24SFgoOdHJhbnNhY3Rpb25faWQYASABKAkSLAoGYXBwX2lkGAIg",
             "ASgLMhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEkAKC2RlYml0X3Bh",
             "cnR5GAQgASgLMisuY29tLmVsYXJpYW4uaGVyYS5wcm90by5QYXltZW50Q291",
@@ -69,25 +69,28 @@ namespace Com.Elarian.Hera.Proto {
             "LgoKdXBkYXRlZF9hdBgJIAEoCzIaLmdvb2dsZS5wcm90b2J1Zi5UaW1lc3Rh",
             "bXASPQoXcHJvdmlkZXJfdHJhbnNhY3Rpb25faWQYCiABKAsyHC5nb29nbGUu",
             "cHJvdG9idWYuU3RyaW5nVmFsdWUSLwoJbmFycmF0aW9uGAsgASgLMhwuZ29v",
-            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlKmwKDlBheW1lbnRDaGFubmVsEh8K",
-            "G1BBWU1FTlRfQ0hBTk5FTF9VTlNQRUNJRklFRBAAEhwKGFBBWU1FTlRfQ0hB",
-            "Tk5FTF9DRUxMVUxBUhABEhsKF1BBWU1FTlRfQ0hBTk5FTF9BSVJUSU1FEAIq",
-            "vwUKDVBheW1lbnRTdGF0dXMSHgoaUEFZTUVOVF9TVEFUVVNfVU5TUEVDSUZJ",
-            "RUQQABIZChVQQVlNRU5UX1NUQVRVU19RVUVVRUQQZBInCiNQQVlNRU5UX1NU",
-            "QVRVU19QRU5ESU5HX0NPTkZJUk1BVElPThBlEiUKIVBBWU1FTlRfU1RBVFVT",
-            "X1BFTkRJTkdfVkFMSURBVElPThBmEhwKGFBBWU1FTlRfU1RBVFVTX1ZBTElE",
-            "QVRFRBBnEiMKHlBBWU1FTlRfU1RBVFVTX0lOVkFMSURfUkVRVUVTVBDIARIh",
-            "ChxQQVlNRU5UX1NUQVRVU19OT1RfU1VQUE9SVEVEEMkBEiYKIVBBWU1FTlRf",
-            "U1RBVFVTX0lOU1VGRklDSUVOVF9GVU5EUxDKARIlCiBQQVlNRU5UX1NUQVRV",
-            "U19BUFBMSUNBVElPTl9FUlJPUhDLARIfChpQQVlNRU5UX1NUQVRVU19OT1Rf",
-            "QUxMT1dFRBDMARIlCiBQQVlNRU5UX1NUQVRVU19EVVBMSUNBVEVfUkVRVUVT",
-            "VBDNARIhChxQQVlNRU5UX1NUQVRVU19JTlZBTElEX1BVUlNFEM4BEiIKHVBB",
-            "WU1FTlRfU1RBVFVTX0lOVkFMSURfV0FMTEVUEM8BEi4KKVBBWU1FTlRfU1RB",
-            "VFVTX0RFQ09NTUlTU0lPTkVEX0NVU1RPTUVSX0lEEKsCEhsKFlBBWU1FTlRf",
-            "U1RBVFVTX1NVQ0NFU1MQrAISGgoVUEFZTUVOVF9TVEFUVVNfRkFJTEVEEJAD",
-            "Eh0KGFBBWU1FTlRfU1RBVFVTX1RIUk9UVExFRBCRAxIbChZQQVlNRU5UX1NU",
-            "QVRVU19FWFBJUkVEEJIDEhwKF1BBWU1FTlRfU1RBVFVTX1JFSkVDVEVEEJMD",
-            "EhwKF1BBWU1FTlRfU1RBVFVTX1JFVkVSU0VEEPQDYgZwcm90bzM="));
+            "Z2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlEjEKC2Rlc2NyaXB0aW9uGAwgASgL",
+            "MhwuZ29vZ2xlLnByb3RvYnVmLlN0cmluZ1ZhbHVlKmwKDlBheW1lbnRDaGFu",
+            "bmVsEh8KG1BBWU1FTlRfQ0hBTk5FTF9VTlNQRUNJRklFRBAAEhwKGFBBWU1F",
+            "TlRfQ0hBTk5FTF9DRUxMVUxBUhABEhsKF1BBWU1FTlRfQ0hBTk5FTF9BSVJU",
+            "SU1FEAIqlQYKDVBheW1lbnRTdGF0dXMSHgoaUEFZTUVOVF9TVEFUVVNfVU5T",
+            "UEVDSUZJRUQQABIZChVQQVlNRU5UX1NUQVRVU19RVUVVRUQQZBInCiNQQVlN",
+            "RU5UX1NUQVRVU19QRU5ESU5HX0NPTkZJUk1BVElPThBlEiUKIVBBWU1FTlRf",
+            "U1RBVFVTX1BFTkRJTkdfVkFMSURBVElPThBmEhwKGFBBWU1FTlRfU1RBVFVT",
+            "X1ZBTElEQVRFRBBnEiMKHlBBWU1FTlRfU1RBVFVTX0lOVkFMSURfUkVRVUVT",
+            "VBDIARIhChxQQVlNRU5UX1NUQVRVU19OT1RfU1VQUE9SVEVEEMkBEiYKIVBB",
+            "WU1FTlRfU1RBVFVTX0lOU1VGRklDSUVOVF9GVU5EUxDKARIlCiBQQVlNRU5U",
+            "X1NUQVRVU19BUFBMSUNBVElPTl9FUlJPUhDLARIfChpQQVlNRU5UX1NUQVRV",
+            "U19OT1RfQUxMT1dFRBDMARIlCiBQQVlNRU5UX1NUQVRVU19EVVBMSUNBVEVf",
+            "UkVRVUVTVBDNARIhChxQQVlNRU5UX1NUQVRVU19JTlZBTElEX1BVUlNFEM4B",
+            "EikKJFBBWU1FTlRfU1RBVFVTX0lOVkFMSURfQ09VTlRFUl9QQVJUWRDPARIq",
+            "CiVQQVlNRU5UX1NUQVRVU19JTlZBTElEX0NIQU5ORUxfTlVNQkVSENABEiEK",
+            "HFBBWU1FTlRfU1RBVFVTX0dBVEVXQVlfRVJST1IQ0QESLgopUEFZTUVOVF9T",
+            "VEFUVVNfREVDT01NSVNTSU9ORURfQ1VTVE9NRVJfSUQQqwISGwoWUEFZTUVO",
+            "VF9TVEFUVVNfU1VDQ0VTUxCsAhIaChVQQVlNRU5UX1NUQVRVU19GQUlMRUQQ",
+            "kAMSHQoYUEFZTUVOVF9TVEFUVVNfVEhST1RUTEVEEJEDEhsKFlBBWU1FTlRf",
+            "U1RBVFVTX0VYUElSRUQQkgMSHAoXUEFZTUVOVF9TVEFUVVNfUkVKRUNURUQQ",
+            "kwMSHAoXUEFZTUVOVF9TVEFUVVNfUkVWRVJTRUQQ9ANiBnByb3RvMw=="));
       descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
           new pbr::FileDescriptor[] { global::Google.Protobuf.WellKnownTypes.WrappersReflection.Descriptor, global::Google.Protobuf.WellKnownTypes.TimestampReflection.Descriptor, global::Com.Elarian.Hera.Proto.CommonModelReflection.Descriptor, },
           new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Com.Elarian.Hera.Proto.PaymentChannel), typeof(global::Com.Elarian.Hera.Proto.PaymentStatus), }, null, new pbr::GeneratedClrTypeInfo[] {
@@ -99,7 +102,7 @@ namespace Com.Elarian.Hera.Proto {
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentCustomerCounterParty), global::Com.Elarian.Hera.Proto.PaymentCustomerCounterParty.Parser, new[]{ "CustomerNumber", "ChannelNumber" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentChannelCounterParty), global::Com.Elarian.Hera.Proto.PaymentChannelCounterParty.Parser, new[]{ "Channel", "ChannelCode", "Source", "Destination", "Account" }, null, null, null, null),
             new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentCounterParty), global::Com.Elarian.Hera.Proto.PaymentCounterParty.Parser, new[]{ "Purse", "Wallet", "Customer", "Channel" }, new[]{ "Party" }, null, null, null),
-            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentTransaction), global::Com.Elarian.Hera.Proto.PaymentTransaction.Parser, new[]{ "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", "ProviderTransactionId", "Narration" }, null, null, null, null)
+            new pbr::GeneratedClrTypeInfo(typeof(global::Com.Elarian.Hera.Proto.PaymentTransaction), global::Com.Elarian.Hera.Proto.PaymentTransaction.Parser, new[]{ "TransactionId", "AppId", "DebitParty", "CreditParty", "Value", "Status", "CreatedAt", "UpdatedAt", "ProviderTransactionId", "Narration", "Description" }, null, null, null, null)
           }));
     }
     #endregion
@@ -125,7 +128,9 @@ namespace Com.Elarian.Hera.Proto {
     [pbr::OriginalName("PAYMENT_STATUS_NOT_ALLOWED")] NotAllowed = 204,
     [pbr::OriginalName("PAYMENT_STATUS_DUPLICATE_REQUEST")] DuplicateRequest = 205,
     [pbr::OriginalName("PAYMENT_STATUS_INVALID_PURSE")] InvalidPurse = 206,
-    [pbr::OriginalName("PAYMENT_STATUS_INVALID_WALLET")] InvalidWallet = 207,
+    [pbr::OriginalName("PAYMENT_STATUS_INVALID_COUNTER_PARTY")] InvalidCounterParty = 207,
+    [pbr::OriginalName("PAYMENT_STATUS_INVALID_CHANNEL_NUMBER")] InvalidChannelNumber = 208,
+    [pbr::OriginalName("PAYMENT_STATUS_GATEWAY_ERROR")] GatewayError = 209,
     [pbr::OriginalName("PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID")] DecommissionedCustomerId = 299,
     [pbr::OriginalName("PAYMENT_STATUS_SUCCESS")] Success = 300,
     [pbr::OriginalName("PAYMENT_STATUS_FAILED")] Failed = 400,
@@ -2278,6 +2283,7 @@ namespace Com.Elarian.Hera.Proto {
       updatedAt_ = other.updatedAt_ != null ? other.updatedAt_.Clone() : null;
       ProviderTransactionId = other.ProviderTransactionId;
       Narration = other.Narration;
+      Description = other.Description;
       _unknownFields = pb::UnknownFieldSet.Clone(other._unknownFields);
     }
 
@@ -2402,6 +2408,19 @@ namespace Com.Elarian.Hera.Proto {
     }
 
 
+    /// <summary>Field number for the "description" field.</summary>
+    public const int DescriptionFieldNumber = 12;
+    private static readonly pb::FieldCodec<string> _single_description_codec = pb::FieldCodec.ForClassWrapper<string>(98);
+    private string description_;
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
+    public string Description {
+      get { return description_; }
+      set {
+        description_ = value;
+      }
+    }
+
+
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute]
     public override bool Equals(object other) {
       return Equals(other as PaymentTransaction);
@@ -2425,6 +2444,7 @@ namespace Com.Elarian.Hera.Proto {
       if (!object.Equals(UpdatedAt, other.UpdatedAt)) return false;
       if (ProviderTransactionId != other.ProviderTransactionId) return false;
       if (Narration != other.Narration) return false;
+      if (Description != other.Description) return false;
       return Equals(_unknownFields, other._unknownFields);
     }
 
@@ -2441,6 +2461,7 @@ namespace Com.Elarian.Hera.Proto {
       if (updatedAt_ != null) hash ^= UpdatedAt.GetHashCode();
       if (providerTransactionId_ != null) hash ^= ProviderTransactionId.GetHashCode();
       if (narration_ != null) hash ^= Narration.GetHashCode();
+      if (description_ != null) hash ^= Description.GetHashCode();
       if (_unknownFields != null) {
         hash ^= _unknownFields.GetHashCode();
       }
@@ -2494,6 +2515,9 @@ namespace Com.Elarian.Hera.Proto {
       if (narration_ != null) {
         _single_narration_codec.WriteTagAndValue(output, Narration);
       }
+      if (description_ != null) {
+        _single_description_codec.WriteTagAndValue(output, Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(output);
       }
@@ -2540,6 +2564,9 @@ namespace Com.Elarian.Hera.Proto {
       if (narration_ != null) {
         _single_narration_codec.WriteTagAndValue(ref output, Narration);
       }
+      if (description_ != null) {
+        _single_description_codec.WriteTagAndValue(ref output, Description);
+      }
       if (_unknownFields != null) {
         _unknownFields.WriteTo(ref output);
       }
@@ -2578,6 +2605,9 @@ namespace Com.Elarian.Hera.Proto {
       }
       if (narration_ != null) {
         size += _single_narration_codec.CalculateSizeWithTag(Narration);
+      }
+      if (description_ != null) {
+        size += _single_description_codec.CalculateSizeWithTag(Description);
       }
       if (_unknownFields != null) {
         size += _unknownFields.CalculateSize();
@@ -2639,6 +2669,11 @@ namespace Com.Elarian.Hera.Proto {
       if (other.narration_ != null) {
         if (narration_ == null || other.Narration != "") {
           Narration = other.Narration;
+        }
+      }
+      if (other.description_ != null) {
+        if (description_ == null || other.Description != "") {
+          Description = other.Description;
         }
       }
       _unknownFields = pb::UnknownFieldSet.MergeFrom(_unknownFields, other._unknownFields);
@@ -2719,6 +2754,13 @@ namespace Com.Elarian.Hera.Proto {
             }
             break;
           }
+          case 98: {
+            string value = _single_description_codec.Read(input);
+            if (description_ == null || value != "") {
+              Description = value;
+            }
+            break;
+          }
         }
       }
     #endif
@@ -2794,6 +2836,13 @@ namespace Com.Elarian.Hera.Proto {
             string value = _single_narration_codec.Read(ref input);
             if (narration_ == null || value != "") {
               Narration = value;
+            }
+            break;
+          }
+          case 98: {
+            string value = _single_description_codec.Read(ref input);
+            if (description_ == null || value != "") {
+              Description = value;
             }
             break;
           }

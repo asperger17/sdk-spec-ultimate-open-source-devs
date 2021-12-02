@@ -156,6 +156,7 @@ typedef GPB_ENUM(SentMessage_FieldNumber) {
   SentMessage_FieldNumber_Message = 12,
   SentMessage_FieldNumber_Cost = 13,
   SentMessage_FieldNumber_ProviderMessageId = 14,
+  SentMessage_FieldNumber_Description_p = 15,
 };
 
 GPB_FINAL @interface SentMessage : GPBMessage
@@ -209,6 +210,10 @@ GPB_FINAL @interface SentMessage : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *providerMessageId;
 /** Test to see if @c providerMessageId has been set. */
 @property(nonatomic, readwrite) BOOL hasProviderMessageId;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
 
 @end
 

@@ -309,6 +309,7 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_messaging_5fstate_2eproto::off
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::SentMessage, message_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::SentMessage, cost_),
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::SentMessage, provider_message_id_),
+  PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::SentMessage, description_),
   ~0u,  // no _has_bits_
   PROTOBUF_FIELD_OFFSET(::com::elarian::hera::proto::MessageReactionState, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -398,15 +399,15 @@ const ::PROTOBUF_NAMESPACE_ID::uint32 TableStruct_messaging_5fstate_2eproto::off
 static const ::PROTOBUF_NAMESPACE_ID::internal::MigrationSchema schemas[] PROTOBUF_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(::com::elarian::hera::proto::ReceivedMessage)},
   { 16, -1, sizeof(::com::elarian::hera::proto::SentMessage)},
-  { 35, -1, sizeof(::com::elarian::hera::proto::MessageReactionState)},
-  { 42, -1, sizeof(::com::elarian::hera::proto::MessageReplyToken)},
-  { 49, -1, sizeof(::com::elarian::hera::proto::ChannelMessage)},
-  { 57, -1, sizeof(::com::elarian::hera::proto::CompleteMessagingSession)},
-  { 71, -1, sizeof(::com::elarian::hera::proto::BlockedMessagingChannelState)},
-  { 80, -1, sizeof(::com::elarian::hera::proto::ActiveMessagingChannelState)},
-  { 89, -1, sizeof(::com::elarian::hera::proto::InSessionMessagingChannelState)},
-  { 103, -1, sizeof(::com::elarian::hera::proto::MessagingChannelState)},
-  { 112, -1, sizeof(::com::elarian::hera::proto::MessagingState)},
+  { 36, -1, sizeof(::com::elarian::hera::proto::MessageReactionState)},
+  { 43, -1, sizeof(::com::elarian::hera::proto::MessageReplyToken)},
+  { 50, -1, sizeof(::com::elarian::hera::proto::ChannelMessage)},
+  { 58, -1, sizeof(::com::elarian::hera::proto::CompleteMessagingSession)},
+  { 72, -1, sizeof(::com::elarian::hera::proto::BlockedMessagingChannelState)},
+  { 81, -1, sizeof(::com::elarian::hera::proto::ActiveMessagingChannelState)},
+  { 90, -1, sizeof(::com::elarian::hera::proto::InSessionMessagingChannelState)},
+  { 104, -1, sizeof(::com::elarian::hera::proto::MessagingChannelState)},
+  { 113, -1, sizeof(::com::elarian::hera::proto::MessagingState)},
 };
 
 static ::PROTOBUF_NAMESPACE_ID::Message const * const file_default_instances[] = {
@@ -443,7 +444,7 @@ const char descriptor_table_protodef_messaging_5fstate_2eproto[] PROTOBUF_SECTIO
   "*.com.elarian.hera.proto.InboundMessageB"
   "ody\022*\n\004cost\030\n \001(\0132\034.com.elarian.hera.pro"
   "to.Cash\0229\n\023provider_message_id\030\013 \001(\0132\034.g"
-  "oogle.protobuf.StringValue\"\377\005\n\013SentMessa"
+  "oogle.protobuf.StringValue\"\262\006\n\013SentMessa"
   "ge\022\?\n\017customer_number\030\001 \001(\0132&.com.elaria"
   "n.hera.proto.CustomerNumber\022F\n\016channel_n"
   "umber\030\002 \001(\0132..com.elarian.hera.proto.Mes"
@@ -462,66 +463,67 @@ const char descriptor_table_protodef_messaging_5fstate_2eproto[] PROTOBUF_SECTIO
   "essage\030\014 \001(\0132\'.com.elarian.hera.proto.Ou"
   "tboundMessage\022*\n\004cost\030\r \001(\0132\034.com.elaria"
   "n.hera.proto.Cash\0229\n\023provider_message_id"
-  "\030\016 \001(\0132\034.google.protobuf.StringValue\"\201\001\n"
-  "\024MessageReactionState\022.\n\ncreated_at\030\001 \001("
-  "\0132\032.google.protobuf.Timestamp\0229\n\010reactio"
-  "n\030\002 \001(\0162\'.com.elarian.hera.proto.Message"
-  "Reaction\"R\n\021MessageReplyToken\022\r\n\005token\030\001"
-  " \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.google.protob"
-  "uf.Timestamp\"\213\001\n\016ChannelMessage\022;\n\010recei"
-  "ved\030\001 \001(\0132\'.com.elarian.hera.proto.Recei"
-  "vedMessageH\000\0223\n\004sent\030\002 \001(\0132#.com.elarian"
-  ".hera.proto.SentMessageH\000B\007\n\005entry\"\323\003\n\030C"
-  "ompleteMessagingSession\022\?\n\017customer_numb"
-  "er\030\001 \001(\0132&.com.elarian.hera.proto.Custom"
-  "erNumber\022F\n\016channel_number\030\002 \001(\0132..com.e"
-  "larian.hera.proto.MessagingChannelNumber"
-  "\022\022\n\nsession_id\030\003 \001(\t\022.\n\nstarted_at\030\004 \001(\013"
-  "2\032.google.protobuf.Timestamp\022+\n\010duration"
-  "\030\005 \001(\0132\031.google.protobuf.Duration\022\017\n\007app"
-  "_ids\030\006 \003(\t\022E\n\nend_reason\030\007 \001(\01621.com.ela"
-  "rian.hera.proto.MessagingSessionEndReaso"
-  "n\022*\n\004cost\030\010 \001(\0132\034.com.elarian.hera.proto"
-  ".Cash\0229\n\023provider_session_id\030\t \001(\0132\034.goo"
-  "gle.protobuf.StringValue\"\227\002\n\034BlockedMess"
-  "agingChannelState\022\?\n\017customer_number\030\001 \001"
-  "(\0132&.com.elarian.hera.proto.CustomerNumb"
-  "er\022F\n\016channel_number\030\002 \001(\0132..com.elarian"
-  ".hera.proto.MessagingChannelNumber\022>\n\013re"
-  "ply_token\030\003 \001(\0132).com.elarian.hera.proto"
-  ".MessageReplyToken\022.\n\nblocked_at\030\004 \001(\0132\032"
-  ".google.protobuf.Timestamp\"\226\002\n\033ActiveMes"
-  "sagingChannelState\022\?\n\017customer_number\030\001 "
-  "\001(\0132&.com.elarian.hera.proto.CustomerNum"
-  "ber\022F\n\016channel_number\030\002 \001(\0132..com.elaria"
-  "n.hera.proto.MessagingChannelNumber\022>\n\013r"
-  "eply_token\030\003 \001(\0132).com.elarian.hera.prot"
-  "o.MessageReplyToken\022.\n\nallowed_at\030\004 \001(\0132"
-  "\032.google.protobuf.Timestamp\"\331\003\n\036InSessio"
-  "nMessagingChannelState\022\?\n\017customer_numbe"
-  "r\030\001 \001(\0132&.com.elarian.hera.proto.Custome"
-  "rNumber\022F\n\016channel_number\030\002 \001(\0132..com.el"
-  "arian.hera.proto.MessagingChannelNumber\022"
-  ">\n\013reply_token\030\003 \001(\0132).com.elarian.hera."
-  "proto.MessageReplyToken\022.\n\nallowed_at\030\004 "
-  "\001(\0132\032.google.protobuf.Timestamp\022\022\n\nsessi"
-  "on_id\030\005 \001(\t\022.\n\nstarted_at\030\006 \001(\0132\032.google"
-  ".protobuf.Timestamp\022.\n\nexpires_at\030\007 \001(\0132"
-  "\032.google.protobuf.Timestamp\022\017\n\007app_ids\030\010"
-  " \003(\t\0229\n\023provider_session_id\030\t \001(\0132\034.goog"
-  "le.protobuf.StringValue\"\376\001\n\025MessagingCha"
-  "nnelState\022G\n\007blocked\030\001 \001(\01324.com.elarian"
-  ".hera.proto.BlockedMessagingChannelState"
-  "H\000\022E\n\006active\030\002 \001(\01323.com.elarian.hera.pr"
-  "oto.ActiveMessagingChannelStateH\000\022L\n\nin_"
-  "session\030\003 \001(\01326.com.elarian.hera.proto.I"
-  "nSessionMessagingChannelStateH\000B\007\n\005state"
-  "\"\317\001\n\016MessagingState\022\?\n\010channels\030\001 \003(\0132-."
-  "com.elarian.hera.proto.MessagingChannelS"
-  "tate\0228\n\010messages\030\002 \003(\0132&.com.elarian.her"
-  "a.proto.ChannelMessage\022B\n\010sessions\030\003 \003(\013"
-  "20.com.elarian.hera.proto.CompleteMessag"
-  "ingSessionb\006proto3"
+  "\030\016 \001(\0132\034.google.protobuf.StringValue\0221\n\013"
+  "description\030\017 \001(\0132\034.google.protobuf.Stri"
+  "ngValue\"\201\001\n\024MessageReactionState\022.\n\ncrea"
+  "ted_at\030\001 \001(\0132\032.google.protobuf.Timestamp"
+  "\0229\n\010reaction\030\002 \001(\0162\'.com.elarian.hera.pr"
+  "oto.MessageReaction\"R\n\021MessageReplyToken"
+  "\022\r\n\005token\030\001 \001(\t\022.\n\nexpires_at\030\002 \001(\0132\032.go"
+  "ogle.protobuf.Timestamp\"\213\001\n\016ChannelMessa"
+  "ge\022;\n\010received\030\001 \001(\0132\'.com.elarian.hera."
+  "proto.ReceivedMessageH\000\0223\n\004sent\030\002 \001(\0132#."
+  "com.elarian.hera.proto.SentMessageH\000B\007\n\005"
+  "entry\"\323\003\n\030CompleteMessagingSession\022\?\n\017cu"
+  "stomer_number\030\001 \001(\0132&.com.elarian.hera.p"
+  "roto.CustomerNumber\022F\n\016channel_number\030\002 "
+  "\001(\0132..com.elarian.hera.proto.MessagingCh"
+  "annelNumber\022\022\n\nsession_id\030\003 \001(\t\022.\n\nstart"
+  "ed_at\030\004 \001(\0132\032.google.protobuf.Timestamp\022"
+  "+\n\010duration\030\005 \001(\0132\031.google.protobuf.Dura"
+  "tion\022\017\n\007app_ids\030\006 \003(\t\022E\n\nend_reason\030\007 \001("
+  "\01621.com.elarian.hera.proto.MessagingSess"
+  "ionEndReason\022*\n\004cost\030\010 \001(\0132\034.com.elarian"
+  ".hera.proto.Cash\0229\n\023provider_session_id\030"
+  "\t \001(\0132\034.google.protobuf.StringValue\"\227\002\n\034"
+  "BlockedMessagingChannelState\022\?\n\017customer"
+  "_number\030\001 \001(\0132&.com.elarian.hera.proto.C"
+  "ustomerNumber\022F\n\016channel_number\030\002 \001(\0132.."
+  "com.elarian.hera.proto.MessagingChannelN"
+  "umber\022>\n\013reply_token\030\003 \001(\0132).com.elarian"
+  ".hera.proto.MessageReplyToken\022.\n\nblocked"
+  "_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"\226\002"
+  "\n\033ActiveMessagingChannelState\022\?\n\017custome"
+  "r_number\030\001 \001(\0132&.com.elarian.hera.proto."
+  "CustomerNumber\022F\n\016channel_number\030\002 \001(\0132."
+  ".com.elarian.hera.proto.MessagingChannel"
+  "Number\022>\n\013reply_token\030\003 \001(\0132).com.elaria"
+  "n.hera.proto.MessageReplyToken\022.\n\nallowe"
+  "d_at\030\004 \001(\0132\032.google.protobuf.Timestamp\"\331"
+  "\003\n\036InSessionMessagingChannelState\022\?\n\017cus"
+  "tomer_number\030\001 \001(\0132&.com.elarian.hera.pr"
+  "oto.CustomerNumber\022F\n\016channel_number\030\002 \001"
+  "(\0132..com.elarian.hera.proto.MessagingCha"
+  "nnelNumber\022>\n\013reply_token\030\003 \001(\0132).com.el"
+  "arian.hera.proto.MessageReplyToken\022.\n\nal"
+  "lowed_at\030\004 \001(\0132\032.google.protobuf.Timesta"
+  "mp\022\022\n\nsession_id\030\005 \001(\t\022.\n\nstarted_at\030\006 \001"
+  "(\0132\032.google.protobuf.Timestamp\022.\n\nexpire"
+  "s_at\030\007 \001(\0132\032.google.protobuf.Timestamp\022\017"
+  "\n\007app_ids\030\010 \003(\t\0229\n\023provider_session_id\030\t"
+  " \001(\0132\034.google.protobuf.StringValue\"\376\001\n\025M"
+  "essagingChannelState\022G\n\007blocked\030\001 \001(\01324."
+  "com.elarian.hera.proto.BlockedMessagingC"
+  "hannelStateH\000\022E\n\006active\030\002 \001(\01323.com.elar"
+  "ian.hera.proto.ActiveMessagingChannelSta"
+  "teH\000\022L\n\nin_session\030\003 \001(\01326.com.elarian.h"
+  "era.proto.InSessionMessagingChannelState"
+  "H\000B\007\n\005state\"\317\001\n\016MessagingState\022\?\n\010channe"
+  "ls\030\001 \003(\0132-.com.elarian.hera.proto.Messag"
+  "ingChannelState\0228\n\010messages\030\002 \003(\0132&.com."
+  "elarian.hera.proto.ChannelMessage\022B\n\010ses"
+  "sions\030\003 \003(\01320.com.elarian.hera.proto.Com"
+  "pleteMessagingSessionb\006proto3"
   ;
 static const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable*const descriptor_table_messaging_5fstate_2eproto_deps[5] = {
   &::descriptor_table_common_5fmodel_2eproto,
@@ -545,7 +547,7 @@ static ::PROTOBUF_NAMESPACE_ID::internal::SCCInfoBase*const descriptor_table_mes
 };
 static ::PROTOBUF_NAMESPACE_ID::internal::once_flag descriptor_table_messaging_5fstate_2eproto_once;
 const ::PROTOBUF_NAMESPACE_ID::internal::DescriptorTable descriptor_table_messaging_5fstate_2eproto = {
-  false, false, descriptor_table_protodef_messaging_5fstate_2eproto, "messaging_state.proto", 3898,
+  false, false, descriptor_table_protodef_messaging_5fstate_2eproto, "messaging_state.proto", 3949,
   &descriptor_table_messaging_5fstate_2eproto_once, descriptor_table_messaging_5fstate_2eproto_sccs, descriptor_table_messaging_5fstate_2eproto_deps, 11, 5,
   schemas, file_default_instances, TableStruct_messaging_5fstate_2eproto::offsets,
   file_level_metadata_messaging_5fstate_2eproto, 11, file_level_enum_descriptors_messaging_5fstate_2eproto, file_level_service_descriptors_messaging_5fstate_2eproto,
@@ -1217,6 +1219,7 @@ class SentMessage::_Internal {
   static const ::com::elarian::hera::proto::OutboundMessage& message(const SentMessage* msg);
   static const ::com::elarian::hera::proto::Cash& cost(const SentMessage* msg);
   static const PROTOBUF_NAMESPACE_ID::StringValue& provider_message_id(const SentMessage* msg);
+  static const PROTOBUF_NAMESPACE_ID::StringValue& description(const SentMessage* msg);
 };
 
 const ::com::elarian::hera::proto::CustomerNumber&
@@ -1258,6 +1261,10 @@ SentMessage::_Internal::cost(const SentMessage* msg) {
 const PROTOBUF_NAMESPACE_ID::StringValue&
 SentMessage::_Internal::provider_message_id(const SentMessage* msg) {
   return *msg->provider_message_id_;
+}
+const PROTOBUF_NAMESPACE_ID::StringValue&
+SentMessage::_Internal::description(const SentMessage* msg) {
+  return *msg->description_;
 }
 void SentMessage::clear_customer_number() {
   if (GetArena() == nullptr && customer_number_ != nullptr) {
@@ -1318,6 +1325,12 @@ void SentMessage::clear_provider_message_id() {
     delete provider_message_id_;
   }
   provider_message_id_ = nullptr;
+}
+void SentMessage::clear_description() {
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
 }
 SentMessage::SentMessage(::PROTOBUF_NAMESPACE_ID::Arena* arena)
   : ::PROTOBUF_NAMESPACE_ID::Message(arena),
@@ -1385,6 +1398,11 @@ SentMessage::SentMessage(const SentMessage& from)
   } else {
     provider_message_id_ = nullptr;
   }
+  if (from._internal_has_description()) {
+    description_ = new PROTOBUF_NAMESPACE_ID::StringValue(*from.description_);
+  } else {
+    description_ = nullptr;
+  }
   ::memcpy(&provider_, &from.provider_,
     static_cast<size_t>(reinterpret_cast<char*>(&status_) -
     reinterpret_cast<char*>(&provider_)) + sizeof(status_));
@@ -1419,6 +1437,7 @@ void SentMessage::SharedDtor() {
   if (this != internal_default_instance()) delete message_;
   if (this != internal_default_instance()) delete cost_;
   if (this != internal_default_instance()) delete provider_message_id_;
+  if (this != internal_default_instance()) delete description_;
 }
 
 void SentMessage::ArenaDtor(void* object) {
@@ -1484,6 +1503,10 @@ void SentMessage::Clear() {
     delete provider_message_id_;
   }
   provider_message_id_ = nullptr;
+  if (GetArena() == nullptr && description_ != nullptr) {
+    delete description_;
+  }
+  description_ = nullptr;
   ::memset(&provider_, 0, static_cast<size_t>(
       reinterpret_cast<char*>(&status_) -
       reinterpret_cast<char*>(&provider_)) + sizeof(status_));
@@ -1601,6 +1624,13 @@ const char* SentMessage::_InternalParse(const char* ptr, ::PROTOBUF_NAMESPACE_ID
       case 14:
         if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 114)) {
           ptr = ctx->ParseMessage(_internal_mutable_provider_message_id(), ptr);
+          CHK_(ptr);
+        } else goto handle_unusual;
+        continue;
+      // .google.protobuf.StringValue description = 15;
+      case 15:
+        if (PROTOBUF_PREDICT_TRUE(static_cast<::PROTOBUF_NAMESPACE_ID::uint8>(tag) == 122)) {
+          ptr = ctx->ParseMessage(_internal_mutable_description(), ptr);
           CHK_(ptr);
         } else goto handle_unusual;
         continue;
@@ -1744,6 +1774,14 @@ failure:
         14, _Internal::provider_message_id(this), target, stream);
   }
 
+  // .google.protobuf.StringValue description = 15;
+  if (this->has_description()) {
+    target = stream->EnsureSpace(target);
+    target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::
+      InternalWriteMessage(
+        15, _Internal::description(this), target, stream);
+  }
+
   if (PROTOBUF_PREDICT_FALSE(_internal_metadata_.have_unknown_fields())) {
     target = ::PROTOBUF_NAMESPACE_ID::internal::WireFormat::InternalSerializeUnknownFieldsToArray(
         _internal_metadata_.unknown_fields<::PROTOBUF_NAMESPACE_ID::UnknownFieldSet>(::PROTOBUF_NAMESPACE_ID::UnknownFieldSet::default_instance), target, stream);
@@ -1844,6 +1882,13 @@ size_t SentMessage::ByteSizeLong() const {
         *provider_message_id_);
   }
 
+  // .google.protobuf.StringValue description = 15;
+  if (this->has_description()) {
+    total_size += 1 +
+      ::PROTOBUF_NAMESPACE_ID::internal::WireFormatLite::MessageSize(
+        *description_);
+  }
+
   // .com.elarian.hera.proto.ChannelNumberProvider provider = 7;
   if (this->provider() != 0) {
     total_size += 1 +
@@ -1920,6 +1965,9 @@ void SentMessage::MergeFrom(const SentMessage& from) {
   }
   if (from.has_provider_message_id()) {
     _internal_mutable_provider_message_id()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_provider_message_id());
+  }
+  if (from.has_description()) {
+    _internal_mutable_description()->PROTOBUF_NAMESPACE_ID::StringValue::MergeFrom(from._internal_description());
   }
   if (from.provider() != 0) {
     _internal_set_provider(from._internal_provider());

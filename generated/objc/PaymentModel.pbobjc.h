@@ -84,7 +84,9 @@ typedef GPB_ENUM(PaymentStatus) {
   PaymentStatus_PaymentStatusNotAllowed = 204,
   PaymentStatus_PaymentStatusDuplicateRequest = 205,
   PaymentStatus_PaymentStatusInvalidPurse = 206,
-  PaymentStatus_PaymentStatusInvalidWallet = 207,
+  PaymentStatus_PaymentStatusInvalidCounterParty = 207,
+  PaymentStatus_PaymentStatusInvalidChannelNumber = 208,
+  PaymentStatus_PaymentStatusGatewayError = 209,
   PaymentStatus_PaymentStatusDecommissionedCustomerId = 299,
   PaymentStatus_PaymentStatusSuccess = 300,
   PaymentStatus_PaymentStatusFailed = 400,
@@ -331,6 +333,7 @@ typedef GPB_ENUM(PaymentTransaction_FieldNumber) {
   PaymentTransaction_FieldNumber_UpdatedAt = 9,
   PaymentTransaction_FieldNumber_ProviderTransactionId = 10,
   PaymentTransaction_FieldNumber_Narration = 11,
+  PaymentTransaction_FieldNumber_Description_p = 12,
 };
 
 GPB_FINAL @interface PaymentTransaction : GPBMessage
@@ -370,6 +373,10 @@ GPB_FINAL @interface PaymentTransaction : GPBMessage
 @property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *narration;
 /** Test to see if @c narration has been set. */
 @property(nonatomic, readwrite) BOOL hasNarration;
+
+@property(nonatomic, readwrite, strong, null_resettable) GPBStringValue *description_p;
+/** Test to see if @c description_p has been set. */
+@property(nonatomic, readwrite) BOOL hasDescription_p;
 
 @end
 
