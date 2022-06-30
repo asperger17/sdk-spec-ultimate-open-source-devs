@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+package com.elarian.hera.proto;
+
+enum CustomerNumberProvider {
+  CUSTOMER_NUMBER_PROVIDER_UNSPECIFIED = 0;
+  CUSTOMER_NUMBER_PROVIDER_FACEBOOK    = 1;
+  CUSTOMER_NUMBER_PROVIDER_CELLULAR    = 2;
+  CUSTOMER_NUMBER_PROVIDER_TELEGRAM    = 3;
+  CUSTOMER_NUMBER_PROVIDER_APP         = 4;
+  CUSTOMER_NUMBER_PROVIDER_EMAIL       = 5;
+}
+
+enum ChannelNumberProvider {
+  CHANNEL_NUMBER_PROVIDER_UNSPECIFIED = 0;
+  CHANNEL_NUMBER_PROVIDER_AT          = 1;
+  CHANNEL_NUMBER_PROVIDER_TWILIO      = 2;
+  CHANNEL_NUMBER_PROVIDER_MAILGUN     = 3;
+  CHANNEL_NUMBER_PROVIDER_FACEBOOK    = 4;
+  CHANNEL_NUMBER_PROVIDER_TELEGRAM    = 5;
+  CHANNEL_NUMBER_PROVIDER_MPESA       = 6;
+}
+
+enum MediaType {
+  MEDIA_TYPE_UNSPECIFIED = 0;
+  MEDIA_TYPE_IMAGE       = 1;
+  MEDIA_TYPE_AUDIO       = 2;
+  MEDIA_TYPE_VIDEO       = 3;
+  MEDIA_TYPE_DOCUMENT    = 4;
+  MEDIA_TYPE_VOICE       = 5;
+  MEDIA_TYPE_STICKER     = 6;
+  MEDIA_TYPE_CONTACT     = 7;
+}
+
+enum CustomerEventDirection {
+  CUSTOMER_EVENT_DIRECTION_UNSPECIFIED = 0;
+  CUSTOMER_EVENT_DIRECTION_INBOUND     = 1;
+  CUSTOMER_EVENT_DIRECTION_OUTBOUND    = 2;
+}
+
+enum CustomerRequestOrigin {
+  CUSTOMER_REQUEST_ORIGIN_UNSPECIFIED  = 0;
+  CUSTOMER_REQUEST_ORIGIN_API_REQUEST  = 1;
+  CUSTOMER_REQUEST_ORIGIN_CUSTOMER_TAG = 2;
+  CUSTOMER_REQUEST_ORIGIN_REPLAY       = 3;
+} 
+
+message DataMapValue {
+  oneof value {
+    string string_val = 2;
+    bytes bytes_val   = 3;
+  }
+}
+
+message Cash {
+  string currency_code = 1;
+  double amount        = 2;
+}
+
+message IndexMapping {
+  string key                        = 1;
+  google.protobuf.StringValue value = 2;
+}
+
+message CustomerIndex {
+  IndexMapping mapping                 = 1;
+  google.protobuf.Timestamp expires_at = 2;  
+}
+
+message AppConnectionProps {
+  string connection_id                      = 1;
+  google.protobuf.Timestamp connection_time = 2;
+  google.protobuf.StringValue ip_address    = 3;
+  bool simplex_mode                         = 4;
+}
+
+message CustomerNumber {
+  CustomerNumberProvider provider       = 1;
+  string number                         = 2;
+  google.protobuf.StringValue partition = 3;
+}

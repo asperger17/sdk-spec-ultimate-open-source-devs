@@ -1,0 +1,65 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+import "common_model.proto";
+import "payment_model.proto";
+import "payment_state.proto";
+
+package com.elarian.hera.proto;
+
+message PaymentEvent {
+  oneof event {
+    PaymentStateAdoptedEvent state_adopted                 = 1;
+    PaymentEntityDecommissionedEvent entity_decommissioned = 2;
+    PaymentInitiatedEvent payment_initiated                = 3;
+    PaymentStatusUpdatedEvent payment_status_updated       = 4;
+    PaymentWalletUpdatedEvent payment_wallet_updated       = 5;
+  }
+}
+
+message PaymentStateAdoptedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  string adopted_customer_id          = 5;
+  PaymentState adopted_state          = 6;
+}
+
+message PaymentEntityDecommissionedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  string new_customer_id              = 5;
+}
+
+message PaymentInitiatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  PaymentTransaction transaction      = 5;  
+}
+
+message PaymentStatusUpdatedEvent {
+  string org_id						= 1;
+  string customer_id					= 2;
+  google.protobuf.Timestamp timestamp			= 3;
+  string transaction_id					= 4;
+  PaymentStatus status					= 5;
+  google.protobuf.StringValue provider_transaction_id	= 6;
+  google.protobuf.StringValue description	        = 7;
+}
+
+message PaymentWalletUpdatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  string wallet_id                    = 4;  
+  string transaction_id               = 5;
+  PaymentBalance balance              = 6;
+  string narration                    = 7;  
+}

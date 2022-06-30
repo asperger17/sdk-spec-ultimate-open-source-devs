@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "common_model.proto";
+import "app_model.proto";
+
+package com.elarian.hera.proto;
+
+message AppState {
+  DataMapValue data                   = 1;
+  repeated CustomerReminder reminders = 2;
+}

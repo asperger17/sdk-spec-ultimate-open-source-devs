@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package com.elarian.hera.proto;
+
+message BillingPlanUsage {
+  int32 active_users           = 1;
+  map<string, int32> app_users = 2;
+  int64 engagement             = 3;
+  int64 analytics              = 4;
+  int64 fragments              = 5;
+}
+
+message OrgBillingState {
+  map<int32, BillingPlanUsage> plans = 1;
+  BillingPlanUsage off_plan          = 2;
+}

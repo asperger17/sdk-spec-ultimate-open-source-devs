@@ -1,0 +1,60 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+import "common_model.proto";
+import "payment_model.proto";
+
+package com.elarian.hera.proto;
+
+message PurseEvent {
+  oneof event {
+    CurrencyUpdatedEvent currency_updated         = 1;
+    DepositCompletedEvent deposit_completed       = 2;
+    WithdrawalInitiatedEvent withdrawal_initiated = 3;
+    WithdrawalCompletedEvent withdrawal_completed = 4;
+  }
+}
+
+message CurrencyUpdatedEvent {
+  string org_id                       = 1;
+  string purse_id                     = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  PaymentBalance new_balance          = 5;
+  string transaction_id               = 6;
+}
+
+message DepositCompletedEvent {
+  string org_id                       = 1;
+  string purse_id                     = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  PaymentBalance new_balance          = 5;
+  string transaction_id               = 6;
+  Cash value                          = 7;
+  string narration                    = 8;
+}
+
+message WithdrawalInitiatedEvent {
+  string org_id                       = 1;
+  string purse_id                     = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  PaymentBalance new_balance          = 5;
+  string transaction_id               = 6;
+  Cash value                          = 7;
+  string narration                    = 8;
+}
+
+message WithdrawalCompletedEvent {
+  string org_id                       = 1;
+  string purse_id                     = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  PaymentBalance new_balance          = 4;
+  string transaction_id               = 5;
+  Cash value                          = 6;  
+  string narration                    = 7;
+  PaymentStatus status                = 8;
+}
+

@@ -1,0 +1,49 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+import "common_model.proto";
+import "activity_model.proto";
+import "activity_state.proto";
+
+package com.elarian.hera.proto;
+
+message ActivityEvent {
+  oneof event {
+    ActivityStateAdoptedEvent state_adopted                 = 1;
+    ActivityEntityDecommissionedEvent entity_decommissioned = 2;
+    CustomerActivityEvent activity                          = 3;
+  }
+}
+
+message ActivityStateAdoptedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  string app_id                       = 4;
+  AppConnectionProps cxn_props        = 5;
+  string adopted_customer_id          = 6;
+  ActivityState adopted_state         = 7;
+}
+
+message ActivityEntityDecommissionedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  string app_id                       = 4;
+  AppConnectionProps cxn_props        = 5;
+  string new_customer_id              = 6;
+}
+
+message CustomerActivityEvent {
+  string org_id                        = 1;
+  string customer_id                   = 2;
+  google.protobuf.Timestamp timestamp  = 3;
+  string app_id                        = 4;
+  AppConnectionProps cxn_props         = 5;
+  string session_id                    = 6;
+  CustomerNumber customer_number       = 7;
+  string source                        = 8;
+  CustomerActivity activity            = 9;
+}
+

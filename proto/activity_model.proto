@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+package com.elarian.hera.proto;
+
+message CustomerActivity {
+  string key                           = 1;
+  map<string, string> properties       = 2;  
+  google.protobuf.Timestamp created_at = 3;
+}

@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+import "common_model.proto";
+
+package com.elarian.hera.proto;
+
+message IdentityState {
+  repeated CustomerIndex tags          = 1;
+  map<string, DataMapValue> metadata   = 2;
+  repeated CustomerIndex secondary_ids = 3;  
+}

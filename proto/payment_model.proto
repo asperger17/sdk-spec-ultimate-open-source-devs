@@ -1,0 +1,104 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/timestamp.proto";
+
+import "common_model.proto";
+
+package com.elarian.hera.proto;
+
+enum PaymentChannel {
+  PAYMENT_CHANNEL_UNSPECIFIED = 0;
+  PAYMENT_CHANNEL_CELLULAR    = 1;
+  PAYMENT_CHANNEL_AIRTIME     = 2;
+}
+
+enum PaymentStatus {
+  PAYMENT_STATUS_UNSPECIFIED                = 0;
+  PAYMENT_STATUS_QUEUED                     = 100;
+  PAYMENT_STATUS_PENDING_CONFIRMATION       = 101;
+  PAYMENT_STATUS_PENDING_VALIDATION         = 102;
+  PAYMENT_STATUS_VALIDATED                  = 103;
+  PAYMENT_STATUS_INVALID_REQUEST            = 200;
+  PAYMENT_STATUS_NOT_SUPPORTED              = 201;
+  PAYMENT_STATUS_INSUFFICIENT_FUNDS         = 202;
+  PAYMENT_STATUS_APPLICATION_ERROR          = 203;
+  PAYMENT_STATUS_NOT_ALLOWED                = 204;
+  PAYMENT_STATUS_DUPLICATE_REQUEST          = 205;
+  PAYMENT_STATUS_INVALID_PURSE              = 206;
+  PAYMENT_STATUS_INVALID_COUNTER_PARTY      = 207;
+  PAYMENT_STATUS_INVALID_CHANNEL_NUMBER     = 208;
+  PAYMENT_STATUS_GATEWAY_ERROR              = 209;
+  PAYMENT_STATUS_DECOMMISSIONED_CUSTOMER_ID = 299;
+  PAYMENT_STATUS_SUCCESS                    = 300;
+  PAYMENT_STATUS_FAILED                     = 400;
+  PAYMENT_STATUS_THROTTLED                  = 401;
+  PAYMENT_STATUS_EXPIRED                    = 402;
+  PAYMENT_STATUS_REJECTED                   = 403;
+  PAYMENT_STATUS_REVERSED                   = 500;
+}
+
+message PaymentChannelNumber {
+  PaymentChannel channel = 1;
+  string number          = 2;
+}
+
+message PendingPaymentTransaction {
+  google.protobuf.Timestamp created_at = 1;
+  Cash value                           = 2;
+  Cash converted                       = 3;
+}
+
+message PaymentBalance {
+  string currency_code                           = 1;
+  Cash available                                 = 2;
+  Cash actual                                    = 3;
+  map<string, PendingPaymentTransaction> pending = 4;
+  int64 sequence_nr                              = 5; 
+}
+
+message PaymentPurseCounterParty {
+  string purse_id = 1;
+}
+
+message PaymentWalletCounterParty {
+  string customer_id = 1;
+  string wallet_id   = 2;
+}
+
+message PaymentCustomerCounterParty {  
+  CustomerNumber customer_number      = 1;
+  PaymentChannelNumber channel_number = 2;
+}
+
+message PaymentChannelCounterParty {
+  PaymentChannel channel              = 1;
+  int32 channel_code                  = 2;
+  string source                       = 3;
+  string destination                  = 4;
+  google.protobuf.StringValue account = 5;  
+}
+
+message PaymentCounterParty {
+  oneof party {
+    PaymentPurseCounterParty purse       = 1;    
+    PaymentWalletCounterParty wallet     = 2;
+    PaymentCustomerCounterParty customer = 3;    
+    PaymentChannelCounterParty channel   = 4;
+  }
+}
+
+message PaymentTransaction {
+  string transaction_id					= 1;
+  google.protobuf.StringValue app_id			= 2;
+  PaymentCounterParty debit_party			= 4;
+  PaymentCounterParty credit_party			= 5;
+  Cash value						= 6;  
+  PaymentStatus status					= 7;
+  google.protobuf.Timestamp created_at			= 8;
+  google.protobuf.Timestamp updated_at			= 9;
+  google.protobuf.StringValue provider_transaction_id	= 10;
+  google.protobuf.StringValue narration                 = 11;
+  google.protobuf.StringValue description               = 12;
+}
+

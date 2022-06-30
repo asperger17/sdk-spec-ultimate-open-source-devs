@@ -1,0 +1,28 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+package com.elarian.hera.proto;
+
+message CustomerBillingEvent {
+  oneof event {
+    BillingActivityEvent billing_activity        = 1;
+    AppBillingActivityEvent app_billing_activity = 2;
+  }
+}
+
+message BillingActivityEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  google.protobuf.Int32Value plan_id  = 4;
+}
+
+message AppBillingActivityEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  string app_id                       = 4;
+  google.protobuf.Int32Value plan_id  = 5;
+}

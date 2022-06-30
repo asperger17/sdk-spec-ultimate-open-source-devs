@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+
+import "common_model.proto";
+import "activity_model.proto";
+
+package com.elarian.hera.proto;
+
+message ActivitySessionState {
+  CustomerNumber customer_number       = 1;
+  string source                        = 2;
+  string session_id                    = 3;
+  string app_id                        = 4;
+  repeated CustomerActivity activities = 5;
+  google.protobuf.Timestamp created_at = 6;
+  google.protobuf.Timestamp updated_at = 7;
+}
+
+message ActivityState {
+  repeated ActivitySessionState sessions   = 1;
+  repeated CustomerNumber customer_numbers = 2;
+}

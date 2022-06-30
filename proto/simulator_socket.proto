@@ -1,0 +1,118 @@
+syntax = "proto3";
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/wrappers.proto";
+
+import "common_model.proto";
+import "messaging_model.proto";
+import "payment_model.proto";
+
+package com.elarian.hera.proto;
+
+message SimulatorToServerCommand {
+  oneof entry {
+    ReceiveMessageSimulatorCommand receive_message            = 1;
+    ReceivePaymentSimulatorCommand receive_payment            = 2;
+    UpdatePaymentStatusSimulatorCommand update_payment_status = 3;
+  }
+}
+
+message ReceiveMessageSimulatorCommand {
+  string customer_number                 = 1;
+  MessagingChannelNumber channel_number  = 2;
+  repeated InboundMessageBody parts      = 3;
+  google.protobuf.StringValue session_id = 4;
+  Cash cost                              = 5;
+  google.protobuf.Duration duration      = 6;
+}
+
+message ReceivePaymentSimulatorCommand {
+  string transaction_id               = 1;
+  PaymentChannelNumber channel_number = 2;
+  string customer_number              = 3;
+  Cash value                          = 4;
+  PaymentStatus status                = 5;
+}
+
+message UpdatePaymentStatusSimulatorCommand {
+  string transaction_id = 1;
+  PaymentStatus status  = 2;
+}
+
+message SimulatorToServerCommandReply {
+  bool status             = 1;
+  string description      = 2;
+  OutboundMessage message = 3;
+}
+
+message ServerToSimulatorNotification {
+  oneof entry {
+    SendMessageSimulatorNotification send_message                  = 1;
+    MakeVoiceCallSimulatorNotification make_voice_call             = 2;
+    SendCustomerPaymentSimulatorNotification send_customer_payment = 3;
+    SendChannelPaymentSimulatorNotification send_channel_payment   = 4;
+    CheckoutPaymentSimulatorNotification checkout_payment          = 5;
+  }
+}
+
+message ServerToSimulatorNotificationReply {}
+
+message SendMessageSimulatorNotification {
+  string org_id                         = 1;
+  string customer_id                    = 2;
+  string message_id                     = 3;
+  CustomerNumber customer_number        = 4;
+  MessagingChannelNumber channel_number = 5;
+  OutboundMessage message               = 6;
+}
+
+message MakeVoiceCallSimulatorNotification {
+  string org_id                         = 1;
+  string customer_id                    = 2;
+  string session_id                     = 3;
+  CustomerNumber customer_number        = 4;
+  MessagingChannelNumber channel_number = 5;
+}
+
+message SendCustomerPaymentSimulatorNotification {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  oneof debit_party {
+    PaymentWalletCounterParty wallet  = 4;
+    PaymentPurseCounterParty purse    = 5;
+  }
+  string transaction_id               = 6;
+  CustomerNumber customer_number      = 7;
+  PaymentChannelNumber channel_number = 8;
+  Cash value                          = 9;
+}
+
+message SendChannelPaymentSimulatorNotification {
+  string org_id                       = 1;
+  string app_id                       = 2;
+  oneof debit_party {
+    PaymentWalletCounterParty wallet  = 3;
+    PaymentPurseCounterParty purse    = 4;
+  }
+  string transaction_id               = 5;
+  PaymentChannel channel              = 6;
+  string source                       = 7;
+  string destination                  = 8;
+  google.protobuf.StringValue account = 9;
+  Cash value                          = 10;
+}
+
+message CheckoutPaymentSimulatorNotification {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  oneof credit_party {
+    PaymentWalletCounterParty wallet  = 4;
+    PaymentPurseCounterParty purse    = 5;
+  }
+  string transaction_id               = 6;
+  CustomerNumber customer_number      = 7;
+  PaymentChannelNumber channel_number = 8;
+  Cash value                          = 9;
+}

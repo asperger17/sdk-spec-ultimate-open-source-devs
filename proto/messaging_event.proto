@@ -1,0 +1,177 @@
+syntax = "proto3";
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+import "common_model.proto";
+import "messaging_model.proto";
+import "messaging_state.proto";
+
+package com.elarian.hera.proto;
+
+message MessagingEvent {
+  oneof event {
+    MessagingStateAdoptedEvent state_adopted                  = 1;
+    MessagingEntityDecommissionedEvent entity_decommissioned  = 2;
+    MessagingConsentUpdatedEvent consent_updated              = 3;
+    MessagingSessionStartedEvent session_started              = 4;
+    MessagingSessionRenewedEvent session_renewed              = 5;
+    MessagingSessionEndedEvent session_ended                  = 6;
+    MessagingSessionUpdatedEvent session_updated              = 7;
+    MessageSentEvent sent                                     = 8;
+    MessageDeliveryStatusUpdatedEvent delivery_status_updated = 9;
+    SentMessageReactionEvent sent_reaction                    = 10;    
+    MessageReceivedEvent received                             = 11;
+  }
+}
+
+message MessagingStateAdoptedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;    
+  string adopted_customer_id          = 5;
+  MessagingState adopted_state        = 6;
+}
+
+message MessagingEntityDecommissionedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  string new_customer_id              = 5;
+}
+
+message MessagingConsentUpdatedEvent {
+  string org_id                         = 1;
+  string customer_id                    = 2;
+  google.protobuf.Timestamp timestamp   = 3;
+  CustomerNumber customer_number        = 4;
+  MessagingChannelNumber channel_number = 5;
+  AppConnectionProps cxn_props          = 6;
+  google.protobuf.StringValue app_id    = 7;  
+  MessagingConsentUpdate update         = 8;
+  CustomerRequestOrigin origin          = 9;
+}
+
+message MessageSentEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  AppConnectionProps cxn_props                    = 6;
+  google.protobuf.StringValue app_id              = 7;
+  string message_id                               = 8;
+  google.protobuf.StringValue session_id          = 9;
+  google.protobuf.StringValue in_reply_to         = 10;
+  OutboundMessage message                         = 11;
+  CustomerRequestOrigin origin                    = 12;
+  ChannelNumberProvider provider                  = 13;  
+  CustomerIndex tag                               = 14;
+  google.protobuf.StringValue work_id             = 15;
+  MessageDeliveryStatus status                    = 16;
+  Cash cost                                       = 17;
+  google.protobuf.StringValue provider_message_id = 18;
+}
+
+message MessageDeliveryStatusUpdatedEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  google.protobuf.StringValue app_id              = 6;
+  string message_id                               = 7;  
+  MessageDeliveryStatus status                    = 8;
+  Cash cost                                       = 9;
+  google.protobuf.StringValue provider_message_id = 10;
+  CustomerRequestOrigin origin                    = 11;
+  google.protobuf.StringValue description         = 12;
+}
+
+message SentMessageReactionEvent {
+  string org_id                         = 1;
+  string customer_id                    = 2;
+  google.protobuf.Timestamp timestamp   = 3;
+  CustomerNumber customer_number        = 4;
+  MessagingChannelNumber channel_number = 5;  
+  google.protobuf.StringValue app_id    = 6;
+  string message_id                     = 7;
+  MessageReaction reaction              = 8;
+  CustomerRequestOrigin origin          = 9;
+}
+
+message MessageReceivedEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  google.protobuf.StringValue app_id              = 6;
+  string message_id                               = 7;
+  google.protobuf.StringValue session_id          = 8;
+  repeated InboundMessageBody parts               = 9;  
+  google.protobuf.StringValue in_reply_to         = 10;
+  ChannelNumberProvider provider                  = 11;
+  Cash cost                                       = 12;
+  google.protobuf.StringValue provider_message_id = 13;
+  CustomerRequestOrigin origin                    = 14;
+}
+
+message MessagingSessionStartedEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  google.protobuf.StringValue app_id              = 6;
+  string session_id                               = 7;
+  google.protobuf.Timestamp expires_at            = 8;
+  google.protobuf.StringValue provider_session_id = 9;
+  CustomerRequestOrigin origin                    = 10;
+}
+
+message MessagingSessionRenewedEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  google.protobuf.StringValue app_id              = 6;
+  string session_id                               = 7;
+  google.protobuf.Timestamp expires_at            = 8;
+  google.protobuf.StringValue provider_session_id = 9;
+  CustomerRequestOrigin origin                    = 10;
+}
+
+message MessagingSessionEndedEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  repeated string app_ids                         = 6;
+  string session_id                               = 7;  
+  google.protobuf.Duration duration               = 8;
+  MessagingSessionEndReason reason                = 9;
+  Cash cost                                       = 10;
+  google.protobuf.StringValue provider_session_id = 11;
+  CustomerRequestOrigin origin                    = 12;
+}
+
+message MessagingSessionUpdatedEvent {
+  string org_id                                   = 1;
+  string customer_id                              = 2;
+  google.protobuf.Timestamp timestamp             = 3;
+  CustomerNumber customer_number                  = 4;
+  MessagingChannelNumber channel_number           = 5;
+  google.protobuf.StringValue app_id              = 6;  
+  string session_id                               = 7;  
+  google.protobuf.Duration duration               = 8;
+  MessagingSessionEndReason reason                = 9;
+  Cash cost                                       = 10;
+  google.protobuf.StringValue provider_session_id = 11;
+  CustomerRequestOrigin origin                    = 12;
+}

@@ -1,0 +1,53 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+package com.elarian.hera.proto;
+
+message OrgBillingEvent {
+  oneof event {
+    CustomerActivatedEvent customer_activated        = 1;
+    AppCustomerActivatedEvent app_customer_activated = 2;
+    EngagementUsageEvent engagement_usage            = 3;
+    AnalyticsUsageEvent analytics_usage              = 4;
+    FragmentsUsageEvent fragments_usage              = 5;
+  }
+}
+
+message CustomerActivatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  google.protobuf.Int32Value plan_id  = 4;
+}
+
+message AppCustomerActivatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  string app_id                       = 4;
+  google.protobuf.Int32Value plan_id  = 5;
+}
+
+message EngagementUsageEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  int64 units                         = 4;
+  google.protobuf.Int32Value plan_id  = 5;
+}
+
+message AnalyticsUsageEvent {
+  string org_id                       = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  int64 units                         = 3;
+  google.protobuf.Int32Value plan_id  = 4;
+}
+
+message FragmentsUsageEvent {
+  string org_id                       = 1;
+  google.protobuf.Timestamp timestamp = 2;
+  int64 units                         = 3;
+  google.protobuf.Int32Value plan_id  = 4;
+}

@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "common_model.proto";
+import "payment_model.proto";
+
+package com.elarian.hera.proto;
+
+message PaymentState {
+  repeated CustomerNumber customer_numbers         = 1;
+  repeated PaymentChannelNumber channel_numbers    = 2;
+  repeated PaymentTransaction transaction_log      = 3;
+  repeated PaymentTransaction pending_transactions = 4;
+  map<string, PaymentBalance> wallets              = 5;
+}

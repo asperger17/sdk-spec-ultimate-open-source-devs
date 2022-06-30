@@ -1,0 +1,103 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+import "common_model.proto";
+import "app_model.proto";
+import "app_state.proto";
+
+package com.elarian.hera.proto;
+
+message AppEvent {
+  oneof event {
+    AppStateAdoptedEvent state_adopted                 = 1;
+    AppEntityDecommissionedEvent entity_decommissioned = 2;
+    AppDataUpdatedEvent data_updated                   = 3;
+    AppDataDeletedEvent data_deleted                   = 4;
+    AppDataLeasedEvent data_leased                     = 5;
+    AppDataLeaseExpiredEvent data_lease_expired        = 6;
+    ReminderAddedEvent reminder_added                  = 7;
+    ReminderCancelledEvent reminder_cancelled          = 8;
+    ReminderProcessedEvent reminder_processed          = 9;
+  }
+}
+
+message AppStateAdoptedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+  string adopted_customer_id          = 6;
+  AppState adopted_state              = 7;
+}
+
+message AppEntityDecommissionedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+  string new_customer_id              = 6;
+}
+
+message AppDataUpdatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+  DataMapValue update                 = 6;
+}
+
+message AppDataDeletedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+}
+
+message AppDataLeasedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+}
+
+message AppDataLeaseExpiredEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+}
+
+message ReminderAddedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+  CustomerReminder reminder           = 6;
+}
+
+message ReminderCancelledEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  AppConnectionProps cxn_props        = 5;
+  CustomerReminder reminder           = 6;
+}
+
+message ReminderProcessedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  string app_id                       = 3;
+  google.protobuf.Timestamp timestamp = 4;
+  CustomerReminder reminder           = 5;
+  CustomerIndex tag                   = 6;
+  google.protobuf.StringValue work_id = 7;
+}

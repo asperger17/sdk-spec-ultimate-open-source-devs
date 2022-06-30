@@ -1,0 +1,85 @@
+syntax = "proto3";
+
+import "google/protobuf/timestamp.proto";
+import "common_model.proto";
+import "identity_state.proto";
+
+package com.elarian.hera.proto;
+
+message IdentityEvent {
+  oneof event {
+    IdentityStateAdoptedEvent state_adopted                 = 1;
+    IdentityEntityDecommissionedEvent entity_decommissioned = 2;
+    TagUpdatedEvent tag_updated                             = 3;
+    TagDeletedEvent tag_deleted                             = 4;
+    MetadataUpdatedEvent metadata_updated                   = 5;
+    MetadataDeletedEvent metadata_deleted                   = 6;
+    SecondaryIdUpdatedEvent secondary_id_updated            = 7;
+    SecondaryIdDeletedEvent secondary_id_deleted            = 8;    
+  }
+}
+
+message IdentityStateAdoptedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;  
+  string adopted_customer_id          = 5;
+  IdentityState adopted_state         = 6;
+}
+
+message IdentityEntityDecommissionedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;  
+  string new_customer_id              = 5;
+}
+
+message TagUpdatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  repeated CustomerIndex updates      = 5;
+}
+
+message TagDeletedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  repeated string deletions           = 5;
+}
+
+message MetadataUpdatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  map<string, DataMapValue> updates   = 5;
+}
+
+message MetadataDeletedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;  
+  repeated string deletions           = 5;
+}
+
+message SecondaryIdUpdatedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;  
+  repeated CustomerIndex updates      = 5;
+}
+
+message SecondaryIdDeletedEvent {
+  string org_id                       = 1;
+  string customer_id                  = 2;
+  google.protobuf.Timestamp timestamp = 3;
+  AppConnectionProps cxn_props        = 4;
+  repeated IndexMapping deletions     = 5;
+}

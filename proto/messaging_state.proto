@@ -1,0 +1,111 @@
+syntax = "proto3";
+
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/wrappers.proto";
+
+import "common_model.proto";
+import "messaging_model.proto";
+
+package com.elarian.hera.proto;
+
+message ReceivedMessage {
+  CustomerNumber customer_number                  = 1;
+  MessagingChannelNumber channel_number           = 2;  
+  string message_id                               = 3;
+  google.protobuf.Timestamp created_at            = 4;
+  google.protobuf.StringValue session_id          = 5;
+  google.protobuf.StringValue in_reply_to         = 6;
+  ChannelNumberProvider provider                  = 7;
+  google.protobuf.StringValue app_id              = 8;
+  repeated InboundMessageBody parts               = 9;
+  Cash cost                                       = 10;
+  google.protobuf.StringValue provider_message_id = 11;
+}
+
+message SentMessage {
+  CustomerNumber customer_number                  = 1;
+  MessagingChannelNumber channel_number           = 2;
+  string message_id                               = 3;
+  google.protobuf.Timestamp created_at            = 4;
+  google.protobuf.StringValue session_id          = 5;
+  google.protobuf.StringValue in_reply_to         = 6;
+  ChannelNumberProvider provider                  = 7;
+  google.protobuf.StringValue app_id              = 8;
+  google.protobuf.Timestamp updated_at            = 9;
+  MessageDeliveryStatus status                    = 10;
+  repeated MessageReactionState reactions         = 11;
+  OutboundMessage message                         = 12;
+  Cash cost                                       = 13;
+  google.protobuf.StringValue provider_message_id = 14;
+  google.protobuf.StringValue description         = 15;
+}
+
+message MessageReactionState {
+  google.protobuf.Timestamp created_at = 1;
+  MessageReaction reaction             = 2;
+}
+
+message MessageReplyToken {
+  string token                         = 1;
+  google.protobuf.Timestamp expires_at = 2;
+}
+
+message ChannelMessage {
+  oneof entry {
+    ReceivedMessage received = 1;
+    SentMessage sent         = 2;
+  }
+}
+
+message CompleteMessagingSession {
+  CustomerNumber customer_number                  = 1;
+  MessagingChannelNumber channel_number           = 2;
+  string session_id                               = 3;
+  google.protobuf.Timestamp started_at            = 4;
+  google.protobuf.Duration duration               = 5;
+  repeated string app_ids                         = 6;
+  MessagingSessionEndReason end_reason            = 7;
+  Cash cost                                       = 8;
+  google.protobuf.StringValue provider_session_id = 9;
+}
+
+message BlockedMessagingChannelState {
+  CustomerNumber customer_number        = 1;
+  MessagingChannelNumber channel_number = 2;
+  MessageReplyToken reply_token         = 3;
+  google.protobuf.Timestamp blocked_at  = 4;
+}
+
+message ActiveMessagingChannelState {
+  CustomerNumber customer_number        = 1;
+  MessagingChannelNumber channel_number = 2;
+  MessageReplyToken reply_token         = 3;
+  google.protobuf.Timestamp allowed_at  = 4;
+}
+
+message InSessionMessagingChannelState {
+  CustomerNumber customer_number                  = 1;
+  MessagingChannelNumber channel_number           = 2;
+  MessageReplyToken reply_token                   = 3;
+  google.protobuf.Timestamp allowed_at            = 4;
+  string session_id                               = 5;
+  google.protobuf.Timestamp started_at            = 6;
+  google.protobuf.Timestamp expires_at            = 7;
+  repeated string app_ids                         = 8;
+  google.protobuf.StringValue provider_session_id = 9;
+}
+
+message MessagingChannelState {
+  oneof state {
+    BlockedMessagingChannelState blocked      = 1;
+    ActiveMessagingChannelState active        = 2;
+    InSessionMessagingChannelState in_session = 3;
+  }
+}
+
+message MessagingState {
+  repeated MessagingChannelState channels    = 1;
+  repeated ChannelMessage messages           = 2;
+  repeated CompleteMessagingSession sessions = 3;  
+}

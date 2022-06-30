@@ -1,0 +1,10 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+
+package com.elarian.hera.proto;
+
+message CustomerBillingState {
+  google.protobuf.Int32Value last_plan = 1;
+  map<string, int32> app_last_plan     = 2;
+}

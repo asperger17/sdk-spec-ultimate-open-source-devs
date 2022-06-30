@@ -1,0 +1,14 @@
+syntax = "proto3";
+
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/duration.proto";
+import "google/protobuf/timestamp.proto";
+
+package com.elarian.hera.proto;
+
+message CustomerReminder {
+  string key                           = 1;
+  google.protobuf.Timestamp remind_at  = 2;
+  google.protobuf.Duration interval    = 3;
+  google.protobuf.StringValue payload  = 4; 
+}
