@@ -77,6 +77,7 @@ The following commands can be sent as part of the ***AppToServerCommand*** paylo
 - *GenerateAuthToken*
 
 - *CreateCustomer*
+- *DeleteCustomer*
 - *GetCustomerState*
 - *AdoptCustomerState*
 - *AddCustomerReminder*
@@ -164,6 +165,10 @@ The SDK should have the following classes with methods that correspond to the ab
   - ~~`registerNotificationHandler(event: String, handler: NotificationHandler)`~~
 
 - `generateAuthToken(): Future<AuthToken>`
+
+- `deleteCustomerByCustomerNumber(customer: CustomerNumber): Future<DeleteCustomerReply>`
+
+- `deleteCustomerByCustomerID(customerID: String): Future<DeleteCustomerReply>`
 
 - `addCustomerReminderByTag(tag: Tag, reminder: Reminder): Future<TagUpdateReply>`
 

@@ -32,6 +32,7 @@ message AppToServerCommand {
     CreateCustomerCommand create_customer				= 2;   
     GetCustomerStateCommand get_customer_state				= 3;
     AdoptCustomerStateCommand adopt_customer_state			= 4;
+    DeleteCustomerCommand delete_customer           = 32;
 
     AddCustomerReminderCommand add_customer_reminder			= 5;
     AddCustomerReminderTagCommand add_customer_reminder_tag		= 6;
@@ -86,6 +87,7 @@ message AppToServerCommandReply {
     TagCommandReply tag_command                          = 9;
     CustomerActivityReply customer_activity              = 10;
     ReplayPaymentReply replay_payment                    = 11;
+    DeleteCustomerReply delete_customer_reply            = 12;
   }
 }
 
@@ -98,6 +100,18 @@ message GenerateAuthTokenReply {
 
 message CreateCustomerCommand {
   CustomerNumber customer_number = 1;
+}
+
+message DeleteCustomerCommand{
+  oneof customer {
+    string customer_id             = 1;
+    CustomerNumber customer_number = 2;
+  }
+}
+
+message DeleteCustomerReply{
+  bool status = 1;
+  string description = 2;
 }
 
 message GetCustomerStateCommand {
